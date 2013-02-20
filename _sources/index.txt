@@ -11,7 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-
+If this addition is visible, my test is successful!
 
 Indices and tables
 ==================

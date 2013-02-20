@@ -5,7 +5,7 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = /home/hum/Projects/repos-git/github/hfdpcpp_s_docs
+BUILDDIR      = _build
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4

@@ -17,4 +17,6 @@ if you want to reach to the original project or author of this project.
 This project on github will add POSIX build environment support and
 possible other enhancement will be done.
 
+http://journeyer.github.com/hfdpcpp_s/
+
 Journeyer J. Joh

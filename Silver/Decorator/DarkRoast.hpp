@@ -4,19 +4,22 @@
 #include "Starbuzz.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Decorator {
+  namespace Decorator {
 
-class DarkRoast : public Beverage {
+    class DarkRoast : public Beverage {
 
-	public: DarkRoast() {
-		_description = "Dark Roast Coffee";
-	}
-	public: double cost() const {
-		return 0.99;
-	}
-};
+    public:
+      DarkRoast()
+      {
+        _description = "Dark Roast Coffee";
+      }
+      double cost() const
+      {
+        return 0.99;
+      }
+    };
 
-} // namespace Observer
+  } // namespace Observer
 } // namespace HeadFirstDesignPatterns
 
 #endif

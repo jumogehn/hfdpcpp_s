@@ -4,17 +4,18 @@
 #include "Remote.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace Remote {
+  namespace Command {
+    namespace Remote {
 
-class NoCommand : public Command{
+      class NoCommand : public Command{
 
-	public: void execute() const {
-	};
-};
+      public:
+        void execute() const
+        {};
+      };
 
-} // namespace Remote
-} // namespace Command
+    } // namespace Remote
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

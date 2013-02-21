@@ -4,18 +4,20 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+  namespace Interpreter {
+    namespace MiniDuckSimulator {
 
-class EndCommand : public Expression {
+      class EndCommand : public Expression {
 
-	public: virtual bool interpret( Context& context ) {
-		return true;
-	}
-};
+      public:
+        virtual bool interpret( Context& context )
+        {
+          return true;
+        }
+      };
 
-} // namespace MiniDuckSimulator
-} // namespace Interpreter
+    } // namespace MiniDuckSimulator
+  } // namespace Interpreter
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -4,21 +4,23 @@
 #include "Starbuzz.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Decorator {
+  namespace Decorator {
 
-class CondimentDecorator : public Beverage {
+    class CondimentDecorator : public Beverage {
 
-	private: CondimentDecorator( const CondimentDecorator& ); // Disable copy constructor
-	private: void operator=( const CondimentDecorator& ); // Disable assignment operator
+      CondimentDecorator( const CondimentDecorator& );
+      void operator=( const CondimentDecorator& );
 
-	protected: CondimentDecorator() {
-	}
-	public: virtual ~CondimentDecorator() = 0 {
-	};
-	public: virtual std::string getDescription() const = 0;
-};
+    protected:
+      CondimentDecorator()
+      {}
+    public:
+      virtual ~CondimentDecorator()
+      {}
+      virtual std::string getDescription() const = 0;
+    };
 
-} // namespace Observer
+  } // namespace Observer
 } // namespace HeadFirstDesignPatterns
 
 #endif

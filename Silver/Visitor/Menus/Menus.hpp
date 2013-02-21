@@ -21,7 +21,7 @@
 #include "Chicken.hpp"
 #include "Egg.hpp"
 #include "Fish.hpp"
-#include "Hotdog.hpp"
+#include "HotDog.hpp"
 #include "Lettus.hpp"
 #include "Milk.hpp"
 #include "Mayonnaise.hpp"

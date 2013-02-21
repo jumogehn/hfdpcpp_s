@@ -4,22 +4,24 @@
 #include "Pizzas.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Factory {
-namespace Simple {
+  namespace Factory {
+    namespace Simple {
 
-class ClamPizza : public Pizza {
+      class ClamPizza : public Pizza {
 
-	public: ClamPizza() {
-		_name = "Clam Pizza";
-		_dough = "Thin Crust";
-		_sauce = "White garlic Sauce";
-		_toppings.push_back( "Grated parmesan cheese" );
-		_toppings.push_back( "Clams" );
-	}
-};
+      public:
+        ClamPizza()
+        {
+          _name = "Clam Pizza";
+          _dough = "Thin Crust";
+          _sauce = "White garlic Sauce";
+          _toppings.push_back( "Grated parmesan cheese" );
+          _toppings.push_back( "Clams" );
+        }
+      };
 
-} // namespace Simple
-} // namespace Factory
+    } // namespace Simple
+  } // namespace Factory
 } // namespace HeadFirstDesignPatterns
 
 #endif

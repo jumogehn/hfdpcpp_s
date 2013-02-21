@@ -4,18 +4,19 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+  namespace Interpreter {
+    namespace MiniDuckSimulator {
 
-template <class T>
-class Iterator {
-	public: virtual ~Iterator() = 0 {
-	}
-	public: virtual T* next()  = 0;
-};
+      template <class T>
+        class Iterator {
+        public:
+          virtual ~Iterator()
+          {}
+          virtual T* next()  = 0;
+        };
 
-} // namespace MiniDuckSimulator
-} // namespace Iterator
+    } // namespace MiniDuckSimulator
+  } // namespace Iterator
 } // namespace HeadFirstDesignPatterns
 
 #endif

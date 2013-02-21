@@ -4,20 +4,22 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+  namespace Interpreter {
+    namespace MiniDuckSimulator {
 
-class MallardDuck : public Duck {
+      class MallardDuck : public Duck {
 
-	public:	MallardDuck() : Duck( new FlyWithWings(), new Quack() ) {
-	}
-	public: void display() const {
-		std::cout << "I'm a real Mallard duck" << std::endl;
-	}
-};
+      public:
+        MallardDuck() : Duck( new FlyWithWings(), new Quack() )
+        {}
+        void display() const
+        {
+          std::cout << "I'm a real Mallard duck" << std::endl;
+        }
+      };
 
-} // namespace MiniDuckSimulator
-} // namespace Interpreter
+    } // namespace MiniDuckSimulator
+  } // namespace Interpreter
 } // namespace HeadFirstDesignPatterns
 
 #endif

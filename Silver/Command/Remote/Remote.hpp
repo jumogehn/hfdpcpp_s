@@ -6,7 +6,7 @@
 #include "Light.hpp"
 #include "CeilingFan.hpp"
 #include "GarageDoor.hpp"
-#include "Hottub.hpp"
+#include "hottub.hpp"
 #include "Stereo.hpp"
 #include "TV.hpp"
 

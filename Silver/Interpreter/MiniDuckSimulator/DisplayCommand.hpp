@@ -4,19 +4,22 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+  namespace Interpreter {
+    namespace MiniDuckSimulator {
 
-class DisplayCommand : public Expression {
-	private: ~DisplayCommand() { // disable inheritance
-	}
-	public: void accept( Visitor* visitor ) { assert( visitor );
-		visitor->interpret( this );
-	}
-};
+      class DisplayCommand : public Expression {
+        ~DisplayCommand()
+        {} // disable inheritance
+      public:
+        void accept( Visitor* visitor )
+        {
+          assert( visitor );
+          visitor->interpret( this );
+        }
+      };
 
-} // namespace MiniDuckSimulator
-} // namespace Interpreter
+    } // namespace MiniDuckSimulator
+  } // namespace Interpreter
 } // namespace HeadFirstDesignPatterns
 
 #endif

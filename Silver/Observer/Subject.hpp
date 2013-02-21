@@ -4,18 +4,20 @@
 #include "WeatherStation.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Observer {
+  namespace Observer {
 
-class Subject {
+    class Subject {
 
-	protected: virtual ~Subject() = 0 {
-	};
-	public: virtual void registerObserver( Observer* o ) = 0;
-	public: virtual void removeObserver( Observer* o ) = 0;
-	public: virtual void notifyObservers() const = 0;
-};
+    protected:
+      virtual ~Subject()
+      {}
+    public:
+      virtual void registerObserver( Observer* o ) = 0;
+      virtual void removeObserver( Observer* o ) = 0;
+      virtual void notifyObservers() const = 0;
+    };
 
-} // namespace Observer
+  } // namespace Observer
 } // namespace HeadFirstDesignPatterns
 
 #endif

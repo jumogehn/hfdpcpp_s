@@ -4,32 +4,38 @@
 #include "SimpleRemote.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace SimpleRemote {
+  namespace Command {
+    namespace SimpleRemote {
 
-class GarageDoor {
+      class GarageDoor {
 
-	public: GarageDoor() {
-	}
-	public: void up() const {
-		std::cout << "Garage Door is Open" << std::endl;
-	}
-	public: void down() const {
-		std::cout << "Garage Door is Closed" << std::endl;
-	}
-	public: void stop() const {
-		std::cout << "Garage Door is Stopped" << std::endl;
-	}
-	public: void lightOn() const {
-		std::cout << "Garage light is on" << std::endl;
-	}
-	public: void lightOff() const {
-		std::cout << "Garage light is off" << std::endl;
-	}
-};
+      public:
+        GarageDoor()
+        {}
+        void up() const
+        {
+          std::cout << "Garage Door is Open" << std::endl;
+        }
+        void down() const
+        {
+          std::cout << "Garage Door is Closed" << std::endl;
+        }
+        void stop() const
+        {
+          std::cout << "Garage Door is Stopped" << std::endl;
+        }
+        void lightOn() const
+        {
+          std::cout << "Garage light is on" << std::endl;
+        }
+        void lightOff() const
+        {
+          std::cout << "Garage light is off" << std::endl;
+        }
+      };
 
-} // namespace SimpleRemote
-} // namespace Command
+    } // namespace SimpleRemote
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

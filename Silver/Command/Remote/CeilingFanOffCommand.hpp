@@ -4,23 +4,27 @@
 #include "Remote.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace Remote {
+  namespace Command {
+    namespace Remote {
 
-class CeilingFanOffCommand : public Command {
+      class CeilingFanOffCommand : public Command {
 
-	private: const CeilingFan* _ceilingFan;
+        const CeilingFan* _ceilingFan;
 
-	public: explicit CeilingFanOffCommand( const CeilingFan* ceilingFan ) :
-		_ceilingFan( ceilingFan ) { assert( ceilingFan );
-	}
-	public: void execute() const {
-		_ceilingFan->off();
-	}
-};
+      public:
+        explicit CeilingFanOffCommand( const CeilingFan* ceilingFan ) :
+          _ceilingFan( ceilingFan )
+        {
+          assert( ceilingFan );
+        }
+        void execute() const
+        {
+          _ceilingFan->off();
+        }
+      };
 
-} // namespace Remote
-} // namespace Command
+    } // namespace Remote
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

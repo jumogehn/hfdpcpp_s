@@ -4,15 +4,17 @@
 #include "WeatherStation.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Observer {
+  namespace Observer {
 
-class DisplayElement {
-	public: virtual void display() const = 0;
-	protected: virtual ~DisplayElement() = 0 {
-	};
-};
+    class DisplayElement {
+    public:
+      virtual void display() const = 0;
+    protected:
+      virtual ~DisplayElement()
+      {}
+    };
 
-} // namespace Observer
+  } // namespace Observer
 } // namespace HeadFirstDesignPatterns
 
 #endif

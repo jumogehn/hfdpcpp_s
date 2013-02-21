@@ -4,19 +4,20 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+  namespace Interpreter {
+    namespace MiniDuckSimulator {
 
-class Visitor;
+      class Visitor;
 
-class Expression {
-	public: virtual ~Expression() = 0 {
-	};
-	public: virtual void accept( Visitor* visitor) = 0;
-};
+      class Expression {
+      public:
+        virtual ~Expression()
+        {}
+        virtual void accept( Visitor* visitor) = 0;
+      };
 
-} // namespace MiniDuckSimulator
-} // namespace Interpreter
+    } // namespace MiniDuckSimulator
+  } // namespace Interpreter
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -4,26 +4,31 @@
 #include "SimpleRemote.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace SimpleRemote {
+  namespace Command {
+    namespace SimpleRemote {
 
-class SimpleRemoteControl {
+      class SimpleRemoteControl {
 
-	private: const Command* _slot;
- 
-	public: SimpleRemoteControl() :
-		_slot( 0 ) {
-	}
-	public: void setCommand( const Command* command ) { assert( command );
-		_slot = command;
-	}
-	public: void buttonWasPressed() const { assert( _slot );
-		_slot->execute();
-	}
-};
+        const Command* _slot;
 
-} // namespace SimpleRemote
-} // namespace Command
+      public:
+        SimpleRemoteControl() :
+          _slot( 0 )
+        {}
+        void setCommand( const Command* command )
+        {
+          assert( command );
+          _slot = command;
+        }
+        void buttonWasPressed() const
+        {
+          assert( _slot );
+          _slot->execute();
+        }
+      };
+
+    } // namespace SimpleRemote
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

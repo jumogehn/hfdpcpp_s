@@ -4,18 +4,19 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+  namespace Interpreter {
+    namespace MiniDuckSimulator {
 
-class QuackBehavior {
+      class QuackBehavior {
 
-	public: virtual ~QuackBehavior() = 0 {
-	};
-	public: virtual void quack() const = 0;
-};
+      public:
+        virtual ~QuackBehavior()
+        {}
+        virtual void quack() const = 0;
+      };
 
-} // namespace MiniDuckSimulator
-} // namespace Interpreter
+    } // namespace MiniDuckSimulator
+  } // namespace Interpreter
 } // namespace HeadFirstDesignPatterns
 
 #endif

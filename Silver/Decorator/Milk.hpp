@@ -4,27 +4,33 @@
 #include "Starbuzz.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Decorator {
+  namespace Decorator {
 
-class Milk : public CondimentDecorator {
+    class Milk : public CondimentDecorator {
 
-	private: const Beverage* _beverage;
+      const Beverage* _beverage;
 
-	public: explicit Milk( const Beverage* beverage ) :
-		_beverage( beverage ) { assert( beverage );
-	}
-	public: ~Milk() {
-		delete _beverage;
-	}
- 	public: std::string getDescription() const {
-		return _beverage->getDescription() + ", Milk";
-	}
- 	public: double cost() const {
-		return 0.10 + _beverage->cost();
-	}
-};
+    public:
+      explicit Milk( const Beverage* beverage ) :
+        _beverage( beverage )
+      {
+        assert( beverage );
+      }
+      ~Milk()
+      {
+        delete _beverage;
+      }
+      std::string getDescription() const
+      {
+        return _beverage->getDescription() + ", Milk";
+      }
+      double cost() const
+      {
+        return 0.10 + _beverage->cost();
+      }
+    };
 
-} // namespace Observer
+  } // namespace Observer
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -4,26 +4,28 @@
 #include "FowlWeight.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace FlyWeight {
-namespace FowlWeight {
+  namespace FlyWeight {
+    namespace FowlWeight {
 
-// Flyweight
+      // Flyweight
 
-class Fowl {
+      class Fowl {
 
-	public: const enum type{mallard, redhead, rubber, model, turkey, last};
+      protected:
+        Fowl()
+        {}
+      public:
+        enum type{mallard, redhead, rubber, model, turkey, last};
 
-	protected: Fowl() {
-	}
-	public: virtual ~Fowl() = 0 {
-	}
-	public: virtual void quack() const = 0;
-	public: virtual void swim() const = 0;
-	public: virtual std::string toString() const = 0;
-};
+        virtual ~Fowl()
+        {}
+        virtual void quack() const = 0;
+        virtual void swim() const = 0;
+        virtual std::string toString() const = 0;
+      };
 
-} // namespace FowlWeight
-} // namespace FlyWeight
+    } // namespace FowlWeight
+  } // namespace FlyWeight
 } // namespace HeadFirstDesignPatterns
 
 #endif

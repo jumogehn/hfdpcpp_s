@@ -4,38 +4,44 @@
 #include "HomeTheater.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Facade {
-namespace HomeTheater {
+  namespace Facade {
+    namespace HomeTheater {
 
-class TheaterLights {
+      class TheaterLights {
 
-	private: std::string _description;
-	
-	private: TheaterLights( const TheaterLights& ); // Disable copy constructor
-	private: void operator=( const TheaterLights& ); // Disable assignment operator
+        std::string _description;
 
-	public: TheaterLights( std::string description ) :
-		_description( description ) {
-	}
-	public: void on() {
-		std::cout << _description.c_str() << " on" << std::endl;
-	}
+        TheaterLights( const TheaterLights& ); // Disable copy constructor
+        void operator=( const TheaterLights& ); // Disable assignment operator
 
-	public: void off() {
-		std::cout << _description.c_str() << " off" << std::endl;
-	}
+      public:
+        TheaterLights( std::string description ) :
+          _description( description )
+        {}
+        void on()
+        {
+          std::cout << _description.c_str() << " on" << std::endl;
+        }
 
-	public: void dim( int level ) {
-		std::cout << _description.c_str() << " dimming to " << level  << "%" << std::endl;
-	}
+        void off()
+        {
+          std::cout << _description.c_str() << " off" << std::endl;
+        }
 
-	public: std::string toString() {
-		return _description;
-	}
-};
+        void dim( int level )
+        {
+          std::cout << _description.c_str() << " dimming to " << level
+            << "%" << std::endl;
+        }
 
-} // namespace HomeTheater
-} // namespace Facade
+        std::string toString()
+        {
+          return _description;
+        }
+      };
+
+    } // namespace HomeTheater
+  } // namespace Facade
 } // namespace HeadFirstDesignPatterns
 
 #endif

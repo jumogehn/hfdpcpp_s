@@ -4,20 +4,22 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+  namespace Interpreter {
+    namespace MiniDuckSimulator {
 
-class NullCommand : public Expression {
+      class NullCommand : public Expression {
 
-	private: std::string _value;
+        std::string _value;
 
-	public: bool accept( Visitor* visitor ) {
-		return visitor->interpret( this );
-	}
-};
+      public:
+        bool accept( Visitor* visitor )
+        {
+          return visitor->interpret( this );
+        }
+      };
 
-} // namespace MiniDuckSimulator
-} // namespace Interpreter
+    } // namespace MiniDuckSimulator
+  } // namespace Interpreter
 } // namespace HeadFirstDesignPatterns
 
 #endif

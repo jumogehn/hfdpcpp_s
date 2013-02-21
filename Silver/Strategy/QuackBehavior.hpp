@@ -4,16 +4,17 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Strategy {
+  namespace Strategy {
 
-class QuackBehavior {
+    class QuackBehavior {
 
-	public: virtual ~QuackBehavior() = 0 {
-	};
-	public: virtual void quack() const = 0;
-};
+    public:
+      virtual ~QuackBehavior()
+      {}
+      virtual void quack() const = 0;
+    };
 
-} // namespace Strategy
+  } // namespace Strategy
 } // namespace HeadFirstDesignPatterns
 
 #endif

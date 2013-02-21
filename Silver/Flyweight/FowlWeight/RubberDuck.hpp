@@ -4,33 +4,37 @@
 #include "FowlWeight.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace FlyWeight {
-namespace FowlWeight {
+  namespace FlyWeight {
+    namespace FowlWeight {
 
-// ConcreteFlyweight
+      // ConcreteFlyweight
 
-class RubberDuck : public Fowl {
+      class RubberDuck : public Fowl {
 
-	private: std::string _type;
-	private: std::string _sound;
-	private: std::string _swim;
+        std::string _type;
+        std::string _sound;
+        std::string _swim;
 
-	public: RubberDuck() :
-		_type( "Rubber Duck" ), _sound( "Squeak" ), _swim( "floats" ) {
-	}
-	public: void quack() const {
-		std::cout << _sound.c_str();
-	}
-	public: void swim() const {
-		std::cout << _swim.c_str();
-	}
-	public: std::string toString() const {
-		return _type.c_str();
-	}
-};
+      public:
+        RubberDuck() :
+          _type( "Rubber Duck" ), _sound( "Squeak" ), _swim( "floats" )
+        {}
+        void quack() const
+        {
+          std::cout << _sound.c_str();
+        }
+        void swim() const
+        {
+          std::cout << _swim.c_str();
+        }
+        std::string toString() const
+        {
+          return _type.c_str();
+        }
+      };
 
-} // namespace FowlWeight
-} // namespace FlyWeight
+    } // namespace FowlWeight
+  } // namespace FlyWeight
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -4,23 +4,27 @@
 #include "Remote.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace Remote {
+  namespace Command {
+    namespace Remote {
 
-class GarageDoorUpCommand : public Command {
+      class GarageDoorUpCommand : public Command {
 
-	private: const GarageDoor* _garageDoor;
+        const GarageDoor* _garageDoor;
 
-	public: explicit GarageDoorUpCommand( const GarageDoor* garageDoor ) :
-		_garageDoor( garageDoor ) { assert( garageDoor );
-	}
-	public: void execute() const {
-		_garageDoor->up();
-	}
-};
+      public:
+        explicit GarageDoorUpCommand( const GarageDoor* garageDoor ) :
+          _garageDoor( garageDoor )
+        {
+          assert( garageDoor );
+        }
+        void execute() const
+        {
+          _garageDoor->up();
+        }
+      };
 
-} // namespace Remote
-} // namespace Command
+    } // namespace Remote
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

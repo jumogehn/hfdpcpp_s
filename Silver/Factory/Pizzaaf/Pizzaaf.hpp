@@ -22,7 +22,7 @@
 #include "Onion.hpp"
 #include "RedPepper.hpp"
 #include "Spinach.hpp"
-#include "Eggplant.hpp"
+#include "EggPlant.hpp"
 
 #include "Pepperoni.hpp"
 #include "SlicedPepperoni.hpp"

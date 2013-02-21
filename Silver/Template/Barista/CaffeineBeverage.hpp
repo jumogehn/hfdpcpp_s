@@ -4,31 +4,35 @@
 #include "Barista.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Template {
-namespace Barista {
+  namespace Template {
+    namespace Barista {
 
-class CaffeineBeverage {
+      class CaffeineBeverage {
+        void boilWater() const
+        {
+          std::cout << "Boiling water" << std::endl;
+        }
+        void pourInCup() const
+        {
+          std::cout << "Pouring into cup" << std::endl;
+        }
+      protected:
+        virtual void brew() const = 0;
+        virtual void addCondiments() const = 0;
 
-	public: virtual ~CaffeineBeverage() = 0 {
-	}
-	public: virtual void prepareRecipe() {
-		boilWater();
-		brew();
-		pourInCup();
-		addCondiments();
-	}
- 	protected: virtual void brew() const = 0;
- 	protected: virtual void addCondiments() const = 0;
- 	private: void boilWater() const {
-		std::cout << "Boiling water" << std::endl;
-	}
- 	private: void pourInCup() const {
-		std::cout << "Pouring into cup" << std::endl;
-	}
-};
+      public:
+        virtual ~CaffeineBeverage()
+        {}
+        virtual void prepareRecipe() {
+          boilWater();
+          brew();
+          pourInCup();
+          addCondiments();
+        }
+      };
 
-} // namespace Barista
-} // namespace Template
+    } // namespace Barista
+  } // namespace Template
 } // namespace HeadFirstDesignPatterns
 
 #endif

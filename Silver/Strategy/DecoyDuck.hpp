@@ -4,18 +4,19 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Strategy {
+  namespace Strategy {
 
-class DecoyDuck : public Duck {
+    class DecoyDuck : public Duck {
 
-	public:	DecoyDuck() : Duck( new FlyNoWay(), new MuteQuack() ) {
-	}
-	public: void display() const {
-		std::cout << "I'm a duck Decoy" << std::endl;
-	}
-};
+    public:
+      DecoyDuck() : Duck( new FlyNoWay(), new MuteQuack() ) {
+      }
+      void display() const {
+        std::cout << "I'm a duck Decoy" << std::endl;
+      }
+    };
 
-} // namespace Strategy
+  } // namespace Strategy
 } // namespace HeadFirstDesignPatterns
 
 #endif

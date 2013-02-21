@@ -4,16 +4,18 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Strategy {
+  namespace Strategy {
 
-class FlyWithWings : public FlyBehavior {
+    class FlyWithWings : public FlyBehavior {
 
-	public:	void fly () const {
-		std::cout << "I'm flying!!" << std::endl;
-	}
-};
+    public:
+      void fly () const
+      {
+        std::cout << "I'm flying!!" << std::endl;
+      }
+    };
 
-} // namespace Strategy
+  } // namespace Strategy
 } // namespace HeadFirstDesignPatterns
 
 #endif

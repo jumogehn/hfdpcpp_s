@@ -4,29 +4,34 @@
 #include "Undo.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace Undo {
+  namespace Command {
+    namespace Undo {
 
-class DimmerLightOnCommand : public Command {
+      class DimmerLightOnCommand : public Command {
 
-	private: const Light* _light;
-	private: mutable int _prevLevel;
- 
-	public: explicit DimmerLightOnCommand( const Light* light ) :
-		_light( light ) { assert( light );
-		_prevLevel = _light->getLevel();
-	}
-	public: void execute() const {
-		_prevLevel = _light->getLevel();
-		_light->dim( 75 );
-	}
-	public: void undo() const {
-		_light->dim( _prevLevel );
-	}
-};
+        const Light* _light;
+        mutable int _prevLevel;
 
-} // namespace Undo
-} // namespace Command
+      public:
+        explicit DimmerLightOnCommand( const Light* light ) :
+          _light( light )
+        {
+          assert( light );
+          _prevLevel = _light->getLevel();
+        }
+        void execute() const
+        {
+          _prevLevel = _light->getLevel();
+          _light->dim( 75 );
+        }
+        void undo() const
+        {
+          _light->dim( _prevLevel );
+        }
+      };
+
+    } // namespace Undo
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

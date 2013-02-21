@@ -4,29 +4,34 @@
 #include "Remotes.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Bridge {
-namespace Remotes {
+  namespace Bridge {
+    namespace Remotes {
 
-class RCA : public TV {
+      class RCA : public TV {
 
-	private: std::string _location;
+        std::string _location;
 
-	public: explicit RCA( const std::string& location ) : 
-		_location( location ) {
-	}
-	public: void on() {
-		std::cout << "RCA " << _location.c_str() << " TV is on" << std::endl;
-	}
-	public: void off() {
-		std::cout << "RCA " << _location.c_str() << " TV is off" << std::endl;
-	}
-	public: void tuneChannel(unsigned int channel) {
-		std::cout << "RCA " << _location.c_str() << " tuned to channel " << channel << std::endl;
-	}
-};
+      public:
+        explicit RCA( const std::string& location ) :
+          _location( location )
+        {}
+        void on()
+        {
+          std::cout << "RCA " << _location.c_str() << " TV is on" << std::endl;
+        }
+        void off()
+        {
+          std::cout << "RCA " << _location.c_str() << " TV is off" << std::endl;
+        }
+        void tuneChannel(unsigned int channel)
+        {
+          std::cout << "RCA " << _location.c_str() << " tuned to channel "
+            << channel << std::endl;
+        }
+      };
 
-} // namespace Remotes
-} // namespace Bridge
+    } // namespace Remotes
+  } // namespace Bridge
 } // namespace HeadFirstDesignPatterns
 
 #endif

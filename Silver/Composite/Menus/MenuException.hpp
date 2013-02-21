@@ -2,26 +2,32 @@
 #define _HFDP_CPP_COMPOSITE_MENUS_EXCEPTION_HPP_
 
 namespace HeadFirstDesignPatterns {
-namespace Composite {
-namespace Menus {
+  namespace Composite {
+    namespace Menus {
 
-class UnsupportedOperationException : public std::exception {
+      class UnsupportedOperationException : public std::exception {
 
-	private: std::string _message;
-			
-	public: UnsupportedOperationException() : 
-		std::exception() {
-	}
-	public: UnsupportedOperationException( const std::string message ) : 
-		std::exception( message.c_str() ), _message( message ) {
-	}
-	public: std::string getMessage() const {
-		return _message;
-	}
-};
+        std::string _message;
 
-} // namespace Menus
-} // namespace Composite
+      public:
+        UnsupportedOperationException() throw():
+          std::exception()
+        {}
+        UnsupportedOperationException( const std::string message ) :
+          std::exception( /*message.c_str()*/ ), _message( message )
+        {}
+
+        virtual ~UnsupportedOperationException() throw()
+        {}
+
+        std::string getMessage() const
+        {
+          return _message;
+        }
+      };
+
+    } // namespace Menus
+  } // namespace Composite
 } // namespace HeadFirstDesignPatterns
 
 #endif

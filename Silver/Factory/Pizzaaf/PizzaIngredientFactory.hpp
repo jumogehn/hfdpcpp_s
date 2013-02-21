@@ -4,21 +4,22 @@
 #include "Pizzaaf.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Factory {
-namespace Abstract {
+  namespace Factory {
+    namespace Abstract {
 
-class PizzaIngredientFactory {
-	public: virtual Dough* createDough() const = 0;
-	public: virtual Sauce* createSauce() const = 0;
-	public: virtual Cheese* createCheese() const = 0;
-	public: virtual std::vector< Veggies* > createVeggies() const = 0;
-	public: virtual Pepperoni* createPepperoni() const = 0;
-	public: virtual Clams* createClam() const = 0;
-	public: virtual ~PizzaIngredientFactory() = 0 {
-	}};
+      class PizzaIngredientFactory {
+      public:
+        virtual Dough* createDough() const = 0;
+        virtual Sauce* createSauce() const = 0;
+        virtual Cheese* createCheese() const = 0;
+        virtual std::vector< Veggies* > createVeggies() const = 0;
+        virtual Pepperoni* createPepperoni() const = 0;
+        virtual Clams* createClam() const = 0;
+        virtual ~PizzaIngredientFactory() {
+        }};
 
-} // namespace Abstract
-} // namespace Factory
+    } // namespace Abstract
+  } // namespace Factory
 } // namespace HeadFirstDesignPatterns
 
 #endif

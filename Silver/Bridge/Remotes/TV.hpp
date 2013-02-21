@@ -4,21 +4,22 @@
 #include "Remotes.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Bridge {
-namespace Remotes {
+  namespace Bridge {
+    namespace Remotes {
 
-class TV {
-	protected: TV() {
-	}
-	public: virtual ~TV() = 0 {
-	}
-	public: virtual void on() = 0;
-	public: virtual void off() = 0;
-	public: virtual void tuneChannel( unsigned int channel ) = 0;
-};
+      class TV {
+      protected:
+        TV() {}
+      public:
+        virtual ~TV()
+        {}
+        virtual void on() = 0;
+        virtual void off() = 0;
+        virtual void tuneChannel( unsigned int channel ) = 0;
+      };
 
-} // namespace Remotes
-} // namespace Bridge
+    } // namespace Remotes
+  } // namespace Bridge
 } // namespace HeadFirstDesignPatterns
 
 #endif

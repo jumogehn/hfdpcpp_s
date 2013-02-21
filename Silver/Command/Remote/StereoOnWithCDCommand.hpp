@@ -4,25 +4,29 @@
 #include "Remote.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace Remote {
+  namespace Command {
+    namespace Remote {
 
-class StereoOnWithCDCommand : public Command {
+      class StereoOnWithCDCommand : public Command {
 
-	private: const Stereo* _stereo;
- 
-	public: explicit StereoOnWithCDCommand( const Stereo* stereo ) :
-		_stereo( stereo ) { assert( stereo );
-	}
-	public: void execute() const {
-		_stereo->on();
-		_stereo->setCD();
-		_stereo->setVolume(11);
-	}
-};
+        const Stereo* _stereo;
 
-} // namespace Remote
-} // namespace Command
+      public:
+        explicit StereoOnWithCDCommand( const Stereo* stereo ) :
+          _stereo( stereo )
+        {
+          assert( stereo );
+        }
+        void execute() const
+        {
+          _stereo->on();
+          _stereo->setCD();
+          _stereo->setVolume(11);
+        }
+      };
+
+    } // namespace Remote
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

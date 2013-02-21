@@ -4,24 +4,27 @@
 #include "Starbuzz.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Decorator {
+  namespace Decorator {
 
-class Beverage {
+    class Beverage {
 
- 	protected: std::string _description;
+    protected:
+      std::string _description;
 
-	protected: Beverage() : 
-		_description( "Unknown Beverage" ) {
-	}
-	public: virtual ~Beverage() = 0 {
-	}
-	public: virtual std::string getDescription() const {
-		return _description;
-	}
-	public: virtual double cost() const = 0;
-};
+      Beverage() :
+        _description( "Unknown Beverage" )
+      {}
+    public:
+      virtual ~Beverage()
+      {}
+      virtual std::string getDescription() const
+      {
+        return _description;
+      }
+      virtual double cost() const = 0;
+    };
 
-} // namespace Observer
+  } // namespace Observer
 } // namespace HeadFirstDesignPatterns
 
 #endif

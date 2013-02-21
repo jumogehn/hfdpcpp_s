@@ -4,21 +4,24 @@
 #include "Ducks.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Adapter {
-namespace Ducks {
+  namespace Adapter {
+    namespace Ducks {
 
-class MallardDuck : public Duck {
+      class MallardDuck : public Duck {
 
- 	public: void fly() const {
-		std::cout << "I'm flying" << std::endl;
-	}
-	public: void quack() const {
-		std::cout << "Quack" << std::endl;
-	}
-};
+      public:
+        void fly() const
+        {
+          std::cout << "I'm flying" << std::endl;
+        }
+        void quack() const
+        {
+          std::cout << "Quack" << std::endl;
+        }
+      };
 
-} // namespace Ducks
-} // namespace Adapter
+    } // namespace Ducks
+  } // namespace Adapter
 } // namespace HeadFirstDesignPatterns
 
 #endif

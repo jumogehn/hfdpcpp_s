@@ -4,29 +4,33 @@
 #include "Pizzaaf.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Factory {
-namespace Abstract {
+  namespace Factory {
+    namespace Abstract {
 
-class PizzaStore {
+      class PizzaStore {
 
-	protected: PizzaStore() {
-	}
-	public: virtual ~PizzaStore() = 0 {
-	}
-	public: std::auto_ptr< Pizza > orderPizza( std::string type ) const {
-		std::auto_ptr< Pizza > pizza( createPizza( type ) );
-		std::cout << "--- Making a " << pizza->getName() << " ---" << std::endl;
-		pizza->prepare();
-		pizza->bake();
-		pizza->cut();
-		pizza->box();
-		return pizza;
-	}
-	public: virtual std::auto_ptr< Pizza > createPizza( std::string type ) const = 0;
-};
+      protected:
+        PizzaStore()
+        {}
+      public:
+        virtual ~PizzaStore()
+        {}
+        std::auto_ptr< Pizza > orderPizza( std::string type ) const
+        {
+          std::auto_ptr< Pizza > pizza( createPizza( type ) );
+          std::cout << "--- Making a " << pizza->getName() << " ---"
+            << std::endl;
+          pizza->prepare();
+          pizza->bake();
+          pizza->cut();
+          pizza->box();
+          return pizza;
+        }
+        virtual std::auto_ptr< Pizza > createPizza(std::string type) const = 0;
+      };
 
-} // namespace Method
-} // namespace Factory
+    } // namespace Method
+  } // namespace Factory
 } // namespace HeadFirstDesignPatterns
 
 #endif

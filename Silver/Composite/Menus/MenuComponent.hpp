@@ -2,46 +2,55 @@
 #define _HFDP_CPP_COMPOSITE_MENUS_MENU_COMPONENT_HPP_
 
 namespace HeadFirstDesignPatterns {
-namespace Composite {
-namespace Menus {
+  namespace Composite {
+    namespace Menus {
 
-class MenuComponent {
+      class MenuComponent {
 
-	private: MenuComponent( const MenuComponent& ); // Disable copy constructor
-	private: void operator=( const MenuComponent& ); // Disable assignment operator
+        MenuComponent( const MenuComponent& ); // Disable copy constructor
+        void operator=( const MenuComponent& ); // Disable assignment operator
 
-	public: MenuComponent() {
-	}
-	public: virtual ~MenuComponent() = 0 {
-	}
-	public: virtual void add( MenuComponent* menuComponent ) {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual void remove( MenuComponent* menuComponent ) {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual const MenuComponent* getChild( int i ) const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual std::string getName() const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual std::string getDescription() const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual double getPrice() const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual bool isVegetarian() const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual void print() const {
-		throw new UnsupportedOperationException();
-	}
-};
+      public:
+        MenuComponent() {
+        }
+        virtual ~MenuComponent()
+        {}
+        virtual void add( MenuComponent* menuComponent )
+        {
+          throw new UnsupportedOperationException();
+        }
+        virtual void remove( MenuComponent* menuComponent )
+        {
+          throw new UnsupportedOperationException();
+        }
+        virtual const MenuComponent* getChild( int i ) const
+        {
+          throw new UnsupportedOperationException();
+        }
+        virtual std::string getName() const
+        {
+          throw new UnsupportedOperationException();
+        }
+        virtual std::string getDescription() const
+        {
+          throw new UnsupportedOperationException();
+        }
+        virtual double getPrice() const
+        {
+          throw new UnsupportedOperationException();
+        }
+        virtual bool isVegetarian() const
+        {
+          throw new UnsupportedOperationException();
+        }
+        virtual void print() const
+        {
+          throw new UnsupportedOperationException();
+        }
+      };
 
-} // namespace Menus
-} // namespace Composite
+    } // namespace Menus
+  } // namespace Composite
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -4,46 +4,57 @@
 #include "FowlWeight.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace FlyWeight {
-namespace FowlWeight {
+  namespace FlyWeight {
+    namespace FowlWeight {
 
-// Unshared ConcreteFlyweight
+      // Unshared ConcreteFlyweight
 
-class Bird : public Fowl {
+      class Bird : public Fowl {
 
-	private: const Fowl* _fowl;
-	private: int _number;
-	private: double _weight;
+        const Fowl* _fowl;
+        int _number;
+        double _weight;
 
-	private: Bird( const Bird& ); // Disable copy constructor
-    private: void operator=( const Bird& ); // Disable assignment operator
+        Bird( const Bird& ); // Disable copy constructor
+        void operator=( const Bird& ); // Disable assignment operator
 
-	public: Bird( const Fowl* fowl, int number = 0, double weight = 0.0 ) :
-		_fowl( fowl ), _number( number ), _weight( weight ) { assert( fowl );
-	}
-	public: void quack() const { assert( _fowl );
-		_fowl->quack();
-	}
-	public: void swim() const { assert( _fowl );
-		_fowl->swim();
-	}
-	public: double getWeight() const {
-		return _weight;
-	}
-	public: double getNumber() const {
-		return _number;
-	}
-	public: std::string toString() const { assert( _fowl );
-		std::stringstream value; 
-		value << "Bird #"<< _number + 1 << ", ";
-		value << "weighs " << _weight << " pounds, ";
-		value << "is a " << _fowl->toString();
-		return value.str();
-	}
-};
+      public:
+        Bird( const Fowl* fowl, int number = 0, double weight = 0.0 ) :
+          _fowl( fowl ), _number( number ), _weight( weight )
+        {
+          assert( fowl );
+        }
+        void quack() const
+        {
+          assert( _fowl );
+          _fowl->quack();
+        }
+        void swim() const
+        {
+          assert( _fowl );
+          _fowl->swim();
+        }
+        double getWeight() const
+        {
+          return _weight;
+        }
+        double getNumber() const
+        {
+          return _number;
+        }
+        std::string toString() const
+        {
+          assert( _fowl );
+          std::stringstream value;
+          value << "Bird #"<< _number + 1 << ", ";
+          value << "weighs " << _weight << " pounds, ";
+          value << "is a " << _fowl->toString();
+          return value.str();
+        }
+      };
 
-} // namespace FowlWeight
-} // namespace FlyWeight
+    } // namespace FowlWeight
+  } // namespace FlyWeight
 } // namespace HeadFirstDesignPatterns
 
 #endif

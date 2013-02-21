@@ -4,32 +4,36 @@
 #include "HomeTheater.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Facade {
-namespace HomeTheater {
+  namespace Facade {
+    namespace HomeTheater {
 
-class Screen {
+      class Screen {
 
-	private: std::string _description;
-	
-	private: Screen( const Screen& ); // Disable copy constructor
-	private: void operator=( const Screen& ); // Disable assignment operator
+        std::string _description;
 
-	public: Screen( std::string description ) :
-		_description( description ) {
-	}
-	public: void up() {
-		std::cout << _description.c_str() << " going up" << std::endl;
-	}
-	public: void down() {
-		std::cout << _description.c_str() << " going down" << std::endl;
-	}
-    public: std::string toString() {
-		return _description;
-    }
-};
+        Screen( const Screen& ); // Disable copy constructor
+        void operator=( const Screen& ); // Disable assignment operator
 
-} // namespace HomeTheater
-} // namespace Facade
+      public:
+        Screen( std::string description ) :
+          _description( description )
+        {}
+        void up()
+        {
+          std::cout << _description.c_str() << " going up" << std::endl;
+        }
+        void down()
+        {
+          std::cout << _description.c_str() << " going down" << std::endl;
+        }
+        std::string toString()
+        {
+          return _description;
+        }
+      };
+
+    } // namespace HomeTheater
+  } // namespace Facade
 } // namespace HeadFirstDesignPatterns
 
 #endif

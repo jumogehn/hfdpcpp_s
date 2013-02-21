@@ -4,22 +4,23 @@
 #include "FowlWeight.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace FlyWeight {
-namespace FowlWeight {
+  namespace FlyWeight {
+    namespace FowlWeight {
 
-// Abstract Flyweight
+      // Abstract Flyweight
 
-class Turkey {
+      class Turkey {
 
-	public: virtual ~Turkey() = 0 {
-	}
-	public: virtual void gobble() const = 0;
-	public: virtual void walk() const = 0;
-	public: virtual std::string toString() const = 0;
-};
+      public:
+        virtual ~Turkey()
+        {}
+        virtual void gobble() const = 0;
+        virtual void walk() const = 0;
+        virtual std::string toString() const = 0;
+      };
 
-} // namespace FowlWeight
-} // namespace FlyWeight
+    } // namespace FowlWeight
+  } // namespace FlyWeight
 } // namespace HeadFirstDesignPatterns
 
 #endif

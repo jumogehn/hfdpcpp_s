@@ -4,18 +4,19 @@
 #include "Pizzaaf.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Factory {
-namespace Abstract {
+  namespace Factory {
+    namespace Abstract {
 
-class Veggies {
+      class Veggies {
 
-	public: virtual ~Veggies() = 0 {
-	}
-	public: virtual std::string toString() const = 0;
-};
+      public:
+        virtual ~Veggies()
+        {}
+        virtual std::string toString() const = 0;
+      };
 
-} // namespace Abstract
-} // namespace Factory
+    } // namespace Abstract
+  } // namespace Factory
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -2,41 +2,49 @@
 #define _HFDP_CPP_BUILDER_EVENT_COMPONENT_HPP_
 
 namespace HeadFirstDesignPatterns {
-namespace Builder {
+  namespace Builder {
 
-class EventComponent {
+    class EventComponent {
 
-	private: EventComponent( const EventComponent& ); // Disable copy constructor
-	private: void operator=( const EventComponent& ); // Disable assignment operator
+      EventComponent( const EventComponent& ); // Disable copy constructor
+      void operator=( const EventComponent& ); // Disable assignment operator
 
-	public: EventComponent() {
-	}
-	public: virtual ~EventComponent() = 0 {
-	}
-	public: virtual EventComponent* add( EventComponent* event ) {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual void remove( EventComponent* event ) {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual const EventComponent* getChild( int i ) const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual std::string getName() const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual std::string getDescription() const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual double getPrice() const {
-		throw new UnsupportedOperationException();
-	}
-	public: virtual void print() const {
-		throw new UnsupportedOperationException();
-	}
-};
+    public:
+      EventComponent()
+      {}
+      virtual ~EventComponent()
+      {}
+      virtual EventComponent* add( EventComponent* event )
+      {
+        throw new UnsupportedOperationException();
+      }
+      virtual void remove( EventComponent* event )
+      {
+        throw new UnsupportedOperationException();
+      }
+      virtual const EventComponent* getChild( int i ) const
+      {
+        throw new UnsupportedOperationException();
+      }
+      virtual std::string getName() const
+      {
+        throw new UnsupportedOperationException();
+      }
+      virtual std::string getDescription() const
+      {
+        throw new UnsupportedOperationException();
+      }
+      virtual double getPrice() const
+      {
+        throw new UnsupportedOperationException();
+      }
+      virtual void print() const
+      {
+        throw new UnsupportedOperationException();
+      }
+    };
 
-} // namespace Builder
+  } // namespace Builder
 } // namespace HeadFirstDesignPatterns
 
 #endif

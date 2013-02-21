@@ -4,35 +4,45 @@
 #include "Remotes.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Bridge {
-namespace Remotes {
+  namespace Bridge {
+    namespace Remotes {
 
-class RemoteControl {
+      class RemoteControl {
 
-	protected: TV* _implementor;
+        RemoteControl( const RemoteControl& ); // Disable copy constructor
+        void operator=( const RemoteControl& ); // Disable assignment operator
 
-	private: RemoteControl( const RemoteControl& ); // Disable copy constructor
-	private: void operator=( const RemoteControl& ); // Disable assignment operator
+      protected:
+        TV* _implementor;
+        RemoteControl() :
+          _implementor( 0 )
+        {}
+        virtual void setChannel( unsigned int channel )
+        {
+          assert( _implementor );
+          _implementor->tuneChannel( channel );
+        }
 
-	protected: RemoteControl() :
-		_implementor( 0 ) {
-	}
-	public: virtual ~RemoteControl() {
-		delete _implementor;
-	}
-	public: virtual void on() { assert( _implementor );
-		_implementor->on();
-	}
-	public: virtual void off() { assert( _implementor );
-		_implementor->off();
-	}
-	protected: virtual void setChannel( unsigned int channel ) { assert( _implementor );
-		_implementor->tuneChannel( channel );
-	}
-};
+      public:
+        virtual ~RemoteControl()
+        {
+          delete _implementor;
+        }
+        virtual void on()
+        {
+          assert( _implementor );
+          _implementor->on();
+        }
+        virtual void off()
+        {
+          assert( _implementor );
+          _implementor->off();
+        }
 
-} // namespace Remotes
-} // namespace Bridge
+      };
+
+    } // namespace Remotes
+  } // namespace Bridge
 } // namespace HeadFirstDesignPatterns
 
 #endif

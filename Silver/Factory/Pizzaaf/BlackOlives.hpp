@@ -4,18 +4,20 @@
 #include "Pizzaaf.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Factory {
-namespace Abstract {
+  namespace Factory {
+    namespace Abstract {
 
-class BlackOlives : public Veggies {
+      class BlackOlives : public Veggies {
 
-	public: std::string toString() const {
-		return ( "Black Olives" );
-	}
-};
+      public:
+        std::string toString() const
+        {
+          return ( "Black Olives" );
+        }
+      };
 
-} // namespace Abstract
-} // namespace Factory
+    } // namespace Abstract
+  } // namespace Factory
 } // namespace HeadFirstDesignPatterns
 
 #endif

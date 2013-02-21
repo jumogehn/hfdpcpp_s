@@ -4,23 +4,27 @@
 #include "Remote.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace Remote {
+  namespace Command {
+    namespace Remote {
 
-class LightOffCommand : public Command {
+      class LightOffCommand : public Command {
 
-	private: const Light* _light;
- 
-	public: explicit LightOffCommand( const Light* light  ) :
-		_light( light ) { assert( light );
-	}
-	public: void execute() const {
-		_light->off();
-	}
-};
+        const Light* _light;
 
-} // namespace Remote
-} // namespace Command
+      public:
+        explicit LightOffCommand( const Light* light  ) :
+          _light( light )
+        {
+          assert( light );
+        }
+        void execute() const
+        {
+          _light->off();
+        }
+      };
+
+    } // namespace Remote
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -4,19 +4,21 @@
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+  namespace Interpreter {
+    namespace MiniDuckSimulator {
 
-class Repetitive : public Expression {
+      class Repetitive : public Expression {
 
-	protected: std::auto_ptr< Variable > _variable;
+      protected:
+        std::auto_ptr< Variable > _variable;
 
-	public: Repetitive(
-	public: virtual bool interpret( Context& context ) = 0;
-};
+      public:
+        Repetitive();
+        virtual bool interpret( Context& context ) = 0;
+      };
 
-} // namespace MiniDuckSimulator
-} // namespace Interpreter
+    } // namespace MiniDuckSimulator
+  } // namespace Interpreter
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -4,23 +4,25 @@
 #include "Remote.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Command {
-namespace Remote {
+  namespace Command {
+    namespace Remote {
 
-class Command {
+      class Command {
 
-	private: Command( const Command& ); // Disable copy constructor
-	private: void operator=( const Command& ); // Disable assignment operator
+        Command( const Command& ); // Disable copy constructor
+        void operator=( const Command& ); // Disable assignment operator
 
-	protected: Command() {
-	}
-	public: virtual ~Command() = 0 {
-	}
-	public: virtual void execute() const = 0;
-};
+      protected:
+        Command()
+        {}
+      public:
+        virtual ~Command()
+        {}
+        virtual void execute() const = 0;
+      };
 
-} // namespace Remote
-} // namespace Command
+    } // namespace Remote
+  } // namespace Command
 } // namespace HeadFirstDesignPatterns
 
 #endif

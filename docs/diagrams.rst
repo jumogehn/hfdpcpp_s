@@ -1,7 +1,4 @@
 
-Class Diagram
-=========================
-
 Adapter
 =======
 
@@ -12,7 +9,7 @@ Adapter
 
 **Sequence Diagram**
 
-.. image:: _static/not_defined_duck_adapter.jpg
+.. image:: _static/Adapter/Ducks/not_defined_duck_adapter.jpg
 
 
 Command

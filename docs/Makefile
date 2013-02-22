@@ -157,10 +157,12 @@ doctest:
 # XXX: Note that the output directory settings in `Doxyfile` are coupled
 # with the BUILDDIR variable in this Makefile and the settings in Sphinx's
 # `conf.py`.
+doxygen:
+	mkdir -p $(BUILDDIR)/html/doxygen
+	doxygen # doxygen automatically looks for `Doxyfile`.
 
-gh-pages: html
+gh-pages: html doxygen
 	git checkout gh-pages; cd ..; git rm -rf .; \
 	mv docs/_build/html/* .; rm -rf docs/; \
 	touch .nojekyll; git add -A; \
 	git commit -m "gh-pages for `git log -1 master --pretty=format:'%h'`"
-

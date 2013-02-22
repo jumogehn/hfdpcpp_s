@@ -13,6 +13,8 @@ Contents:
 
 If this addition is visible, my test is successful!
 
+You can view :download:`Doxygen Document<_static/linktodoxygen.html>`.
+
 Indices and tables
 ==================
 

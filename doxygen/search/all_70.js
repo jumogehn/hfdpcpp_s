@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['pancake',['Pancake',['../class_head_first_design_patterns_1_1_visitor_1_1_menus_1_1_pancake.html',1,'HeadFirstDesignPatterns::Visitor::Menus']]],
+  ['pancakehousemenu',['PancakeHouseMenu',['../class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_1_1_pancake_house_menu.html',1,'HeadFirstDesignPatterns::Iterator::DinerMerger']]],
+  ['pancakehousemenu',['PancakeHouseMenu',['../class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_pancake_house_menu.html',1,'HeadFirstDesignPatterns::Iterator::DinerMergerI']]],
+  ['pancakehousemenuiterator',['PancakeHouseMenuIterator',['../class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_pancake_house_menu_iterator.html',1,'HeadFirstDesignPatterns::Iterator::DinerMergerI']]],
+  ['pancakehousemenuiterator',['PancakeHouseMenuIterator',['../class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_1_1_pancake_house_menu_iterator.html',1,'HeadFirstDesignPatterns::Iterator::DinerMerger']]],
+  ['parmesancheese',['ParmesanCheese',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_parmesan_cheese.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
+  ['pasta',['Pasta',['../class_head_first_design_patterns_1_1_visitor_1_1_menus_1_1_pasta.html',1,'HeadFirstDesignPatterns::Visitor::Menus']]],
+  ['pepperoni',['Pepperoni',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_pepperoni.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
+  ['pepperonipizza',['PepperoniPizza',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_pepperoni_pizza.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
+  ['pepperonipizza',['PepperoniPizza',['../class_head_first_design_patterns_1_1_factory_1_1_simple_1_1_pepperoni_pizza.html',1,'HeadFirstDesignPatterns::Factory::Simple']]],
+  ['pizza',['Pizza',['../class_head_first_design_patterns_1_1_factory_1_1_method_1_1_pizza.html',1,'HeadFirstDesignPatterns::Factory::Method']]],
+  ['pizza',['Pizza',['../class_head_first_design_patterns_1_1_factory_1_1_simple_1_1_pizza.html',1,'HeadFirstDesignPatterns::Factory::Simple']]],
+  ['pizza',['Pizza',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_pizza.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
+  ['pizzaingredientfactory',['PizzaIngredientFactory',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_pizza_ingredient_factory.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
+  ['pizzastore',['PizzaStore',['../class_head_first_design_patterns_1_1_factory_1_1_method_1_1_pizza_store.html',1,'HeadFirstDesignPatterns::Factory::Method']]],
+  ['pizzastore',['PizzaStore',['../class_head_first_design_patterns_1_1_factory_1_1_simple_1_1_pizza_store.html',1,'HeadFirstDesignPatterns::Factory::Simple']]],
+  ['pizzastore',['PizzaStore',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_pizza_store.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
+  ['plumtomatosauce',['PlumTomatoSauce',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_plum_tomato_sauce.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
+  ['popcornpopper',['PopcornPopper',['../class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_popcorn_popper.html',1,'HeadFirstDesignPatterns::Facade::HomeTheater']]],
+  ['potato',['Potato',['../class_head_first_design_patterns_1_1_visitor_1_1_menus_1_1_potato.html',1,'HeadFirstDesignPatterns::Visitor::Menus']]],
+  ['projector',['Projector',['../class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_projector.html',1,'HeadFirstDesignPatterns::Facade::HomeTheater']]]
+];

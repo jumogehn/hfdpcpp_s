@@ -9,9 +9,10 @@ Welcome to sphinx_tst's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+  :maxdepth: 2
 
-If this addition is visible, my test is successful!
+  uml.rst
+
 
 You can view :download:`Doxygen Document<_static/linktodoxygen.html>`.
 

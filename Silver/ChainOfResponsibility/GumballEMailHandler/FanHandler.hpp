@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_CHAIN_OF_RESPONSIBILITY_FAN_HANDLER_HPP_
 #define _HFDP_CPP_CHAIN_OF_RESPONSIBILITY_FAN_HANDLER_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
   namespace ChainOfResponsibility {
     namespace GumballEMailHandler {
@@ -10,9 +13,12 @@ namespace HeadFirstDesignPatterns {
       public:
         explicit FanHandler( const Handler* successor = 0 ) :
           Handler( successor )
-        {}
+        {
+          HUM_TRACE(ACE_TEXT("FanHandler::FanHandler"));
+        }
         void handleRequest( std::string request ) const
         {
+          HUM_TRACE(ACE_TEXT("FanHandler::handleRequest"));
           std::transform( request.begin(), request.end(), request.begin(),
                           tolower );
 
@@ -24,6 +30,7 @@ namespace HeadFirstDesignPatterns {
         }
         bool canHandleRequest( const std::string& request ) const
         {
+          HUM_TRACE(ACE_TEXT("FanHandler::canHandleRequest"));
           bool value = false;
 
           if( std::string::npos != request.find( "razz" ) ) {
@@ -45,6 +52,7 @@ namespace HeadFirstDesignPatterns {
         }
         void print() const
         {
+          HUM_TRACE(ACE_TEXT("FanHandler::print"));
           std:: cout << std::endl << "Fan mail, send to CEO:";
           Handler::print();
         }

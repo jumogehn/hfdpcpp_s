@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_SIMPLE_FACTORY_CHEESE_PIZZA_HPP_
 #define _HFDP_CPP_SIMPLE_FACTORY_CHEESE_PIZZA_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Pizzas.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -12,6 +15,8 @@ namespace HeadFirstDesignPatterns {
       public:
         CheesePizza()
         {
+          HUM_TRACE(ACE_TEXT("CheesePizza::CheesePizza"));
+
           _name = "Cheese Pizza";
           _dough = "Regular Crust";
           _sauce = "Marinara Pizza Sauce";

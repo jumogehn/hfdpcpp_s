@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_COMMAND_REMOTE_CONTROL_WITH_UNDO_HPP_
 #define _HFDP_CPP_COMMAND_REMOTE_CONTROL_WITH_UNDO_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Undo.hpp"
 #include <typeinfo>
 
@@ -23,6 +26,7 @@ namespace HeadFirstDesignPatterns {
       public:
         RemoteControlWithUndo()
         {
+          HUM_TRACE(ACE_TEXT("RemoteControlWithUndo::RemoteControlWithUndo"));
           _noCommand = new NoCommand();
           for( int i = 0; i < SLOTS; i++ ) {
             _onCommands[i] = _noCommand;
@@ -32,32 +36,38 @@ namespace HeadFirstDesignPatterns {
         }
         ~RemoteControlWithUndo()
         {
+          HUM_TRACE(ACE_TEXT("RemoteControlWithUndo::~RemoteControlWithUndo"));
           delete _noCommand;
         }
         void setCommand( int slot, Command* onCommand, Command* offCommand )
         {
           assert( slot <= SLOTS ); assert( onCommand ); assert( offCommand );
+          HUM_TRACE(ACE_TEXT("RemoteControlWithUndo::setCommand"));
           _onCommands[slot]  = onCommand;
           _offCommands[slot] = offCommand;
         }
         void onButtonWasPushed( int slot ) const
         {
           assert( slot <= SLOTS );
+          HUM_TRACE(ACE_TEXT("RemoteControlWithUndo::onButtonWasPushed"));
           _onCommands[slot]->execute();
           _undoCommand = _onCommands[slot];
         }
         void offButtonWasPushed( int slot ) const
         {
           assert( slot <= SLOTS );
+          HUM_TRACE(ACE_TEXT("RemoteControlWithUndo::offButtonWasPushed"));
           _offCommands[slot]->execute();
           _undoCommand = _offCommands[slot];
         }
         void undoButtonWasPushed() const
         {
+          HUM_TRACE(ACE_TEXT("RemoteControlWithUndo::undoButtonWasPushed"));
           _undoCommand->undo();
         }
         std::string toString() const
         {
+          HUM_TRACE(ACE_TEXT("RemoteControlWithUndo::toString"));
           std::stringstream value;
           value << std::endl << "------ Remote Control -------" << std::endl;
           for( int i = 0; i < SLOTS; i++ ) {

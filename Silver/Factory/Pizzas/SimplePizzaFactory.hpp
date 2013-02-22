@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_SIMPLE_PIZZA_FACTORY_HPP_
 #define _HFDP_CPP_SIMPLE_PIZZA_FACTORY_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Pizzas.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -12,6 +15,7 @@ namespace HeadFirstDesignPatterns {
       public:
         Pizza* createPizza( std::string type ) const
         {
+          HUM_TRACE(ACE_TEXT("SimplePizzaFactory::createPizza"));
           Pizza* pizza = 0;
           if( type.compare( "cheese" ) == 0 ) {
             pizza = new CheesePizza();

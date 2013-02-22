@@ -1,9 +1,16 @@
+
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Pizzas.hpp"
 
 using namespace HeadFirstDesignPatterns::Factory::Simple;
 
 int main( int argc, char* argv[] )
 {
+  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
+
+  HUM_TRACE(ACE_TEXT("main"));
 
   SimplePizzaFactory factory;
   PizzaStore store( &factory );

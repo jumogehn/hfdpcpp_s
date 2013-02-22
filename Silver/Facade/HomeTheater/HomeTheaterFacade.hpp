@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_FACADE_HOME_THEATER_FACADE_HPP_
 #define _HFDP_CPP_FACADE_HOME_THEATER_FACADE_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "HomeTheater.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -37,9 +40,11 @@ namespace HeadFirstDesignPatterns {
           assert(screen);
           assert(lights);
           assert(popper);
+          HUM_TRACE(ACE_TEXT("HomeTheaterFacade::~HomeTheaterFacade"));
         }
         void watchMovie( std::string movie )
         {
+          HUM_TRACE(ACE_TEXT("HomeTheaterFacade::watchMovie"));
           std::cout << "Get ready to watch a movie..." << std::endl;
           _popper->on();
           _popper->pop();
@@ -56,6 +61,7 @@ namespace HeadFirstDesignPatterns {
         }
         void endMovie()
         {
+          HUM_TRACE(ACE_TEXT("HomeTheaterFacade::endMovie"));
           std::cout << "Shutting movie theater down..." << std::endl;
           _popper->off();
           _lights->on();
@@ -68,6 +74,7 @@ namespace HeadFirstDesignPatterns {
         }
         void listenToCd( std::string cdTitle )
         {
+          HUM_TRACE(ACE_TEXT("HomeTheaterFacade::listenToCd"));
           std::cout << "Get ready for an audiopile experence..." << std::endl;
           _lights->on();
           _amp->on();
@@ -79,6 +86,7 @@ namespace HeadFirstDesignPatterns {
         }
         void endCd()
         {
+          HUM_TRACE(ACE_TEXT("HomeTheaterFacade::endCd"));
           std::cout << "Shutting down CD..." << std::endl;
           _amp->off();
           _amp->setCd( _cd );
@@ -87,6 +95,7 @@ namespace HeadFirstDesignPatterns {
         }
         void listenToRadio( double frequency )
         {
+          HUM_TRACE(ACE_TEXT("HomeTheaterFacade::listenToRadio"));
           std::cout << "Tuning in the airwaves..." << std::endl;
           _tuner->on();
           _tuner->setFrequency( frequency );
@@ -96,6 +105,7 @@ namespace HeadFirstDesignPatterns {
         }
         void endRadio()
         {
+          HUM_TRACE(ACE_TEXT("HomeTheaterFacade::endRadio"));
           std::cout << "Shutting down the tuner..." << std::endl;
           _tuner->off();
           _amp->off();

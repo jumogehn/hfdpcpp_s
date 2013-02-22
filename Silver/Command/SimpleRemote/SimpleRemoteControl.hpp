@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CONTROL_HPP_
 #define _HFDP_CPP_COMMAND_SIMPLE_REMOTE_CONTROL_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "SimpleRemote.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -14,15 +17,19 @@ namespace HeadFirstDesignPatterns {
       public:
         SimpleRemoteControl() :
           _slot( 0 )
-        {}
+        {
+          HUM_TRACE(ACE_TEXT("SimpleRemoteControl::SimpleRemoteControl"));
+        }
         void setCommand( const Command* command )
         {
           assert( command );
+          HUM_TRACE(ACE_TEXT("SimpleRemoteControl::setCommand"));
           _slot = command;
         }
         void buttonWasPressed() const
         {
           assert( _slot );
+          HUM_TRACE(ACE_TEXT("SimpleRemoteControl::buttonWasPressed"));
           _slot->execute();
         }
       };

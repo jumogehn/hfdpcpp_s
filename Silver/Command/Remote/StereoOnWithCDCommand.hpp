@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_ON_COMMAND_HPP_
 #define _HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_ON_COMMAND_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Remote.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -16,9 +19,12 @@ namespace HeadFirstDesignPatterns {
           _stereo( stereo )
         {
           assert( stereo );
+          HUM_TRACE(ACE_TEXT("StereoOnWithCDCommand::StereoOnWithCDCommand"));
         }
         void execute() const
         {
+          HUM_TRACE(ACE_TEXT("StereoOnWithCDCommand::execute"));
+
           _stereo->on();
           _stereo->setCD();
           _stereo->setVolume(11);

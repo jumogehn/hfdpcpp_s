@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_FACTORY_NY_PEPPERONI_PIZZA_HPP_
 #define _HFDP_CPP_FACTORY_NY_PEPPERONI_PIZZA_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Pizzafm.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -11,6 +14,7 @@ namespace HeadFirstDesignPatterns {
       public:
         NYStylePepperoniPizza()
         {
+          HUM_TRACE(ACE_TEXT("NYStylePepperoniPizza::NYStylePepperoniPizza"));
           _name = "NY Style Pepperoni Pizza";
           _dough = "Thin Crust Dough";
           _sauce = "Marinara Sauce";

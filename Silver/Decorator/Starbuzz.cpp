@@ -1,8 +1,16 @@
+
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Starbuzz.hpp"
 
 using namespace HeadFirstDesignPatterns::Decorator;
 
 int main( int argc, char* argv[] ) {
+
+  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
+
+  HUM_TRACE(ACE_TEXT("main"));
 
   Beverage* beverage = new Espresso();
   std::cout.setf( std::ios::showpoint);

@@ -1,0 +1,404 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+bubblesOff	hottub.hpp	/^        void bubblesOff() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+bubblesOn	hottub.hpp	/^        void bubblesOn() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+CeilingFan	CeilingFan.hpp	/^        explicit CeilingFan( const std::string location ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:( const std::string location )
+CeilingFan	CeilingFan.hpp	/^      class CeilingFan {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+CeilingFan.hpp	CeilingFan.hpp	1;"	F
+CeilingFanOffCommand	CeilingFanOffCommand.hpp	/^        explicit CeilingFanOffCommand( const CeilingFan* ceilingFan ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand	access:public	signature:( const CeilingFan* ceilingFan )
+CeilingFanOffCommand	CeilingFanOffCommand.hpp	/^      class CeilingFanOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+CeilingFanOffCommand.hpp	CeilingFanOffCommand.hpp	1;"	F
+CeilingFanOnCommand	CeilingFanOnCommand.hpp	/^        explicit CeilingFanOnCommand( const CeilingFan* ceilingFan ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand	access:public	signature:( const CeilingFan* ceilingFan )
+CeilingFanOnCommand	CeilingFanOnCommand.hpp	/^      class CeilingFanOnCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+CeilingFanOnCommand.hpp	CeilingFanOnCommand.hpp	1;"	F
+Command	CeilingFan.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	CeilingFanOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	CeilingFanOnCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	Command.hpp	/^        Command( const Command& ); \/\/ Disable copy constructor$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::Command	access:private	signature:( const Command& )
+Command	Command.hpp	/^        Command()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Command	access:protected	signature:()
+Command	Command.hpp	/^      class Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+Command	Command.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	GarageDoor.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	GarageDoorDownCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	GarageDoorUpCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	hottub.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	HottubOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	HottubOnCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	Light.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	LightOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	LightOnCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	LivingroomLightOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	LivingroomLightOnCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	NoCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	RemoteControl.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	Stereo.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	StereoOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	StereoOnWithCDCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command	TV.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+Command.hpp	Command.hpp	1;"	F
+cool	hottub.hpp	/^        void cool() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+down	GarageDoor.hpp	/^        void down() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+execute	CeilingFanOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand	access:public	signature:() const
+execute	CeilingFanOnCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand	access:public	signature:() const
+execute	Command.hpp	/^        virtual void execute() const = 0;$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::Command	access:public	signature:() const
+execute	GarageDoorDownCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand	access:public	signature:() const
+execute	GarageDoorUpCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand	access:public	signature:() const
+execute	HottubOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::HottubOffCommand	access:public	signature:() const
+execute	HottubOnCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::HottubOnCommand	access:public	signature:() const
+execute	LightOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LightOffCommand	access:public	signature:() const
+execute	LightOnCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LightOnCommand	access:public	signature:() const
+execute	LivingroomLightOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand	access:public	signature:() const
+execute	LivingroomLightOnCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand	access:public	signature:() const
+execute	NoCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::NoCommand	access:public	signature:() const
+execute	StereoOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::StereoOffCommand	access:public	signature:() const
+execute	StereoOnWithCDCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand	access:public	signature:() const
+GarageDoor	GarageDoor.hpp	/^        explicit GarageDoor( const std::string location ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:( const std::string location )
+GarageDoor	GarageDoor.hpp	/^      class GarageDoor {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+GarageDoor.hpp	GarageDoor.hpp	1;"	F
+GarageDoorDownCommand	GarageDoorDownCommand.hpp	/^        explicit GarageDoorDownCommand( const GarageDoor* garageDoor ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand	access:public	signature:( const GarageDoor* garageDoor )
+GarageDoorDownCommand	GarageDoorDownCommand.hpp	/^      class GarageDoorDownCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+GarageDoorDownCommand.hpp	GarageDoorDownCommand.hpp	1;"	F
+GarageDoorUpCommand	GarageDoorUpCommand.hpp	/^        explicit GarageDoorUpCommand( const GarageDoor* garageDoor ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand	access:public	signature:( const GarageDoor* garageDoor )
+GarageDoorUpCommand	GarageDoorUpCommand.hpp	/^      class GarageDoorUpCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+GarageDoorUpCommand.hpp	GarageDoorUpCommand.hpp	1;"	F
+getSpeed	CeilingFan.hpp	/^        int getSpeed() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+HeadFirstDesignPatterns	CeilingFan.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	CeilingFanOffCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	CeilingFanOnCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	Command.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	GarageDoor.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	GarageDoorDownCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	GarageDoorUpCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	hottub.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	HottubOffCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	HottubOnCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	Light.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	LightOffCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	LightOnCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	LivingroomLightOffCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	LivingroomLightOnCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	NoCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	RemoteControl.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	Stereo.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	StereoOffCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	StereoOnWithCDCommand.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns	TV.hpp	/^namespace HeadFirstDesignPatterns {$/;"	n
+HeadFirstDesignPatterns::Command	CeilingFan.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	CeilingFanOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	CeilingFanOnCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	Command.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	GarageDoor.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	GarageDoorDownCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	GarageDoorUpCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	hottub.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	HottubOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	HottubOnCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	Light.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	LightOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	LightOnCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	LivingroomLightOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	LivingroomLightOnCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	NoCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	RemoteControl.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	Stereo.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	StereoOffCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	StereoOnWithCDCommand.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command	TV.hpp	/^  namespace Command {$/;"	n	namespace:HeadFirstDesignPatterns
+HeadFirstDesignPatterns::Command::Remote	CeilingFan.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	CeilingFanOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	CeilingFanOnCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	Command.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	GarageDoor.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	GarageDoorDownCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	GarageDoorUpCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	hottub.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	HottubOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	HottubOnCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	Light.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	LightOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	LightOnCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	LivingroomLightOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	LivingroomLightOnCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	NoCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	RemoteControl.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	Stereo.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	StereoOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	StereoOnWithCDCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote	TV.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+HeadFirstDesignPatterns::Command::Remote::CeilingFan	CeilingFan.hpp	/^      class CeilingFan {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::CeilingFan	CeilingFan.hpp	/^        explicit CeilingFan( const std::string location ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:( const std::string location )
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::getSpeed	CeilingFan.hpp	/^        int getSpeed() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::HIGH	CeilingFan.hpp	/^        static const int HIGH = 2;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::high	CeilingFan.hpp	/^        void high() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::LOW	CeilingFan.hpp	/^        static const int LOW = 0;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::low	CeilingFan.hpp	/^        void low() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::MEDIUM	CeilingFan.hpp	/^        static const int MEDIUM = 1;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::medium	CeilingFan.hpp	/^        void medium() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::off	CeilingFan.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::_level	CeilingFan.hpp	/^        mutable int _level;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:private
+HeadFirstDesignPatterns::Command::Remote::CeilingFan::_location	CeilingFan.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:private
+HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand	CeilingFanOffCommand.hpp	/^      class CeilingFanOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand::CeilingFanOffCommand	CeilingFanOffCommand.hpp	/^        explicit CeilingFanOffCommand( const CeilingFan* ceilingFan ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand	access:public	signature:( const CeilingFan* ceilingFan )
+HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand::execute	CeilingFanOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand::_ceilingFan	CeilingFanOffCommand.hpp	/^        const CeilingFan* _ceilingFan;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand	CeilingFanOnCommand.hpp	/^      class CeilingFanOnCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand::CeilingFanOnCommand	CeilingFanOnCommand.hpp	/^        explicit CeilingFanOnCommand( const CeilingFan* ceilingFan ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand	access:public	signature:( const CeilingFan* ceilingFan )
+HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand::execute	CeilingFanOnCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand::_ceilingFan	CeilingFanOnCommand.hpp	/^        const CeilingFan* _ceilingFan;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::Command	Command.hpp	/^      class Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+HeadFirstDesignPatterns::Command::Remote::Command::Command	Command.hpp	/^        Command( const Command& ); \/\/ Disable copy constructor$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::Command	access:private	signature:( const Command& )
+HeadFirstDesignPatterns::Command::Remote::Command::Command	Command.hpp	/^        Command()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Command	access:protected	signature:()
+HeadFirstDesignPatterns::Command::Remote::Command::execute	Command.hpp	/^        virtual void execute() const = 0;$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::Command	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Command::operator =	Command.hpp	/^        void operator=( const Command& ); \/\/ Disable assignment operator$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::Command	access:private	signature:( const Command& )
+HeadFirstDesignPatterns::Command::Remote::Command::~Command	Command.hpp	/^        virtual ~Command()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Command	access:public	signature:()
+HeadFirstDesignPatterns::Command::Remote::GarageDoor	GarageDoor.hpp	/^      class GarageDoor {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+HeadFirstDesignPatterns::Command::Remote::GarageDoor::down	GarageDoor.hpp	/^        void down() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::GarageDoor::GarageDoor	GarageDoor.hpp	/^        explicit GarageDoor( const std::string location ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:( const std::string location )
+HeadFirstDesignPatterns::Command::Remote::GarageDoor::lightOff	GarageDoor.hpp	/^        void lightOff() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::GarageDoor::lightOn	GarageDoor.hpp	/^        void lightOn() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::GarageDoor::stop	GarageDoor.hpp	/^        void stop() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::GarageDoor::up	GarageDoor.hpp	/^        void up() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::GarageDoor::_location	GarageDoor.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:private
+HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand	GarageDoorDownCommand.hpp	/^      class GarageDoorDownCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand::execute	GarageDoorDownCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand::GarageDoorDownCommand	GarageDoorDownCommand.hpp	/^        explicit GarageDoorDownCommand( const GarageDoor* garageDoor ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand	access:public	signature:( const GarageDoor* garageDoor )
+HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand::_garageDoor	GarageDoorDownCommand.hpp	/^        const GarageDoor* _garageDoor;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand	GarageDoorUpCommand.hpp	/^      class GarageDoorUpCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand::execute	GarageDoorUpCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand::GarageDoorUpCommand	GarageDoorUpCommand.hpp	/^        explicit GarageDoorUpCommand( const GarageDoor* garageDoor ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand	access:public	signature:( const GarageDoor* garageDoor )
+HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand::_garageDoor	GarageDoorUpCommand.hpp	/^        const GarageDoor* _garageDoor;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::Hottub	hottub.hpp	/^      class Hottub {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+HeadFirstDesignPatterns::Command::Remote::Hottub::bubblesOff	hottub.hpp	/^        void bubblesOff() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Hottub::bubblesOn	hottub.hpp	/^        void bubblesOn() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Hottub::cool	hottub.hpp	/^        void cool() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Hottub::heat	hottub.hpp	/^        void heat() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Hottub::Hottub	hottub.hpp	/^        Hottub() :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:()
+HeadFirstDesignPatterns::Command::Remote::Hottub::jetsOff	hottub.hpp	/^        void jetsOff() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Hottub::jetsOn	hottub.hpp	/^        void jetsOn() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Hottub::off	hottub.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Hottub::on	hottub.hpp	/^        void on() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Hottub::setTemperature	hottub.hpp	/^        void setTemperature( int temperature )$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:( int temperature )
+HeadFirstDesignPatterns::Command::Remote::Hottub::_on	hottub.hpp	/^        mutable bool _on;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:private
+HeadFirstDesignPatterns::Command::Remote::Hottub::_temperature	hottub.hpp	/^        mutable int _temperature;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:private
+HeadFirstDesignPatterns::Command::Remote::HottubOffCommand	HottubOffCommand.hpp	/^      class HottubOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::HottubOffCommand::execute	HottubOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::HottubOffCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::HottubOffCommand::HottubOffCommand	HottubOffCommand.hpp	/^        explicit HottubOffCommand( const Hottub* hottub ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::HottubOffCommand	access:public	signature:( const Hottub* hottub )
+HeadFirstDesignPatterns::Command::Remote::HottubOffCommand::_hottub	HottubOffCommand.hpp	/^        const Hottub* _hottub;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::HottubOffCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::HottubOnCommand	HottubOnCommand.hpp	/^      class HottubOnCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::HottubOnCommand::execute	HottubOnCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::HottubOnCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::HottubOnCommand::HottubOnCommand	HottubOnCommand.hpp	/^        explicit HottubOnCommand( const Hottub* hottub ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::HottubOnCommand	access:public	signature:( const Hottub* hottub )
+HeadFirstDesignPatterns::Command::Remote::HottubOnCommand::_hottub	HottubOnCommand.hpp	/^        const Hottub* _hottub;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::HottubOnCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::Light	Light.hpp	/^      class Light {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+HeadFirstDesignPatterns::Command::Remote::Light::Light	Light.hpp	/^        explicit Light( const std::string location) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Light	access:public	signature:( const std::string location)
+HeadFirstDesignPatterns::Command::Remote::Light::off	Light.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Light	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Light::on	Light.hpp	/^        void on() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Light	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Light::_location	Light.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::Light	access:private
+HeadFirstDesignPatterns::Command::Remote::LightOffCommand	LightOffCommand.hpp	/^      class LightOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::LightOffCommand::execute	LightOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LightOffCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::LightOffCommand::LightOffCommand	LightOffCommand.hpp	/^        explicit LightOffCommand( const Light* light  ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LightOffCommand	access:public	signature:( const Light* light )
+HeadFirstDesignPatterns::Command::Remote::LightOffCommand::_light	LightOffCommand.hpp	/^        const Light* _light;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::LightOffCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::LightOnCommand	LightOnCommand.hpp	/^      class LightOnCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::LightOnCommand::execute	LightOnCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LightOnCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::LightOnCommand::LightOnCommand	LightOnCommand.hpp	/^        explicit LightOnCommand( const Light* light ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LightOnCommand	access:public	signature:( const Light* light )
+HeadFirstDesignPatterns::Command::Remote::LightOnCommand::_light	LightOnCommand.hpp	/^        const Light* _light;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::LightOnCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand	LivingroomLightOffCommand.hpp	/^      class LivingroomLightOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand::execute	LivingroomLightOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand::LivingroomLightOffCommand	LivingroomLightOffCommand.hpp	/^        explicit LivingroomLightOffCommand( const Light* light ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand	access:public	signature:( const Light* light )
+HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand::_light	LivingroomLightOffCommand.hpp	/^        const Light* _light;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand	LivingroomLightOnCommand.hpp	/^      class LivingroomLightOnCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand::execute	LivingroomLightOnCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand::LivingroomLightOnCommand	LivingroomLightOnCommand.hpp	/^        explicit LivingroomLightOnCommand( const Light* light ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand	access:public	signature:( const Light* light )
+HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand::_light	LivingroomLightOnCommand.hpp	/^        const Light* _light;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::NoCommand	NoCommand.hpp	/^      class NoCommand : public Command{$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::NoCommand::execute	NoCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::NoCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::RemoteControl	RemoteControl.hpp	/^      class RemoteControl {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::offButtonWasPushed	RemoteControl.hpp	/^        void offButtonWasPushed( int slot ) const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:( int slot ) const
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::onButtonWasPushed	RemoteControl.hpp	/^        void onButtonWasPushed( int slot ) const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:( int slot ) const
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::operator =	RemoteControl.hpp	/^        void operator=( const RemoteControl& ); \/\/ Disable assignment operator$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private	signature:( const RemoteControl& )
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::RemoteControl	RemoteControl.hpp	/^        RemoteControl( const RemoteControl& ); \/\/ Disable copy constructor$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private	signature:( const RemoteControl& )
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::RemoteControl	RemoteControl.hpp	/^        RemoteControl()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:()
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::setCommand	RemoteControl.hpp	/^        void setCommand( int slot, Command* onCommand, Command* offCommand )$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:( int slot, Command* onCommand, Command* offCommand )
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::SLOTS	RemoteControl.hpp	/^        static const int SLOTS = 7;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::toString	RemoteControl.hpp	/^        std::string toString() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::_noCommand	RemoteControl.hpp	/^        Command* _noCommand;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::_offCommands	RemoteControl.hpp	/^        Command* _offCommands[SLOTS];$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::_onCommands	RemoteControl.hpp	/^        Command* _onCommands[SLOTS];$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private
+HeadFirstDesignPatterns::Command::Remote::RemoteControl::~RemoteControl	RemoteControl.hpp	/^        ~RemoteControl()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:()
+HeadFirstDesignPatterns::Command::Remote::Stereo	Stereo.hpp	/^      class Stereo {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+HeadFirstDesignPatterns::Command::Remote::Stereo::off	Stereo.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Stereo::on	Stereo.hpp	/^        void on() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Stereo::setCD	Stereo.hpp	/^        void setCD() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Stereo::setDVD	Stereo.hpp	/^        void setDVD() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Stereo::setRadio	Stereo.hpp	/^        void setRadio() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::Stereo::setVolume	Stereo.hpp	/^        void setVolume(int volume) const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:(int volume) const
+HeadFirstDesignPatterns::Command::Remote::Stereo::Stereo	Stereo.hpp	/^        explicit Stereo( std::string location ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:( std::string location )
+HeadFirstDesignPatterns::Command::Remote::Stereo::_location	Stereo.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:private
+HeadFirstDesignPatterns::Command::Remote::StereoOffCommand	StereoOffCommand.hpp	/^      class StereoOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::StereoOffCommand::execute	StereoOffCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::StereoOffCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::StereoOffCommand::StereoOffCommand	StereoOffCommand.hpp	/^        explicit StereoOffCommand( const Stereo* stereo ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::StereoOffCommand	access:public	signature:( const Stereo* stereo )
+HeadFirstDesignPatterns::Command::Remote::StereoOffCommand::_stereo	StereoOffCommand.hpp	/^        const Stereo* _stereo;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::StereoOffCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand	StereoOnWithCDCommand.hpp	/^      class StereoOnWithCDCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand::execute	StereoOnWithCDCommand.hpp	/^        void execute() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand::StereoOnWithCDCommand	StereoOnWithCDCommand.hpp	/^        explicit StereoOnWithCDCommand( const Stereo* stereo ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand	access:public	signature:( const Stereo* stereo )
+HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand::_stereo	StereoOnWithCDCommand.hpp	/^        const Stereo* _stereo;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand	access:private
+HeadFirstDesignPatterns::Command::Remote::TV	TV.hpp	/^      class TV {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+HeadFirstDesignPatterns::Command::Remote::TV::off	TV.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::TV	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::TV::on	TV.hpp	/^        void on() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::TV	access:public	signature:() const
+HeadFirstDesignPatterns::Command::Remote::TV::setInputChannel	TV.hpp	/^        void setInputChannel()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::TV	access:public	signature:()
+HeadFirstDesignPatterns::Command::Remote::TV::TV	TV.hpp	/^        explicit TV( const std::string location ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::TV	access:public	signature:( const std::string location )
+HeadFirstDesignPatterns::Command::Remote::TV::_channel	TV.hpp	/^        mutable int _channel;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::TV	access:private
+HeadFirstDesignPatterns::Command::Remote::TV::_location	TV.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::TV	access:private
+heat	hottub.hpp	/^        void heat() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+HIGH	CeilingFan.hpp	/^        static const int HIGH = 2;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public
+high	CeilingFan.hpp	/^        void high() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+Hottub	hottub.hpp	/^        Hottub() :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:()
+Hottub	hottub.hpp	/^      class Hottub {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+hottub.hpp	hottub.hpp	1;"	F
+HottubOffCommand	HottubOffCommand.hpp	/^        explicit HottubOffCommand( const Hottub* hottub ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::HottubOffCommand	access:public	signature:( const Hottub* hottub )
+HottubOffCommand	HottubOffCommand.hpp	/^      class HottubOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HottubOffCommand.hpp	HottubOffCommand.hpp	1;"	F
+HottubOnCommand	HottubOnCommand.hpp	/^        explicit HottubOnCommand( const Hottub* hottub ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::HottubOnCommand	access:public	signature:( const Hottub* hottub )
+HottubOnCommand	HottubOnCommand.hpp	/^      class HottubOnCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+HottubOnCommand.hpp	HottubOnCommand.hpp	1;"	F
+jetsOff	hottub.hpp	/^        void jetsOff() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+jetsOn	hottub.hpp	/^        void jetsOn() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+Light	Light.hpp	/^        explicit Light( const std::string location) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Light	access:public	signature:( const std::string location)
+Light	Light.hpp	/^      class Light {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+Light.hpp	Light.hpp	1;"	F
+lightOff	GarageDoor.hpp	/^        void lightOff() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+LightOffCommand	LightOffCommand.hpp	/^        explicit LightOffCommand( const Light* light  ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LightOffCommand	access:public	signature:( const Light* light )
+LightOffCommand	LightOffCommand.hpp	/^      class LightOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+LightOffCommand.hpp	LightOffCommand.hpp	1;"	F
+lightOn	GarageDoor.hpp	/^        void lightOn() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+LightOnCommand	LightOnCommand.hpp	/^        explicit LightOnCommand( const Light* light ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LightOnCommand	access:public	signature:( const Light* light )
+LightOnCommand	LightOnCommand.hpp	/^      class LightOnCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+LightOnCommand.hpp	LightOnCommand.hpp	1;"	F
+LivingroomLightOffCommand	LivingroomLightOffCommand.hpp	/^        explicit LivingroomLightOffCommand( const Light* light ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand	access:public	signature:( const Light* light )
+LivingroomLightOffCommand	LivingroomLightOffCommand.hpp	/^      class LivingroomLightOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+LivingroomLightOffCommand.hpp	LivingroomLightOffCommand.hpp	1;"	F
+LivingroomLightOnCommand	LivingroomLightOnCommand.hpp	/^        explicit LivingroomLightOnCommand( const Light* light ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand	access:public	signature:( const Light* light )
+LivingroomLightOnCommand	LivingroomLightOnCommand.hpp	/^      class LivingroomLightOnCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+LivingroomLightOnCommand.hpp	LivingroomLightOnCommand.hpp	1;"	F
+LOW	CeilingFan.hpp	/^        static const int LOW = 0;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public
+low	CeilingFan.hpp	/^        void low() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+main	Remote.cpp	/^int main( int argc, char* argv[] ) {$/;"	f	signature:( int argc, char* argv[] )
+Makefile	Makefile	1;"	F
+MEDIUM	CeilingFan.hpp	/^        static const int MEDIUM = 1;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public
+medium	CeilingFan.hpp	/^        void medium() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+NoCommand	NoCommand.hpp	/^      class NoCommand : public Command{$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+NoCommand.hpp	NoCommand.hpp	1;"	F
+off	CeilingFan.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:public	signature:() const
+off	hottub.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+off	Light.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Light	access:public	signature:() const
+off	Stereo.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+off	TV.hpp	/^        void off() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::TV	access:public	signature:() const
+offButtonWasPushed	RemoteControl.hpp	/^        void offButtonWasPushed( int slot ) const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:( int slot ) const
+on	hottub.hpp	/^        void on() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:() const
+on	Light.hpp	/^        void on() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Light	access:public	signature:() const
+on	Stereo.hpp	/^        void on() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+on	TV.hpp	/^        void on() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::TV	access:public	signature:() const
+onButtonWasPushed	RemoteControl.hpp	/^        void onButtonWasPushed( int slot ) const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:( int slot ) const
+operator =	Command.hpp	/^        void operator=( const Command& ); \/\/ Disable assignment operator$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::Command	access:private	signature:( const Command& )
+operator =	RemoteControl.hpp	/^        void operator=( const RemoteControl& ); \/\/ Disable assignment operator$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private	signature:( const RemoteControl& )
+Remote	CeilingFan.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	CeilingFanOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	CeilingFanOnCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	Command.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	GarageDoor.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	GarageDoorDownCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	GarageDoorUpCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	hottub.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	HottubOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	HottubOnCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	Light.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	LightOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	LightOnCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	LivingroomLightOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	LivingroomLightOnCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	NoCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	RemoteControl.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	Stereo.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	StereoOffCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	StereoOnWithCDCommand.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote	TV.hpp	/^    namespace Remote {$/;"	n	namespace:HeadFirstDesignPatterns::Command
+Remote.cpp	Remote.cpp	1;"	F
+Remote.hpp	Remote.hpp	1;"	F
+RemoteControl	RemoteControl.hpp	/^        RemoteControl( const RemoteControl& ); \/\/ Disable copy constructor$/;"	p	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private	signature:( const RemoteControl& )
+RemoteControl	RemoteControl.hpp	/^        RemoteControl()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:()
+RemoteControl	RemoteControl.hpp	/^      class RemoteControl {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+RemoteControl.hpp	RemoteControl.hpp	1;"	F
+setCD	Stereo.hpp	/^        void setCD() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+setCommand	RemoteControl.hpp	/^        void setCommand( int slot, Command* onCommand, Command* offCommand )$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:( int slot, Command* onCommand, Command* offCommand )
+setDVD	Stereo.hpp	/^        void setDVD() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+setInputChannel	TV.hpp	/^        void setInputChannel()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::TV	access:public	signature:()
+setRadio	Stereo.hpp	/^        void setRadio() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:() const
+setTemperature	hottub.hpp	/^        void setTemperature( int temperature )$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:public	signature:( int temperature )
+setVolume	Stereo.hpp	/^        void setVolume(int volume) const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:(int volume) const
+SLOTS	RemoteControl.hpp	/^        static const int SLOTS = 7;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private
+Stereo	Stereo.hpp	/^        explicit Stereo( std::string location ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:public	signature:( std::string location )
+Stereo	Stereo.hpp	/^      class Stereo {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+Stereo.hpp	Stereo.hpp	1;"	F
+StereoOffCommand	StereoOffCommand.hpp	/^        explicit StereoOffCommand( const Stereo* stereo ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::StereoOffCommand	access:public	signature:( const Stereo* stereo )
+StereoOffCommand	StereoOffCommand.hpp	/^      class StereoOffCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+StereoOffCommand.hpp	StereoOffCommand.hpp	1;"	F
+StereoOnWithCDCommand	StereoOnWithCDCommand.hpp	/^        explicit StereoOnWithCDCommand( const Stereo* stereo ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand	access:public	signature:( const Stereo* stereo )
+StereoOnWithCDCommand	StereoOnWithCDCommand.hpp	/^      class StereoOnWithCDCommand : public Command {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote	inherits:Command
+StereoOnWithCDCommand.hpp	StereoOnWithCDCommand.hpp	1;"	F
+stop	GarageDoor.hpp	/^        void stop() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+toString	RemoteControl.hpp	/^        std::string toString() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:() const
+TV	TV.hpp	/^        explicit TV( const std::string location ) :$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::TV	access:public	signature:( const std::string location )
+TV	TV.hpp	/^      class TV {$/;"	c	namespace:HeadFirstDesignPatterns::Command::Remote
+TV.hpp	TV.hpp	1;"	F
+up	GarageDoor.hpp	/^        void up() const$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:public	signature:() const
+_ceilingFan	CeilingFanOffCommand.hpp	/^        const CeilingFan* _ceilingFan;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOffCommand	access:private
+_ceilingFan	CeilingFanOnCommand.hpp	/^        const CeilingFan* _ceilingFan;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFanOnCommand	access:private
+_channel	TV.hpp	/^        mutable int _channel;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::TV	access:private
+_garageDoor	GarageDoorDownCommand.hpp	/^        const GarageDoor* _garageDoor;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorDownCommand	access:private
+_garageDoor	GarageDoorUpCommand.hpp	/^        const GarageDoor* _garageDoor;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::GarageDoorUpCommand	access:private
+_HFDP_CPP_COMMAND_REMOTE_CEILING_FAN_HPP_	CeilingFan.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_COMMAND_HPP_	Command.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_CONTROL_HPP_	RemoteControl.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_GARAGE_DOOR_HPP_	GarageDoor.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_HOT_TUB_HPP_	hottub.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_HPP_	Remote.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_LIGHT_HPP_	Light.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_NO_COMMAND_HPP_	NoCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_STEREO_HPP_	Stereo.hpp	2;"	d
+_HFDP_CPP_COMMAND_REMOTE_TV_HPP_	TV.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_OFF_COMMAND_HPP_	CeilingFanOffCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_ON_COMMAND_HPP_	CeilingFanOnCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_DOWN_COMMAND_HPP_	GarageDoorDownCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_UP_COMMAND_HPP_	GarageDoorUpCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_OFF_COMMAND_HPP_	HottubOffCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_ON_COMMAND_HPP_	HottubOnCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_OFF_COMMAND_HPP_	LightOffCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_ON_COMMAND_HPP_	LightOnCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_OFF_COMMAND_HPP_	LivingroomLightOffCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_ON_COMMAND_HPP_	LivingroomLightOnCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_OFF_COMMAND_HPP_	StereoOffCommand.hpp	2;"	d
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_ON_COMMAND_HPP_	StereoOnWithCDCommand.hpp	2;"	d
+_hottub	HottubOffCommand.hpp	/^        const Hottub* _hottub;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::HottubOffCommand	access:private
+_hottub	HottubOnCommand.hpp	/^        const Hottub* _hottub;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::HottubOnCommand	access:private
+_level	CeilingFan.hpp	/^        mutable int _level;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:private
+_light	LightOffCommand.hpp	/^        const Light* _light;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::LightOffCommand	access:private
+_light	LightOnCommand.hpp	/^        const Light* _light;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::LightOnCommand	access:private
+_light	LivingroomLightOffCommand.hpp	/^        const Light* _light;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOffCommand	access:private
+_light	LivingroomLightOnCommand.hpp	/^        const Light* _light;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::LivingroomLightOnCommand	access:private
+_location	CeilingFan.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::CeilingFan	access:private
+_location	GarageDoor.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::GarageDoor	access:private
+_location	Light.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::Light	access:private
+_location	Stereo.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::Stereo	access:private
+_location	TV.hpp	/^        std::string _location;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::TV	access:private
+_noCommand	RemoteControl.hpp	/^        Command* _noCommand;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private
+_offCommands	RemoteControl.hpp	/^        Command* _offCommands[SLOTS];$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private
+_on	hottub.hpp	/^        mutable bool _on;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:private
+_onCommands	RemoteControl.hpp	/^        Command* _onCommands[SLOTS];$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:private
+_stereo	StereoOffCommand.hpp	/^        const Stereo* _stereo;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::StereoOffCommand	access:private
+_stereo	StereoOnWithCDCommand.hpp	/^        const Stereo* _stereo;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::StereoOnWithCDCommand	access:private
+_temperature	hottub.hpp	/^        mutable int _temperature;$/;"	m	class:HeadFirstDesignPatterns::Command::Remote::Hottub	access:private
+~Command	Command.hpp	/^        virtual ~Command()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::Command	access:public	signature:()
+~RemoteControl	RemoteControl.hpp	/^        ~RemoteControl()$/;"	f	class:HeadFirstDesignPatterns::Command::Remote::RemoteControl	access:public	signature:()

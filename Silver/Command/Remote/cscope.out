@@ -1,0 +1,9892 @@
+cscope 15 $HOME/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote               0000061116
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/CeilingFan.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_CEILING_FAN_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_CEILING_FAN_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cCešgFª
+ {
+
+15 
+mubË
+ 
+	g_Ëv–
+;
+
+16 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+18 
+	gpublic
+:
+
+19 cÚ¡ 
+HIGH
+ = 2;
+
+20 cÚ¡ 
+	gMEDIUM
+ = 1;
+
+21 cÚ¡ 
+	gLOW
+ = 0;
+
+23 
+ex¶ic™
+ 
+CešgFª
+ĞcÚ¡ 
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+ ) :
+
+24 
+_Ëv–
+Ğ
+LOW
+ ), 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::CeilingFan"));
+
+28 
+high
+() const
+
+30 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::high"));
+
+31 
+	g_Ëv–
+ = 
+HIGH
+;
+
+32 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+()
+
+33 << " cešg fª i Ú high" << 
+¡d
+::
+’dl
+;
+
+35 
+medium
+() const
+
+37 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::medium"));
+
+38 
+	g_Ëv–
+ = 
+MEDIUM
+;
+
+39 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+()
+
+40 << " cešg fª i Ú medium" << 
+¡d
+::
+’dl
+;
+
+42 
+low
+() const
+
+44 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::low"));
+
+45 
+	g_Ëv–
+ = 
+LOW
+;
+
+46 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+()
+
+47 << " cešg fª i Ú†ow" << 
+¡d
+::
+’dl
+;
+
+49 
+off
+() const
+
+51 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::off"));
+
+52 
+	g_Ëv–
+ = 0;
+
+53 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " cešg fª i off" << 
+¡d
+::
+’dl
+;
+
+55 
+g‘S³ed
+() const
+
+57 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::getSpeed"));
+
+58  
+	g_Ëv–
+;
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/CeilingFanOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cCešgFªOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+CešgFª
+* 
+_ûšgFª
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+CešgFªOffCommªd
+ĞcÚ¡ 
+CešgFª
+* 
+ûšgFª
+ ) :
+
+19 
+_ûšgFª
+Ğ
+ûšgFª
+ )
+
+21 
+as£¹
+Ğ
+ûšgFª
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFanOffCommand::CeilingFanOffCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFanOffCommand::execute"));
+
+27 
+	g_ûšgFª
+->
+off
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/CeilingFanOnCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cCešgFªOnCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+CešgFª
+* 
+_ûšgFª
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+CešgFªOnCommªd
+ĞcÚ¡ 
+CešgFª
+* 
+ûšgFª
+ ) :
+
+19 
+_ûšgFª
+Ğ
+ûšgFª
+ )
+
+21 
+as£¹
+Ğ
+ûšgFª
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFanOnCommand::CeilingFanOnCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFanOnCommand::execute"));
+
+27 
+	g_ûšgFª
+->
+high
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Command.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cCommªd
+ {
+
+15 
+Commªd
+( const Command& );
+
+16 
+	gİ”©Ü
+=ĞcÚ¡ 
+Commªd
+& );
+
+18 
+	g´Ùeùed
+:
+
+19 
+Commªd
+()
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("Command::Command"));
+
+23 
+	gpublic
+:
+
+24 
+vœtu®
+ ~
+Commªd
+()
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("Command::~Command"));
+
+28 
+vœtu®
+ 
+execu‹
+() const = 0;
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/GarageDoor.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_GARAGE_DOOR_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_GARAGE_DOOR_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cG¬ageDoÜ
+ {
+
+15 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+G¬ageDoÜ
+ĞcÚ¡ 
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+ ) :
+
+19 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::GarageDoor"));
+
+23 
+up
+() const
+
+25 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::up"));
+
+26 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " DoÜ i Up" << 
+¡d
+::
+’dl
+;
+
+28 
+down
+() const
+
+30 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::down"));
+
+31 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " DoÜ i Down" << 
+¡d
+::
+’dl
+;
+
+33 
+¡İ
+() const
+
+35 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::stop"));
+
+36 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " DoÜ i Stİ³d" << 
+¡d
+::
+’dl
+;
+
+38 
+lightOn
+() const
+
+40 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::lightOn"));
+
+41 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< "†ighˆi Ú" << 
+¡d
+::
+’dl
+;
+
+43 
+lightOff
+() const
+
+45 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::lightOff"));
+
+46 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< "†ighˆi off" << 
+¡d
+::
+’dl
+;
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/GarageDoorDownCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_DOWN_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_DOWN_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cG¬ageDoÜDownCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+G¬ageDoÜ
+* 
+_g¬ageDoÜ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+G¬ageDoÜDownCommªd
+ĞcÚ¡ 
+G¬ageDoÜ
+* 
+g¬ageDoÜ
+ ) :
+
+19 
+_g¬ageDoÜ
+Ğ
+g¬ageDoÜ
+ )
+
+21 
+as£¹
+Ğ
+g¬ageDoÜ
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoorDownCommand::GarageDoorDownCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoorDownCommand::execute"));
+
+27 
+	g_g¬ageDoÜ
+->
+down
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/GarageDoorUpCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_UP_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_UP_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cG¬ageDoÜUpCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+G¬ageDoÜ
+* 
+_g¬ageDoÜ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+G¬ageDoÜUpCommªd
+ĞcÚ¡ 
+G¬ageDoÜ
+* 
+g¬ageDoÜ
+ ) :
+
+19 
+_g¬ageDoÜ
+Ğ
+g¬ageDoÜ
+ )
+
+21 
+as£¹
+Ğ
+g¬ageDoÜ
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoorUpCommand::GarageDoorUpCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoorUpCommand::execute"));
+
+27 
+	g_g¬ageDoÜ
+->
+up
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/HottubOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cHÙtubOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+HÙtub
+* 
+_hÙtub
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+HÙtubOffCommªd
+ĞcÚ¡ 
+HÙtub
+* 
+hÙtub
+ ) :
+
+19 
+_hÙtub
+Ğ
+hÙtub
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("HottubOffCommand::HottubOffCommand"));
+
+22 
+as£¹
+Ğ
+hÙtub
+ );
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("HottubOffCommand::execute"));
+
+27 
+	g_hÙtub
+->
+coŞ
+();
+
+28 
+	g_hÙtub
+->
+off
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/HottubOnCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cHÙtubOnCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+HÙtub
+* 
+_hÙtub
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+HÙtubOnCommªd
+ĞcÚ¡ 
+HÙtub
+* 
+hÙtub
+ ) :
+
+19 
+_hÙtub
+Ğ
+hÙtub
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("HottubOnCommand::HottubOnCommand"));
+
+22 
+as£¹
+Ğ
+hÙtub
+ );
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("HottubOnCommand::execute"));
+
+27 
+	g_hÙtub
+->
+Ú
+();
+
+28 
+	g_hÙtub
+->
+h—t
+();
+
+29 
+	g_hÙtub
+->
+bubbËsOn
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Light.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_LIGHT_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_LIGHT_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLight
+ {
+
+15 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+Light
+ĞcÚ¡ 
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+) :
+
+19 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("Light::Light"));
+
+23 
+Ú
+() const
+
+25 
+HUM_TRACE
+(
+ACE_TEXT
+("Light::on"));
+
+26 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< "†ighˆi Ú" << 
+¡d
+::
+’dl
+;
+
+28 
+off
+() const
+
+30 
+HUM_TRACE
+(
+ACE_TEXT
+("Light::off"));
+
+31 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< "†ighˆi off" << 
+¡d
+::
+’dl
+;
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/LightOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLightOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+Light
+* 
+_light
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+LightOffCommªd
+ĞcÚ¡ 
+Light
+* 
+light
+ ) :
+
+19 
+_light
+Ğ
+light
+ )
+
+21 
+as£¹
+Ğ
+light
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("LightOffCommand::LightOffCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("LightOffCommand::execute"));
+
+27 
+	g_light
+->
+off
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/LightOnCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLightOnCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+Light
+* 
+_light
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+LightOnCommªd
+ĞcÚ¡ 
+Light
+* 
+light
+ ) :
+
+19 
+_light
+Ğ
+light
+ )
+
+21 
+as£¹
+Ğ
+light
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("LightOnCommand::LightOnCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("LightOnCommand::execute"));
+
+27 
+	g_light
+->
+Ú
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/LivingroomLightOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLivšgroomLightOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+Light
+* 
+_light
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+LivšgroomLightOffCommªd
+ĞcÚ¡ 
+Light
+* 
+light
+ ) :
+
+19 
+_light
+Ğ
+light
+ )
+
+21 
+as£¹
+Ğ
+light
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("LivingroomLightOffCommand::"
+
+25 
+execu‹
+() const
+
+27 
+HUM_TRACE
+(
+ACE_TEXT
+("LivingroomLightOffCommand::execute"));
+
+28 
+	g_light
+->
+off
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/LivingroomLightOnCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLivšgroomLightOnCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+Light
+* 
+_light
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+LivšgroomLightOnCommªd
+ĞcÚ¡ 
+Light
+* 
+light
+ ) :
+
+19 
+_light
+Ğ
+light
+ )
+
+21 
+as£¹
+Ğ
+light
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("LivingroomLightOnCommand::"
+
+25 
+execu‹
+() const
+
+27 
+HUM_TRACE
+(
+ACE_TEXT
+("LivingroomLightOnCommand::execute"));
+
+28 
+	g_light
+->
+Ú
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/NoCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_NO_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_NO_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cNoCommªd
+ : 
+public
+ 
+Commªd
+{
+
+15 
+public
+:
+
+16 
+execu‹
+() const
+
+18 
+HUM_TRACE
+(
+ACE_TEXT
+("NoCommand::execute"));
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Remote.cpp
+
+1 
+	~"RemÙe.hµ
+"
+
+3 
+	~"Hum_Log_Mªag”.h
+"
+
+4 
+	~"Hum_T¿û.h
+"
+
+7 
+usšg
+ 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+::
+Commªd
+::
+RemÙe
+;
+
+9 
+	$maš
+Ğ
+¬gc
+, * 
+¬gv
+[] ) {
+
+11 
+HUM_LOG_MANAGER
+->
+	`»dœeùToFe
+(
+	`ACE_TEXT
+("trace.log"));
+
+13 
+	`HUM_TRACE
+(
+	`ACE_TEXT
+("main"));
+
+15 
+¡d
+::
+auto_±r
+< 
+RemÙeCÚŒŞ
+ > 
+	`»mÙeCÚŒŞ
+(
+
+16 
+Ãw
+ 
+	`RemÙeCÚŒŞ
+() );
+
+18 
+¡d
+::
+auto_±r
+< 
+Light
+ > 
+	`livšgRoomLight
+(
+
+19 
+Ãw
+ 
+	`Light
+( "Living Room" ) );
+
+20 
+¡d
+::
+auto_±r
+< 
+Light
+ > 
+	`k™ch’Light
+(
+
+21 
+Ãw
+ 
+	`Light
+( "Kitchen" ) );
+
+22 
+¡d
+::
+auto_±r
+< 
+CešgFª
+ > 
+	`ûšgFª
+(
+
+23 
+Ãw
+ 
+	`CešgFª
+( "Living Room" ) );
+
+24 
+¡d
+::
+auto_±r
+< 
+G¬ageDoÜ
+ > 
+	`g¬ageDoÜ
+(
+
+25 
+Ãw
+ 
+	`G¬ageDoÜ
+( "Garage" ) );
+
+26 
+¡d
+::
+auto_±r
+< 
+S‹»o
+ > 
+	`¡”eo
+(
+
+27 
+Ãw
+ 
+	`S‹»o
+( "Living Room" ) );
+
+29 
+¡d
+::
+auto_±r
+< 
+LightOnCommªd
+ > 
+	`livšgRoomLightOn
+(
+
+30 
+Ãw
+ 
+	`LightOnCommªd
+Ğ
+livšgRoomLight
+.
+	`g‘
+() ) );
+
+31 
+¡d
+::
+auto_±r
+< 
+LightOffCommªd
+ > 
+	`livšgRoomLightOff
+(
+
+32 
+Ãw
+ 
+	`LightOffCommªd
+Ğ
+livšgRoomLight
+.
+	`g‘
+() ) );
+
+33 
+¡d
+::
+auto_±r
+< 
+LightOnCommªd
+ > 
+	`k™ch’LightOn
+(
+
+34 
+Ãw
+ 
+	`LightOnCommªd
+Ğ
+k™ch’Light
+.
+	`g‘
+() ) );
+
+35 
+¡d
+::
+auto_±r
+< 
+LightOffCommªd
+ > 
+	`k™ch’LightOff
+(
+
+36 
+Ãw
+ 
+	`LightOffCommªd
+Ğ
+k™ch’Light
+.
+	`g‘
+() ) );
+
+38 
+¡d
+::
+auto_±r
+< 
+CešgFªOnCommªd
+ > 
+	`ûšgFªOn
+(
+
+39 
+Ãw
+ 
+	`CešgFªOnCommªd
+Ğ
+ûšgFª
+.
+	`g‘
+() ) );
+
+40 
+¡d
+::
+auto_±r
+< 
+CešgFªOffCommªd
+ > 
+	`ûšgFªOff
+(
+
+41 
+Ãw
+ 
+	`CešgFªOffCommªd
+Ğ
+ûšgFª
+.
+	`g‘
+() ) );
+
+43 
+¡d
+::
+auto_±r
+< 
+G¬ageDoÜUpCommªd
+ > 
+	`g¬ageDoÜUp
+(
+
+44 
+Ãw
+ 
+	`G¬ageDoÜUpCommªd
+Ğ
+g¬ageDoÜ
+.
+	`g‘
+() ) );
+
+45 
+¡d
+::
+auto_±r
+< 
+G¬ageDoÜDownCommªd
+ > 
+	`g¬ageDoÜDown
+(
+
+46 
+Ãw
+ 
+	`G¬ageDoÜDownCommªd
+Ğ
+g¬ageDoÜ
+.
+	`g‘
+() ) );
+
+48 
+¡d
+::
+auto_±r
+< 
+S‹»oOnW™hCDCommªd
+ > 
+	`¡”eoOnW™hCD
+(
+
+49 
+Ãw
+ 
+	`S‹»oOnW™hCDCommªd
+Ğ
+¡”eo
+.
+	`g‘
+() ) );
+
+50 
+¡d
+::
+auto_±r
+< 
+S‹»oOffCommªd
+ > 
+	`¡”eoOff
+(
+
+51 
+Ãw
+ 
+	`S‹»oOffCommªd
+Ğ
+¡”eo
+.
+	`g‘
+() ) );
+
+53 
+»mÙeCÚŒŞ
+->
+	`£tCommªd
+Ğ0, 
+livšgRoomLightOn
+.
+	`g‘
+(),
+
+54 
+livšgRoomLightOff
+.
+	`g‘
+() );
+
+55 
+»mÙeCÚŒŞ
+->
+	`£tCommªd
+Ğ1, 
+k™ch’LightOn
+.
+	`g‘
+(), 
+k™ch’LightOff
+.get() );
+
+56 
+»mÙeCÚŒŞ
+->
+	`£tCommªd
+Ğ2, 
+ûšgFªOn
+.
+	`g‘
+(), 
+ûšgFªOff
+.get() );
+
+57 
+»mÙeCÚŒŞ
+->
+	`£tCommªd
+Ğ3, 
+¡”eoOnW™hCD
+.
+	`g‘
+(), 
+¡”eoOff
+.get() );
+
+58 
+»mÙeCÚŒŞ
+->
+	`£tCommªd
+Ğ4, 
+g¬ageDoÜUp
+.
+	`g‘
+(), 
+g¬ageDoÜDown
+.get() );
+
+60 
+¡d
+::
+cout
+ << 
+»mÙeCÚŒŞ
+->
+	`toSŒšg
+(è<< std::
+’dl
+;
+
+62 
+»mÙeCÚŒŞ
+->
+	`ÚBu‰ÚWasPushed
+( 0 );
+
+63 
+»mÙeCÚŒŞ
+->
+	`offBu‰ÚWasPushed
+( 0 );
+
+64 
+»mÙeCÚŒŞ
+->
+	`ÚBu‰ÚWasPushed
+( 1 );
+
+65 
+»mÙeCÚŒŞ
+->
+	`offBu‰ÚWasPushed
+( 1 );
+
+66 
+»mÙeCÚŒŞ
+->
+	`ÚBu‰ÚWasPushed
+( 2 );
+
+67 
+»mÙeCÚŒŞ
+->
+	`offBu‰ÚWasPushed
+( 2 );
+
+68 
+»mÙeCÚŒŞ
+->
+	`ÚBu‰ÚWasPushed
+( 3 );
+
+69 
+»mÙeCÚŒŞ
+->
+	`offBu‰ÚWasPushed
+( 3 );
+
+70 
+»mÙeCÚŒŞ
+->
+	`ÚBu‰ÚWasPushed
+( 4 );
+
+71 
+»mÙeCÚŒŞ
+->
+	`offBu‰ÚWasPushed
+( 4 );
+
+74 
+	}
+}
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Remote.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_HPP_
+
+
+	)
+
+4 
+	~"../../Snd¬d.h
+"
+
+6 
+	~"Light.hµ
+"
+
+7 
+	~"CešgFª.hµ
+"
+
+8 
+	~"G¬ageDoÜ.hµ
+"
+
+9 
+	~"hÙtub.hµ
+"
+
+10 
+	~"S‹»o.hµ
+"
+
+11 
+	~"TV.hµ
+"
+
+13 
+	~"Commªd.hµ
+"
+
+14 
+	~"NoCommªd.hµ
+"
+
+15 
+	~"CešgFªOffCommªd.hµ
+"
+
+16 
+	~"CešgFªOnCommªd.hµ
+"
+
+17 
+	~"G¬ageDoÜDownCommªd.hµ
+"
+
+18 
+	~"G¬ageDoÜUpCommªd.hµ
+"
+
+19 
+	~"HÙtubOffCommªd.hµ
+"
+
+20 
+	~"HÙtubOnCommªd.hµ
+"
+
+21 
+	~"LightOffCommªd.hµ
+"
+
+22 
+	~"LightOnCommªd.hµ
+"
+
+23 
+	~"LivšgroomLightOffCommªd.hµ
+"
+
+24 
+	~"LivšgroomLightOnCommªd.hµ
+"
+
+25 
+	~"S‹»oOffCommªd.hµ
+"
+
+26 
+	~"S‹»oOnW™hCDCommªd.hµ
+"
+
+28 
+	~"RemÙeCÚŒŞ.hµ
+"
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/RemoteControl.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_CONTROL_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_CONTROL_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+8 
+	~<ty³šfo
+>
+
+10 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+11 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+12 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+17 şas 
+	cRemÙeCÚŒŞ
+ {
+
+19 cÚ¡ 
+	gSLOTS
+ = 7;
+
+21 
+Commªd
+* 
+	g_ÚCommªds
+[
+SLOTS
+];
+
+22 
+Commªd
+* 
+	g_offCommªds
+[
+SLOTS
+];
+
+23 
+Commªd
+* 
+	g_noCommªd
+;
+
+25 
+RemÙeCÚŒŞ
+( const RemoteControl& );
+
+26 
+	gİ”©Ü
+=ĞcÚ¡ 
+RemÙeCÚŒŞ
+& );
+
+28 
+	gpublic
+:
+
+29 
+RemÙeCÚŒŞ
+()
+
+31 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::RemoteControl"));
+
+32 
+	g_noCommªd
+ = 
+Ãw
+ 
+NoCommªd
+();
+
+33  
+	gi
+ = 0; i < 
+	gSLOTS
+; i++ ) {
+
+34 
+	g_ÚCommªds
+[
+i
+] = 
+_noCommªd
+;
+
+35 
+	g_offCommªds
+[
+i
+] = 
+_noCommªd
+;
+
+38 ~
+RemÙeCÚŒŞ
+()
+
+40 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::~RemoteControl"));
+
+41 
+d–‘e
+ 
+	g_noCommªd
+;
+
+43 
+£tCommªd
+Ğ
+¦Ù
+, 
+Commªd
+* 
+ÚCommªd
+, Commªd* 
+offCommªd
+ )
+
+45 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::setCommand"));
+
+46 
+as£¹
+Ğ
+¦Ù
+ <ğ
+SLOTS
+ );‡s£¹Ğ
+ÚCommªd
+ );‡s£¹ ( 
+offCommªd
+ );
+
+47 
+	g_ÚCommªds
+[
+¦Ù
+] = 
+ÚCommªd
+;
+
+48 
+	g_offCommªds
+[
+¦Ù
+] = 
+offCommªd
+;
+
+50 
+ÚBu‰ÚWasPushed
+Ğ
+¦Ù
+ ) const
+
+52 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::onButtonWasPushed"));
+
+53 
+as£¹
+Ğ
+¦Ù
+ <ğ
+SLOTS
+ );
+
+54 
+	g_ÚCommªds
+[
+¦Ù
+]->
+execu‹
+();
+
+56 
+offBu‰ÚWasPushed
+Ğ
+¦Ù
+ ) const
+
+58 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::offButtonWasPushed"));
+
+59 
+as£¹
+Ğ
+¦Ù
+ <ğ
+SLOTS
+ );
+
+60 
+	g_offCommªds
+[
+¦Ù
+]->
+execu‹
+();
+
+62 
+	g¡d
+::
+¡ršg
+ 
+toSŒšg
+() const
+
+64 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::toString"));
+
+65 
+	g¡d
+::
+¡ršg¡»am
+ 
+v®ue
+;
+
+66 
+	gv®ue
+ << "\n------ RemÙCÚŒŞ -------\n" << 
+	g¡d
+::
+’dl
+;
+
+67  
+	gi
+ = 0; i < 
+	gSLOTS
+; i++ ) {
+
+68 
+	gv®ue
+ << "[¦Ù " << 
+	gi
+ << "] ";
+
+69 
+	gv®ue
+ << 
+ty³id
+Ğ*
+_ÚCommªds
+[
+i
+] ).
+Çme
+();
+
+70 
+	gv®ue
+ << " ";
+
+71 
+	gv®ue
+ << 
+ty³id
+Ğ*
+_offCommªds
+[
+i
+] ).
+Çme
+();
+
+72 
+	gv®ue
+ << 
+	g¡d
+::
+’dl
+;
+
+74  
+	gv®ue
+.
+¡r
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Stereo.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_STEREO_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_STEREO_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cS‹»o
+ {
+
+15 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+S‹»o
+Ğ
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+ ) :
+
+19 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::Stereo"));
+
+23 
+Ú
+() const
+
+25 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::on"));
+
+26 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " s‹»Øi Ú" << 
+¡d
+::
+’dl
+;
+
+28 
+off
+() const
+
+30 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::off"));
+
+31 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " s‹»Øi off" << 
+¡d
+::
+’dl
+;
+
+33 
+£tCD
+() const
+
+35 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::setCD"));
+
+36 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " stereo is set for CD input"
+
+37 << 
+¡d
+::
+’dl
+;
+
+39 
+£tDVD
+() const
+
+41 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::setDVD"));
+
+42 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " stereo is set for DVD input"
+
+43 << 
+¡d
+::
+’dl
+;
+
+45 
+£tRadio
+() const
+
+47 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::setRadio"));
+
+48 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " stereo is set for Radio"
+
+49 << 
+¡d
+::
+’dl
+;
+
+51 
+£tVŞume
+(
+vŞume
+) const
+
+53 
+as£¹
+(
+vŞume
+ > 0 && volume < 12);
+
+54 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::setVolume"));
+
+57 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " Stereo volume seto "
+
+58 << 
+vŞume
+ << 
+¡d
+::
+’dl
+;
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/StereoOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cS‹»oOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+S‹»o
+* 
+_¡”eo
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+S‹»oOffCommªd
+ĞcÚ¡ 
+S‹»o
+* 
+¡”eo
+ ) :
+
+19 
+_¡”eo
+Ğ
+¡”eo
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("StereoOffCommand::StereoOffCommand"));
+
+22 
+as£¹
+Ğ
+¡”eo
+ );
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("StereoOffCommand::execute"));
+
+27 
+	g_¡”eo
+->
+off
+();
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/StereoOnWithCDCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cS‹»oOnW™hCDCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+S‹»o
+* 
+_¡”eo
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+S‹»oOnW™hCDCommªd
+ĞcÚ¡ 
+S‹»o
+* 
+¡”eo
+ ) :
+
+19 
+_¡”eo
+Ğ
+¡”eo
+ )
+
+21 
+as£¹
+Ğ
+¡”eo
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("StereoOnWithCDCommand::StereoOnWithCDCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("StereoOnWithCDCommand::execute"));
+
+28 
+	g_¡”eo
+->
+Ú
+();
+
+29 
+	g_¡”eo
+->
+£tCD
+();
+
+30 
+	g_¡”eo
+->
+£tVŞume
+(11);
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/TV.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_TV_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_TV_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cTV
+ {
+
+15 
+mubË
+ 
+	g_chªÃl
+;
+
+16 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+18 
+	gpublic
+:
+
+19 
+ex¶ic™
+ 
+TV
+ĞcÚ¡ 
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+ ) :
+
+20 
+_chªÃl
+Ğ0 ), 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("TV::TV"));
+
+24 
+Ú
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("TV::on"));
+
+27 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " TV i Ú" << 
+¡d
+::
+’dl
+;
+
+29 
+off
+() const
+
+31 
+HUM_TRACE
+(
+ACE_TEXT
+("TV::off"));
+
+32 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " TV i off" << 
+¡d
+::
+’dl
+;
+
+34 
+£tIÅutChªÃl
+()
+
+36 
+HUM_TRACE
+(
+ACE_TEXT
+("TV::setInputChannel"));
+
+37 
+	g_chªÃl
+ = 3;
+
+38 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " Channel is set for VCR"
+
+39 << 
+¡d
+::
+’dl
+;
+
+	@/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/hottub.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_HOT_TUB_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_HOT_TUB_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cHÙtub
+ {
+
+15 
+mubË
+ 
+boŞ
+ 
+	g_Ú
+;
+
+16 
+mubË
+ 
+	g_‹m³¿tu»
+;
+
+18 
+	gpublic
+:
+
+19 
+HÙtub
+() :
+
+20 
+_Ú
+Ğ
+çl£
+ ), 
+_‹m³¿tu»
+( 0 )
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::Hottub"));
+
+24 
+Ú
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::on"));
+
+27 
+	g_Ú
+ = 
+Œue
+;
+
+29 
+off
+() const
+
+31 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::off"));
+
+32 
+	g_Ú
+ = 
+çl£
+;
+
+34 
+bubbËsOn
+() const
+
+36 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::bubblesOn"));
+
+37 ifĞ
+	g_Ú
+ ) {
+
+38 
+	g¡d
+::
+cout
+ << "HÙtub i bubblšg!" << 
+¡d
+::
+’dl
+;
+
+41 
+bubbËsOff
+() const
+
+43 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::bubblesOff"));
+
+44 ifĞ
+	g_Ú
+ ) {
+
+45 
+	g¡d
+::
+cout
+ << "HÙtub i nÙ bubblšg" << 
+¡d
+::
+’dl
+;
+
+48 
+j‘sOn
+() const
+
+50 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::jetsOn"));
+
+51 ifĞ
+	g_Ú
+ ) {
+
+52 
+	g¡d
+::
+cout
+ << "HÙtub j‘ ¬Ú" << 
+¡d
+::
+’dl
+;
+
+55 
+j‘sOff
+() const
+
+57 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::jetsOff"));
+
+58 ifĞ
+	g_Ú
+ ) {
+
+59 
+	g¡d
+::
+cout
+ << "HÙtub j‘ ¬off" << 
+¡d
+::
+’dl
+;
+
+62 
+£tTem³¿tu»
+Ğ
+‹m³¿tu»
+ )
+
+64 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::setTemperature"));
+
+65 
+as£¹
+Ğ
+‹m³¿tu»
+ >= 0 );
+
+66 
+	g_‹m³¿tu»
+ = 
+‹m³¿tu»
+;
+
+68 
+h—t
+() const
+
+70 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::heat"));
+
+71 
+	g_‹m³¿tu»
+ = 105;
+
+72 
+	g¡d
+::
+cout
+ << "Hottub is heatingo‡ steaming 105 degrees"
+
+73 << 
+¡d
+::
+’dl
+;
+
+75 
+coŞ
+() const
+
+77 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::cool"));
+
+78 
+	g_‹m³¿tu»
+ = 98;
+
+79 
+	g¡d
+::
+cout
+ << "HÙtub i coŞšgØ98 deg»es" << 
+¡d
+::
+’dl
+;
+
+	@../../Standard.h
+
+1 #iâdef 
+_HEAD_FIRST_DESIGN_PATTERNS_STANDARD_H_
+
+
+2 
+	#_HEAD_FIRST_DESIGN_PATTERNS_STANDARD_H_
+
+
+	)
+
+4 #ifdeà 
+_MSC_VER
+
+
+5 #´agm¨
+w¬nšg
+Ğ
+di§bË
+ : 4100 )
+
+6 #´agm¨
+w¬nšg
+Ğ
+di§bË
+ : 4355 )
+
+9 
+	#_CRT_SECURE_NO_DEPRECATE
+ 1
+
+	)
+
+11 
+	~<as£¹.h
+>
+
+12 
+	~<®gÜ™hm
+>
+
+13 
+	~<ùime
+>
+
+14 
+	~<memÜy
+>
+
+15 
+	~<m­
+>
+
+16 
+	~<io¡»am
+>
+
+17 
+	~<™”©Ü
+>
+
+18 
+	~<li¡
+>
+
+19 
+	~<s¡»am
+>
+
+20 
+	~<¡ršg
+>
+
+21 
+	~<veùÜ
+>
+
+22 
+	~<f¡»am
+>
+
+	@CeilingFan.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_CEILING_FAN_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_CEILING_FAN_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cCešgFª
+ {
+
+15 
+mubË
+ 
+	g_Ëv–
+;
+
+16 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+18 
+	gpublic
+:
+
+19 cÚ¡ 
+HIGH
+ = 2;
+
+20 cÚ¡ 
+	gMEDIUM
+ = 1;
+
+21 cÚ¡ 
+	gLOW
+ = 0;
+
+23 
+ex¶ic™
+ 
+CešgFª
+ĞcÚ¡ 
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+ ) :
+
+24 
+_Ëv–
+Ğ
+LOW
+ ), 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::CeilingFan"));
+
+28 
+high
+() const
+
+30 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::high"));
+
+31 
+	g_Ëv–
+ = 
+HIGH
+;
+
+32 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+()
+
+33 << " cešg fª i Ú high" << 
+¡d
+::
+’dl
+;
+
+35 
+medium
+() const
+
+37 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::medium"));
+
+38 
+	g_Ëv–
+ = 
+MEDIUM
+;
+
+39 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+()
+
+40 << " cešg fª i Ú medium" << 
+¡d
+::
+’dl
+;
+
+42 
+low
+() const
+
+44 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::low"));
+
+45 
+	g_Ëv–
+ = 
+LOW
+;
+
+46 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+()
+
+47 << " cešg fª i Ú†ow" << 
+¡d
+::
+’dl
+;
+
+49 
+off
+() const
+
+51 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::off"));
+
+52 
+	g_Ëv–
+ = 0;
+
+53 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " cešg fª i off" << 
+¡d
+::
+’dl
+;
+
+55 
+g‘S³ed
+() const
+
+57 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFan::getSpeed"));
+
+58  
+	g_Ëv–
+;
+
+	@CeilingFanOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cCešgFªOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+CešgFª
+* 
+_ûšgFª
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+CešgFªOffCommªd
+ĞcÚ¡ 
+CešgFª
+* 
+ûšgFª
+ ) :
+
+19 
+_ûšgFª
+Ğ
+ûšgFª
+ )
+
+21 
+as£¹
+Ğ
+ûšgFª
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFanOffCommand::CeilingFanOffCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFanOffCommand::execute"));
+
+27 
+	g_ûšgFª
+->
+off
+();
+
+	@CeilingFanOnCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_CEILING_FAN_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cCešgFªOnCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+CešgFª
+* 
+_ûšgFª
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+CešgFªOnCommªd
+ĞcÚ¡ 
+CešgFª
+* 
+ûšgFª
+ ) :
+
+19 
+_ûšgFª
+Ğ
+ûšgFª
+ )
+
+21 
+as£¹
+Ğ
+ûšgFª
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFanOnCommand::CeilingFanOnCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("CeilingFanOnCommand::execute"));
+
+27 
+	g_ûšgFª
+->
+high
+();
+
+	@Command.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cCommªd
+ {
+
+15 
+Commªd
+( const Command& );
+
+16 
+	gİ”©Ü
+=ĞcÚ¡ 
+Commªd
+& );
+
+18 
+	g´Ùeùed
+:
+
+19 
+Commªd
+()
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("Command::Command"));
+
+23 
+	gpublic
+:
+
+24 
+vœtu®
+ ~
+Commªd
+()
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("Command::~Command"));
+
+28 
+vœtu®
+ 
+execu‹
+() const = 0;
+
+	@GarageDoor.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_GARAGE_DOOR_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_GARAGE_DOOR_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cG¬ageDoÜ
+ {
+
+15 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+G¬ageDoÜ
+ĞcÚ¡ 
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+ ) :
+
+19 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::GarageDoor"));
+
+23 
+up
+() const
+
+25 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::up"));
+
+26 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " DoÜ i Up" << 
+¡d
+::
+’dl
+;
+
+28 
+down
+() const
+
+30 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::down"));
+
+31 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " DoÜ i Down" << 
+¡d
+::
+’dl
+;
+
+33 
+¡İ
+() const
+
+35 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::stop"));
+
+36 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " DoÜ i Stİ³d" << 
+¡d
+::
+’dl
+;
+
+38 
+lightOn
+() const
+
+40 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::lightOn"));
+
+41 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< "†ighˆi Ú" << 
+¡d
+::
+’dl
+;
+
+43 
+lightOff
+() const
+
+45 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoor::lightOff"));
+
+46 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< "†ighˆi off" << 
+¡d
+::
+’dl
+;
+
+	@GarageDoorDownCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_DOWN_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_DOWN_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cG¬ageDoÜDownCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+G¬ageDoÜ
+* 
+_g¬ageDoÜ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+G¬ageDoÜDownCommªd
+ĞcÚ¡ 
+G¬ageDoÜ
+* 
+g¬ageDoÜ
+ ) :
+
+19 
+_g¬ageDoÜ
+Ğ
+g¬ageDoÜ
+ )
+
+21 
+as£¹
+Ğ
+g¬ageDoÜ
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoorDownCommand::GarageDoorDownCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoorDownCommand::execute"));
+
+27 
+	g_g¬ageDoÜ
+->
+down
+();
+
+	@GarageDoorUpCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_UP_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_GARAGE_DOOR_UP_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cG¬ageDoÜUpCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+G¬ageDoÜ
+* 
+_g¬ageDoÜ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+G¬ageDoÜUpCommªd
+ĞcÚ¡ 
+G¬ageDoÜ
+* 
+g¬ageDoÜ
+ ) :
+
+19 
+_g¬ageDoÜ
+Ğ
+g¬ageDoÜ
+ )
+
+21 
+as£¹
+Ğ
+g¬ageDoÜ
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoorUpCommand::GarageDoorUpCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("GarageDoorUpCommand::execute"));
+
+27 
+	g_g¬ageDoÜ
+->
+up
+();
+
+	@HottubOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cHÙtubOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+HÙtub
+* 
+_hÙtub
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+HÙtubOffCommªd
+ĞcÚ¡ 
+HÙtub
+* 
+hÙtub
+ ) :
+
+19 
+_hÙtub
+Ğ
+hÙtub
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("HottubOffCommand::HottubOffCommand"));
+
+22 
+as£¹
+Ğ
+hÙtub
+ );
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("HottubOffCommand::execute"));
+
+27 
+	g_hÙtub
+->
+coŞ
+();
+
+28 
+	g_hÙtub
+->
+off
+();
+
+	@HottubOnCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_HOTTUB_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cHÙtubOnCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+HÙtub
+* 
+_hÙtub
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+HÙtubOnCommªd
+ĞcÚ¡ 
+HÙtub
+* 
+hÙtub
+ ) :
+
+19 
+_hÙtub
+Ğ
+hÙtub
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("HottubOnCommand::HottubOnCommand"));
+
+22 
+as£¹
+Ğ
+hÙtub
+ );
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("HottubOnCommand::execute"));
+
+27 
+	g_hÙtub
+->
+Ú
+();
+
+28 
+	g_hÙtub
+->
+h—t
+();
+
+29 
+	g_hÙtub
+->
+bubbËsOn
+();
+
+	@Light.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_LIGHT_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_LIGHT_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLight
+ {
+
+15 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+Light
+ĞcÚ¡ 
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+) :
+
+19 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("Light::Light"));
+
+23 
+Ú
+() const
+
+25 
+HUM_TRACE
+(
+ACE_TEXT
+("Light::on"));
+
+26 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< "†ighˆi Ú" << 
+¡d
+::
+’dl
+;
+
+28 
+off
+() const
+
+30 
+HUM_TRACE
+(
+ACE_TEXT
+("Light::off"));
+
+31 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< "†ighˆi off" << 
+¡d
+::
+’dl
+;
+
+	@LightOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLightOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+Light
+* 
+_light
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+LightOffCommªd
+ĞcÚ¡ 
+Light
+* 
+light
+ ) :
+
+19 
+_light
+Ğ
+light
+ )
+
+21 
+as£¹
+Ğ
+light
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("LightOffCommand::LightOffCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("LightOffCommand::execute"));
+
+27 
+	g_light
+->
+off
+();
+
+	@LightOnCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIGHT_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLightOnCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+Light
+* 
+_light
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+LightOnCommªd
+ĞcÚ¡ 
+Light
+* 
+light
+ ) :
+
+19 
+_light
+Ğ
+light
+ )
+
+21 
+as£¹
+Ğ
+light
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("LightOnCommand::LightOnCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("LightOnCommand::execute"));
+
+27 
+	g_light
+->
+Ú
+();
+
+	@LivingroomLightOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLivšgroomLightOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+Light
+* 
+_light
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+LivšgroomLightOffCommªd
+ĞcÚ¡ 
+Light
+* 
+light
+ ) :
+
+19 
+_light
+Ğ
+light
+ )
+
+21 
+as£¹
+Ğ
+light
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("LivingroomLightOffCommand::"
+
+25 
+execu‹
+() const
+
+27 
+HUM_TRACE
+(
+ACE_TEXT
+("LivingroomLightOffCommand::execute"));
+
+28 
+	g_light
+->
+off
+();
+
+	@LivingroomLightOnCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_LIVINGROOM_LIGHT_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cLivšgroomLightOnCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+Light
+* 
+_light
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+LivšgroomLightOnCommªd
+ĞcÚ¡ 
+Light
+* 
+light
+ ) :
+
+19 
+_light
+Ğ
+light
+ )
+
+21 
+as£¹
+Ğ
+light
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("LivingroomLightOnCommand::"
+
+25 
+execu‹
+() const
+
+27 
+HUM_TRACE
+(
+ACE_TEXT
+("LivingroomLightOnCommand::execute"));
+
+28 
+	g_light
+->
+Ú
+();
+
+	@NoCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_NO_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_NO_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cNoCommªd
+ : 
+public
+ 
+Commªd
+{
+
+15 
+public
+:
+
+16 
+execu‹
+() const
+
+18 
+HUM_TRACE
+(
+ACE_TEXT
+("NoCommand::execute"));
+
+	@Remote.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_HPP_
+
+
+	)
+
+4 
+	~"../../Snd¬d.h
+"
+
+6 
+	~"Light.hµ
+"
+
+7 
+	~"CešgFª.hµ
+"
+
+8 
+	~"G¬ageDoÜ.hµ
+"
+
+9 
+	~"hÙtub.hµ
+"
+
+10 
+	~"S‹»o.hµ
+"
+
+11 
+	~"TV.hµ
+"
+
+13 
+	~"Commªd.hµ
+"
+
+14 
+	~"NoCommªd.hµ
+"
+
+15 
+	~"CešgFªOffCommªd.hµ
+"
+
+16 
+	~"CešgFªOnCommªd.hµ
+"
+
+17 
+	~"G¬ageDoÜDownCommªd.hµ
+"
+
+18 
+	~"G¬ageDoÜUpCommªd.hµ
+"
+
+19 
+	~"HÙtubOffCommªd.hµ
+"
+
+20 
+	~"HÙtubOnCommªd.hµ
+"
+
+21 
+	~"LightOffCommªd.hµ
+"
+
+22 
+	~"LightOnCommªd.hµ
+"
+
+23 
+	~"LivšgroomLightOffCommªd.hµ
+"
+
+24 
+	~"LivšgroomLightOnCommªd.hµ
+"
+
+25 
+	~"S‹»oOffCommªd.hµ
+"
+
+26 
+	~"S‹»oOnW™hCDCommªd.hµ
+"
+
+28 
+	~"RemÙeCÚŒŞ.hµ
+"
+
+	@RemoteControl.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_CONTROL_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_CONTROL_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+8 
+	~<ty³šfo
+>
+
+10 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+11 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+12 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+17 şas 
+	cRemÙeCÚŒŞ
+ {
+
+19 cÚ¡ 
+	gSLOTS
+ = 7;
+
+21 
+Commªd
+* 
+	g_ÚCommªds
+[
+SLOTS
+];
+
+22 
+Commªd
+* 
+	g_offCommªds
+[
+SLOTS
+];
+
+23 
+Commªd
+* 
+	g_noCommªd
+;
+
+25 
+RemÙeCÚŒŞ
+( const RemoteControl& );
+
+26 
+	gİ”©Ü
+=ĞcÚ¡ 
+RemÙeCÚŒŞ
+& );
+
+28 
+	gpublic
+:
+
+29 
+RemÙeCÚŒŞ
+()
+
+31 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::RemoteControl"));
+
+32 
+	g_noCommªd
+ = 
+Ãw
+ 
+NoCommªd
+();
+
+33  
+	gi
+ = 0; i < 
+	gSLOTS
+; i++ ) {
+
+34 
+	g_ÚCommªds
+[
+i
+] = 
+_noCommªd
+;
+
+35 
+	g_offCommªds
+[
+i
+] = 
+_noCommªd
+;
+
+38 ~
+RemÙeCÚŒŞ
+()
+
+40 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::~RemoteControl"));
+
+41 
+d–‘e
+ 
+	g_noCommªd
+;
+
+43 
+£tCommªd
+Ğ
+¦Ù
+, 
+Commªd
+* 
+ÚCommªd
+, Commªd* 
+offCommªd
+ )
+
+45 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::setCommand"));
+
+46 
+as£¹
+Ğ
+¦Ù
+ <ğ
+SLOTS
+ );‡s£¹Ğ
+ÚCommªd
+ );‡s£¹ ( 
+offCommªd
+ );
+
+47 
+	g_ÚCommªds
+[
+¦Ù
+] = 
+ÚCommªd
+;
+
+48 
+	g_offCommªds
+[
+¦Ù
+] = 
+offCommªd
+;
+
+50 
+ÚBu‰ÚWasPushed
+Ğ
+¦Ù
+ ) const
+
+52 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::onButtonWasPushed"));
+
+53 
+as£¹
+Ğ
+¦Ù
+ <ğ
+SLOTS
+ );
+
+54 
+	g_ÚCommªds
+[
+¦Ù
+]->
+execu‹
+();
+
+56 
+offBu‰ÚWasPushed
+Ğ
+¦Ù
+ ) const
+
+58 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::offButtonWasPushed"));
+
+59 
+as£¹
+Ğ
+¦Ù
+ <ğ
+SLOTS
+ );
+
+60 
+	g_offCommªds
+[
+¦Ù
+]->
+execu‹
+();
+
+62 
+	g¡d
+::
+¡ršg
+ 
+toSŒšg
+() const
+
+64 
+HUM_TRACE
+(
+ACE_TEXT
+("RemoteControl::toString"));
+
+65 
+	g¡d
+::
+¡ršg¡»am
+ 
+v®ue
+;
+
+66 
+	gv®ue
+ << "\n------ RemÙCÚŒŞ -------\n" << 
+	g¡d
+::
+’dl
+;
+
+67  
+	gi
+ = 0; i < 
+	gSLOTS
+; i++ ) {
+
+68 
+	gv®ue
+ << "[¦Ù " << 
+	gi
+ << "] ";
+
+69 
+	gv®ue
+ << 
+ty³id
+Ğ*
+_ÚCommªds
+[
+i
+] ).
+Çme
+();
+
+70 
+	gv®ue
+ << " ";
+
+71 
+	gv®ue
+ << 
+ty³id
+Ğ*
+_offCommªds
+[
+i
+] ).
+Çme
+();
+
+72 
+	gv®ue
+ << 
+	g¡d
+::
+’dl
+;
+
+74  
+	gv®ue
+.
+¡r
+();
+
+	@Stereo.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_STEREO_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_STEREO_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cS‹»o
+ {
+
+15 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+S‹»o
+Ğ
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+ ) :
+
+19 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::Stereo"));
+
+23 
+Ú
+() const
+
+25 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::on"));
+
+26 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " s‹»Øi Ú" << 
+¡d
+::
+’dl
+;
+
+28 
+off
+() const
+
+30 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::off"));
+
+31 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " s‹»Øi off" << 
+¡d
+::
+’dl
+;
+
+33 
+£tCD
+() const
+
+35 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::setCD"));
+
+36 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " stereo is set for CD input"
+
+37 << 
+¡d
+::
+’dl
+;
+
+39 
+£tDVD
+() const
+
+41 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::setDVD"));
+
+42 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " stereo is set for DVD input"
+
+43 << 
+¡d
+::
+’dl
+;
+
+45 
+£tRadio
+() const
+
+47 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::setRadio"));
+
+48 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " stereo is set for Radio"
+
+49 << 
+¡d
+::
+’dl
+;
+
+51 
+£tVŞume
+(
+vŞume
+) const
+
+53 
+as£¹
+(
+vŞume
+ > 0 && volume < 12);
+
+54 
+HUM_TRACE
+(
+ACE_TEXT
+("Stereo::setVolume"));
+
+57 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " Stereo volume seto "
+
+58 << 
+vŞume
+ << 
+¡d
+::
+’dl
+;
+
+	@StereoOffCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_OFF_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_OFF_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cS‹»oOffCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+S‹»o
+* 
+_¡”eo
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+S‹»oOffCommªd
+ĞcÚ¡ 
+S‹»o
+* 
+¡”eo
+ ) :
+
+19 
+_¡”eo
+Ğ
+¡”eo
+ )
+
+21 
+HUM_TRACE
+(
+ACE_TEXT
+("StereoOffCommand::StereoOffCommand"));
+
+22 
+as£¹
+Ğ
+¡”eo
+ );
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("StereoOffCommand::execute"));
+
+27 
+	g_¡”eo
+->
+off
+();
+
+	@StereoOnWithCDCommand.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_ON_COMMAND_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_SIMPLE_REMOTE_STEREO_ON_COMMAND_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cS‹»oOnW™hCDCommªd
+ : 
+public
+ 
+Commªd
+ {
+
+15 cÚ¡ 
+S‹»o
+* 
+_¡”eo
+;
+
+17 
+	gpublic
+:
+
+18 
+ex¶ic™
+ 
+S‹»oOnW™hCDCommªd
+ĞcÚ¡ 
+S‹»o
+* 
+¡”eo
+ ) :
+
+19 
+_¡”eo
+Ğ
+¡”eo
+ )
+
+21 
+as£¹
+Ğ
+¡”eo
+ );
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("StereoOnWithCDCommand::StereoOnWithCDCommand"));
+
+24 
+execu‹
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("StereoOnWithCDCommand::execute"));
+
+28 
+	g_¡”eo
+->
+Ú
+();
+
+29 
+	g_¡”eo
+->
+£tCD
+();
+
+30 
+	g_¡”eo
+->
+£tVŞume
+(11);
+
+	@TV.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_TV_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_TV_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cTV
+ {
+
+15 
+mubË
+ 
+	g_chªÃl
+;
+
+16 
+	g¡d
+::
+¡ršg
+ 
+_loÿtiÚ
+;
+
+18 
+	gpublic
+:
+
+19 
+ex¶ic™
+ 
+TV
+ĞcÚ¡ 
+¡d
+::
+¡ršg
+ 
+loÿtiÚ
+ ) :
+
+20 
+_chªÃl
+Ğ0 ), 
+_loÿtiÚ
+Ğ
+loÿtiÚ
+ )
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("TV::TV"));
+
+24 
+Ú
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("TV::on"));
+
+27 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " TV i Ú" << 
+¡d
+::
+’dl
+;
+
+29 
+off
+() const
+
+31 
+HUM_TRACE
+(
+ACE_TEXT
+("TV::off"));
+
+32 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+(è<< " TV i off" << 
+¡d
+::
+’dl
+;
+
+34 
+£tIÅutChªÃl
+()
+
+36 
+HUM_TRACE
+(
+ACE_TEXT
+("TV::setInputChannel"));
+
+37 
+	g_chªÃl
+ = 3;
+
+38 
+	g¡d
+::
+cout
+ << 
+_loÿtiÚ
+.
+c_¡r
+() << " Channel is set for VCR"
+
+39 << 
+¡d
+::
+’dl
+;
+
+	@hottub.hpp
+
+1 #iâdef 
+_HFDP_CPP_COMMAND_REMOTE_HOT_TUB_HPP_
+
+
+2 
+	#_HFDP_CPP_COMMAND_REMOTE_HOT_TUB_HPP_
+
+
+	)
+
+4 
+	~"Hum_Log_Mªag”.h
+"
+
+5 
+	~"Hum_T¿û.h
+"
+
+7 
+	~"RemÙe.hµ
+"
+
+9 
+Çme¥aû
+ 
+	gH—dFœ¡DesignP©‹ºs
+ {
+
+10 
+Çme¥aû
+ 
+	gCommªd
+ {
+
+11 
+Çme¥aû
+ 
+	gRemÙe
+ {
+
+13 şas 
+	cHÙtub
+ {
+
+15 
+mubË
+ 
+boŞ
+ 
+	g_Ú
+;
+
+16 
+mubË
+ 
+	g_‹m³¿tu»
+;
+
+18 
+	gpublic
+:
+
+19 
+HÙtub
+() :
+
+20 
+_Ú
+Ğ
+çl£
+ ), 
+_‹m³¿tu»
+( 0 )
+
+22 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::Hottub"));
+
+24 
+Ú
+() const
+
+26 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::on"));
+
+27 
+	g_Ú
+ = 
+Œue
+;
+
+29 
+off
+() const
+
+31 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::off"));
+
+32 
+	g_Ú
+ = 
+çl£
+;
+
+34 
+bubbËsOn
+() const
+
+36 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::bubblesOn"));
+
+37 ifĞ
+	g_Ú
+ ) {
+
+38 
+	g¡d
+::
+cout
+ << "HÙtub i bubblšg!" << 
+¡d
+::
+’dl
+;
+
+41 
+bubbËsOff
+() const
+
+43 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::bubblesOff"));
+
+44 ifĞ
+	g_Ú
+ ) {
+
+45 
+	g¡d
+::
+cout
+ << "HÙtub i nÙ bubblšg" << 
+¡d
+::
+’dl
+;
+
+48 
+j‘sOn
+() const
+
+50 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::jetsOn"));
+
+51 ifĞ
+	g_Ú
+ ) {
+
+52 
+	g¡d
+::
+cout
+ << "HÙtub j‘ ¬Ú" << 
+¡d
+::
+’dl
+;
+
+55 
+j‘sOff
+() const
+
+57 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::jetsOff"));
+
+58 ifĞ
+	g_Ú
+ ) {
+
+59 
+	g¡d
+::
+cout
+ << "HÙtub j‘ ¬off" << 
+¡d
+::
+’dl
+;
+
+62 
+£tTem³¿tu»
+Ğ
+‹m³¿tu»
+ )
+
+64 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::setTemperature"));
+
+65 
+as£¹
+Ğ
+‹m³¿tu»
+ >= 0 );
+
+66 
+	g_‹m³¿tu»
+ = 
+‹m³¿tu»
+;
+
+68 
+h—t
+() const
+
+70 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::heat"));
+
+71 
+	g_‹m³¿tu»
+ = 105;
+
+72 
+	g¡d
+::
+cout
+ << "Hottub is heatingo‡ steaming 105 degrees"
+
+73 << 
+¡d
+::
+’dl
+;
+
+75 
+coŞ
+() const
+
+77 
+HUM_TRACE
+(
+ACE_TEXT
+("Hottub::cool"));
+
+78 
+	g_‹m³¿tu»
+ = 98;
+
+79 
+	g¡d
+::
+cout
+ << "HÙtub i coŞšgØ98 deg»es" << 
+¡d
+::
+’dl
+;
+
+	@/usr/include/assert.h
+
+24 #ifdef 
+_ASSERT_H
+
+
+26 #undeà
+_ASSERT_H
+
+
+27 #undeà
+as£¹
+
+
+28 #undeà
+__ASSERT_VOID_CAST
+
+
+30 #ifdef 
+__USE_GNU
+
+
+31 #undeà
+as£¹_³¼Ü
+
+
+36 
+	#_ASSERT_H
+ 1
+
+	)
+
+37 
+	~<ã©u»s.h
+>
+
+39 #ià
+defšed
+ 
+__ılu¥lus
+ && 
+__GNUC_PREREQ
+ (2,95)
+
+40 
+	#__ASSERT_VOID_CAST
+ 
+¡©ic_ÿ¡
+<>
+
+	)
+
+42 
+	#__ASSERT_VOID_CAST
+ ()
+
+	)
+
+50 #ifdef 
+NDEBUG
+
+
+52 
+	#as£¹
+(
+ex´
+è(
+	`__ASSERT_VOID_CAST
+ (0))
+
+	)
+
+60 #ifdef 
+__USE_GNU
+
+
+61 
+	#as£¹_³¼Ü
+(
+”ºum
+è(
+	`__ASSERT_VOID_CAST
+ (0))
+
+	)
+
+66 #iâdeà
+_ASSERT_H_DECLS
+
+
+67 
+	#_ASSERT_H_DECLS
+
+
+	)
+
+68 
+__BEGIN_DECLS
+
+
+71 
+	$__as£¹_ç
+ (
+__cÚ¡
+ *
+__as£¹iÚ
+, __cÚ¡ *
+__fe
+,
+
+72 
+__lše
+, 
+__cÚ¡
+ *
+__funùiÚ
+)
+
+73 
+__THROW
+ 
+	`__©Œibu‹__
+ ((
+__nÜ‘uº__
+));
+
+76 
+	$__as£¹_³¼Ü_ç
+ (
+__”ºum
+, 
+__cÚ¡
+ *
+__fe
+,
+
+77 
+__lše
+,
+
+78 
+__cÚ¡
+ *
+__funùiÚ
+)
+
+79 
+__THROW
+ 
+	`__©Œibu‹__
+ ((
+__nÜ‘uº__
+));
+
+84 
+	$__as£¹
+ (cÚ¡ *
+__as£¹iÚ
+, cÚ¡ *
+__fe
+, 
+__lše
+)
+
+85 
+__THROW
+ 
+	`__©Œibu‹__
+ ((
+__nÜ‘uº__
+));
+
+88 
+__END_DECLS
+
+
+91 
+	#as£¹
+(
+ex´
+) \
+
+92 ((
+ex´
+) \
+
+93 ? 
+	`__ASSERT_VOID_CAST
+ (0) \
+
+94 : 
+	`__as£¹_ç
+ (
+	`__STRING
+(
+ex´
+), 
+__FILE__
+, 
+__LINE__
+, 
+__ASSERT_FUNCTION
+))
+
+	)
+
+96 #ifdef 
+__USE_GNU
+
+
+97 
+	#as£¹_³¼Ü
+(
+”ºum
+) \
+
+98 (!(
+”ºum
+) \
+
+99 ? 
+	`__ASSERT_VOID_CAST
+ (0) \
+
+100 : 
+	`__as£¹_³¼Ü_ç
+ ((
+”ºum
+), 
+__FILE__
+, 
+__LINE__
+, 
+__ASSERT_FUNCTION
+))
+
+	)
+
+108 #ià
+defšed
+ 
+__ılu¥lus
+ ? 
+	`__GNUC_PREREQ
+ (2, 6) : __GNUC_PREREQ (2, 4)
+
+109 
+	#__ASSERT_FUNCTION
+ 
+__PRETTY_FUNCTION__
+
+
+	)
+
+111 #ià
+defšed
+ 
+__STDC_VERSION__
+ && __STDC_VERSION__ >= 199901L
+
+112 
+	#__ASSERT_FUNCTION
+ 
+__func__
+
+
+	)
+
+114 
+	#__ASSERT_FUNCTION
+ ((
+__cÚ¡
+ *è0)
+
+	)
+
+	@/usr/include/features.h
+
+20 #iâdef 
+_FEATURES_H
+
+
+21 
+	#_FEATURES_H
+ 1
+
+	)
+
+98 #undeà
+__USE_ISOC99
+
+
+99 #undeà
+__USE_ISOC95
+
+
+100 #undeà
+__USE_POSIX
+
+
+101 #undeà
+__USE_POSIX2
+
+
+102 #undeà
+__USE_POSIX199309
+
+
+103 #undeà
+__USE_POSIX199506
+
+
+104 #undeà
+__USE_XOPEN
+
+
+105 #undeà
+__USE_XOPEN_EXTENDED
+
+
+106 #undeà
+__USE_UNIX98
+
+
+107 #undeà
+__USE_XOPEN2K
+
+
+108 #undeà
+__USE_XOPEN2KXSI
+
+
+109 #undeà
+__USE_XOPEN2K8
+
+
+110 #undeà
+__USE_XOPEN2K8XSI
+
+
+111 #undeà
+__USE_LARGEFILE
+
+
+112 #undeà
+__USE_LARGEFILE64
+
+
+113 #undeà
+__USE_FILE_OFFSET64
+
+
+114 #undeà
+__USE_BSD
+
+
+115 #undeà
+__USE_SVID
+
+
+116 #undeà
+__USE_MISC
+
+
+117 #undeà
+__USE_ATFILE
+
+
+118 #undeà
+__USE_GNU
+
+
+119 #undeà
+__USE_REENTRANT
+
+
+120 #undeà
+__USE_FORTIFY_LEVEL
+
+
+121 #undeà
+__FAVOR_BSD
+
+
+122 #undeà
+__KERNEL_STRICT_NAMES
+
+
+126 #iâdeà
+_LOOSE_KERNEL_NAMES
+
+
+127 
+	#__KERNEL_STRICT_NAMES
+
+
+	)
+
+131 
+	#__USE_ANSI
+ 1
+
+	)
+
+140 #ià
+defšed
+ 
+__GNUC__
+ && defšed 
+__GNUC_MINOR__
+
+
+141 
+	#__GNUC_PREREQ
+(
+maj
+, 
+mš
+) \
+
+142 ((
+__GNUC__
+ << 16è+ 
+__GNUC_MINOR__
+ >ğ((
+maj
+è<< 16è+ (
+mš
+))
+
+	)
+
+144 
+	#__GNUC_PREREQ
+(
+maj
+, 
+mš
+è0
+
+	)
+
+149 #ià
+defšed
+ 
+_BSD_SOURCE
+ && \
+
+150 !(
+defšed
+ 
+	g_POSIX_SOURCE
+ || defšed 
+	g_POSIX_C_SOURCE
+ || \
+
+151 
+defšed
+ 
+	g_XOPEN_SOURCE
+ || defšed 
+	g_GNU_SOURCE
+ || defšed 
+	g_SVID_SOURCE
+)
+
+152 
+	#__FAVOR_BSD
+ 1
+
+	)
+
+156 #ifdeà
+_GNU_SOURCE
+
+
+157 #undeà
+_ISOC95_SOURCE
+
+
+158 
+	#_ISOC95_SOURCE
+ 1
+
+	)
+
+159 #undeà
+_ISOC99_SOURCE
+
+
+160 
+	#_ISOC99_SOURCE
+ 1
+
+	)
+
+161 #undeà
+_POSIX_SOURCE
+
+
+162 
+	#_POSIX_SOURCE
+ 1
+
+	)
+
+163 #undeà
+_POSIX_C_SOURCE
+
+
+164 
+	#_POSIX_C_SOURCE
+ 200809L
+
+	)
+
+165 #undeà
+_XOPEN_SOURCE
+
+
+166 
+	#_XOPEN_SOURCE
+ 700
+
+	)
+
+167 #undeà
+_XOPEN_SOURCE_EXTENDED
+
+
+168 
+	#_XOPEN_SOURCE_EXTENDED
+ 1
+
+	)
+
+169 #undeà
+_LARGEFILE64_SOURCE
+
+
+170 
+	#_LARGEFILE64_SOURCE
+ 1
+
+	)
+
+171 #undeà
+_BSD_SOURCE
+
+
+172 
+	#_BSD_SOURCE
+ 1
+
+	)
+
+173 #undeà
+_SVID_SOURCE
+
+
+174 
+	#_SVID_SOURCE
+ 1
+
+	)
+
+175 #undeà
+_ATFILE_SOURCE
+
+
+176 
+	#_ATFILE_SOURCE
+ 1
+
+	)
+
+181 #ià(!
+defšed
+ 
+__STRICT_ANSI__
+ && !defšed 
+_ISOC99_SOURCE
+ && \
+
+182 !
+defšed
+ 
+	g_POSIX_SOURCE
+ && !defšed 
+	g_POSIX_C_SOURCE
+ && \
+
+183 !
+defšed
+ 
+	g_XOPEN_SOURCE
+ && !defšed 
+	g_BSD_SOURCE
+ && !defšed 
+	g_SVID_SOURCE
+)
+
+184 
+	#_BSD_SOURCE
+ 1
+
+	)
+
+185 
+	#_SVID_SOURCE
+ 1
+
+	)
+
+192 #ià(
+defšed
+ 
+_ISOC99_SOURCE
+ || defšed 
+_ISOC9X_SOURCE
+ \
+
+193 || (
+defšed
+ 
+	g__STDC_VERSION__
+ && __STDC_VERSION__ >= 199901L))
+
+194 
+	#__USE_ISOC99
+ 1
+
+	)
+
+198 #ià(
+defšed
+ 
+_ISOC99_SOURCE
+ || defšed 
+_ISOC9X_SOURCE
+ \
+
+199 || (
+defšed
+ 
+__STDC_VERSION__
+ && __STDC_VERSION__ >= 199409L))
+
+200 
+	#__USE_ISOC95
+ 1
+
+	)
+
+205 #ià((!
+defšed
+ 
+__STRICT_ANSI__
+ || (
+_XOPEN_SOURCE
+ - 0) >= 500) && \
+
+206 !
+defšed
+ 
+_POSIX_SOURCE
+ && !defšed 
+_POSIX_C_SOURCE
+)
+
+207 
+	#_POSIX_SOURCE
+ 1
+
+	)
+
+208 #ià
+defšed
+ 
+_XOPEN_SOURCE
+ && (_XOPEN_SOURCE - 0) < 500
+
+209 
+	#_POSIX_C_SOURCE
+ 2
+
+	)
+
+210 #–ià
+defšed
+ 
+_XOPEN_SOURCE
+ && (_XOPEN_SOURCE - 0) < 600
+
+211 
+	#_POSIX_C_SOURCE
+ 199506L
+
+	)
+
+212 #–ià
+defšed
+ 
+_XOPEN_SOURCE
+ && (_XOPEN_SOURCE - 0) < 700
+
+213 
+	#_POSIX_C_SOURCE
+ 200112L
+
+	)
+
+215 
+	#_POSIX_C_SOURCE
+ 200809L
+
+	)
+
+217 
+	#__USE_POSIX_IMPLICITLY
+ 1
+
+	)
+
+220 #ià
+defšed
+ 
+_POSIX_SOURCE
+ || 
+_POSIX_C_SOURCE
+ >ğ1 || defšed 
+_XOPEN_SOURCE
+
+
+221 
+	#__USE_POSIX
+ 1
+
+	)
+
+224 #ià
+defšed
+ 
+_POSIX_C_SOURCE
+ && _POSIX_C_SOURCE >ğ2 || defšed 
+_XOPEN_SOURCE
+
+
+225 
+	#__USE_POSIX2
+ 1
+
+	)
+
+228 #ià(
+_POSIX_C_SOURCE
+ - 0) >= 199309L
+
+229 
+	#__USE_POSIX199309
+ 1
+
+	)
+
+232 #ià(
+_POSIX_C_SOURCE
+ - 0) >= 199506L
+
+233 
+	#__USE_POSIX199506
+ 1
+
+	)
+
+236 #ià(
+_POSIX_C_SOURCE
+ - 0) >= 200112L
+
+237 
+	#__USE_XOPEN2K
+ 1
+
+	)
+
+238 #undeà
+__USE_ISOC95
+
+
+239 
+	#__USE_ISOC95
+ 1
+
+	)
+
+240 #undeà
+__USE_ISOC99
+
+
+241 
+	#__USE_ISOC99
+ 1
+
+	)
+
+244 #ià(
+_POSIX_C_SOURCE
+ - 0) >= 200809L
+
+245 
+	#__USE_XOPEN2K8
+ 1
+
+	)
+
+246 #undeà
+_ATFILE_SOURCE
+
+
+247 
+	#_ATFILE_SOURCE
+ 1
+
+	)
+
+250 #ifdef 
+_XOPEN_SOURCE
+
+
+251 
+	#__USE_XOPEN
+ 1
+
+	)
+
+252 #ià(
+_XOPEN_SOURCE
+ - 0) >= 500
+
+253 
+	#__USE_XOPEN_EXTENDED
+ 1
+
+	)
+
+254 
+	#__USE_UNIX98
+ 1
+
+	)
+
+255 #undeà
+_LARGEFILE_SOURCE
+
+
+256 
+	#_LARGEFILE_SOURCE
+ 1
+
+	)
+
+257 #ià(
+_XOPEN_SOURCE
+ - 0) >= 600
+
+258 #ià(
+_XOPEN_SOURCE
+ - 0) >= 700
+
+259 
+	#__USE_XOPEN2K8
+ 1
+
+	)
+
+260 
+	#__USE_XOPEN2K8XSI
+ 1
+
+	)
+
+262 
+	#__USE_XOPEN2K
+ 1
+
+	)
+
+263 
+	#__USE_XOPEN2KXSI
+ 1
+
+	)
+
+264 #undeà
+__USE_ISOC95
+
+
+265 
+	#__USE_ISOC95
+ 1
+
+	)
+
+266 #undeà
+__USE_ISOC99
+
+
+267 
+	#__USE_ISOC99
+ 1
+
+	)
+
+270 #ifdeà
+_XOPEN_SOURCE_EXTENDED
+
+
+271 
+	#__USE_XOPEN_EXTENDED
+ 1
+
+	)
+
+276 #ifdeà
+_LARGEFILE_SOURCE
+
+
+277 
+	#__USE_LARGEFILE
+ 1
+
+	)
+
+280 #ifdeà
+_LARGEFILE64_SOURCE
+
+
+281 
+	#__USE_LARGEFILE64
+ 1
+
+	)
+
+284 #ià
+defšed
+ 
+_FILE_OFFSET_BITS
+ && _FILE_OFFSET_BITS == 64
+
+285 
+	#__USE_FILE_OFFSET64
+ 1
+
+	)
+
+288 #ià
+defšed
+ 
+_BSD_SOURCE
+ || defšed 
+_SVID_SOURCE
+
+
+289 
+	#__USE_MISC
+ 1
+
+	)
+
+292 #ifdef 
+_BSD_SOURCE
+
+
+293 
+	#__USE_BSD
+ 1
+
+	)
+
+296 #ifdef 
+_SVID_SOURCE
+
+
+297 
+	#__USE_SVID
+ 1
+
+	)
+
+300 #ifdef 
+_ATFILE_SOURCE
+
+
+301 
+	#__USE_ATFILE
+ 1
+
+	)
+
+304 #ifdef 
+_GNU_SOURCE
+
+
+305 
+	#__USE_GNU
+ 1
+
+	)
+
+308 #ià
+defšed
+ 
+_REENTRANT
+ || defšed 
+_THREAD_SAFE
+
+
+309 
+	#__USE_REENTRANT
+ 1
+
+	)
+
+312 #ià
+defšed
+ 
+_FORTIFY_SOURCE
+ && _FORTIFY_SOURCE > 0 \
+
+313 && 
+__GNUC_PREREQ
+ (4, 1è&& 
+defšed
+ 
+	g__OPTIMIZE__
+ && __OPTIMIZE__ > 0
+
+314 #ià
+_FORTIFY_SOURCE
+ > 1
+
+315 
+	#__USE_FORTIFY_LEVEL
+ 2
+
+	)
+
+317 
+	#__USE_FORTIFY_LEVEL
+ 1
+
+	)
+
+320 
+	#__USE_FORTIFY_LEVEL
+ 0
+
+	)
+
+324 
+	~<b™s/´edefs.h
+>
+
+327 
+	#__STDC_ISO_10646__
+ 200009L
+
+	)
+
+335 #undeà
+__GNU_LIBRARY__
+
+
+336 
+	#__GNU_LIBRARY__
+ 6
+
+	)
+
+340 
+	#__GLIBC__
+ 2
+
+	)
+
+341 
+	#__GLIBC_MINOR__
+ 15
+
+	)
+
+343 
+	#__GLIBC_PREREQ
+(
+maj
+, 
+mš
+) \
+
+344 ((
+__GLIBC__
+ << 16è+ 
+__GLIBC_MINOR__
+ >ğ((
+maj
+è<< 16è+ (
+mš
+))
+
+	)
+
+347 #ià
+defšed
+ 
+__GNUC__
+ \
+
+348 || (
+defšed
+ 
+	g__PGI
+ && defšed 
+	g__i386__
+ ) \
+
+349 || (
+defšed
+ 
+	g__INTEL_COMPILER
+ && (defšed 
+	g__i386__
+ || defšed 
+	g__Ÿ64__
+)) \
+
+350 || (
+defšed
+ 
+	g__STDC_VERSION__
+ && __STDC_VERSION__ >= 199901L)
+
+351 
+	#__GLIBC_HAVE_LONG_LONG
+ 1
+
+	)
+
+355 #iâdeà
+__ASSEMBLER__
+
+
+356 #iâdeà
+_SYS_CDEFS_H
+
+
+357 
+	~<sys/cdefs.h
+>
+
+362 #ià
+defšed
+ 
+__USE_FILE_OFFSET64
+ && !defšed 
+__REDIRECT
+
+
+363 
+	#__USE_LARGEFILE
+ 1
+
+	)
+
+364 
+	#__USE_LARGEFILE64
+ 1
+
+	)
+
+370 #ià
+__GNUC_PREREQ
+ (2, 7è&& 
+defšed
+ 
+__OPTIMIZE__
+ \
+
+371 && !
+defšed
+ 
+	g__OPTIMIZE_SIZE__
+ && !defšed 
+	g__NO_INLINE__
+ \
+
+372 && 
+defšed
+ 
+	g__ex‹º_šlše
+
+
+373 
+	#__USE_EXTERN_INLINES
+ 1
+
+	)
+
+378 #ià
+__GNUC_PREREQ
+ (2, 7è&& 
+defšed
+ 
+__OPTIMIZE__
+ \
+
+379 && (
+defšed
+ 
+	g_LIBC
+ || !defšed 
+	g__OPTIMIZE_SIZE__
+è&& !defšed 
+	g__NO_INLINE__
+ \
+
+380 && 
+defšed
+ 
+	g__ex‹º_šlše
+
+
+381 
+	#__USE_EXTERN_INLINES_IN_LIBC
+ 1
+
+	)
+
+389 
+	~<gnu/¡ubs.h
+>
+
+	@/usr/include/bits/predefs.h
+
+19 #iâdeà
+_FEATURES_H
+
+
+23 #iâdeà
+_PREDEFS_H
+
+
+24 
+	#_PREDEFS_H
+
+
+	)
+
+27 
+	#__STDC_IEC_559__
+ 1
+
+	)
+
+28 
+	#__STDC_IEC_559_COMPLEX__
+ 1
+
+	)
+
+	@/usr/include/gnu/stubs.h
+
+4 
+	~<b™s/wÜdsize.h
+>
+
+6 #ià
+__WORDSIZE
+ == 32
+
+7 
+	~<gnu/¡ubs-32.h
+>
+
+8 #–ià
+__WORDSIZE
+ == 64
+
+9 
+	~<gnu/¡ubs-64.h
+>
+
+	@/usr/include/sys/cdefs.h
+
+20 #iâdef 
+_SYS_CDEFS_H
+
+
+21 
+	#_SYS_CDEFS_H
+ 1
+
+	)
+
+24 #iâdeà
+_FEATURES_H
+
+
+25 
+	~<ã©u»s.h
+>
+
+31 #ià
+defšed
+ 
+__GNUC__
+ && !defšed 
+__STDC__
+
+
+36 #undeà
+__P
+
+
+37 #undeà
+__PMT
+
+
+39 #ifdeà
+__GNUC__
+
+
+43 #ià
+__GNUC_PREREQ
+ (4, 6è&& !
+defšed
+ 
+_LIBC
+
+
+44 
+	#__LEAF
+ , 
+__Ëaf__
+
+
+	)
+
+45 
+	#__LEAF_ATTR
+ 
+	`__©Œibu‹__
+ ((
+__Ëaf__
+))
+
+	)
+
+47 
+	#__LEAF
+
+
+	)
+
+48 
+	#__LEAF_ATTR
+
+
+	)
+
+56 #ià!
+defšed
+ 
+__ılu¥lus
+ && 
+__GNUC_PREREQ
+ (3, 3)
+
+57 
+	#__THROW
+ 
+	`__©Œibu‹__
+ ((
+__nÙhrow__
+ 
+__LEAF
+))
+
+	)
+
+58 
+	#__THROWNL
+ 
+	`__©Œibu‹__
+ ((
+__nÙhrow__
+))
+
+	)
+
+59 
+	#__NTH
+(
+fù
+è
+	`__©Œibu‹__
+ ((
+__nÙhrow__
+ 
+__LEAF
+)è
+	)
+fct
+
+61 #ià
+defšed
+ 
+__ılu¥lus
+ && 
+__GNUC_PREREQ
+ (2,8)
+
+62 
+	#__THROW
+ 
+	`throw
+ ()
+
+	)
+
+63 
+	#__THROWNL
+ 
+	`throw
+ ()
+
+	)
+
+64 
+	#__NTH
+(
+fù
+è
+__LEAF_ATTR
+ fù 
+	`throw
+ ()
+
+	)
+
+66 
+	#__THROW
+
+
+	)
+
+67 
+	#__THROWNL
+
+
+	)
+
+68 
+	#__NTH
+(
+fù
+è
+	)
+fct
+
+74 
+	#__šlše
+
+
+	)
+
+76 
+	#__THROW
+
+
+	)
+
+77 
+	#__THROWNL
+
+
+	)
+
+78 
+	#__NTH
+(
+fù
+è
+	)
+fct
+
+80 
+	#__cÚ¡
+ cÚ¡
+
+	)
+
+81 
+	#__sigÃd
+ sigÃd
+
+	)
+
+82 
+	#__vŞ©e
+ vŞ©e
+
+	)
+
+88 
+	#__P
+(
+¬gs
+è
+	)
+args
+
+89 
+	#__PMT
+(
+¬gs
+è
+	)
+args
+
+94 
+	#__CONCAT
+(
+x
+,
+y
+èx ## 
+	)
+y
+
+95 
+	#__STRING
+(
+x
+è#x
+
+	)
+
+98 
+	#__±r_t
+ *
+
+	)
+
+99 
+	#__lÚg_doubË_t
+ 
+
+	)
+
+103 #ifdef 
+__ılu¥lus
+
+
+104 
+	#__BEGIN_DECLS
+ "C" {
+
+	)
+
+105 
+	#__END_DECLS
+ }
+
+	)
+
+107 
+	#__BEGIN_DECLS
+
+
+	)
+
+108 
+	#__END_DECLS
+
+
+	)
+
+117 #ià
+defšed
+ 
+__ılu¥lus
+ && defšed 
+_GLIBCPP_USE_NAMESPACES
+
+
+118 
+	#__BEGIN_NAMESPACE_STD
+ 
+Çme¥aû
+ 
+¡d
+ {
+
+	)
+
+119 
+	#__END_NAMESPACE_STD
+ }
+
+	)
+
+120 
+	#__USING_NAMESPACE_STD
+(
+Çme
+è
+usšg
+ 
+¡d
+::Çme;
+
+	)
+
+121 
+	#__BEGIN_NAMESPACE_C99
+ 
+Çme¥aû
+ 
+__c99
+ {
+
+	)
+
+122 
+	#__END_NAMESPACE_C99
+ }
+
+	)
+
+123 
+	#__USING_NAMESPACE_C99
+(
+Çme
+è
+usšg
+ 
+__c99
+::Çme;
+
+	)
+
+128 
+	#__BEGIN_NAMESPACE_STD
+
+
+	)
+
+129 
+	#__END_NAMESPACE_STD
+
+
+	)
+
+130 
+	#__USING_NAMESPACE_STD
+(
+Çme
+)
+
+	)
+
+131 
+	#__BEGIN_NAMESPACE_C99
+
+
+	)
+
+132 
+	#__END_NAMESPACE_C99
+
+
+	)
+
+133 
+	#__USING_NAMESPACE_C99
+(
+Çme
+)
+
+	)
+
+138 #iâdeà
+__BOUNDED_POINTERS__
+
+
+139 
+	#__bounded
+
+
+	)
+
+140 
+	#__unbounded
+
+
+	)
+
+141 
+	#__±rv®ue
+
+
+	)
+
+146 
+	#__bos
+(
+±r
+è
+	`__butš_objeù_size
+ (±r, 
+__USE_FORTIFY_LEVEL
+ > 1)
+
+	)
+
+147 
+	#__bos0
+(
+±r
+è
+	`__butš_objeù_size
+ (±r, 0)
+
+	)
+
+149 #ià
+__GNUC_PREREQ
+ (4,3)
+
+150 
+	#__w¬ndeş
+(
+Çme
+, 
+msg
+) \
+
+151 
+	`Çme
+ (è
+	`__©Œibu‹__
+((
+	`__w¬nšg__
+ (
+msg
+)))
+
+	)
+
+152 
+	#__w¬Ç‰r
+(
+msg
+è
+	`__©Œibu‹__
+((
+	`__w¬nšg__
+ (msg)))
+
+	)
+
+153 
+	#__”rÜdeş
+(
+Çme
+, 
+msg
+) \
+
+154 
+	`Çme
+ (è
+	`__©Œibu‹__
+((
+	`__”rÜ__
+ (
+msg
+)))
+
+	)
+
+156 
+	#__w¬ndeş
+(
+Çme
+, 
+msg
+è
+	`Çme
+ ()
+
+	)
+
+157 
+	#__w¬Ç‰r
+(
+msg
+)
+
+	)
+
+158 
+	#__”rÜdeş
+(
+Çme
+, 
+msg
+è
+	`Çme
+ ()
+
+	)
+
+162 #ià
+__GNUC_PREREQ
+ (2,97)
+
+164 
+	#__æex¬r
+ []
+
+	)
+
+166 #ifdeà
+__GNUC__
+
+
+167 
+	#__æex¬r
+ [0]
+
+	)
+
+169 #ià
+defšed
+ 
+__STDC_VERSION__
+ && __STDC_VERSION__ >= 199901L
+
+170 
+	#__æex¬r
+ []
+
+	)
+
+173 
+	#__æex¬r
+ [1]
+
+	)
+
+189 #ià
+defšed
+ 
+__GNUC__
+ && __GNUC__ >= 2
+
+191 
+	#__REDIRECT
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+èÇm´ÙØ
+	`__asm__
+ (
+	`__ASMNAME
+ (#®Ÿs))
+
+	)
+
+192 #ifdeà
+__ılu¥lus
+
+
+193 
+	#__REDIRECT_NTH
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+) \
+
+194 
+Çme
+ 
+´Ùo
+ 
+__THROW
+ 
+	`__asm__
+ (
+	`__ASMNAME
+ (#®Ÿs))
+
+	)
+
+195 
+	#__REDIRECT_NTHNL
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+) \
+
+196 
+Çme
+ 
+´Ùo
+ 
+__THROWNL
+ 
+	`__asm__
+ (
+	`__ASMNAME
+ (#®Ÿs))
+
+	)
+
+198 
+	#__REDIRECT_NTH
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+) \
+
+199 
+Çme
+ 
+´Ùo
+ 
+	`__asm__
+ (
+	`__ASMNAME
+ (#®Ÿs)è
+__THROW
+
+
+	)
+
+200 
+	#__REDIRECT_NTHNL
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+) \
+
+201 
+Çme
+ 
+´Ùo
+ 
+	`__asm__
+ (
+	`__ASMNAME
+ (#®Ÿs)è
+__THROWNL
+
+
+	)
+
+203 
+	#__ASMNAME
+(
+úame
+è
+	`__ASMNAME2
+ (
+__USER_LABEL_PREFIX__
+, cÇme)
+
+	)
+
+204 
+	#__ASMNAME2
+(
+´efix
+, 
+úame
+è
+	`__STRING
+ (´efixè
+	)
+cname
+
+217 #ià!
+defšed
+ 
+__GNUC__
+ || __GNUC__ < 2
+
+218 
+	#__©Œibu‹__
+(
+xyz
+è
+
+	)
+
+224 #ià
+__GNUC_PREREQ
+ (2,96)
+
+225 
+	#__©Œibu‹_m®loc__
+ 
+	`__©Œibu‹__
+ ((
+__m®loc__
+))
+
+	)
+
+227 
+	#__©Œibu‹_m®loc__
+
+
+	)
+
+233 #ià
+__GNUC_PREREQ
+ (2,96)
+
+234 
+	#__©Œibu‹_pu»__
+ 
+	`__©Œibu‹__
+ ((
+__pu»__
+))
+
+	)
+
+236 
+	#__©Œibu‹_pu»__
+
+
+	)
+
+240 #ià
+__GNUC_PREREQ
+ (2,5)
+
+241 
+	#__©Œibu‹_cÚ¡__
+ 
+	`__©Œibu‹__
+ ((
+__cÚ¡__
+))
+
+	)
+
+243 
+	#__©Œibu‹_cÚ¡__
+
+
+	)
+
+249 #ià
+__GNUC_PREREQ
+ (3,1)
+
+250 
+	#__©Œibu‹_u£d__
+ 
+	`__©Œibu‹__
+ ((
+__u£d__
+))
+
+	)
+
+251 
+	#__©Œibu‹_nošlše__
+ 
+	`__©Œibu‹__
+ ((
+__nošlše__
+))
+
+	)
+
+253 
+	#__©Œibu‹_u£d__
+ 
+	`__©Œibu‹__
+ ((
+__unu£d__
+))
+
+	)
+
+254 
+	#__©Œibu‹_nošlše__
+
+
+	)
+
+258 #ià
+__GNUC_PREREQ
+ (3,2)
+
+259 
+	#__©Œibu‹_d•»ÿ‹d__
+ 
+	`__©Œibu‹__
+ ((
+__d•»ÿ‹d__
+))
+
+	)
+
+261 
+	#__©Œibu‹_d•»ÿ‹d__
+
+
+	)
+
+270 #ià
+__GNUC_PREREQ
+ (2,8)
+
+271 
+	#__©Œibu‹_fÜm©_¬g__
+(
+x
+è
+	`__©Œibu‹__
+ ((
+	`__fÜm©_¬g__
+ (x)))
+
+	)
+
+273 
+	#__©Œibu‹_fÜm©_¬g__
+(
+x
+è
+
+	)
+
+280 #ià
+__GNUC_PREREQ
+ (2,97)
+
+281 
+	#__©Œibu‹_fÜm©_¡rfmÚ__
+(
+a
+,
+b
+) \
+
+282 
+	`__©Œibu‹__
+ ((
+	`__fÜm©__
+ (
+__¡rfmÚ__
+, 
+a
+, 
+b
+)))
+
+	)
+
+284 
+	#__©Œibu‹_fÜm©_¡rfmÚ__
+(
+a
+,
+b
+è
+
+	)
+
+289 #ià
+__GNUC_PREREQ
+ (3,3)
+
+290 
+	#__nÚnuÎ
+(
+·¿ms
+è
+	`__©Œibu‹__
+ ((
+__nÚnuÎ__
+…¬ams))
+
+	)
+
+292 
+	#__nÚnuÎ
+(
+·¿ms
+)
+
+	)
+
+297 #ià
+__GNUC_PREREQ
+ (3,4)
+
+298 
+	#__©Œibu‹_w¬n_unu£d_»suÉ__
+ \
+
+299 
+	`__©Œibu‹__
+ ((
+__w¬n_unu£d_»suÉ__
+))
+
+	)
+
+300 #ià
+__USE_FORTIFY_LEVEL
+ > 0
+
+301 
+	#__wur
+ 
+__©Œibu‹_w¬n_unu£d_»suÉ__
+
+
+	)
+
+304 
+	#__©Œibu‹_w¬n_unu£d_»suÉ__
+
+
+	)
+
+306 #iâdeà
+__wur
+
+
+307 
+	#__wur
+
+
+	)
+
+311 #ià
+__GNUC_PREREQ
+ (3,2)
+
+312 
+	#__®ways_šlše
+ 
+__šlše
+ 
+	`__©Œibu‹__
+ ((
+__®ways_šlše__
+))
+
+	)
+
+314 
+	#__®ways_šlše
+ 
+__šlše
+
+
+	)
+
+319 #ià!
+defšed
+ 
+__ılu¥lus
+ || 
+__GNUC_PREREQ
+ (4,3)
+
+320 #ià
+defšed
+ 
+__GNUC_STDC_INLINE__
+ || defšed 
+__ılu¥lus
+
+
+321 
+	#__ex‹º_šlše
+ 
+__šlše
+ 
+	`__©Œibu‹__
+ ((
+__gnu_šlše__
+))
+
+	)
+
+322 #ià
+__GNUC_PREREQ
+ (4,3)
+
+323 
+	#__ex‹º_®ways_šlše
+ \
+
+324 
+__®ways_šlše
+ 
+	`__©Œibu‹__
+ ((
+__gnu_šlše__
+, 
+__¬tificŸl__
+))
+
+	)
+
+326 
+	#__ex‹º_®ways_šlše
+ \
+
+327 
+__®ways_šlše
+ 
+	`__©Œibu‹__
+ ((
+__gnu_šlše__
+))
+
+	)
+
+330 
+	#__ex‹º_šlše
+ 
+__šlše
+
+
+	)
+
+331 #ià
+__GNUC_PREREQ
+ (4,3)
+
+332 
+	#__ex‹º_®ways_šlše
+ \
+
+333 
+__®ways_šlše
+ 
+	`__©Œibu‹__
+ ((
+__¬tificŸl__
+))
+
+	)
+
+335 
+	#__ex‹º_®ways_šlše
+ 
+__®ways_šlše
+
+
+	)
+
+342 #ià
+__GNUC_PREREQ
+ (4,3)
+
+343 
+	#__va_¬g_·ck
+(è
+	`__butš_va_¬g_·ck
+ ()
+
+	)
+
+344 
+	#__va_¬g_·ck_Ën
+(è
+	`__butš_va_¬g_·ck_Ën
+ ()
+
+	)
+
+351 #ià!
+__GNUC_PREREQ
+ (2,8)
+
+352 
+	#__ex‹nsiÚ__
+
+
+	)
+
+356 #ià!
+__GNUC_PREREQ
+ (2,92)
+
+357 
+	#__»¡riù
+
+
+	)
+
+363 #ià
+__GNUC_PREREQ
+ (3,1è&& !
+defšed
+ 
+__GNUG__
+
+
+364 
+	#__»¡riù_¬r
+ 
+__»¡riù
+
+
+	)
+
+366 #ifdeà
+__GNUC__
+
+
+367 
+	#__»¡riù_¬r
+
+
+	)
+
+369 #ià
+defšed
+ 
+__STDC_VERSION__
+ && __STDC_VERSION__ >= 199901L
+
+370 
+	#__»¡riù_¬r
+ 
+»¡riù
+
+
+	)
+
+373 
+	#__»¡riù_¬r
+
+
+	)
+
+378 
+	~<b™s/wÜdsize.h
+>
+
+380 #ià
+defšed
+ 
+__LONG_DOUBLE_MATH_OPTIONAL
+ && defšed 
+__NO_LONG_DOUBLE_MATH
+
+
+381 
+	#__LDBL_COMPAT
+ 1
+
+	)
+
+382 #ifdeà
+__REDIRECT
+
+
+383 
+	#__LDBL_REDIR1
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+è
+	`__REDIRECT
+ (Çme,…rÙo,‡lŸs)
+
+	)
+
+384 
+	#__LDBL_REDIR
+(
+Çme
+, 
+´Ùo
+) \
+
+385 
+	`__LDBL_REDIR1
+ (
+Çme
+, 
+´Ùo
+, 
+__Ædbl_
+##Çme)
+
+	)
+
+386 
+	#__LDBL_REDIR1_NTH
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+è
+	`__REDIRECT_NTH
+ (Çme,…rÙo,‡lŸs)
+
+	)
+
+387 
+	#__LDBL_REDIR_NTH
+(
+Çme
+, 
+´Ùo
+) \
+
+388 
+	`__LDBL_REDIR1_NTH
+ (
+Çme
+, 
+´Ùo
+, 
+__Ædbl_
+##Çme)
+
+	)
+
+389 
+	#__LDBL_REDIR1_DECL
+(
+Çme
+, 
+®Ÿs
+) \
+
+390 
+	`__ty³of
+ (
+Çme
+èÇm
+	`__asm
+ (
+	`__ASMNAME
+ (#®Ÿs));
+
+	)
+
+391 
+	#__LDBL_REDIR_DECL
+(
+Çme
+) \
+
+392 
+	`__ty³of
+ (
+Çme
+èÇm
+	`__asm
+ (
+	`__ASMNAME
+ ("__Ædbl_" #Çme));
+
+	)
+
+393 
+	#__REDIRECT_LDBL
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+) \
+
+394 
+	`__LDBL_REDIR1
+ (
+Çme
+, 
+´Ùo
+, 
+__Ædbl_
+##
+®Ÿs
+)
+
+	)
+
+395 
+	#__REDIRECT_NTH_LDBL
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+) \
+
+396 
+	`__LDBL_REDIR1_NTH
+ (
+Çme
+, 
+´Ùo
+, 
+__Ædbl_
+##
+®Ÿs
+)
+
+	)
+
+399 #ià!
+defšed
+ 
+__LDBL_COMPAT
+ || !defšed 
+__REDIRECT
+
+
+400 
+	#__LDBL_REDIR1
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+èÇm
+	)
+proto
+
+401 
+	#__LDBL_REDIR
+(
+Çme
+, 
+´Ùo
+èÇm
+	)
+proto
+
+402 
+	#__LDBL_REDIR1_NTH
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+èÇm´ÙØ
+__THROW
+
+
+	)
+
+403 
+	#__LDBL_REDIR_NTH
+(
+Çme
+, 
+´Ùo
+èÇm´ÙØ
+__THROW
+
+
+	)
+
+404 
+	#__LDBL_REDIR_DECL
+(
+Çme
+)
+
+	)
+
+405 #ifdeà
+__REDIRECT
+
+
+406 
+	#__REDIRECT_LDBL
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+è
+	`__REDIRECT
+ (Çme,…rÙo,‡lŸs)
+
+	)
+
+407 
+	#__REDIRECT_NTH_LDBL
+(
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+) \
+
+408 
+	`__REDIRECT_NTH
+ (
+Çme
+, 
+´Ùo
+, 
+®Ÿs
+)
+
+	)
+
+	@/usr/include/bits/wordsize.h
+
+3 #ià
+defšed
+ 
+__x86_64__
+
+
+4 
+	#__WORDSIZE
+ 64
+
+	)
+
+5 
+	#__WORDSIZE_COMPAT32
+ 1
+
+	)
+
+7 
+	#__WORDSIZE
+ 32
+
+	)
+
+	@/usr/include/gnu/stubs-32.h
+
+6 #ifdeà
+_LIBC
+
+
+7 #”rÜ 
+AµliÿtiÚs
+ 
+may
+ 
+nÙ
+ 
+defše
+ 
+the
+ 
+maüo
+ 
+_LIBC
+
+
+10 
+	#__¡ub___k”Ãl_co¦
+
+
+	)
+
+11 
+	#__¡ub___k”Ãl_sšl
+
+
+	)
+
+12 
+	#__¡ub___k”Ãl_Æ
+
+
+	)
+
+13 
+	#__¡ub_chæags
+
+
+	)
+
+14 
+	#__¡ub_ç‰ach
+
+
+	)
+
+15 
+	#__¡ub_fchæags
+
+
+	)
+
+16 
+	#__¡ub_fd‘ach
+
+
+	)
+
+17 
+	#__¡ub_g‰y
+
+
+	)
+
+18 
+	#__¡ub_lchmod
+
+
+	)
+
+19 
+	#__¡ub_»voke
+
+
+	)
+
+20 
+	#__¡ub_£ogš
+
+
+	)
+
+21 
+	#__¡ub_sig»tuº
+
+
+	)
+
+22 
+	#__¡ub_s¡k
+
+
+	)
+
+23 
+	#__¡ub_¡ty
+
+
+	)
+
+	@/usr/include/gnu/stubs-64.h
+
+6 #ifdeà
+_LIBC
+
+
+7 #”rÜ 
+AµliÿtiÚs
+ 
+may
+ 
+nÙ
+ 
+defše
+ 
+the
+ 
+maüo
+ 
+_LIBC
+
+
+10 
+	#__¡ub_bdæush
+
+
+	)
+
+11 
+	#__¡ub_chæags
+
+
+	)
+
+12 
+	#__¡ub_ç‰ach
+
+
+	)
+
+13 
+	#__¡ub_fchæags
+
+
+	)
+
+14 
+	#__¡ub_fd‘ach
+
+
+	)
+
+15 
+	#__¡ub_g‘msg
+
+
+	)
+
+16 
+	#__¡ub_g‰y
+
+
+	)
+
+17 
+	#__¡ub_lchmod
+
+
+	)
+
+18 
+	#__¡ub_putmsg
+
+
+	)
+
+19 
+	#__¡ub_»voke
+
+
+	)
+
+20 
+	#__¡ub_£ogš
+
+
+	)
+
+21 
+	#__¡ub_sig»tuº
+
+
+	)
+
+22 
+	#__¡ub_s¡k
+
+
+	)
+
+23 
+	#__¡ub_¡ty
+
+
+	)
+
+	@
+1
+.
+1
+/usr/include
+54
+2619
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/CeilingFan.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/CeilingFanOffCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/CeilingFanOnCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Command.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/GarageDoor.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/GarageDoorDownCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/GarageDoorUpCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/HottubOffCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/HottubOnCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Light.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/LightOffCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/LightOnCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/LivingroomLightOffCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/LivingroomLightOnCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/NoCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Remote.cpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Remote.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/RemoteControl.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/Stereo.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/StereoOffCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/StereoOnWithCDCommand.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/TV.hpp
+/home/hum/Projects/repos-git/github/hfdpcpp_s/Silver/Command/Remote/hottub.hpp
+../../Standard.h
+CeilingFan.hpp
+CeilingFanOffCommand.hpp
+CeilingFanOnCommand.hpp
+Command.hpp
+GarageDoor.hpp
+GarageDoorDownCommand.hpp
+GarageDoorUpCommand.hpp
+HottubOffCommand.hpp
+HottubOnCommand.hpp
+Light.hpp
+LightOffCommand.hpp
+LightOnCommand.hpp
+LivingroomLightOffCommand.hpp
+LivingroomLightOnCommand.hpp
+NoCommand.hpp
+Remote.hpp
+RemoteControl.hpp
+Stereo.hpp
+StereoOffCommand.hpp
+StereoOnWithCDCommand.hpp
+TV.hpp
+hottub.hpp
+/usr/include/assert.h
+/usr/include/features.h
+/usr/include/bits/predefs.h
+/usr/include/gnu/stubs.h
+/usr/include/sys/cdefs.h
+/usr/include/bits/wordsize.h
+/usr/include/gnu/stubs-32.h
+/usr/include/gnu/stubs-64.h

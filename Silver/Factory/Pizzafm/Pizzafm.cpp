@@ -1,9 +1,17 @@
+
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Pizzafm.hpp"
 
 using namespace HeadFirstDesignPatterns::Factory::Method;
 
 int main( int argc, char* argv[] )
 {
+
+  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
+
+  HUM_TRACE(ACE_TEXT("main"));
 
   std::auto_ptr< PizzaStore > nyStore( new NYPizzaStore() );
   std::auto_ptr< PizzaStore > chicagoStore( new ChicagoPizzaStore() );

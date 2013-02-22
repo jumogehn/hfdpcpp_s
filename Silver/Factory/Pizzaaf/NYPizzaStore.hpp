@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_FACTORY_ABSTRACT_NYPIZZA_STORE_HPP_
 #define _HFDP_CPP_FACTORY_ABSTRACT_NYPIZZA_STORE_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Pizzaaf.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -12,6 +15,8 @@ namespace HeadFirstDesignPatterns {
       public:
         std::auto_ptr< Pizza > createPizza( std::string item ) const
         {
+          HUM_TRACE(ACE_TEXT("NYPizzaStore::createPizza"));
+
           std::auto_ptr< Pizza > pizza( 0 );
           PizzaIngredientFactory* ingredientFactory
             = new NYPizzaIngredientFactory();

@@ -81,83 +81,93 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _HFDP_CPP_COMMAND_REMOTE_CONTROL_WITH_UNDO_HPP_</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _HFDP_CPP_COMMAND_REMOTE_CONTROL_WITH_UNDO_HPP_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Undo.hpp&quot;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;typeinfo&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Hum_Log_Manager.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;Hum_Trace.h&quot;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="keyword">namespace </span>HeadFirstDesignPatterns {
-<a name="l00008"></a>00008   <span class="keyword">namespace </span>Command {
-<a name="l00009"></a>00009     <span class="keyword">namespace </span>Undo {
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011       <span class="comment">//</span>
-<a name="l00012"></a>00012       <span class="comment">// This is the invoker</span>
-<a name="l00013"></a>00013       <span class="comment">//</span>
-<a name="l00014"></a><a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_remote_control_with_undo.html">00014</a>       <span class="keyword">class </span><a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_remote_control_with_undo.html">RemoteControlWithUndo</a> {
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SLOTS = 7;
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018         <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* _onCommands[SLOTS];
-<a name="l00019"></a>00019         <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* _offCommands[SLOTS];
-<a name="l00020"></a>00020         <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* _noCommand;
-<a name="l00021"></a>00021         <span class="keyword">mutable</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* _undoCommand;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023       <span class="keyword">public</span>:
-<a name="l00024"></a>00024         <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_remote_control_with_undo.html">RemoteControlWithUndo</a>()
-<a name="l00025"></a>00025         {
-<a name="l00026"></a>00026           _noCommand = <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_no_command.html">NoCommand</a>();
-<a name="l00027"></a>00027           <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; SLOTS; i++ ) {
-<a name="l00028"></a>00028             _onCommands[i] = _noCommand;
-<a name="l00029"></a>00029             _offCommands[i] = _noCommand;
-<a name="l00030"></a>00030           }
-<a name="l00031"></a>00031           _undoCommand = _noCommand;
-<a name="l00032"></a>00032         }
-<a name="l00033"></a>00033         ~<a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_remote_control_with_undo.html">RemoteControlWithUndo</a>()
-<a name="l00034"></a>00034         {
-<a name="l00035"></a>00035           <span class="keyword">delete</span> _noCommand;
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;Undo.hpp&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;typeinfo&gt;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="keyword">namespace </span>HeadFirstDesignPatterns {
+<a name="l00011"></a>00011   <span class="keyword">namespace </span>Command {
+<a name="l00012"></a>00012     <span class="keyword">namespace </span>Undo {
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014       <span class="comment">//</span>
+<a name="l00015"></a>00015       <span class="comment">// This is the invoker</span>
+<a name="l00016"></a>00016       <span class="comment">//</span>
+<a name="l00017"></a><a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_remote_control_with_undo.html">00017</a>       <span class="keyword">class </span><a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_remote_control_with_undo.html">RemoteControlWithUndo</a> {
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SLOTS = 7;
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021         <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* _onCommands[SLOTS];
+<a name="l00022"></a>00022         <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* _offCommands[SLOTS];
+<a name="l00023"></a>00023         <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* _noCommand;
+<a name="l00024"></a>00024         <span class="keyword">mutable</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* _undoCommand;
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026       <span class="keyword">public</span>:
+<a name="l00027"></a>00027         <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_remote_control_with_undo.html">RemoteControlWithUndo</a>()
+<a name="l00028"></a>00028         {
+<a name="l00029"></a>00029           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;RemoteControlWithUndo::RemoteControlWithUndo&quot;</span>));
+<a name="l00030"></a>00030           _noCommand = <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_no_command.html">NoCommand</a>();
+<a name="l00031"></a>00031           <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; SLOTS; i++ ) {
+<a name="l00032"></a>00032             _onCommands[i] = _noCommand;
+<a name="l00033"></a>00033             _offCommands[i] = _noCommand;
+<a name="l00034"></a>00034           }
+<a name="l00035"></a>00035           _undoCommand = _noCommand;
 <a name="l00036"></a>00036         }
-<a name="l00037"></a>00037         <span class="keywordtype">void</span> setCommand( <span class="keywordtype">int</span> slot, <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* onCommand, <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* offCommand )
+<a name="l00037"></a>00037         ~<a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_remote_control_with_undo.html">RemoteControlWithUndo</a>()
 <a name="l00038"></a>00038         {
-<a name="l00039"></a>00039           assert( slot &lt;= SLOTS ); assert( onCommand ); assert( offCommand );
-<a name="l00040"></a>00040           _onCommands[slot]  = onCommand;
-<a name="l00041"></a>00041           _offCommands[slot] = offCommand;
-<a name="l00042"></a>00042         }
-<a name="l00043"></a>00043         <span class="keywordtype">void</span> onButtonWasPushed( <span class="keywordtype">int</span> slot )<span class="keyword"> const</span>
-<a name="l00044"></a>00044 <span class="keyword">        </span>{
-<a name="l00045"></a>00045           assert( slot &lt;= SLOTS );
-<a name="l00046"></a>00046           _onCommands[slot]-&gt;execute();
-<a name="l00047"></a>00047           _undoCommand = _onCommands[slot];
+<a name="l00039"></a>00039           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;RemoteControlWithUndo::~RemoteControlWithUndo&quot;</span>));
+<a name="l00040"></a>00040           <span class="keyword">delete</span> _noCommand;
+<a name="l00041"></a>00041         }
+<a name="l00042"></a>00042         <span class="keywordtype">void</span> setCommand( <span class="keywordtype">int</span> slot, <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* onCommand, <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_undo_1_1_command.html">Command</a>* offCommand )
+<a name="l00043"></a>00043         {
+<a name="l00044"></a>00044           assert( slot &lt;= SLOTS ); assert( onCommand ); assert( offCommand );
+<a name="l00045"></a>00045           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;RemoteControlWithUndo::setCommand&quot;</span>));
+<a name="l00046"></a>00046           _onCommands[slot]  = onCommand;
+<a name="l00047"></a>00047           _offCommands[slot] = offCommand;
 <a name="l00048"></a>00048         }
-<a name="l00049"></a>00049         <span class="keywordtype">void</span> offButtonWasPushed( <span class="keywordtype">int</span> slot )<span class="keyword"> const</span>
+<a name="l00049"></a>00049         <span class="keywordtype">void</span> onButtonWasPushed( <span class="keywordtype">int</span> slot )<span class="keyword"> const</span>
 <a name="l00050"></a>00050 <span class="keyword">        </span>{
 <a name="l00051"></a>00051           assert( slot &lt;= SLOTS );
-<a name="l00052"></a>00052           _offCommands[slot]-&gt;execute();
-<a name="l00053"></a>00053           _undoCommand = _offCommands[slot];
-<a name="l00054"></a>00054         }
-<a name="l00055"></a>00055         <span class="keywordtype">void</span> undoButtonWasPushed()<span class="keyword"> const</span>
-<a name="l00056"></a>00056 <span class="keyword">        </span>{
-<a name="l00057"></a>00057           _undoCommand-&gt;undo();
-<a name="l00058"></a>00058         }
-<a name="l00059"></a>00059         std::string toString()<span class="keyword"> const</span>
-<a name="l00060"></a>00060 <span class="keyword">        </span>{
-<a name="l00061"></a>00061           std::stringstream value;
-<a name="l00062"></a>00062           value &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;------ Remote Control -------&quot;</span> &lt;&lt; std::endl;
-<a name="l00063"></a>00063           <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; SLOTS; i++ ) {
-<a name="l00064"></a>00064             value &lt;&lt; <span class="stringliteral">&quot;[slot &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;] &quot;</span>;
-<a name="l00065"></a>00065             value &lt;&lt; <span class="keyword">typeid</span>( *_onCommands[i] ).name();
-<a name="l00066"></a>00066             value &lt;&lt; <span class="stringliteral">&quot;    &quot;</span>;
-<a name="l00067"></a>00067             value &lt;&lt; <span class="keyword">typeid</span>( *_offCommands[i] ).name();
-<a name="l00068"></a>00068             value &lt;&lt; std::endl;
-<a name="l00069"></a>00069           }
-<a name="l00070"></a>00070           value &lt;&lt; <span class="stringliteral">&quot;[undo] &quot;</span> &lt;&lt; <span class="keyword">typeid</span>( *_undoCommand ).name() &lt;&lt; std::endl;
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072           <span class="keywordflow">return</span> value.str();
-<a name="l00073"></a>00073         }
-<a name="l00074"></a>00074       };
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076     } <span class="comment">// namespace Undo</span>
-<a name="l00077"></a>00077   } <span class="comment">// namespace Command</span>
-<a name="l00078"></a>00078 } <span class="comment">// namespace HeadFirstDesignPatterns</span>
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="preprocessor">#endif</span>
+<a name="l00052"></a>00052           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;RemoteControlWithUndo::onButtonWasPushed&quot;</span>));
+<a name="l00053"></a>00053           _onCommands[slot]-&gt;execute();
+<a name="l00054"></a>00054           _undoCommand = _onCommands[slot];
+<a name="l00055"></a>00055         }
+<a name="l00056"></a>00056         <span class="keywordtype">void</span> offButtonWasPushed( <span class="keywordtype">int</span> slot )<span class="keyword"> const</span>
+<a name="l00057"></a>00057 <span class="keyword">        </span>{
+<a name="l00058"></a>00058           assert( slot &lt;= SLOTS );
+<a name="l00059"></a>00059           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;RemoteControlWithUndo::offButtonWasPushed&quot;</span>));
+<a name="l00060"></a>00060           _offCommands[slot]-&gt;execute();
+<a name="l00061"></a>00061           _undoCommand = _offCommands[slot];
+<a name="l00062"></a>00062         }
+<a name="l00063"></a>00063         <span class="keywordtype">void</span> undoButtonWasPushed()<span class="keyword"> const</span>
+<a name="l00064"></a>00064 <span class="keyword">        </span>{
+<a name="l00065"></a>00065           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;RemoteControlWithUndo::undoButtonWasPushed&quot;</span>));
+<a name="l00066"></a>00066           _undoCommand-&gt;undo();
+<a name="l00067"></a>00067         }
+<a name="l00068"></a>00068         std::string toString()<span class="keyword"> const</span>
+<a name="l00069"></a>00069 <span class="keyword">        </span>{
+<a name="l00070"></a>00070           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;RemoteControlWithUndo::toString&quot;</span>));
+<a name="l00071"></a>00071           std::stringstream value;
+<a name="l00072"></a>00072           value &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;------ Remote Control -------&quot;</span> &lt;&lt; std::endl;
+<a name="l00073"></a>00073           <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; SLOTS; i++ ) {
+<a name="l00074"></a>00074             value &lt;&lt; <span class="stringliteral">&quot;[slot &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;] &quot;</span>;
+<a name="l00075"></a>00075             value &lt;&lt; <span class="keyword">typeid</span>( *_onCommands[i] ).name();
+<a name="l00076"></a>00076             value &lt;&lt; <span class="stringliteral">&quot;    &quot;</span>;
+<a name="l00077"></a>00077             value &lt;&lt; <span class="keyword">typeid</span>( *_offCommands[i] ).name();
+<a name="l00078"></a>00078             value &lt;&lt; std::endl;
+<a name="l00079"></a>00079           }
+<a name="l00080"></a>00080           value &lt;&lt; <span class="stringliteral">&quot;[undo] &quot;</span> &lt;&lt; <span class="keyword">typeid</span>( *_undoCommand ).name() &lt;&lt; std::endl;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082           <span class="keywordflow">return</span> value.str();
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084       };
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086     } <span class="comment">// namespace Undo</span>
+<a name="l00087"></a>00087   } <span class="comment">// namespace Command</span>
+<a name="l00088"></a>00088 } <span class="comment">// namespace HeadFirstDesignPatterns</span>
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -176,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 22 2013 12:46:40 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 22 2013 23:10:19 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

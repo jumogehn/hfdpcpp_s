@@ -81,81 +81,95 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _HFDP_CPP_FACADE_HOME_THEATER_AMPLIFIER_HPP_</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _HFDP_CPP_FACADE_HOME_THEATER_AMPLIFIER_HPP_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;HomeTheater.hpp&quot;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="keyword">namespace </span>HeadFirstDesignPatterns {
-<a name="l00007"></a>00007   <span class="keyword">namespace </span>Facade {
-<a name="l00008"></a>00008     <span class="keyword">namespace </span>HomeTheater {
-<a name="l00009"></a>00009 
-<a name="l00010"></a><a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">00010</a>       <span class="keyword">class </span><a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a> {
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012         std::string _description;
-<a name="l00013"></a>00013         <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_tuner.html">Tuner</a>* _tuner;
-<a name="l00014"></a>00014         <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_dvd_player.html">DvdPlayer</a>* _dvd;
-<a name="l00015"></a>00015         <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_cd_player.html">CdPlayer</a>* _cd;
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017         <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a>( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a>&amp; ); <span class="comment">// Disable copy constructor</span>
-<a name="l00018"></a>00018         <span class="keywordtype">void</span> operator=( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a>&amp; ); <span class="comment">// Disable assignment operator</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Hum_Log_Manager.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;Hum_Trace.h&quot;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;HomeTheater.hpp&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="keyword">namespace </span>HeadFirstDesignPatterns {
+<a name="l00010"></a>00010   <span class="keyword">namespace </span>Facade {
+<a name="l00011"></a>00011     <span class="keyword">namespace </span>HomeTheater {
+<a name="l00012"></a>00012 
+<a name="l00013"></a><a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">00013</a>       <span class="keyword">class </span><a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a> {
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015         std::string _description;
+<a name="l00016"></a>00016         <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_tuner.html">Tuner</a>* _tuner;
+<a name="l00017"></a>00017         <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_dvd_player.html">DvdPlayer</a>* _dvd;
+<a name="l00018"></a>00018         <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_cd_player.html">CdPlayer</a>* _cd;
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020       <span class="keyword">public</span>:
-<a name="l00021"></a>00021         <span class="keyword">explicit</span> <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a>( std::string description ) :
-<a name="l00022"></a>00022           _description( description ), _tuner( 0 ), _dvd( 0 ), _cd( 0 )
-<a name="l00023"></a>00023         {}
-<a name="l00024"></a>00024         <span class="keywordtype">void</span> on()<span class="keyword"> const</span>
-<a name="l00025"></a>00025 <span class="keyword">        </span>{
-<a name="l00026"></a>00026           std::cout &lt;&lt; _description &lt;&lt; <span class="stringliteral">&quot; on&quot;</span> &lt;&lt; std::endl;
-<a name="l00027"></a>00027         }
-<a name="l00028"></a>00028         <span class="keywordtype">void</span> off()<span class="keyword"> const</span>
-<a name="l00029"></a>00029 <span class="keyword">        </span>{
-<a name="l00030"></a>00030           std::cout &lt;&lt; _description &lt;&lt; <span class="stringliteral">&quot; off&quot;</span> &lt;&lt; std::endl;
-<a name="l00031"></a>00031         }
-<a name="l00032"></a>00032         <span class="keywordtype">void</span> setStereoSound()
-<a name="l00033"></a>00033         {
-<a name="l00034"></a>00034           std::cout &lt;&lt; _description &lt;&lt; <span class="stringliteral">&quot; stereo mode on&quot;</span> &lt;&lt; std::endl;
-<a name="l00035"></a>00035         }
-<a name="l00036"></a>00036         <span class="keywordtype">void</span> setSurroundSound()
-<a name="l00037"></a>00037         {
-<a name="l00038"></a>00038           std::cout &lt;&lt; _description
-<a name="l00039"></a>00039             &lt;&lt; <span class="stringliteral">&quot; surround sound on (5 speakers, 1 subwoofer)&quot;</span> &lt;&lt; std::endl;
-<a name="l00040"></a>00040         }
-<a name="l00041"></a>00041         <span class="keywordtype">void</span> setVolume( <span class="keywordtype">int</span> level )
-<a name="l00042"></a>00042         {
-<a name="l00043"></a>00043           assert( 0 &lt; level );
-<a name="l00044"></a>00044           std::cout &lt;&lt; _description
-<a name="l00045"></a>00045             &lt;&lt; <span class="stringliteral">&quot; setting volume to &quot;</span> &lt;&lt; level &lt;&lt; std::endl;
-<a name="l00046"></a>00046         }
-<a name="l00047"></a>00047         <span class="keywordtype">void</span> setTuner( <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_tuner.html">Tuner</a>* tuner)
-<a name="l00048"></a>00048         {
-<a name="l00049"></a>00049           assert( tuner );
-<a name="l00050"></a>00050           std::cout &lt;&lt; _description
-<a name="l00051"></a>00051             &lt;&lt; <span class="stringliteral">&quot; setting tuner to &quot;</span> &lt;&lt; tuner-&gt;toString() &lt;&lt; std::endl;
-<a name="l00052"></a>00052           _tuner = tuner;
-<a name="l00053"></a>00053         }
-<a name="l00054"></a>00054         <span class="keywordtype">void</span> setDvd( <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_dvd_player.html">DvdPlayer</a>* dvd )
-<a name="l00055"></a>00055         {
-<a name="l00056"></a>00056           assert( dvd );
-<a name="l00057"></a>00057           std::cout &lt;&lt; _description
-<a name="l00058"></a>00058             &lt;&lt; <span class="stringliteral">&quot; setting DVD player to &quot;</span> &lt;&lt; dvd-&gt;toString()&lt;&lt; std::endl;
-<a name="l00059"></a>00059           _dvd = dvd;
-<a name="l00060"></a>00060         }
-<a name="l00061"></a>00061         <span class="keywordtype">void</span> setCd( <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_cd_player.html">CdPlayer</a>* cd )
-<a name="l00062"></a>00062         {
-<a name="l00063"></a>00063           assert( cd );
-<a name="l00064"></a>00064           std::cout &lt;&lt; _description
-<a name="l00065"></a>00065             &lt;&lt; <span class="stringliteral">&quot; setting CD player to &quot;</span> &lt;&lt; cd-&gt;toString() &lt;&lt; std::endl;
-<a name="l00066"></a>00066           _cd = cd;
-<a name="l00067"></a>00067         }
-<a name="l00068"></a>00068         std::string toString()<span class="keyword"> const</span>
-<a name="l00069"></a>00069 <span class="keyword">        </span>{
-<a name="l00070"></a>00070           <span class="keywordflow">return</span> _description.c_str();
-<a name="l00071"></a>00071         }
-<a name="l00072"></a>00072       };
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074     } <span class="comment">// namespace HomeTheater</span>
-<a name="l00075"></a>00075   } <span class="comment">// namespace Facade</span>
-<a name="l00076"></a>00076 } <span class="comment">// namespace HeadFirstDesignPatterns</span>
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="preprocessor">#endif</span>
+<a name="l00020"></a>00020         <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a>( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a>&amp; ); <span class="comment">// Disable copy constructor</span>
+<a name="l00021"></a>00021         <span class="keywordtype">void</span> operator=( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a>&amp; ); <span class="comment">// Disable assignment operator</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023       <span class="keyword">public</span>:
+<a name="l00024"></a>00024         <span class="keyword">explicit</span> <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_amplifier.html">Amplifier</a>( std::string description ) :
+<a name="l00025"></a>00025           _description( description ), _tuner( 0 ), _dvd( 0 ), _cd( 0 )
+<a name="l00026"></a>00026         {
+<a name="l00027"></a>00027           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::Amplifier&quot;</span>));
+<a name="l00028"></a>00028         }
+<a name="l00029"></a>00029         <span class="keywordtype">void</span> on()<span class="keyword"> const</span>
+<a name="l00030"></a>00030 <span class="keyword">        </span>{
+<a name="l00031"></a>00031           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::on&quot;</span>));
+<a name="l00032"></a>00032           std::cout &lt;&lt; _description &lt;&lt; <span class="stringliteral">&quot; on&quot;</span> &lt;&lt; std::endl;
+<a name="l00033"></a>00033         }
+<a name="l00034"></a>00034         <span class="keywordtype">void</span> off()<span class="keyword"> const</span>
+<a name="l00035"></a>00035 <span class="keyword">        </span>{
+<a name="l00036"></a>00036           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::off&quot;</span>));
+<a name="l00037"></a>00037           std::cout &lt;&lt; _description &lt;&lt; <span class="stringliteral">&quot; off&quot;</span> &lt;&lt; std::endl;
+<a name="l00038"></a>00038         }
+<a name="l00039"></a>00039         <span class="keywordtype">void</span> setStereoSound()
+<a name="l00040"></a>00040         {
+<a name="l00041"></a>00041           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::setStereoSound&quot;</span>));
+<a name="l00042"></a>00042           std::cout &lt;&lt; _description &lt;&lt; <span class="stringliteral">&quot; stereo mode on&quot;</span> &lt;&lt; std::endl;
+<a name="l00043"></a>00043         }
+<a name="l00044"></a>00044         <span class="keywordtype">void</span> setSurroundSound()
+<a name="l00045"></a>00045         {
+<a name="l00046"></a>00046           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::setSurroundSound&quot;</span>));
+<a name="l00047"></a>00047           std::cout &lt;&lt; _description
+<a name="l00048"></a>00048             &lt;&lt; <span class="stringliteral">&quot; surround sound on (5 speakers, 1 subwoofer)&quot;</span> &lt;&lt; std::endl;
+<a name="l00049"></a>00049         }
+<a name="l00050"></a>00050         <span class="keywordtype">void</span> setVolume( <span class="keywordtype">int</span> level )
+<a name="l00051"></a>00051         {
+<a name="l00052"></a>00052           assert( 0 &lt; level );
+<a name="l00053"></a>00053           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::setVolume&quot;</span>));
+<a name="l00054"></a>00054           std::cout &lt;&lt; _description
+<a name="l00055"></a>00055             &lt;&lt; <span class="stringliteral">&quot; setting volume to &quot;</span> &lt;&lt; level &lt;&lt; std::endl;
+<a name="l00056"></a>00056         }
+<a name="l00057"></a>00057         <span class="keywordtype">void</span> setTuner( <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_tuner.html">Tuner</a>* tuner)
+<a name="l00058"></a>00058         {
+<a name="l00059"></a>00059           assert( tuner );
+<a name="l00060"></a>00060           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::setTuner&quot;</span>));
+<a name="l00061"></a>00061           std::cout &lt;&lt; _description
+<a name="l00062"></a>00062             &lt;&lt; <span class="stringliteral">&quot; setting tuner to &quot;</span> &lt;&lt; tuner-&gt;toString() &lt;&lt; std::endl;
+<a name="l00063"></a>00063           _tuner = tuner;
+<a name="l00064"></a>00064         }
+<a name="l00065"></a>00065         <span class="keywordtype">void</span> setDvd( <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_dvd_player.html">DvdPlayer</a>* dvd )
+<a name="l00066"></a>00066         {
+<a name="l00067"></a>00067           assert( dvd );
+<a name="l00068"></a>00068           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::setDvd&quot;</span>));
+<a name="l00069"></a>00069           std::cout &lt;&lt; _description
+<a name="l00070"></a>00070             &lt;&lt; <span class="stringliteral">&quot; setting DVD player to &quot;</span> &lt;&lt; dvd-&gt;toString()&lt;&lt; std::endl;
+<a name="l00071"></a>00071           _dvd = dvd;
+<a name="l00072"></a>00072         }
+<a name="l00073"></a>00073         <span class="keywordtype">void</span> setCd( <a class="code" href="class_head_first_design_patterns_1_1_facade_1_1_home_theater_1_1_cd_player.html">CdPlayer</a>* cd )
+<a name="l00074"></a>00074         {
+<a name="l00075"></a>00075           assert( cd );
+<a name="l00076"></a>00076           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::setCd&quot;</span>));
+<a name="l00077"></a>00077           std::cout &lt;&lt; _description
+<a name="l00078"></a>00078             &lt;&lt; <span class="stringliteral">&quot; setting CD player to &quot;</span> &lt;&lt; cd-&gt;toString() &lt;&lt; std::endl;
+<a name="l00079"></a>00079           _cd = cd;
+<a name="l00080"></a>00080         }
+<a name="l00081"></a>00081         std::string toString()<span class="keyword"> const</span>
+<a name="l00082"></a>00082 <span class="keyword">        </span>{
+<a name="l00083"></a>00083           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;Amplifier::toString&quot;</span>));
+<a name="l00084"></a>00084           <span class="keywordflow">return</span> _description.c_str();
+<a name="l00085"></a>00085         }
+<a name="l00086"></a>00086       };
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088     } <span class="comment">// namespace HomeTheater</span>
+<a name="l00089"></a>00089   } <span class="comment">// namespace Facade</span>
+<a name="l00090"></a>00090 } <span class="comment">// namespace HeadFirstDesignPatterns</span>
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -174,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 22 2013 12:46:40 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 22 2013 23:10:18 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

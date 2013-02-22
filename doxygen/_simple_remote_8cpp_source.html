@@ -78,26 +78,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SimpleRemote.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;SimpleRemote.hpp&quot;</span>
-<a name="l00002"></a>00002 
-<a name="l00003"></a>00003 <span class="keyword">using namespace </span>HeadFirstDesignPatterns::Command::SimpleRemote;
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;Hum_Log_Manager.h&quot;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;Hum_Trace.h&quot;</span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[] ) {
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;SimpleRemote.hpp&quot;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007   std::auto_ptr&lt; SimpleRemoteControl &gt; remote( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_simple_remote_control.html">SimpleRemoteControl</a>() );
-<a name="l00008"></a>00008   std::auto_ptr&lt; Light &gt; light( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_light.html">Light</a>() );
-<a name="l00009"></a>00009   std::auto_ptr&lt; GarageDoor &gt; garageDoor( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_garage_door.html">GarageDoor</a>() );
-<a name="l00010"></a>00010   std::auto_ptr&lt; LightOnCommand &gt; lightOn( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_light_on_command.html">LightOnCommand</a>( light.get() ) );
-<a name="l00011"></a>00011   std::auto_ptr&lt; GarageDoorOpenCommand &gt;
-<a name="l00012"></a>00012     garageOpen( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_garage_door_open_command.html">GarageDoorOpenCommand</a>(garageDoor.get() ) );
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014   remote-&gt;setCommand( lightOn.get() );
-<a name="l00015"></a>00015   remote-&gt;buttonWasPressed();
-<a name="l00016"></a>00016   remote-&gt;setCommand( garageOpen.get() );
-<a name="l00017"></a>00017   remote-&gt;buttonWasPressed();
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019   <span class="keywordflow">return</span> 0;
-<a name="l00020"></a>00020 }
+<a name="l00007"></a>00007 <span class="keyword">using namespace </span>HeadFirstDesignPatterns::Command::SimpleRemote;
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[] ) {
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011   HUM_LOG_MANAGER-&gt;redirectToFile(ACE_TEXT(<span class="stringliteral">&quot;trace.log&quot;</span>));
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013   HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;main&quot;</span>));
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015   std::auto_ptr&lt; SimpleRemoteControl &gt; remote( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_simple_remote_control.html">SimpleRemoteControl</a>() );
+<a name="l00016"></a>00016   std::auto_ptr&lt; Light &gt; light( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_light.html">Light</a>() );
+<a name="l00017"></a>00017   std::auto_ptr&lt; GarageDoor &gt; garageDoor( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_garage_door.html">GarageDoor</a>() );
+<a name="l00018"></a>00018   std::auto_ptr&lt; LightOnCommand &gt; lightOn( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_light_on_command.html">LightOnCommand</a>( light.get() ) );
+<a name="l00019"></a>00019   std::auto_ptr&lt; GarageDoorOpenCommand &gt;
+<a name="l00020"></a>00020     garageOpen( <span class="keyword">new</span> <a class="code" href="class_head_first_design_patterns_1_1_command_1_1_simple_remote_1_1_garage_door_open_command.html">GarageDoorOpenCommand</a>(garageDoor.get() ) );
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022   remote-&gt;setCommand( lightOn.get() );
+<a name="l00023"></a>00023   remote-&gt;buttonWasPressed();
+<a name="l00024"></a>00024   remote-&gt;setCommand( garageOpen.get() );
+<a name="l00025"></a>00025   remote-&gt;buttonWasPressed();
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027   <span class="keywordflow">return</span> 0;
+<a name="l00028"></a>00028 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -116,7 +124,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 22 2013 12:46:40 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 22 2013 23:10:19 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

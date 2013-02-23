@@ -14,20 +14,20 @@ Adapter
 .. image:: _static/Adapter/Ducks/not_defined_duck_adapter.jpg
 
 
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_duck_8hpp_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_duck_adapter_8hpp_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_ducks_8hpp_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_mallard_duck_8hpp_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_turkey_8hpp_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_turkey_adapter_8hpp_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_wild_turkey_8hpp_source.html>`
+`<doxygen/_adapter_2_ducks_2_duck_8hpp_source.html>`
+`<doxygen/_adapter_2_ducks_2_duck_adapter_8hpp_source.html>`
+`<doxygen/_adapter_2_ducks_2_ducks_8hpp_source.html>`
+`<doxygen/_adapter_2_ducks_2_mallard_duck_8hpp_source.html>`
+`<doxygen/_adapter_2_ducks_2_turkey_8hpp_source.html>`
+`<doxygen/_adapter_2_ducks_2_turkey_adapter_8hpp_source.html>`
+`<doxygen/_adapter_2_ducks_2_wild_turkey_8hpp_source.html>`
 
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_ducks_8cpp_source.html>`
+`<doxygen/_adapter_2_ducks_2_ducks_8cpp_source.html>`
 
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_trace_8log_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_makefile_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_README_source.html>`
-`<http://journeyer.github.com/hfdpcpp_s/doxygen/_adapter_2_ducks_2_ducks_8vcproj_source.html>`
+`<doxygen/_adapter_2_ducks_2_trace_8log_source.html>`
+`<doxygen/_adapter_2_ducks_2_makefile_source.html>`
+`<doxygen/_adapter_2_ducks_2_README_source.html>`
+`<doxygen/_adapter_2_ducks_2_ducks_8vcproj_source.html>`
 
 
 패턴 8. 어댑터

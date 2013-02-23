@@ -2,15 +2,6 @@
 Welcome to Head First Design Patterns for C++ documentation!
 ============================================================
 
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-   Adapter.rst
-   Command.rst
-
-
 You can view :download:`Doxygen Document<_static/linktodoxygen.html>`.
 
 You can download :download:`the UML file<_static/Silver.uml>` and open/edit it via `StarUML <http://staruml.sourceforge.net/en/>`_.

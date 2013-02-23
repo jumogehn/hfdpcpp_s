@@ -1,0 +1,757 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>&lt;no title&gt; &mdash; hfdpcpp_s 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="index.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="index.html">
+          <span>hfdpcpp_s 0.1 documentation</span></a></h1>
+        <h2 class="heading"><span>&lt;no title&gt;</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        <a class="uplink" href="index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <p>헤드 퍼스트 디자인 패턴</p>
+<p>목차</p>
+<p><a href="#id27"><span class="problematic" id="id28">`1. 디자인 패턴의 세계에 오신 것을 환영 합니다 - 스트래티지`_</span></a></p>
+<p><a href="#id29"><span class="problematic" id="id30">`2. 객체들에게 연락망을 돌립시다 - 옵저버`_</span></a></p>
+<p><a href="#id31"><span class="problematic" id="id32">`3. 객체 꾸미기 - 데코레이터`_</span></a></p>
+<p><a href="#id33"><span class="problematic" id="id34">`4. 객체지향 빵 굽기 - 팩토리`_</span></a></p>
+<p><a href="#id35"><span class="problematic" id="id36">`5. 세상에 단 하나뿐인 특별한 객체 - 싱글턴`_</span></a></p>
+<p><a href="#id37"><span class="problematic" id="id38">`6. 호출 캡슐화 - 커맨드`_</span></a></p>
+<p><a href="#id39"><span class="problematic" id="id40">`7. 적응시키기 - 어댑터와 퍼사드`_</span></a></p>
+<p><a href="#id41"><span class="problematic" id="id42">`8. 알고리즘 캡슐화 - 템플릿 메소드`_</span></a></p>
+<p><a href="#id43"><span class="problematic" id="id44">`9. 잘 관리된 컬렉션 - 이터레이터와 컴포지트`_</span></a></p>
+<p><a href="#id45"><span class="problematic" id="id46">`10. 객체의 상태 - 스테이트`_</span></a></p>
+<p><a href="#id47"><span class="problematic" id="id48">`11. 객체 접근 제어 - 프록시`_</span></a></p>
+<p><a href="#id49"><span class="problematic" id="id50">`12. 패턴들로 이루어진 패턴 - 컴파운드 패턴`_</span></a></p>
+<p><a href="#id51"><span class="problematic" id="id52">`13. 실전에서의 디자인 패턴 - 패턴과 함께하는 행복한 삶`_</span></a></p>
+<ol class="arabic simple" start="14">
+<li>부록 - 기타 패턴</li>
+</ol>
+<p>생성관련 패턴
+행동관련 패턴
+구조관련 패턴
+<a href="#id53"><span class="problematic" id="id54">`싱글턴(5)`_</span></a>
+` 추상팩토리(4)`_
+` 팩토리 메소드`_`(4)`_
+프로토타입
+빌더
+<a href="#id55"><span class="problematic" id="id56">`템플릿 메소드(8)`_</span></a>
+` 커맨드(6)`_
+` 이터레이터(9)`_
+` 옵저버(2)`_
+` 스테이트(10)`_
+` 스트래티지(1)`_
+비지터
+미디에이터
+메멘토
+인터프리터
+역할사슬
+<a href="#id57"><span class="problematic" id="id58">`데코레이터(3)`_</span></a>
+` 컴포지트(9)`_
+` 프록시(11)`_
+` 퍼사드(7)`_
+` 어댑터(7)`_
+플라이웨이트
+브리지</p>
+<p><a href="#id59"><span class="problematic" id="id60">`1. 디자인 패턴의 세계에 오신 것을 환영 합니다.`_</span></a></p>
+<p>디자인 원칙
+애플리케 이션에서 달라지는 부분을 찾아내고, 달라지지 않는 부분으로부터 분리 시킨다.</p>
+<p>&#8220;바뀌는 부분은 따로 뽑아서 캡슐화 시킨다. 그렇게 하면 나중에 바뀌지 않는 부분에는 영향을 미치지 않은 채로 그 부분만
+고치거나 확장할 수 있다.&#8221;</p>
+<p>이 개념은 매우 간단하지만 다른 모든 디자인 패턴의 기반을 이루는 원칙이다. 모든 패턴은 &#8216;시스템의 일부분을 다른 부분과
+독립적으로 변화시킬 수 있는&#8217; 방법을 제공하기 위한 것이니까...</p>
+<p>디자인 원칙
+구현이 아닌 인터페이스에 맞춰서 프로그래밍 한다.</p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/Duck.hpp">Duck.hpp</a>
+<a href="#id61"><span class="problematic" id="id62">`FlyBehavior.hpp`_</span></a>
+<a href="#id63"><span class="problematic" id="id64">`QuackBehavior.hpp`_</span></a></p>
+<p><a href="#id65"><span class="problematic" id="id66">`FlyWithWings.hpp`_</span></a>
+<a href="#id67"><span class="problematic" id="id68">`FlyNoWay.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FlyRocketPowered.hpp">FlyRocketPowered.hpp</a></p>
+<p><a href="#id69"><span class="problematic" id="id70">`Quack.hpp`_</span></a>
+<a href="#id71"><span class="problematic" id="id72">`Squeak.hpp`_</span></a>
+<a href="#id73"><span class="problematic" id="id74">`FakeQuack.hpp`_</span></a>
+<a href="#id75"><span class="problematic" id="id76">`MuteQuack.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/MallardDuck.hpp">MallardDuck.hpp</a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/RedHeadDuck.hpp">RedHeadDuck.hpp</a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/ModelDuck.hpp">ModelDuck.hpp</a>
+<a href="#id77"><span class="problematic" id="id78">`DecoyDuck.hpp`_</span></a>
+<a href="#id79"><span class="problematic" id="id80">`RubberDuck.hpp`_</span></a></p>
+<p><a href="#id81"><span class="problematic" id="id82">`MiniDuckSimulator.cpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/MiniDuckSimulator.hpp">MiniDuckSimulator.hpp</a></p>
+<p>디자인 원칙
+상속보다는 구성을 활용한다.</p>
+<p>패턴 1. 스트래티지
+알고리즘 군을 정의하고 각각을 캡슐화하여 교환해서 사용할 수 있도록 만든다. 스트래티지를 활용하면 알고리즘을 사용하는
+클라이언트와는 독립적으로 알고리즘을 변경할 수 있다.</p>
+<p>` 2. 객체들에게 연락망을 돌립시다 - 옵저버 패턴`_</p>
+<p>패턴 2. 옵저버
+한 객체의 상태가 바뀌면 그 객체에 의존하는 다른 객체들한테 연락이 가고 자동으로 내용이 갱신되는 방식으로 일대다(one-
+to-many) 의존성을 정의한다.</p>
+<p>디자인 원칙
+서로 상호작용을 하는 객체 사이에서는 가능하면 느슨하게 결합하는 디자인을 사용해야 한다.</p>
+<p><a href="#id83"><span class="problematic" id="id84">`Subject.hpp`_</span></a>
+<a href="#id85"><span class="problematic" id="id86">`Observer.hpp`_</span></a>
+<a href="#id87"><span class="problematic" id="id88">`DisplayElement.hpp`_</span></a></p>
+<p><a href="#id89"><span class="problematic" id="id90">`WeatherData.hpp`_</span></a>
+<a href="#id91"><span class="problematic" id="id92">`CurrentConditionsDisplay.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/ForecastDisplay.hpp">ForecastDisplay.hpp</a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/HeatIndexDisplay.hpp">HeatIndexDisplay.hpp</a>
+<a href="#id93"><span class="problematic" id="id94">`StatisticsDisplay.hpp`_</span></a></p>
+<p><a href="#id95"><span class="problematic" id="id96">`WeatherStation.hpp`_</span></a>
+<a href="#id97"><span class="problematic" id="id98">`WeatherStation.cpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/stdafx.cpp">stdafx.cpp</a>
+<a href="#id99"><span class="problematic" id="id100">`stdafx.h`_</span></a></p>
+<p>` 3. 객체 꾸미기 - 데코레이터 패턴`_</p>
+<p>디자인 원칙 - OCP (Open-Closed Principle) 클래스는 확장에 대해서는 열려 있어야 하지만 코드 변경에
+대해서는 닫혀 있어야 한다.</p>
+<p>패턴 3. 데코레이터
+객체에 추가적인 요건을 동적으로 첨가한다. 데코레이터는 서브클래스를 만드는 것을 통해서 기능을 유연하게 확장할 수 있는 방법을
+제공한다.</p>
+<p><a href="#id101"><span class="problematic" id="id102">`Beverage.hpp`_</span></a>
+<a href="#id103"><span class="problematic" id="id104">`CondimentDecorator.hpp`_</span></a>
+<a href="#id105"><span class="problematic" id="id106">`DarkRoast.hpp`_</span></a>
+<a href="#id107"><span class="problematic" id="id108">`Decaf.hpp`_</span></a>
+<a href="#id109"><span class="problematic" id="id110">`Espresso.hpp`_</span></a>
+<a href="#id111"><span class="problematic" id="id112">`HouseBlend.hpp`_</span></a>
+<a href="#id113"><span class="problematic" id="id114">`Milk.hpp`_</span></a>
+<a href="#id115"><span class="problematic" id="id116">`Mocha.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Soy.hpp">Soy.hpp</a>
+<a href="#id117"><span class="problematic" id="id118">`Whip.hpp`_</span></a></p>
+<p><a href="#id119"><span class="problematic" id="id120">`Starbuzz.cpp`_</span></a>
+<a href="#id121"><span class="problematic" id="id122">`Starbuzz.hpp`_</span></a></p>
+<p>` 4. 객체지향 빵 굽기 - 팩토리 패턴`_</p>
+<p>간단한 팩토리 - 패턴 장려상</p>
+<p>SimplePizzaFactory 클래스는 팩토리로써 위 애플리케이션에서 유일하게 Pizza 의 구상클래스를 직접 참조하는
+부분이다.
+이런 메소드(SimplePizzaFactory::createPizza())를 static 메소드로 선언하는 경우가 종종 있다.</p>
+<p><a href="#id123"><span class="problematic" id="id124">`CheesePizza.hpp`_</span></a>
+<a href="#id125"><span class="problematic" id="id126">`ClamPizza.hpp`_</span></a>
+<a href="#id127"><span class="problematic" id="id128">`PepperoniPizza.hpp`_</span></a>
+<a href="#id129"><span class="problematic" id="id130">`Pizza.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/Pizzas.cpp">Pizzas.cpp</a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/Pizzas.hpp">Pizzas.hpp</a>
+<a href="#id131"><span class="problematic" id="id132">`PizzaStore.hpp`_</span></a>
+<a href="#id133"><span class="problematic" id="id134">`SimplePizzaFactory.hpp`_</span></a>
+<a href="#id135"><span class="problematic" id="id136">`VeggiePizza.hpp`_</span></a></p>
+<p><a href="#id137"><span class="problematic" id="id138">`Pizza.hpp`_</span></a>
+<a href="#id139"><span class="problematic" id="id140">`PizzaStore.hpp`_</span></a></p>
+<p><a href="#id141"><span class="problematic" id="id142">`ChicagoStyleCheesePizza.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/ChicagoStyleClamPizza.hpp">ChicagoStyleClamPizza.hpp</a>
+<a href="#id143"><span class="problematic" id="id144">`ChicagoStylePepperoniPizza.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/ChicagoStyleVeggiePizza.hpp">ChicagoStyleVeggiePizza.hpp</a></p>
+<p><a href="#id145"><span class="problematic" id="id146">`NYStyleCheesePizza.hpp`_</span></a>
+<a href="#id147"><span class="problematic" id="id148">`NYStyleClamPizza.hpp`_</span></a>
+<a href="#id149"><span class="problematic" id="id150">`NYStylePepperoniPizza.hpp`_</span></a>
+<a href="#id151"><span class="problematic" id="id152">`NYStyleVeggiePizza.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ChicagoPizzaStore.hpp">ChicagoPizzaStore.hpp</a>
+<a href="#id153"><span class="problematic" id="id154">`NYPizzaStore.hpp`_</span></a></p>
+<p><a href="#id155"><span class="problematic" id="id156">`Pizzafm.cpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/Pizzafm.hpp">Pizzafm.hpp</a></p>
+<p>패턴 4. 팩토리 메소드
+객체를 생성하기 위한 인터페이스를 정의하는데, 어떤 클래스의 인스턴스를 만들지는 서브클래스에서 결정하게 만든다. 팩토리 메소드
+패턴을 이용하면 클래스의 인스턴스를 만드는 일을 서브클래스에게 맏게 된다.</p>
+<p>Q : 간단한 팩토리와 팩토리 메소드 패턴의 차이점
+A : 간단한 팩토리는 1회용 처방에 불과한 반면, 팩토리 메소드 패턴을 사용하면 어떤 구현을 사용할지를 서브클래스에서
+결정하는 프레임워크를 만들 수 있다는 결정적인 차이점이 있다. 예를 들어, 팩토리 메소드 패턴에서 사용한
+orderPizza() 메소드에서는 피자를 만들기 위한 일반적인 프레임워크를 제공한다. 그 프레임워크에서는 팩토리 메소드를
+사용하여 구상클래스의 객체를 생성한다. PizzaStore 클래스의 서브클래스를 만들 때, 어떤 구상 제품 클래스로부터
+orderPizza() 에서 리턴할 피자를 만들지 결정하게 된다. 간단한 팩토리에서는 객체 생성을 캡슐화 하기는 하지만 팩토리
+메소드 패턴처럼 강력한 유연성을 지닌 프레임워크를 제공하진 못한다. 생성하는 제품을 마음대로 변경할 수 없기 때문이다.</p>
+<p>디자인 원칙 - 의존성 뒤집기 (Dependency Inversion Principle) 추상화된 것에 의존하도록 만들어라.
+구상 클래스에 의존하도록 만들지 않도록 한다.
+- 어떤 변수에도 구상 클래스에 대한 레퍼런스를 저장하지 말라
+new 연산자를 사용하면 구상 클래스에 대한 레퍼런스를 사용하게 되는 것이다. 팩토리를 써서 구상 클래스에 대한 레퍼런스를
+변수에 저장하는 일을 미리 방지하라.</p>
+<ul class="simple">
+<li>구상 클래스에서 유도된 클래스를 만들지 말라</li>
+</ul>
+<p>구상 클래스에서 유도된 클래스를 만들면 특정 구상 클래스에 의존하게 된다. 인터페이스나 추상클래스처럼 추상화된 것으로부터
+클래스를 만들어야 한다.</p>
+<ul class="simple">
+<li>베이스 클래스에 이미 구현되어 있던 메소드를 오버라이드하지 말라</li>
+</ul>
+<p>이미 구현되어있는 메소드를 오버라이드한다는 것은 애초부터 베이스클래스가 제대로 추상화된 것이 아니었다고 볼 수 있다. 베이스
+클래스에서 메소드를 정의할 때는 모든 서브 클래스에서 공유할 수 있는 것만 정의해야 한다.</p>
+<p>&gt;&gt; 물론 이는 가이드라인일 뿐이다. 합당한 이유가 있는 경우에는 의도적으로 이 가이드라인을 지키지 않기로 선택할 수 있다.
+예를 들면, 자바의 String 클래스와 같은 경우 거의 변경이 발생하지 않을 것으로 예상되므로 팩토리를 사용하지 않고 직접
+만들어서 사용할 수 있는 것이다!</p>
+<p><a href="#id157"><span class="problematic" id="id158">`Pizza.hpp`_</span></a>
+<a href="#id159"><span class="problematic" id="id160">`CheesePizza.hpp`_</span></a>
+<a href="#id161"><span class="problematic" id="id162">`ClamPizza.hpp`_</span></a>
+<a href="#id163"><span class="problematic" id="id164">`PepperoniPizza.hpp`_</span></a>
+<a href="#id165"><span class="problematic" id="id166">`VeggiePizza.hpp`_</span></a></p>
+<p><a href="#id167"><span class="problematic" id="id168">`PizzaStore.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ChicagoPizzaStore.hpp">ChicagoPizzaStore.hpp</a>
+<a href="#id169"><span class="problematic" id="id170">`NYPizzaStore.hpp`_</span></a></p>
+<p><a href="#id171"><span class="problematic" id="id172">`PizzaIngredientFactory.hpp`_</span></a>
+<a href="#id173"><span class="problematic" id="id174">`ChicagoPizzaIngredientFactory.hpp`_</span></a>
+<a href="#id175"><span class="problematic" id="id176">`NYPizzaIngredientFactory.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Dough.hpp">Dough.hpp</a>
+<a href="#id177"><span class="problematic" id="id178">`ThickCrustDough.hpp`_</span></a>
+<a href="#id179"><span class="problematic" id="id180">`ThinCrustDough.hpp`_</span></a></p>
+<p><a href="#id181"><span class="problematic" id="id182">`Sauce.hpp`_</span></a>
+<a href="#id183"><span class="problematic" id="id184">`MarinaraSauce.hpp`_</span></a>
+<a href="#id185"><span class="problematic" id="id186">`PlumTomatoSauce.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Cheese.hpp">Cheese.hpp</a>
+<a href="#id187"><span class="problematic" id="id188">`MozzarellaCheese.hpp`_</span></a>
+<a href="#id189"><span class="problematic" id="id190">`ParmesanCheese.hpp`_</span></a>
+<a href="#id191"><span class="problematic" id="id192">`RegginanoCheese.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Clams.hpp">Clams.hpp</a>
+<a href="#id193"><span class="problematic" id="id194">`FreshClams.hpp`_</span></a>
+<a href="#id195"><span class="problematic" id="id196">`FrozenClams.hpp`_</span></a></p>
+<p><a href="#id197"><span class="problematic" id="id198">`Pepperoni.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/SlicedPepperoni.hpp">SlicedPepperoni.hpp</a></p>
+<p><a href="#id199"><span class="problematic" id="id200">`Veggies.hpp`_</span></a>
+<a href="#id201"><span class="problematic" id="id202">`BlackOlives.hpp`_</span></a>
+<a href="#id203"><span class="problematic" id="id204">`EggPlant.hpp`_</span></a>
+<a href="#id205"><span class="problematic" id="id206">`Garlic.hpp`_</span></a>
+<a href="#id207"><span class="problematic" id="id208">`RedPepper.hpp`_</span></a>
+<a href="#id209"><span class="problematic" id="id210">`Spinach.hpp`_</span></a>
+<a href="#id211"><span class="problematic" id="id212">`Mushroom.hpp`_</span></a>
+<a href="#id213"><span class="problematic" id="id214">`Onion.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Pizzaaf.cpp">Pizzaaf.cpp</a>
+<a href="#id215"><span class="problematic" id="id216">`Pizzaaf.hpp`_</span></a></p>
+<p>패턴 5. 추상 팩토리
+인터페이스를 이용하여 서로 연관된, 또는 의존하는 객체를 구상 클래스를 지정하지 않고도 생성할 수 있다.</p>
+<p>팩토리 메소드 패턴 추상 팩토리 패턴 클래스 (의 상속)를 사용해서 객체 생성
+객체(의 구성)를 사용해서 객체 생성
+간단한 인터페이스 - 하나의 팩토리 메소드 - 장점
+제품 군을 생성 - 인터페이스가 큰 편,
+팩토리가 생성하는 제품군에 제품을 추가하는 경우
+인터페이스의 변경이 불가피하다. - 단점
+객체 생성을 캡슐화해서 애플리케이션의 결합을 느슨하게 만들고, 특정 구현에 덜 의존하도록 만들 수 있음.</p>
+<p>`
+5. 세상에 단 하나뿐인 특별한 객체 - 싱글턴 패턴`_</p>
+<p>패턴 6. 싱글턴
+해당 클래스의 인스턴스가 하나만 만들어지고, 어디서든지 그 인스턴스에 접근할 수 있도록 하기 위한 패턴</p>
+<p><a href="#id217"><span class="problematic" id="id218">`chocolate.cpp`_</span></a>
+<a href="#id219"><span class="problematic" id="id220">`Chocolate.hpp`_</span></a>
+<a href="#id221"><span class="problematic" id="id222">`ChocolateBoiler.hpp`_</span></a></p>
+<p>싱글턴을 쓸 때는 동기화 문제를 해결해야만 한다. 위 C++ 예제에서는 동기화 코드가 들어가 있지 않기 때문에 별도로 동기화
+문제를 해결해야만 한다. 언어별로 제공되는 각종 동기화 기법을 사용하거나 아예 static 객체로 생성시키거나 안전한 시점에
+객체 생성을 시키도록 하는 등의 방법을 쓸 수 있다.</p>
+<p>` 6. 호출 캡슐화 - 커맨드 패턴`_</p>
+<p><a href="#id223"><span class="problematic" id="id224">`SimpleRemoteControl.hpp`_</span></a></p>
+<p><a href="#id225"><span class="problematic" id="id226">`Command.hpp`_</span></a></p>
+<p><a href="#id227"><span class="problematic" id="id228">`GarageDoor.hpp`_</span></a>
+<a href="#id229"><span class="problematic" id="id230">`GarageDoorOpenCommand.hpp`_</span></a></p>
+<p><a href="#id231"><span class="problematic" id="id232">`Light.hpp`_</span></a>
+<a href="#id233"><span class="problematic" id="id234">`LightOnCommand.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/LightOffCommand.hpp">LightOffCommand.hpp</a></p>
+<p><a href="#id235"><span class="problematic" id="id236">`SimpleRemote.cpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/SimpleRemote.hpp">SimpleRemote.hpp</a></p>
+<p>패턴 7. 커맨드
+요구사항 을 객체로 캡슐화 할 수 있으며, 매개변수를 써서 여러가지 다른 요구사항을 집어넣을 수도 있다. 또한 요청 내역을
+큐에 저장하거나 로그로 기록할 수도 있으며, 작업 취소 기능도 지원 가능하다.</p>
+<p>참조 : 메타 커맨드 패턴 (명령들로 이루어진 매크로를 만들어서 여러개의 명령을 한번에 실행한다.)</p>
+<p>참고 : 클라이언트(Client)는 Invoker 에 setCommand() 되는 ConcreteCommand 객체를
+생성한다.</p>
+<p><a href="#id237"><span class="problematic" id="id238">`RemoteControl.hpp`_</span></a></p>
+<p><a href="#id239"><span class="problematic" id="id240">`Command.hpp`_</span></a></p>
+<p><a href="#id241"><span class="problematic" id="id242">`CeilingFan.hpp`_</span></a>
+<a href="#id243"><span class="problematic" id="id244">`CeilingFanOffCommand.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/CeilingFanOnCommand.hpp">CeilingFanOnCommand.hpp</a></p>
+<p><a href="#id245"><span class="problematic" id="id246">`GarageDoor.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/GarageDoorDownCommand.hpp">GarageDoorDownCommand.hpp</a>
+<a href="#id247"><span class="problematic" id="id248">`GarageDoorUpCommand.hpp`_</span></a></p>
+<p><a href="#id249"><span class="problematic" id="id250">`hottub.hpp`_</span></a>
+<a href="#id251"><span class="problematic" id="id252">`HottubOffCommand.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/HottubOnCommand.hpp">HottubOnCommand.hpp</a></p>
+<p><a href="#id253"><span class="problematic" id="id254">`Light.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/LightOffCommand.hpp">LightOffCommand.hpp</a>
+<a href="#id255"><span class="problematic" id="id256">`LightOnCommand.hpp`_</span></a>
+<a href="#id257"><span class="problematic" id="id258">`LivingroomLightOffCommand.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/LivingroomLightOnCommand.hpp">LivingroomLightOnCommand.hpp</a></p>
+<p><a href="#id259"><span class="problematic" id="id260">`NoCommand.hpp`_</span></a></p>
+<p><a href="#id261"><span class="problematic" id="id262">`Stereo.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/StereoOffCommand.hpp">StereoOffCommand.hpp</a>
+<a href="#id263"><span class="problematic" id="id264">`StereoOnWithCDCommand.hpp`_</span></a></p>
+<p><a href="#id265"><span class="problematic" id="id266">`TV.hpp`_</span></a></p>
+<p><a href="#id267"><span class="problematic" id="id268">`Remote.cpp`_</span></a>
+<a href="#id269"><span class="problematic" id="id270">`Remote.hpp`_</span></a></p>
+<p>널 객체( null object ) - 패턴 장려상
+딱히 리턴할 객체는 없지만 클라이언트 쪽에서 null 을 처리하지 않아도 되도록 하고 싶을 때 널 객체를 활용하면 좋다.
+위 사례에서의 NoCommand 클래스의 용법이다.</p>
+<p><a href="#id271"><span class="problematic" id="id272">`RemoteControlWithUndo.hpp`_</span></a></p>
+<p><a href="#id273"><span class="problematic" id="id274">`Command.hpp`_</span></a></p>
+<p><a href="#id275"><span class="problematic" id="id276">`CeilingFan.hpp`_</span></a>
+<a href="#id277"><span class="problematic" id="id278">`CeilingFanHighCommand.hpp`_</span></a>
+<a href="#id279"><span class="problematic" id="id280">`CeilingFanLowCommand.hpp`_</span></a>
+<a href="#id281"><span class="problematic" id="id282">`CeilingFanMediumCommand.hpp`_</span></a>
+<a href="#id283"><span class="problematic" id="id284">`CeilingFanOffCommand.hpp`_</span></a></p>
+<p><a href="#id285"><span class="problematic" id="id286">`Light.hpp`_</span></a>
+<a href="#id287"><span class="problematic" id="id288">`DimmerLightOffCommand.hpp`_</span></a>
+<a href="#id289"><span class="problematic" id="id290">`DimmerLightOnCommand.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/LightOffCommand.hpp">LightOffCommand.hpp</a>
+<a href="#id291"><span class="problematic" id="id292">`LightOnCommand.hpp`_</span></a></p>
+<p><a href="#id293"><span class="problematic" id="id294">`NoCommand.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/stdafx.cpp">stdafx.cpp</a>
+<a href="#id295"><span class="problematic" id="id296">`stdafx.h`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/Undo.cpp">Undo.cpp</a>
+<a href="#id297"><span class="problematic" id="id298">`Undo.hpp`_</span></a></p>
+<ul class="simple">
+<li>undo 기능 외에도 매크로 커맨드 객체를 사용할 수도 있다.(샘플 리모컨의 파티모드)</li>
+<li>쓰레드 풀이나 프로세스 풀 혹은 스케줄러 에서도 활용할 수 있다.</li>
+<li>커맨드 클래스에 load(), store() 함수를 추가함으로써 로그 기반의 복구시스템을 구현하는데 쓰일 수도 있으며,</li>
+</ul>
+<p>트랜젝션을 활용하여 모든 작업이 완벽하게 처리되도록 하거나, 그렇지 않으면 아무것도 처리되지 않게 롤백하도록 하는 기능을
+구현하는데 쓰일 수도 있다.</p>
+<p>` 7. 적응시키기 - 어댑터 패턴과 퍼사드 패턴`_</p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/Duck.hpp">Duck.hpp</a>
+<a href="#id299"><span class="problematic" id="id300">`Turkey.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/MallardDuck.hpp">MallardDuck.hpp</a>
+<a href="#id301"><span class="problematic" id="id302">`WildTurkey.hpp`_</span></a>
+<a href="#id303"><span class="problematic" id="id304">`DuckAdapter.hpp`_</span></a>
+<a href="#id305"><span class="problematic" id="id306">`TurkeyAdapter.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/Ducks.hpp">Ducks.hpp</a>
+<a href="#id307"><span class="problematic" id="id308">`Ducks.cpp`_</span></a></p>
+<p>패턴 8. 어댑터
+한 클래스의 인터페이스를 클라이언트에서 사용하고자 하는 다른 인터페이스로 변환한다. 어댑터를 이용하면 인터페이스 호환성 문제
+때문에 같이 쓸 수 없는 클래스들을 연결해서 쓸 수 있다.</p>
+<p>[객체 어댑터]</p>
+<p>[클래스 어댑터]</p>
+<p>다중상속이 지양되는 바로 그 이유로 클래스 어댑터의 사용도 지양된다. (일반적으로...)</p>
+<p><a href="#id309"><span class="problematic" id="id310">`Amplifier.hpp`_</span></a>
+<a href="#id311"><span class="problematic" id="id312">`CdPlayer.hpp`_</span></a>
+<a href="#id313"><span class="problematic" id="id314">`DvdPlayer.hpp`_</span></a>
+<a href="#id315"><span class="problematic" id="id316">`PopcornPopper.hpp`_</span></a>
+<a href="#id317"><span class="problematic" id="id318">`Projector.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/Screen.hpp">Screen.hpp</a>
+<a href="#id319"><span class="problematic" id="id320">`TheaterLights.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/Tuner.hpp">Tuner.hpp</a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/HomeTheaterFacade.hpp">HomeTheaterFacade.hpp</a></p>
+<p><a href="#id321"><span class="problematic" id="id322">`HomeTheater.hpp`_</span></a>
+<a href="#id323"><span class="problematic" id="id324">`HomeTheater.cpp`_</span></a></p>
+<p>패턴 9. 퍼사드
+어떤 서브시스템의 일련의 인터페이스에 대한 통합된 인터페이스를 제공한다. 퍼사드에서 고수준 인터페이스를 정의하기 때문에
+서브시스템을 더 쉽게 사용할 수 있다.</p>
+<p>디자인 원칙 - 최소지식 원칙(데메테르의 법칙) 정말 친한 친구하고만 이야기 하라!
+최소지식 원칙을 지키기 위한 가이드 : 어떤 메소드에서든지 다음 네 종류의 객체의 메소드만을 호출하면 된다.</p>
+<ul class="simple">
+<li>객체 자체의 메소드</li>
+<li>메소드에 매개변수로 전달된 객체의 메소드</li>
+<li>그 메소드에서 생성하거나 인스턴스를 만든 객체의 메소드</li>
+<li>그 객체에 속하는(포함되는) 구성요소(객체)의 메소드</li>
+</ul>
+<p>절대 금물 : 어떤 메소드를 호출한 결과로 리턴받은 객체에 있는 메소드를 호출하는 것!!</p>
+<p>` 8. 알고리즘 캡슐화 - 템플릿 메소드 패턴`_</p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/CaffeineBeverage.hpp">CaffeineBeverage.hpp</a>
+<a href="#id325"><span class="problematic" id="id326">`Coffee.hpp`_</span></a>
+<a href="#id327"><span class="problematic" id="id328">`Tea.hpp`_</span></a></p>
+<p><a href="#id329"><span class="problematic" id="id330">`CaffeineBeverageWithHook.hpp`_</span></a>
+<a href="#id331"><span class="problematic" id="id332">`CoffeeWithHook.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/TeaWithHook.hpp">TeaWithHook.hpp</a></p>
+<p><a href="#id333"><span class="problematic" id="id334">`Barista.cpp`_</span></a>
+<a href="#id335"><span class="problematic" id="id336">`Barista.hpp`_</span></a></p>
+<p>패턴 10. 템플릿 메소드
+메소드에 서 알고리즘의 골격을 정의한다. 알고리즘의 여러 단계중 일부는 서브클래스에서 구현할 수 있다. 템플릿 메소드를
+이용하면 알고리즘의 구조는 그대로 유지하면서 서브클래스에서 특정 단계를 재정의 할 수 있다.</p>
+<p>잠깐 : 후크(hook)는 추상 클래스에서 선언되는 메소드이긴 하지만(위 패턴 정의 그림에서 Operation1(),
+Operation2() 처럼) 자바의 abstract 메소드 혹은 C++ 의 순수 가상함수처럼 그 바디가 없는 것이 아니라
+기본적인 내용이 구현되어있거나 아무 내용이 없는 빈 메소드로 구현이 된 메소드 이다. 이렇게 하면 서브클래스 입장에서는 후크를
+활용(오버라이드)해서 후크 메소드가 사용되는 지점에서 알고리즘에 끼어들 수 있게 된다. 물론 그냥 무시하고 넘어가도록
+전략적으로 방치시킬 수도 있다.</p>
+<p>디자인 원칙 - 헐리우드 원칙 먼저 연락하지 마세요. 저희가 연락 드리겠습니다.</p>
+<p>클래스들의 고수준과 저수준의 다단계의 계층 구조에서 고수준 구성요소가 저수준 구성요소에 의존하고 또, 저수준 구성요소도 아무런
+제한없이 고소준 구성요소에 의존하며 구수준과 저수준의 각종 클래스들이 서로서로 의존관계가 무질서하게 얽혀있는 의존성
+부페(dependency rot) 를 방지하기 위해서 헐리우드 원칙을 사용할 수 있다. 이 원칙을 사용하면 저수준
+구성요소에서는 시스템에 접속을 할 수는 있지만, 언제 어떤 식으로 그 구성요소들을 사용할지는 고수준 구성요소에서 결정하게
+된다. 즉, 고수준 구성요소에서 저수준 구성요소에게 &#8220;먼저 연락하지 마세요. 제가 먼저 연락 드리겠습니다.&#8221; 라고 얘기를 하는
+것과 같다.
+헐리우드 원칙은 템플릿 메소드 패턴에서 눈에 확연히 드러나며, 팩토리 메소드 패턴과 옵저버 패턴 등 에서도 관찰할 수 있다.</p>
+<p>` 9. 잘 관리된 컬렉션 - 이터레이터와 컴포지트 패턴`_</p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/Menu.hpp">Menu.hpp</a>
+<a href="#id337"><span class="problematic" id="id338">`DinerMenu.hpp`_</span></a>
+<a href="#id339"><span class="problematic" id="id340">`PancakeHouseMenu.hpp`_</span></a></p>
+<p><a href="#id341"><span class="problematic" id="id342">`Waitress.hpp`_</span></a></p>
+<p><a href="#id343"><span class="problematic" id="id344">`Iterator.hpp`_</span></a>
+<a href="#id345"><span class="problematic" id="id346">`DinerMenuIterator.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/PancakeHouseMenuIterator.hpp">PancakeHouseMenuIterator.hpp</a></p>
+<p><a href="#id347"><span class="problematic" id="id348">`MenuItem.hpp`_</span></a></p>
+<p><a href="#id349"><span class="problematic" id="id350">`DinerMergerI.cpp`_</span></a>
+<a href="#id351"><span class="problematic" id="id352">`DinerMergerI.hpp`_</span></a></p>
+<p>패턴 11. 이터레이터
+컬렉션 구현 방법을 노출시키지 않으면서도 그 집합체 안에 들어있는 모든 항목에 접근할 수 있게 해 주는 방법을 제공한다.</p>
+<p>주의 : Iterator 인터페이스에서 선언하는 메소드 이름은 전통적으로 First, Next, IsDone,
+CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove 등을 사용하는 것이 대세이다.
+first 가 없어진 것은 자바에서는 처음부터 다시 돌리고 싶은 경우 그냥 반복자를 새로 만드는 방식을 주로 사용하기
+때문이다....</p>
+<p>본문의 Iterator 는 외부 반복자 이다. 클라이언트가 next 를 호출하며 반복작업을 제어하기 때문이다. 반면 내부
+반복자는 반복자 자신에 의해서 반복작업이 제어된다. 즉, 클라이언트가 반복자한테 어떤 작어을 넘겨줘야 한다. 내부 반복자를
+쓰면 클라이언트가 반복작업을 마음대로 제어할 수 없기 때문에 외부 반복자를 쓰는 경우보다 유연성이 조금 떨어지게 되는데 작업을
+반복자에게 완전 위임할 수 있어서 오히려 이점이 장점이 되기도 한다.</p>
+<p>디자인 원칙 - 단일 역할의 원칙 클래스를 바꾸는 이유는 한 가지 뿐이어야 한다.</p>
+<p>하나의 클래스가 수행하는 역할은 곧 그 역할에 변화가 발생할 때 그 클래스에도 변화를 불러오는 이유가 되게 된다.
+하나의 클래스가 관련 없는 두가지 이상의 역할을 맡게 된다면 역할의 수 만큼 그 클래스가 변경될 경우의 수를 늘리게 된다.
+하나의 클래스가 수행하는 역할을 한가지로 했을 때 응집도가 높은 좋은 디자인을 얻을 수 있게된다.</p>
+<p>집합체에 내부 컬렉션과 관련된 기능과 반복자용 메소드관련 기능이 전부 구현된다면 단일 역할의 원칙에 위배된다.</p>
+<p>패턴 12. 컴포지트
+컴포지트 패턴을 이용하면 객체들을 트리 구조로 구성하여 부분과 전체를 나타내는 계층 구조로 만들 수 있으며, 클라이언트에서
+개별 객체와 다른 객체들로 구성된 복합 객체(composite)를 똑같은 방법으로 다룰 수 있다.</p>
+<p><a href="#id353"><span class="problematic" id="id354">`MenuComponent.hpp`_</span></a>
+<a href="#id355"><span class="problematic" id="id356">`MenuItem.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/Menu.hpp">Menu.hpp</a></p>
+<p><a href="#id357"><span class="problematic" id="id358">`Waitress.hpp`_</span></a></p>
+<p><a href="#id359"><span class="problematic" id="id360">`MenuException.hpp`_</span></a></p>
+<p><a href="#id361"><span class="problematic" id="id362">`Menus.cpp`_</span></a>
+<a href="#id363"><span class="problematic" id="id364">`Menus.hpp`_</span></a></p>
+<p>주의 : 컴포지트 패턴은 Component 에서 Leaf 와 Composite 를 위한 인터페이스를 모두 포함하고 있기 때문에
+하나의 클래스가 두 개의 역할을 맡게 되고 이것이 단일 역할의 원칙을 위배하고 있다고 볼 수도 있다. 컴포지트 패턴은 실제로
+단일 역할의 원칙을 위배하는 대신 투명성을 추구하는 패턴이다. 여기서의 투명성이란 클라이언트 입장에서 복합객체와 잎 노드를
+똑같은 Component 라는 인터페이스를 통해 처리하므로써 어떤 원소가 복합객체인지 잎 노드인지가 클라이언트 입장에서는
+투명하게 느껴지는 것이다.
+Component 클래스에는 두 종류의 기능이 들어있다 보니까 안전성이 다소 떨이지게 된다. 클라이언트가 어떤 원소에 대해서는
+무의미하거나 부적절한 작업을 처리하려고 할 수 있기 때문이다. 하지만 이렇게 단일 역할의 원칙을 어기는 것은 일종의 디자인상의
+결정사항이다.(트레이드 오프가 있다는 뜻?) 다른 방향에서 디자인해서(즉, 단일 역할의 원칙에 따라서 디자인) 각 역할별로
+클래스를 구분할 수도 있을 것이다. 이렇게 하면 어떤 원소에 대해 부적절한 처리를 시도하려거나 하는 문제는 없어질 것이다.
+하지만 대신에 투명성이 떨어지게 되고 코드중에 조건문이나 instanceof 연산자(자바에서) 같은 것들이 필요해 지게 된다.
+컴포지트 패턴은 또한 상황에 따라 원칙을 적절히 사용해야 한다는 것의 대표사례가 되기도 한다. 디자인 패턴의 가이드라인을
+따르는 것 보다 때로는 그에 위배되는 방식으로 디자인하는 것이 필요하기도 하다.
+하지만 컴포지트 패턴의 잎 노드를 자식이 0개인 복합 객체라고 본다면 이런 해석과 달리 볼 수도 있다! (단일 역할 원칙을
+지키는 것이다!)</p>
+<p>print 메소드에서 사용된 반복자는 구성 요소의 각 항목에 대해 일을 처리하고 구성요소가 Menu 인 경우에는 재귀적으로
+print 를 호출해서 작업을 처리한다. 즉 MenuComponent 내부에서 반복작업을 알아서 처리했다.(내부 반복자)
+여기에 외부 반복자를 사용하는 방식을 추가로 구현해 본 것이 아래의 코드이다. 외부 반복자를 쓸 때는 반복중 현재 위치를 관리
+해야한다. 그래야 클라이언트에서 hasNext, next 를 호출해서 원하는 반복작업을 할 수 있기 때문이다. 이 경우에는
+스택을 써서 재귀적인 구조에서의 복합객체에서의 현재 위치를 관리할 수 있다. (쫌 복잡하군하..)</p>
+<p><a href="#id365"><span class="problematic" id="id366">`MenuComponent.java`_</span></a>
+<a href="#id1"><span class="problematic" id="id2">`</span></a>MenuItem.java
+<a href="#id3"><span class="problematic" id="id4">`</span></a><a href="#id5"><span class="problematic" id="id6">_`</span></a>Menu.java</p>
+<p><a href="#id7"><span class="problematic" id="id8">`</span></a><a href="#id9"><span class="problematic" id="id10">_`</span></a>NullIterator.java
+<a href="#id11"><span class="problematic" id="id12">`</span></a><a href="#id13"><span class="problematic" id="id14">_`</span></a>CompositeIterator.java</p>
+<p><a href="#id15"><span class="problematic" id="id16">`</span></a><a href="#id17"><span class="problematic" id="id18">_`</span></a>Waitress.java</p>
+<p><a href="#id19"><span class="problematic" id="id20">`</span></a><a href="#id21"><span class="problematic" id="id22">_`</span></a>MenuTestDrive.java</p>
+<p><a href="#id23"><span class="problematic" id="id24">`</span></a>_
+널반복자는 널객체 디자인 패턴이 적용된 사례가 된다. 그리고 printBegetarianMenu 메소드에서 try/catch
+구조를 사용한 것은 Menu 와 MenuItem을 똑같이 다룸으로써 투명성을 높이기 위함이다.</p>
+<p>컴포지트 패턴의 가장 큰 장점은 클라이언트를 단순화 시킬 수 있다는 것이다. 클라이언트는 복합객체를 사용하고 있는지 잎 객체를
+사용하고 있는지에 대해서 전혀 신경쓰지 않아도 된다. 올바른 객체에 대해 올바른 연산을 적용하고 있는지 확인하기 위해 if
+문을 지저분하게 여기저기 사용하지 않아도 된다. 그리고 하나의 메소드를 호출하면 전체 구조에 대해서 반복해서 작업을 처리할
+수도 있다.</p>
+<p>안드로이드의 오픈코어의 테스트 코드에 바로 컴포지트 패턴이 적용되 있다. 자동으로 수많은 테스트 케이스의 테스트를 수행할 수
+있도록 수많은 테스트 케이스들이 복합객체를 구성한다. 테스트는 일정 범위만 수행할 수도 있고 특정 테스트 항목만 할 수도
+있으며 전체를 테스트할 수도 있다. 컴포지트 패턴이 GUI 외에 적용된 모법 사례이다. - humi주</p>
+<p>` 10. 객체의 상태 - 스테이트 패턴`_</p>
+<p><a href="#id367"><span class="problematic" id="id368">`State.hpp`_</span></a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/HasQuarterState.hpp">HasQuarterState.hpp</a>
+<a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/NoQuarterState.hpp">NoQuarterState.hpp</a>
+<a href="#id369"><span class="problematic" id="id370">`SoldOutState.hpp`_</span></a>
+<a href="#id371"><span class="problematic" id="id372">`SoldState.hpp`_</span></a>
+<a href="#id373"><span class="problematic" id="id374">`WinnerState.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/GumballMachine.cpp">GumballMachine.cpp</a>
+<a href="#id375"><span class="problematic" id="id376">`GumballMachine.hpp`_</span></a></p>
+<p><a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/GumballStateWinner.cpp">GumballStateWinner.cpp</a>
+<a href="#id377"><span class="problematic" id="id378">`GumballStateWinner.hpp`_</span></a></p>
+<p>위 예제에서처럼 상태 전환 코드를 상태 클래스에 집어 넣으면 상태 클래스들 사이에 의존성이 생긴다는 단점이 있다.
+GumballMachine을 구현한 코드를 보면 구상 상태 클래스를 코드에 직접 집어넣는 대신 Context 객체의 게터
+메소드를 써서 그나마 의존성을 최소화 하려고 노력했음을 알 수 있다.
+상태 전환의 흐름을 결정하는 코드를 어느 쪽에 집어 넣는지에 따라서, 시스템이 점점 커지게 될 때, 어떤 클래스(Context
+또는 상태 클래스)가 변경에 대해서 닫혀지게 되는지가 결정된다.</p>
+<p>패턴 13. 스테이트
+객체의 내부 상태가 바뀜에 따라서 객체의 행동을 바꿀 수 있다. 마치 객체의 클래스가 바뀌는 것과 같은 결과를 얻을 수 있다.</p>
+<p>&#8220;한가지 비밀을 알려드릴까요? 스트래티지 패턴하고 스테이트 패턴은 태어나자마자 헤어지긴 했지만 원래 쌍둥이랍니다.&#8221;</p>
+<p>스테이트 패턴
+스트래티지 패턴
+상태 객체에 일련의 행동(여러개의 함수)을 캡슐화 한다. 상황에 따라 Context 객체에서 여러 상태 객체 중 한 객체에게
+모든 행동을 맡기게 된다.
+클라이언트에서 컨택스트 객체에게 어떤 전략 객체를 사용할지를 지정해 준다. 그리고 실행시에 전략 객체를 변경할 수 있는
+유연성을 제공해 준다.
+컨택스트 객체에 수많은 조건문을 넣는 대신 사용할 수 있는 패턴이다. 행동을 상태 객체 내에 캡슐화 시켜서 컨택스트 내의 상태
+객체를 바꾸는 것을 통해 컨택스트 객체의 행동을 바꿀 수 있기 때문이다.
+서브클래스를 만드는 방법을 대신해서 유연성을 극대화 하는 용도로 사용된다.</p>
+<p>참고 :
+<a href="#id379"><span class="problematic" id="id380">`OOP란 조건문(if)을 줄이는 것`_</span></a>
+<a href="#id381"><span class="problematic" id="id382">`On the Criteria to be used in Decomposing Systems into Modules`_</span></a></p>
+<p>` 11. 객체 접근 제어 - 프록시 패턴`_</p>
+<p>패턴 14. 프록시
+어떤 객체에 대한 접근을 제어하기 위한 용도로 대리인이나 대변인에 해당하는 객체를 제공하는 패턴</p>
+<p>바보같은 질문은 없다네..
+Q: 어떤 식으로 클라이언트에서 진짜 객체가 아닌 프록시를 사용하도록 만드나요?
+A: 가장 흔하게 쓰이는 기법은 진짜 객체의 인스턴스를 생성해서 리턴하는 팩토리를 사용하는 방법입니다. 이 작업은 팩토리
+메소드 내에서 진행되기 때문에 실제 객체를 프록시로 감싼 다음에 리턴할 수 있죠. 클라이언트에서는 진짜 객체를 쓰고 있는지,
+아니면 프록시 객체를 쓰고 있는지 전혀 알지 못합니다.</p>
+<p>이런 내용을 보면 프록시 패턴은 데코레이터와 같아보일 수도 있다. 하지만 그 용도와 사용 형태등에 있어서 차이점이 존재한다.
+데코레이터 패턴은 주제 객체에 행동을 추가하는데 주 목적이 있고 흔하게 한 10겹 정도 감싸기까지 한다. 이에 반해 프록시
+패턴은 아래와 같은 다양한 목적을 위해 쓰이는데 단순히 주제 객체에 행동을 추가하는 것 보다는 클라이언트측에 주제 객체를
+대변한다. 클라이언트는 프록시를 통해 접근이 되고 있는지조차 눈치 채지 못할 수도 있다.
+어뎁터 패턴과도 혼동될 수 있겠지만 어뎁터 패턴에서는 인터페이스가 상이하다는 차이점으로 구분할 수 있겠다....</p>
+<ul class="simple">
+<li>원격 프록시 : 원격 객체에 대한 접근을 제어</li>
+<li>가상 프록시 : 생성하기 힘든 자원에 대한 접근을 제어(CD 커버 뷰어)</li>
+<li>보호 프록시 : 접근 권한이 필요한 자원에 대한 접근을 제어</li>
+<li>방화벽 프록시 : 방화벽</li>
+<li>스마트 레퍼런스 프록시 : 레퍼런스 카운트를 세는 등의 기능</li>
+<li>캐싱 프록시 : 웹서버등에서 사용됨</li>
+<li>동기화 프록시 : 분산환경에서의 객체의 동기화. 자바스페이스에서 사용</li>
+<li>복잡도 숨김 프록시 : Facade Proxy 라고도 함 퍼사드와의 차이는 접근을 차단한다는 것.</li>
+<li>지연 복사 프록시 : COW(Copy-On-Write). 변형된 가상 프록시.</li>
+</ul>
+<p>본문에서는 객체 직렬화와 키워드 transient에 대해서 배울 수 있었다. C++에서는 어떻게 될까?</p>
+<p>` 12. 패턴들로 이루어진 패턴 - 컴파운드 패턴`_</p>
+<p>GoF 책의 2장 Text Editor Lexi 를 참고하자</p>
+<p>MVC 와 Model2 를 비교해보자</p>
+<p>이제 HTML5, WebOS, Cloud Computing 시대가 오는 구나...</p>
+<p>Native Application 은 좀 타격이 있을 듯...</p>
+<p>그나저나 Compound Pattern 은 그저 비빔밥일 뿐이로구나 공식 패턴은 아니니....</p>
+<p>` 13. 실전에서의 디자인 패턴 - 패턴과 함께하는 행복한 삶`_</p>
+<p>패턴이란 특정 컨텍스트 내에서 주어진 문제에 대한 해결책이다.</p>
+<p>컨텍스트 : 패턴이 적용되는 상황. 반복적으로 일어날 수 있어야 한다.</p>
+<p>문제 : 컨텍스트 내에서 이루고자 하는 목적. 컨텍스트 내에서 생길 수 있는 제약조건도 문제에 포함된다.</p>
+<p>해결책 : 누구든지 적용해서 일련의 제약조건 내에서 목적을 달성할 수 있는 일반적인 디자인</p>
+<p>커뮤니티 :
+<a href="#id383"><span class="problematic" id="id384">`포틀랜드 패턴 리포지터리`_</span></a>
+<a class="reference external" href="http://hillside.net/">힐사이드 그룹</a>
+OOPSLA (컨퍼런스)</p>
+<p>: <a class="reference external" href="http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/MenuItem.java">http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/MenuItem.java</a>
+.. _EggPlant.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/EggPlant.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/EggPlant.hpp</a>
+.. _DuckAdapter.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/DuckAdapter.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/DuckAdapter.hpp</a>
+.. _CheesePizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/CheesePizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/CheesePizza.hpp</a>
+.. _ClamPizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/ClamPizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/ClamPizza.hpp</a>
+.. _Pizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/Pizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/Pizza.hpp</a>
+.. _SimpleRemoteControl.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/SimpleRemoteControl.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/SimpleRemoteControl.hpp</a>
+.. _CeilingFanHighCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFanHighCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFanHighCommand.hpp</a>
+.. _13. 실전에서의 디자인 패턴 - 패턴과 함께하는 행복한 삶: <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#13">http://opencpp.kr/Books/HFDP/hfdp.html#13</a>
+.. _컴파운드 패턴: <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#12">http://opencpp.kr/Books/HFDP/hfdp.html#12</a>
+.. _
+프록시(11): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#11">http://opencpp.kr/Books/HFDP/hfdp.html#11</a>
+.. _
+스테이트(10): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#10">http://opencpp.kr/Books/HFDP/hfdp.html#10</a>
+.. _BlackOlives.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/BlackOlives.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/BlackOlives.hpp</a>
+.. _DinerMergerI.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/DinerMergerI.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/DinerMergerI.cpp</a>
+.. _Duck.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/Duck.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/Duck.hpp</a>
+.. _ChicagoStyleCheesePizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/ChicagoStyleCheesePizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/ChicagoStyleCheesePizza.hpp</a>
+.. _Pepperoni.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Pepperoni.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Pepperoni.hpp</a>
+.. _GumballMachine.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/GumballMachine.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/GumballMachine.hpp</a>
+.. _MenuException.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/MenuException.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/MenuException.hpp</a>
+.. _Tea.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/Tea.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/Tea.hpp</a>
+.. _CaffeineBeverageWithHook.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/CaffeineBeverageWithHook.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/CaffeineBeverageWithHook.hpp</a>
+.. _DarkRoast.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/DarkRoast.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/DarkRoast.hpp</a>
+.. _Decaf.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Decaf.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Decaf.hpp</a>
+.. _LightOffCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/LightOffCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/LightOffCommand.hpp</a>
+.. _FlyWithWings.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FlyWithWings.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FlyWithWings.hpp</a>
+.. _NoCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/NoCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/NoCommand.hpp</a>
+.. _PancakeHouseMenu.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/PancakeHouseMenu.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/PancakeHouseMenu.hpp</a>
+.. _Menu.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/Menu.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/Menu.hpp</a>
+.. _StereoOnWithCDCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/StereoOnWithCDCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/StereoOnWithCDCommand.hpp</a>
+.. _Command.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/Command.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/Command.hpp</a>
+.. _NYPizzaStore.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/NYPizzaStore.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/NYPizzaStore.hpp</a>
+.. _VeggiePizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/VeggiePizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/VeggiePizza.hpp</a>
+.. _Amplifier.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/Amplifier.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/Amplifier.hpp</a>
+.. _FakeQuack.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FakeQuack.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FakeQuack.hpp</a>
+.. _NoCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/NoCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/NoCommand.hpp</a>
+.. _PepperoniPizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/PepperoniPizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/PepperoniPizza.hpp</a>
+.. _CeilingFanOffCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/CeilingFanOffCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/CeilingFanOffCommand.hpp</a>
+.. _
+: <a class="reference external" href="http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/NullIterator.java">http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/NullIterator.java</a>
+.. _Chocolate.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Singleton/Chocolate/Chocolate.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Singleton/Chocolate/Chocolate.hpp</a>
+.. _MenuItem.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/MenuItem.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/MenuItem.hpp</a>
+.. _Command.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Command.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Command.hpp</a>
+.. _TheaterLights.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/TheaterLights.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/TheaterLights.hpp</a>
+.. _HouseBlend.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/HouseBlend.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/HouseBlend.hpp</a>
+.. _Pizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/Pizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/Pizza.hpp</a>
+.. _
+: <a class="reference external" href="http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/CompositeIterator.java">http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/CompositeIterator.java</a>
+.. _DvdPlayer.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/DvdPlayer.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/DvdPlayer.hpp</a>
+.. _ClamPizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ClamPizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ClamPizza.hpp</a>
+.. _MarinaraSauce.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/MarinaraSauce.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/MarinaraSauce.hpp</a>
+.. _Mushroom.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Mushroom.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Mushroom.hpp</a>
+.. _PizzaStore.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/PizzaStore.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/PizzaStore.hpp</a>
+.. _LightOnCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/LightOnCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/LightOnCommand.hpp</a>
+.. _ChocolateBoiler.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Singleton/Chocolate/ChocolateBoiler.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Singleton/Chocolate/ChocolateBoiler.hpp</a>
+.. _stdafx.h: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/stdafx.h">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/stdafx.h</a>
+.. _StatisticsDisplay.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/StatisticsDisplay.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/StatisticsDisplay.hpp</a>
+.. _Beverage.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Beverage.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Beverage.hpp</a>
+.. _NYStyleCheesePizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYStyleCheesePizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYStyleCheesePizza.hpp</a>
+.. _HomeTheater.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/HomeTheater.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/HomeTheater.hpp</a>
+.. _stdafx.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/stdafx.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/stdafx.cpp</a>
+.. _Barista.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/Barista.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/Barista.cpp</a>
+.. _WeatherStation.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/WeatherStation.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/WeatherStation.hpp</a>
+.. _Ducks.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/Ducks.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/Ducks.cpp</a>
+.. _CeilingFan.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/CeilingFan.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/CeilingFan.hpp</a>
+.. _Whip.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Whip.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Whip.hpp</a>
+.. _DinerMenuIterator.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/DinerMenuIterator.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/DinerMenuIterator.hpp</a>
+.. _DimmerLightOnCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/DimmerLightOnCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/DimmerLightOnCommand.hpp</a>
+.. _CondimentDecorator.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/CondimentDecorator.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/CondimentDecorator.hpp</a>
+.. _Coffee.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/Coffee.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/Coffee.hpp</a>
+.. _MenuItem.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/MenuItem.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/MenuItem.hpp</a>
+.. _Menus.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/Menus.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/Menus.cpp</a>
+.. _OOP란 조건문(if)을 줄이는 것: <a class="reference external" href="http://alankang.tistory.com/249">http://alankang.tistory.com/249</a>
+.. _CdPlayer.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/CdPlayer.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/CdPlayer.hpp</a>
+.. _Pizzafm.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/Pizzafm.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/Pizzafm.cpp</a>
+.. _SoldState.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/SoldState.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/SoldState.hpp</a>
+.. _Veggies.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Veggies.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Veggies.hpp</a>
+.. _Turkey.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/Turkey.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/Turkey.hpp</a>
+.. _CeilingFan.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFan.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFan.hpp</a>
+.. _GumballStateWinner.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/GumballStateWinner.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/GumballStateWinner.hpp</a>
+.. _State.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/State.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/State.hpp</a>
+.. _RemoteControlWithUndo.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/RemoteControlWithUndo.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/RemoteControlWithUndo.hpp</a>
+.. _Light.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/Light.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/Light.hpp</a>
+.. _SimplePizzaFactory.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/SimplePizzaFactory.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/SimplePizzaFactory.hpp</a>
+.. _DisplayElement.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/DisplayElement.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/DisplayElement.hpp</a>
+.. _stdafx.h: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/stdafx.h">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/stdafx.h</a>
+.. _RegginanoCheese.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/RegginanoCheese.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/RegginanoCheese.hpp</a>
+.. _NYPizzaStore.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYPizzaStore.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYPizzaStore.hpp</a>
+.. _FlyBehavior.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FlyBehavior.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FlyBehavior.hpp</a>
+.. _WinnerState.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/WinnerState.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/WinnerState.hpp</a>
+.. _PizzaIngredientFactory.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/PizzaIngredientFactory.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/PizzaIngredientFactory.hpp</a>
+.. _NYStyleClamPizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYStyleClamPizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYStyleClamPizza.hpp</a>
+.. _Light.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/Light.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/Light.hpp</a>
+.. _GarageDoorUpCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/GarageDoorUpCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/GarageDoorUpCommand.hpp</a>
+.. _SoldOutState.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/SoldOutState.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/State/GumballStateWinner/SoldOutState.hpp</a>
+.. _PizzaStore.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/PizzaStore.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/PizzaStore.hpp</a>
+.. _Subject.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/Subject.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/Subject.hpp</a>
+.. _Sauce.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Sauce.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Sauce.hpp</a>
+.. _DecoyDuck.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/DecoyDuck.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/DecoyDuck.hpp</a>
+.. _PepperoniPizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/PepperoniPizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/PepperoniPizza.hpp</a>
+.. _MallardDuck.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/MallardDuck.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/MallardDuck.hpp</a>
+.. _MiniDuckSimulator.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/MiniDuckSimulator.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/MiniDuckSimulator.cpp</a>
+.. _Pizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Pizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Pizza.hpp</a>
+.. _QuackBehavior.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/QuackBehavior.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/QuackBehavior.hpp</a>
+.. _ThinCrustDough.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ThinCrustDough.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ThinCrustDough.hpp</a>
+.. _Starbuzz.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Starbuzz.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Starbuzz.cpp</a>
+.. _PizzaStore.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/PizzaStore.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/PizzaStore.hpp</a>
+.. _WildTurkey.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/WildTurkey.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/WildTurkey.hpp</a>
+.. _LivingroomLightOffCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/LivingroomLightOffCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/LivingroomLightOffCommand.hpp</a>
+.. _CheesePizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/CheesePizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/CheesePizza.hpp</a>
+.. _CurrentConditionsDisplay.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/CurrentConditionsDisplay.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/CurrentConditionsDisplay.hpp</a>
+.. _ParmesanCheese.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ParmesanCheese.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ParmesanCheese.hpp</a>
+.. _MenuComponent.java: <a class="reference external" href="http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/MenuComponent.java">http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/MenuComponent.java</a>
+.. _Mocha.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Mocha.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Mocha.hpp</a>
+.. _CoffeeWithHook.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/CoffeeWithHook.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/CoffeeWithHook.hpp</a>
+.. _NYStyleVeggiePizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYStyleVeggiePizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYStyleVeggiePizza.hpp</a>
+.. _Onion.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Onion.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Onion.hpp</a>
+.. _VeggiePizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/VeggiePizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzas/VeggiePizza.hpp</a>
+.. _ChicagoPizzaIngredientFactory.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ChicagoPizzaIngredientFactory.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ChicagoPizzaIngredientFactory.hpp</a>
+.. _Waitress.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/Waitress.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/Waitress.hpp</a>
+.. _Starbuzz.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Starbuzz.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Starbuzz.hpp</a>
+.. _Light.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Light.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Light.hpp</a>
+.. _HottubOffCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/HottubOffCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/HottubOffCommand.hpp</a>
+.. _CeilingFanMediumCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFanMediumCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFanMediumCommand.hpp</a>
+.. _
+어댑터(7): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#7">http://opencpp.kr/Books/HFDP/hfdp.html#7</a>
+.. _
+커맨드(6): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#6">http://opencpp.kr/Books/HFDP/hfdp.html#6</a>
+.. _싱글턴(5): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#5">http://opencpp.kr/Books/HFDP/hfdp.html#5</a>
+.. _(4): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#4">http://opencpp.kr/Books/HFDP/hfdp.html#4</a>
+.. _데코레이터(3): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#3">http://opencpp.kr/Books/HFDP/hfdp.html#3</a>
+.. _
+옵저버(2): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#2">http://opencpp.kr/Books/HFDP/hfdp.html#2</a>
+.. _
+스트래티지(1): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#1">http://opencpp.kr/Books/HFDP/hfdp.html#1</a>
+.. _
+13. 실전에서의 디자인 패턴 - 패턴과 함께하는 행복한 삶: <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#0">http://opencpp.kr/Books/HFDP/hfdp.html#0</a>
+.. _
+: <a class="reference external" href="http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/Menu.java">http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/Menu.java</a>
+.. _FlyNoWay.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FlyNoWay.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/FlyNoWay.hpp</a>
+.. _
+컴포지트(9): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#9">http://opencpp.kr/Books/HFDP/hfdp.html#9</a>
+.. _템플릿 메소드(8): <a class="reference external" href="http://opencpp.kr/Books/HFDP/hfdp.html#8">http://opencpp.kr/Books/HFDP/hfdp.html#8</a>
+.. _NYPizzaIngredientFactory.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/NYPizzaIngredientFactory.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/NYPizzaIngredientFactory.hpp</a>
+.. _LightOffCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/LightOffCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/LightOffCommand.hpp</a>
+.. _
+: <a class="reference external" href="http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/MenuTestDrive.java">http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/MenuTestDrive.java</a>
+.. _On the Criteria to be used in Decomposing Systems into Modules: <a class="reference external" href="http://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf">http://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf</a>
+.. _WeatherData.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/WeatherData.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/WeatherData.hpp</a>
+.. _chocolate.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Singleton/Chocolate/chocolate.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Singleton/Chocolate/chocolate.cpp</a>
+.. _FrozenClams.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/FrozenClams.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/FrozenClams.hpp</a>
+.. _TurkeyAdapter.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/TurkeyAdapter.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Adapter/Ducks/TurkeyAdapter.hpp</a>
+.. _Undo.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/Undo.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/Undo.hpp</a>
+.. _PopcornPopper.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/PopcornPopper.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/PopcornPopper.hpp</a>
+.. _GarageDoorOpenCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/GarageDoorOpenCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/GarageDoorOpenCommand.hpp</a>
+.. _Remote.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Remote.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Remote.hpp</a>
+.. _GarageDoor.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/GarageDoor.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/GarageDoor.hpp</a>
+.. _Menus.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/Menus.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/Menus.hpp</a>
+.. _RemoteControl.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/RemoteControl.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/RemoteControl.hpp</a>
+.. _RedPepper.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/RedPepper.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/RedPepper.hpp</a>
+.. _hottub.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/hottub.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/hottub.hpp</a>
+.. _ChicagoPizzaStore.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/ChicagoPizzaStore.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/ChicagoPizzaStore.hpp</a>
+.. _Spinach.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Spinach.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Spinach.hpp</a>
+.. _ChicagoStylePepperoniPizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/ChicagoStylePepperoniPizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/ChicagoStylePepperoniPizza.hpp</a>
+.. _Milk.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Milk.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Milk.hpp</a>
+.. _DinerMergerI.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/DinerMergerI.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/DinerMergerI.hpp</a>
+.. _Pizzaaf.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Pizzaaf.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Pizzaaf.hpp</a>
+.. _
+: <a class="reference external" href="http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/Waitress.java">http://opencpp.kr/Books/HFDP/HeadFirstDesignPatterns_code102507/HF_DP/src/headfirst/composite/menuiterator/Waitress.java</a>
+.. _Stereo.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Stereo.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Stereo.hpp</a>
+.. _Quack.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/Quack.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/Quack.hpp</a>
+.. _RubberDuck.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/RubberDuck.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/RubberDuck.hpp</a>
+.. _CeilingFanLowCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFanLowCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFanLowCommand.hpp</a>
+.. _WeatherStation.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/WeatherStation.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/WeatherStation.cpp</a>
+.. _DinerMenu.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/DinerMenu.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/DinerMenu.hpp</a>
+.. _CeilingFanOffCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFanOffCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/CeilingFanOffCommand.hpp</a>
+.. _Command.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/Command.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/Command.hpp</a>
+.. _PlumTomatoSauce.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/PlumTomatoSauce.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/PlumTomatoSauce.hpp</a>
+.. _NYStylePepperoniPizza.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYStylePepperoniPizza.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzafm/NYStylePepperoniPizza.hpp</a>
+.. _SimpleRemote.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/SimpleRemote.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/SimpleRemote/SimpleRemote.cpp</a>
+.. _TV.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/TV.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/TV.hpp</a>
+.. _Espresso.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Espresso.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Decorator/Espresso.hpp</a>
+.. _DimmerLightOffCommand.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/DimmerLightOffCommand.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Undo/DimmerLightOffCommand.hpp</a>
+.. _Projector.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/Projector.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Facade/HomeTheater/Projector.hpp</a>
+.. _MenuComponent.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/MenuComponent.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Composite/Menus/MenuComponent.hpp</a>
+.. _MozzarellaCheese.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/MozzarellaCheese.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/MozzarellaCheese.hpp</a>
+.. _Barista.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/Barista.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Template/Barista/Barista.hpp</a>
+.. _Remote.cpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Remote.cpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/Remote.cpp</a>
+.. _FreshClams.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/FreshClams.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/FreshClams.hpp</a>
+.. _ThickCrustDough.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ThickCrustDough.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/ThickCrustDough.hpp</a>
+.. _포틀랜드 패턴 리포지터리: <a class="reference external" href="http://c2.com/cgi/wiki?WelcomeVisitors">http://c2.com/cgi/wiki?WelcomeVisitors</a>
+.. _Garlic.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Garlic.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Factory/Pizzaaf/Garlic.hpp</a>
+.. _Waitress.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/Waitress.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/Waitress.hpp</a>
+.. _Observer.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/Observer.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Observer/Observer.hpp</a>
+.. _Squeak.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/Squeak.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/Squeak.hpp</a>
+.. _MuteQuack.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/MuteQuack.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Strategy/MuteQuack.hpp</a>
+.. _GarageDoor.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/GarageDoor.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Command/Remote/GarageDoor.hpp</a>
+.. _Iterator.hpp: <a class="reference external" href="http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/Iterator.hpp">http://opencpp.kr/Books/HFDP/cpp_Silver/Iterator/DinerMergerI/Iterator.hpp</a></p>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        <a class="uplink" href="index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2013, Journeyer J. Joh.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

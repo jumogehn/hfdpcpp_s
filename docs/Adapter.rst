@@ -18,20 +18,15 @@ Adapter
 
 *Under Silver/Adapter/Ducks*
 
-| `Ducks.cpp <doxygen/_adapter_2_ducks_2_ducks_8cpp_source.html>`_
+| `Ducks.cpp <doxygen/ducks_8cpp_source.html>`_
 |
 | `Duck.hpp <doxygen/_adapter_2_ducks_2_duck_8hpp_source.html>`_
-| `DuckAdapter.hpp <doxygen/_adapter_2_ducks_2_duck_adapter_8hpp_source.html>`_
-| `Ducks.hpp <doxygen/_adapter_2_ducks_2_ducks_8hpp_source.html>`_
+| `DuckAdapter.hpp <doxygen/duck_adapter_8hpp_source.html>`_
+| `Ducks.hpp <doxygen/ducks_8hpp_source.html>`_
 | `MallardDuck.hpp <doxygen/_adapter_2_ducks_2_mallard_duck_8hpp_source.html>`_
 | `Turkey.hpp <doxygen/_adapter_2_ducks_2_turkey_8hpp_source.html>`_
 | `TurkeyAdapter.h <doxygen/_adapter_2_ducks_2_turkey_adapter_8hpp_source.html>`_
 | `WildTurkey.hpp <doxygen/_adapter_2_ducks_2_wild_turkey_8hpp_source.html>`_
-|
-| `trace.log <doxygen/_adapter_2_ducks_2_trace_8log_source.html>`_
-| `Makefile <doxygen/_adapter_2_ducks_2_makefile_source.html>`_
-| `README <doxygen/_adapter_2_ducks_2_README_source.html>`_
-| `Ducks.vcproj <doxygen/_adapter_2_ducks_2_ducks_8vcproj_source.html>`_
 
 
 패턴 8. 어댑터

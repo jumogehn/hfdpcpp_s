@@ -16,15 +16,10 @@ if you want to reach to the original project or author of this project.
 This project on github will add POSIX build environment support and
 possible other enhancement will be done.
 
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-   Silver/Adapter/Ducks/README.rst
-   Silver/Command/Remote/README.rst
-
-http://journeyer.github.com/hfdpcpp_s/
+|`Adapter <Silver/Adapter/Ducks/README.rst>`_
+|`Command <Silver/Command/Remote/README.rst>`_
+|
+|`Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s/>`_
 
 Journeyer J. Joh
 

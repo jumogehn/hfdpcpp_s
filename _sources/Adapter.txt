@@ -19,12 +19,12 @@ Adapter
 **Class Diagram**
 
 .. image:: _static/Adapter/Ducks/Overview_of_Silver.jpg
-   :scale: 50 %
+   :scale: 75 %
    :alt: Class Diagram
 
 **Sequence Diagram**
 
 .. image:: _static/Adapter/Ducks/not_defined_duck_adapter.jpg
-   :scale: 50 %
+   :scale: 75 %
    :alt: Sequence Diagram
 

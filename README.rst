@@ -16,8 +16,8 @@ if you want to reach to the original project or author of this project.
 This project on github will add POSIX build environment support and
 possible other enhancement will be done.
 
-| `Adapter <Silver/Adapter/Ducks/README.rst>`_
-| `Command <Silver/Command/Remote/README.rst>`_
+| `Adapter <docs/_static/Silver/Adapter/Ducks/README.rst>`_
+| `Command <docs/_static/Silver/Command/Remote/README.rst>`_
 |
 | `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s/>`_
 

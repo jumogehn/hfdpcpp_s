@@ -7,7 +7,7 @@ Contents:
 .. toctree::
   :maxdepth: 2
 
-  ../README.rst
+  _static/README.rst
 
 You can view :download:`Doxygen Document<_static/linktodoxygen.html>`.
 

@@ -8,14 +8,14 @@ Simple Remote Control
 
 **Class Diagram**
 
-.. image:: Remote/Overview_of_SimpleRemote.jpg
+.. image:: SimpleRemote/Overview_of_SimpleRemote.jpg
    :scale: 50 %
    :alt: Class Diagram
 
 
 **Sequence Diagram**
 
-.. image:: Remote/SequenceDiagram1.jpg
+.. image:: SimpleRemote/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

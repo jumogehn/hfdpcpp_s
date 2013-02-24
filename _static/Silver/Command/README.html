@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Command Pattern &mdash; hfdpcpp_s 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../underscore.js"></script>
+    <script type="text/javascript" src="../../doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../theme_extras.js"></script>
+    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Head First Design Patterns in C++" href="../../README.html" />
+    <link rel="prev" title="Adapter" href="../Adapter/Ducks/README.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="../../../index.html">
+          <span>hfdpcpp_s 0.1 documentation</span></a></h1>
+        <h2 class="heading"><span>Command Pattern</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="../Adapter/Ducks/README.html">Adapter</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../../index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="command-pattern">
+<h1>Command Pattern<a class="headerlink" href="#command-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="simple-remote-control">
+<h2>Simple Remote Control<a class="headerlink" href="#simple-remote-control" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-diagram">
+<h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../../_images/Overview_of_SimpleRemote.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_SimpleRemote.jpg" style="width: 540.5px; height: 198.5px;" /></a>
+</div>
+<div class="section" id="sequence-diagram">
+<h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../../_images/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram1.jpg" style="width: 445.0px; height: 374.0px;" /></a>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>패턴 7. 커맨드</td>
+</tr>
+<tr class="row-even"><td>요구사항 을 객체로 캡슐화 할 수 있으며, 매개변수를 써서 여러가지 다른
+요구사항을 집어넣을 수도 있다. 또한 요청 내역을 큐에 저장하거나 로그로 기록할
+수도 있으며, 작업 취소 기능도 지원 가능하다.</td>
+</tr>
+</tbody>
+</table>
+<p>참조 : 메타 커맨드 패턴 (명령들로 이루어진 매크로를 만들어서 여러개의 명령을
+한번에 실행한다.)</p>
+<a class="reference internal image-reference" href="../../../_images/Command_Pattern.jpg"><img alt="GoF's Command Pattern" src="../../../_images/Command_Pattern.jpg" style="width: 329.0px; height: 160.0px;" /></a>
+<p>참고 : 클라이언트(Client)는 Invoker 에 setCommand() 되는 ConcreteCommand 객체를
+생성한다.</p>
+</div>
+</div>
+<div class="section" id="remote-control">
+<h2>Remote Control<a class="headerlink" href="#remote-control" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Class Diagram<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../../_images/Overview_of_Remote.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_Remote.jpg" style="width: 915.0px; height: 644.0px;" /></a>
+</div>
+<div class="section" id="id2">
+<h3>Sequence Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../../_images/SequenceDiagram11.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram11.jpg" style="width: 1540.5px; height: 640.0px;" /></a>
+<p><strong>널 객체( null object ) - 패턴 장려상</strong></p>
+<p>딱히 리턴할 객체는 없지만 클라이언트 쪽에서 null 을 처리하지 않아도 되도록 하고
+싶을 때 널 객체를 활용하면 좋다. 위 사례에서의 NoCommand 클래스의 용법이다.</p>
+</div>
+</div>
+<div class="section" id="undo">
+<h2>Undo<a class="headerlink" href="#undo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Class Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../../_images/Overview_of_Undo.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_Undo.jpg" style="width: 906.0px; height: 345.5px;" /></a>
+</div>
+<div class="section" id="id4">
+<h3>Sequence Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../../_images/SequenceDiagram12.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram12.jpg" style="width: 807.0px; height: 390.0px;" /></a>
+<ul class="simple">
+<li>undo 기능 외에도 매크로 커맨드 객체를 사용할 수도 있다. (샘플 리모컨의
+파티모드)</li>
+<li>쓰레드 풀이나 프로세스 풀 혹은 스케줄러 에서도 활용할 수 있다.</li>
+<li>커맨드 클래스에 load(), store() 함수를 추가함으로써 로그 기반의 복구시스템을
+구현하는데 쓰일 수도 있으며, 트랜젝션을 활용하여 모든 작업이 완벽하게
+처리되도록 하거나, 그렇지 않으면 아무것도 처리되지 않게 롤백하도록 하는
+기능을 구현하는데 쓰일 수도 있다.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="../Adapter/Ducks/README.html">Adapter</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../../index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2013, Journeyer J. Joh.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

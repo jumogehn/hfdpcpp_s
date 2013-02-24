@@ -11,7 +11,7 @@ Command
 
 **Sequence Diagram**
 
-.. image:: Remote_Seq.jpg
+.. image:: SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

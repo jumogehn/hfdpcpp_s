@@ -7,5 +7,5 @@ Head First Design Patterns in C++
   :maxdepth: 2
 
   Silver/Adapter/Ducks/README.rst
-  Silver/Command/Remote/README.rst
+  Silver/Command/README.rst
 

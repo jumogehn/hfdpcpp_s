@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Composite Pattern &mdash; hfdpcpp_s 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../underscore.js"></script>
+    <script type="text/javascript" src="../../doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../theme_extras.js"></script>
+    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Head First Design Patterns in C++" href="../../README.html" />
+    <link rel="next" title="Decorator Pattern" href="../Decorator/README.html" />
+    <link rel="prev" title="Iterator Pattern" href="../Iterator/README.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="../../../index.html">
+          <span>hfdpcpp_s 0.1 documentation</span></a></h1>
+        <h2 class="heading"><span>Composite Pattern</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="../Iterator/README.html">Iterator Pattern</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../Decorator/README.html">Decorator Pattern</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="composite-pattern">
+<h1>Composite Pattern<a class="headerlink" href="#composite-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="menus">
+<h2>Menus<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>패턴 12. 컴포지트</td>
+</tr>
+<tr class="row-even"><td>컴포지트 패턴을 이용하면 객체들을 트리 구조로 구성하여 부분과 전체를 나타내는
+계층 구조로 만들 수 있으며, 클라이언트에서 개별 객체와 다른 객체들로 구성된
+복합 객체(composite)를 똑같은 방법으로 다룰 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../../_images/Composite.jpg"><img alt="GoF's Composite Pattern" src="../../../_images/Composite.jpg" style="width: 266.0px; height: 161.0px;" /></a>
+<div class="section" id="class-diagram">
+<h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_static/Silver/Composite/Menus/Overview_of_Menus.jpg"><img alt="Class Diagram" src="_static/Silver/Composite/Menus/Overview_of_Menus.jpg" /></a>
+</div>
+<div class="section" id="sequence-diagram">
+<h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_static/Silver/Composite/Menus/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/Composite/Menus/SequenceDiagram1.jpg" /></a>
+<p>주의 : 컴포지트 패턴은 Component 에서 Leaf 와 Composite 를 위한 인터페이스를
+모두 포함하고 있기 때문에 하나의 클래스가 두 개의 역할을 맡게 되고 이것이 단일
+역할의 원칙을 위배하고 있다고 볼 수도 있다. 컴포지트 패턴은 실제로 <tt class="docutils literal"><span class="pre">단일</span> <span class="pre">역할의</span>
+<span class="pre">원칙</span></tt> 을 위배하는 대신 투명성을 추구하는 패턴이다. 여기서의 투명성이란
+클라이언트 입장에서 복합객체와 잎 노드를 똑같은 Component 라는 인터페이스를 통해
+처리 하므로써 어떤 원소가 복합객체인지 잎 노드인지가 클라이언트 입장에서는
+투명하게 느껴지는 것이다.
+Component 클래스에는 두 종류의 기능이 들어있다 보니까 안전성이 다소 떨이지게
+된다. 클라이언트가 어떤 원소에 대해서는 무의미하거나 부적절한 작업을 처리하려고
+할 수 있기 때문이다. 하지만 이렇게 단일 역할의 원칙을 어기는 것은 일종의
+디자인상의 결정사항이다.(트레이드 오프가 있다는 뜻?) 다른 방향에서 디자인해서
+(즉, 단일 역할의 원칙에 따라서 디자인) 각 역할별로 클래스를 구분할 수도 있을
+것이다. 이렇게 하면 어떤 원소에 대해 부적절한 처리를 시도하려거나 하는 문제는
+없어질 것이다. 하지만 대신에 투명성이 떨어지게 되고 코드중에 조건문이나
+instanceof 연산자(자바에서) 같은 것들이 필요해 지게 된다.
+컴포지트 패턴은 또한 상황에 따라 원칙을 적절히 사용해야 한다는 것의 대표사례가
+되기도 한다. 디자인 패턴의 가이드라인을 따르는 것 보다 때로는 그에 위배되는
+방식으로 디자인하는 것이 필요하기도 하다.
+하지만 컴포지트 패턴의 잎 노드를 자식이 0개인 복합 객체라고 본다면 이런 해석과
+달리 볼 수도 있다! (단일 역할 원칙을 지키는 것이다!)</p>
+<p>print 메소드에서 사용된 반복자는 구성 요소의 각 항목에 대해 일을 처리하고
+구성요소가 Menu 인 경우에는 재귀적으로 print 를 호출해서 작업을 처리한다. 즉
+MenuComponent 내부에서 반복작업을 알아서 처리했다.(<tt class="docutils literal"><span class="pre">내부</span> <span class="pre">반복자</span></tt>) 여기에
+<tt class="docutils literal"><span class="pre">외부</span> <span class="pre">반복자</span></tt> 를 사용하는 방식을 추가로 구현해 본 것이 아래의 코드이다. 외부
+반복자를 쓸 때는 반복중 현재 위치를 관리 해야한다. 그래야 클라이언트에서
+hasNext, next 를 호출해서 원하는 반복작업을 할 수 있기 때문이다. 이 경우에는
+스택을 써서 재귀적인 구조에서의 복합객체에서의 현재 위치를 관리할 수 있다. (쫌
+복잡하군하..)</p>
+<p><em>여기에 자바코드는 C++ 버전은 없는 건가..</em></p>
+<p>널반복자는 <tt class="docutils literal"><span class="pre">널객체</span> <span class="pre">디자인</span> <span class="pre">패턴</span></tt> 이 적용된 사례가 된다. 그리고
+printBegetarianMenu 메소드에서 try/catch 구조를 사용한 것은 Menu 와 MenuItem을
+똑같이 다룸으로써 투명성을 높이기 위함이다.</p>
+<p>컴포지트 패턴의 가장 큰 장점은 클라이언트를 단순화 시킬 수 있다는 것이다.
+클라이언트는 복합객체를 사용하고 있는지 잎 객체를 사용하고 있는지에 대해서 전혀
+신경쓰지 않아도 된다. 올바른 객체에 대해 올바른 연산을 적용하고 있는지 확인하기
+위해 if 문을 지저분하게 여기저기 사용하지 않아도 된다. 그리고 하나의 메소드를
+호출하면 전체 구조에 대해서 반복해서 작업을 처리할 수도 있다.</p>
+<p>안드로이드의 오픈코어의 테스트 코드에 바로 컴포지트 패턴이 적용되 있다. 자동으로
+수많은 테스트 케이스의 테스트를 수행할 수 있도록 수많은 테스트 케이스들이
+복합객체를 구성한다. 테스트는 일정 범위만 수행할 수도 있고 특정 테스트 항목만 할
+수도 있으며 전체를 테스트할 수도 있다. 컴포지트 패턴이 GUI 외에 적용된 모범
+사례이다.</p>
+<p>Continue to <a class="reference external" href="../Iterator">Iterator Pattern</a></p>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="../Iterator/README.html">Iterator Pattern</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../Decorator/README.html">Decorator Pattern</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2013, Journeyer J. Joh.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

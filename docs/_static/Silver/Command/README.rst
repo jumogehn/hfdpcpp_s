@@ -60,7 +60,8 @@ Sequence Diagram
    :alt: Sequence Diagram
 
 
-|**널 객체( null object ) - 패턴 장려상**
+**널 객체( null object ) - 패턴 장려상**
+
 딱히 리턴할 객체는 없지만 클라이언트 쪽에서 null 을 처리하지 않아도 되도록 하고
 싶을 때 널 객체를 활용하면 좋다. 위 사례에서의 NoCommand 클래스의 용법이다.
 

@@ -85,3 +85,4 @@ printBegetarianMenu 메소드에서 try/catch 구조를 사용한 것은 Menu �
 사례이다.
 
 Continue to `Iterator Pattern <../Iterator>`_
+

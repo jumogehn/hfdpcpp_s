@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Iterator Pattern &mdash; hfdpcpp_s 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../underscore.js"></script>
+    <script type="text/javascript" src="../../doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../theme_extras.js"></script>
+    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="../../../index.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="../../../index.html">
+          <span>hfdpcpp_s 0.1 documentation</span></a></h1>
+        <h2 class="heading"><span>Iterator Pattern</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        <a class="uplink" href="../../../index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="iterator-pattern">
+<h1>Iterator Pattern<a class="headerlink" href="#iterator-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dinnermergeri">
+<h2>DinnerMergerI<a class="headerlink" href="#dinnermergeri" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-diagram">
+<h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_static/Silver/Iterator/DinnerMergerI/Overview_of_DinnerMergerI.jpg"><img alt="Class Diagram" src="_static/Silver/Iterator/DinnerMergerI/Overview_of_DinnerMergerI.jpg" /></a>
+</div>
+<div class="section" id="sequence-diagram">
+<h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_static/Silver/Iterator/DinnerMergerI/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/Iterator/DinnerMergerI/SequenceDiagram1.jpg" /></a>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>패턴 11. 이터레이터</td>
+</tr>
+<tr class="row-even"><td>컬렉션 구현 방법을 노출시키지 않으면서도 그 집합체 안에 들어있는 모든 항목에
+접근할 수 있게 해 주는 방법을 제공한다.</td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../../_images/Iterator.jpg"><img alt="GoF's Iterator Pattern" src="../../../_images/Iterator.jpg" style="width: 220.5px; height: 134.5px;" /></a>
+<p>주의 : Iterator 인터페이스에서 선언하는 메소드 이름은 전통적으로 First, Next,
+IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove 등을
+사용하는 것이 대세이다. first 가 없어진 것은 자바에서는 처음부터 다시 돌리고
+싶은 경우 그냥 반복자를 새로 만드는 방식을 주로 사용하기 때문이다....</p>
+<p>본문의 Iterator 는 <tt class="docutils literal"><span class="pre">외부</span> <span class="pre">반복자</span></tt> 이다. 클라이언트가 next 를 호출하며 반복작업을
+제어하기 때문이다. 반면 <tt class="docutils literal"><span class="pre">내부</span> <span class="pre">반복자</span></tt> 는 반복자 자신에 의해서 반복작업이
+제어된다.
+즉, 클라이언트가 반복자한테 어떤 작어을 넘겨줘야 한다. 내부 반복자를 쓰면
+클라이언트가 반복작업을 마음대로 제어할 수 없기 때문에 외부 반복자를 쓰는
+경우보다 유연성이 조금 떨어지게 되는데 작업을 반복자에게 완전 위임할 수 있어서
+오히려 이점이 장점이 되기도 한다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>디자인 원칙 - 단일 역할의 원칙</td>
+</tr>
+<tr class="row-even"><td>클래스를 바꾸는 이유는 한 가지 뿐이어야 한다.</td>
+</tr>
+</tbody>
+</table>
+<p>하나의 클래스가 수행하는 역할은 곧 그 역할에 변화가 발생할 때 그 클래스에도
+변화를 불러오는 이유가 되게 된다.
+하나의 클래스가 관련 없는 두가지 이상의 역할을 맡게 된다면 역할의 수 만큼 그
+클래스가 변경될 경우의 수를 늘리게 된다.
+하나의 클래스가 수행하는 역할을 한가지로 했을 때 응집도가 높은 좋은 디자인을
+얻을 수 있게된다.</p>
+<p>집합체에 내부 컬렉션과 관련된 기능과 반복자용 메소드관련 기능이 전부 구현된다면
+<tt class="docutils literal"><span class="pre">단일</span> <span class="pre">역할의</span> <span class="pre">원칙</span></tt> 에 위배된다.</p>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        <a class="uplink" href="../../../index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2013, Journeyer J. Joh.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

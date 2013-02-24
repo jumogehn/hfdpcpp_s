@@ -60,7 +60,7 @@ Sequence Diagram
    :alt: Sequence Diagram
 
 
-** 널 객체( null object ) - 패턴 장려상 **
+**널 객체( null object ) - 패턴 장려상**
 딱히 리턴할 객체는 없지만 클라이언트 쪽에서 null 을 처리하지 않아도 되도록 하고
 싶을 때 널 객체를 활용하면 좋다. 위 사례에서의 NoCommand 클래스의 용법이다.
 
@@ -85,7 +85,7 @@ Sequence Diagram
    :alt: Sequence Diagram
 
 
-* undo 기능 외에도 매크로 커맨드 객체를 사용할 수도 있다.(샘플 리모컨의
+* undo 기능 외에도 매크로 커맨드 객체를 사용할 수도 있다. (샘플 리모컨의
   파티모드)
 * 쓰레드 풀이나 프로세스 풀 혹은 스케줄러 에서도 활용할 수 있다.
 * 커맨드 클래스에 load(), store() 함수를 추가함으로써 로그 기반의 복구시스템을

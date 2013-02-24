@@ -17,7 +17,7 @@ This project on github will add POSIX build environment support and
 possible other enhancement will be done.
 
 | `Adapter <docs/_static/Silver/Adapter/Ducks>`_
-| `Command <docs/_static/Silver/Command/Remote>`_
+| `Command <docs/_static/Silver/Command>`_
 |
 | `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
 

@@ -9,7 +9,7 @@ Contents:
 
   _static/README.rst
 
-You can view `Doxygen Document <_static/linktodoxygen.html>`.
+You can view `Doxygen Document <_static/linktodoxygen.html>`_.
 
 You can download :download:`the UML file <_static/Silver.uml>` and open/edit it
 via `StarUML <http://staruml.sourceforge.net/en/>`_.

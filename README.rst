@@ -57,6 +57,7 @@ Contents
 | `Command <docs/_static/Silver/Command>`_
 | `Iterator <docs/_static/Silver/Iterator>`_
 | `Composite <docs/_static/Silver/Composite>`_
+| `Decorator <docs/_static/Silver/Decorator>`_
 |
 | `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
 

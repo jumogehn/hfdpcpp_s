@@ -40,4 +40,18 @@ Remote Control
 Undo
 ====
 
+**Class Diagram**
+
+.. image:: Undo/Overview_of_Undo.jpg
+   :scale: 50 %
+   :alt: Class Diagram
+
+
+**Sequence Diagram**
+
+.. image:: Undo/SequenceDiagram1.jpg
+   :scale: 50 %
+   :alt: Sequence Diagram
+
+
 

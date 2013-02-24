@@ -24,7 +24,7 @@ possible other enhancement will be done.
 You can view `Doxygen Document
 <http://journeyer.github.com/hfdpcpp_s/doxygen>`_.
 
-You can download :download:`the UML file
+You can download `the UML file
 <http://journeyer.github.com/hfdpcpp_s/_download/Silver.uml>_` and open/edit it
 via `StarUML <http://staruml.sourceforge.net/en/>`_.
 

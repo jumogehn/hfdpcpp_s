@@ -9,7 +9,7 @@ Ducks
 Class Diagram
 -------------
 
-.. image:: Ducks/Overview_of_SimpleRemote.jpg
+.. image:: Ducks/Overview_of_Ducks.jpg
    :scale: 50 %
    :alt: Class Diagram
 

@@ -55,6 +55,7 @@ Contents
 
 | `Adapter <docs/_static/Silver/Adapter>`_
 | `Command <docs/_static/Silver/Command>`_
+| `Iterator <docs/_static/Silver/Iterator>`_
 |
 | `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
 

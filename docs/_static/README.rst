@@ -8,4 +8,5 @@ Head First Design Patterns in C++
 
   Silver/Adapter/README.rst
   Silver/Command/README.rst
+  Silver/Iterator/README.rst
 

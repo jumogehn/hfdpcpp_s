@@ -21,5 +21,13 @@ possible other enhancement will be done.
 |
 | `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
 
+You can view `Doxygen Document
+<http://journeyer.github.com/hfdpcpp_s/_static/linktodoxygen.html>`.
+
+You can download :download:`the UML file
+<http://journeyer.github.com/hfdpcpp_s/_static/Silver.uml>` and open/edit it
+via `StarUML <http://staruml.sourceforge.net/en/>`_.
+
+
 Journeyer J. Joh
 

@@ -84,5 +84,5 @@ printBegetarianMenu 메소드에서 try/catch 구조를 사용한 것은 Menu �
 수도 있으며 전체를 테스트할 수도 있다. 컴포지트 패턴이 GUI 외에 적용된 모범
 사례이다.
 
-Continue to `Iterator Pattern <../Iterator>`_
+Continue to `Iterator Pattern <../Iterator/README.rst>`_
 

@@ -63,6 +63,3 @@ IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove �
 집합체에 내부 컬렉션과 관련된 기능과 반복자용 메소드관련 기능이 전부 구현된다면
 ``단일 역할의 원칙`` 에 위배된다.
 
-
-Continue to `Composite Pattern <../Composite/README.rst>`_
-

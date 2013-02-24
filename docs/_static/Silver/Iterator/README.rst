@@ -64,5 +64,11 @@ IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove �
 ``단일 역할의 원칙`` 에 위배된다.
 
 
-Continue to `Composite Pattern <../Composite/README.rst>`_
+.. toctree::
+  :maxdepth: 1
+
+  ../Composite/README.rst
+
+
+Continue to `Composite Pattern <../Composite>`_
 

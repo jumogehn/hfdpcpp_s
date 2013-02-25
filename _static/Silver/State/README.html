@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>State Pattern &mdash; hfdpcpp_s 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../underscore.js"></script>
+    <script type="text/javascript" src="../../doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../theme_extras.js"></script>
+    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="../../../index.html" />
+    <link rel="prev" title="Singleton Pattern" href="../Singleton/README.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="../../../index.html">
+          <span>hfdpcpp_s 0.1 documentation</span></a></h1>
+        <h2 class="heading"><span>State Pattern</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="../Singleton/README.html">Singleton Pattern</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../../index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="state-pattern">
+<h1>State Pattern<a class="headerlink" href="#state-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gumballstatewinner">
+<h2>GumballStateWinner<a class="headerlink" href="#gumballstatewinner" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-diagram">
+<h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_static/Silver/State/GumballStateWinner/Overview_of_GumballStateWinner.jpg"><img alt="Class Diagram" src="_static/Silver/State/GumballStateWinner/Overview_of_GumballStateWinner.jpg" /></a>
+</div>
+<div class="section" id="sequence-diagram">
+<h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_static/Silver/State/GumballStateWinner/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/State/GumballStateWinner/SequenceDiagram1.jpg" /></a>
+<p>위 예제에서처럼 상태 전환 코드를 상태 클래스에 집어 넣으면 상태 클래스들 사이에
+의존성이 생긴다는 단점이 있다. GumballMachine을 구현한 코드를 보면 구상 상태
+클래스를 코드에 직접 집어넣는 대신 Context 객체의 게터 메소드를 써서 그나마
+의존성을 최소화 하려고 노력했음을 알 수 있다.</p>
+<p>상태 전환의 흐름을 결정하는 코드를 어느 쪽에 집어 넣는지에 따라서, 시스템이 점점
+커지게 될 때, 어떤 클래스(Context 또는 상태 클래스)가 변경에 대해서 닫혀지게
+되는지가 결정된다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">패턴 13. 스테이트</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>객체의 내부 상태가 바뀜에 따라서 객체의 행동을 바꿀 수 있다. 마치 객체의
+클래스가 바뀌는 것과 같은 결과를 얻을 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../../_images/State.jpg"><img alt="GoG's State Pattern" src="../../../_images/State.jpg" style="width: 226.0px; height: 113.0px;" /></a>
+<p><strong>&#8220;한가지 비밀을 알려드릴까요? 스트래티지 패턴하고 스테이트 패턴은 태어나자마자
+헤어지긴 했지만 원래 쌍둥이랍니다.&#8221;</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">스테이트 패턴</th>
+<th class="head">스트래티지 패턴</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="2">상태 객체에 일련의 행동(여러개의     <a href="#id1"><span class="problematic" id="id2">|</span></a>클라이언트에서 컨택스트 객체에게 어떤
+함수)을 캡슐화 한다. 상황에 따라     <a href="#id3"><span class="problematic" id="id4">|</span></a>전략 객체를 사용할지를 지정해 준다.
+Context 객체에서 여러 상태 객체 중 한|그리고 실행시에 전략 객체를 변경할 수
+객체에게 모든 행동을 맡기게 된다.    <a href="#id5"><span class="problematic" id="id6">|</span></a>있는 유연성을 제공해 준다.</td>
+</tr>
+<tr class="row-odd"><td colspan="2">컨택스트 객체에 수많은 조건문을 넣는 <a href="#id13"><span class="problematic" id="id14">|서브클래스를 만드는 방법을 대신해서
+대신 사용할 수 있는 패턴이다. 행동을 |유연성을 극대화 하는 용도로 사용된다.
+상태 객체 내에 캡슐화 시켜서 컨택스트|</span></a>
+내의 상태 객체를 바꾸는 것을 통해    |
+컨택스트 객체의 행동을 바꿀 수 있기  |
+때문이다.                            |</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#id7"><span class="problematic" id="id8">|</span></a>참고 :
+<a href="#id9"><span class="problematic" id="id10">|</span></a><a class="reference external" href="http://alankang.tistory.com/249">OOP란 조건문(if)을 줄이는 것</a>
+<a href="#id11"><span class="problematic" id="id12">|</span></a><a class="reference external" href="http://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf">On the Criteria to be used in Decomposing Systems into Modules</a></p>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="../Singleton/README.html">Singleton Pattern</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../../index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2013, Journeyer J. Joh.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

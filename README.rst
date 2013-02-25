@@ -61,6 +61,8 @@ Contents
 | `Facade <docs/_static/Silver/Facade>`_
 | `Factory <docs/_static/Silver/Factory>`_
 | `Observer <docs/_static/Silver/Observer>`_
+| `Singleton <docs/_static/Silver/Singleton>`_
+| `State <docs/_static/Silver/State>`_
 |
 | `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
 

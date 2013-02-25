@@ -63,6 +63,8 @@ Contents
 | `Observer <docs/_static/Silver/Observer>`_
 | `Singleton <docs/_static/Silver/Singleton>`_
 | `State <docs/_static/Silver/State>`_
+| `Strategy <docs/_static/Silver/Strategy>`_
+| `Template <docs/_static/Silver/Template>`_
 |
 | `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
 

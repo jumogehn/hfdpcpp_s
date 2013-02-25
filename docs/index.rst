@@ -65,6 +65,8 @@ Contents
   _static/Silver/Observer/README.rst
   _static/Silver/Singleton/README.rst
   _static/Silver/State/README.rst
+  _static/Silver/Strategy/README.rst
+  _static/Silver/Template/README.rst
 
 
 You can view :download:`Doxygen Document <_static/linktodoxygen.html>`.

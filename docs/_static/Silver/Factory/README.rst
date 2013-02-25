@@ -26,6 +26,7 @@ Sequence Diagram
 
 SimplePizzaFactory 클래스는 팩토리로써 위 애플리케이션에서 유일하게 Pizza 의
 구상클래스를 직접 참조하는 부분이다.
+
 **이런 메소드(SimplePizzaFactory::createPizza())를 static 메소드로 선언하는
 경우가 종종 있다.**
 
@@ -63,6 +64,7 @@ Sequence Diagram
    :alt: A Facade
 
 Q : 간단한 팩토리와 팩토리 메소드 패턴의 차이점
+
 A : 간단한 팩토리는 1회용 처방에 불과한 반면, 팩토리 메소드 패턴을 사용하면 어떤
 구현을 사용할지를 서브클래스에서 결정하는 프레임워크를 만들 수 있다는 결정적인
 차이점이 있다. 예를 들어, 팩토리 메소드 패턴에서 사용한 orderPizza() 메소드에서는

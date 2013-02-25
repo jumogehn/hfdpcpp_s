@@ -3,6 +3,7 @@ TRACE    (139964248123200) calling PizzaStore::PizzaStore in file `PizzaStore.hp
 TRACE    (139964248123200) leaving PizzaStore::PizzaStore in file `PizzaStore.hpp' on line 17
 TRACE    (139964248123200) calling PizzaStore::PizzaStore in file `PizzaStore.hpp' on line 17
 TRACE    (139964248123200) leaving PizzaStore::PizzaStore in file `PizzaStore.hpp' on line 17
+
 TRACE    (139964248123200) calling PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
 TRACE       (139964248123200) calling NYPizzaStore::createPizza in file `NYPizzaStore.hpp' on line 18
 TRACE          (139964248123200) calling Pizza::Pizza in file `Pizza.hpp' on line 22
@@ -21,8 +22,10 @@ TRACE       (139964248123200) leaving Pizza::cut in file `Pizza.hpp' on line 53
 TRACE       (139964248123200) calling Pizza::box in file `Pizza.hpp' on line 58
 TRACE       (139964248123200) leaving Pizza::box in file `Pizza.hpp' on line 58
 TRACE    (139964248123200) leaving PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
+
 TRACE    (139964248123200) calling Pizza::getName in file `Pizza.hpp' on line 63
 TRACE    (139964248123200) leaving Pizza::getName in file `Pizza.hpp' on line 63
+
 TRACE    (139964248123200) calling PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
 TRACE       (139964248123200) calling ChicagoPizzaStore::createPizza in file `ChicagoPizzaStore.hpp' on line 18
 TRACE          (139964248123200) calling Pizza::Pizza in file `Pizza.hpp' on line 22
@@ -41,10 +44,12 @@ TRACE       (139964248123200) leaving ChicagoStyleCheesePizza::cut in file `Chic
 TRACE       (139964248123200) calling Pizza::box in file `Pizza.hpp' on line 58
 TRACE       (139964248123200) leaving Pizza::box in file `Pizza.hpp' on line 58
 TRACE    (139964248123200) leaving PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
+
 TRACE    (139964248123200) calling Pizza::~Pizza in file `Pizza.hpp' on line 32
 TRACE    (139964248123200) leaving Pizza::~Pizza in file `Pizza.hpp' on line 32
 TRACE    (139964248123200) calling Pizza::getName in file `Pizza.hpp' on line 63
 TRACE    (139964248123200) leaving Pizza::getName in file `Pizza.hpp' on line 63
+
 TRACE    (139964248123200) calling PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
 TRACE       (139964248123200) calling NYPizzaStore::createPizza in file `NYPizzaStore.hpp' on line 18
 TRACE          (139964248123200) calling Pizza::Pizza in file `Pizza.hpp' on line 22
@@ -63,10 +68,12 @@ TRACE       (139964248123200) leaving Pizza::cut in file `Pizza.hpp' on line 53
 TRACE       (139964248123200) calling Pizza::box in file `Pizza.hpp' on line 58
 TRACE       (139964248123200) leaving Pizza::box in file `Pizza.hpp' on line 58
 TRACE    (139964248123200) leaving PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
+
 TRACE    (139964248123200) calling Pizza::~Pizza in file `Pizza.hpp' on line 32
 TRACE    (139964248123200) leaving Pizza::~Pizza in file `Pizza.hpp' on line 32
 TRACE    (139964248123200) calling Pizza::getName in file `Pizza.hpp' on line 63
 TRACE    (139964248123200) leaving Pizza::getName in file `Pizza.hpp' on line 63
+
 TRACE    (139964248123200) calling PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
 TRACE       (139964248123200) calling ChicagoPizzaStore::createPizza in file `ChicagoPizzaStore.hpp' on line 18
 TRACE          (139964248123200) calling Pizza::Pizza in file `Pizza.hpp' on line 22
@@ -85,10 +92,12 @@ TRACE       (139964248123200) leaving ChicagoStyleClamPizza::cut in file `Chicag
 TRACE       (139964248123200) calling Pizza::box in file `Pizza.hpp' on line 58
 TRACE       (139964248123200) leaving Pizza::box in file `Pizza.hpp' on line 58
 TRACE    (139964248123200) leaving PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
+
 TRACE    (139964248123200) calling Pizza::~Pizza in file `Pizza.hpp' on line 32
 TRACE    (139964248123200) leaving Pizza::~Pizza in file `Pizza.hpp' on line 32
 TRACE    (139964248123200) calling Pizza::getName in file `Pizza.hpp' on line 63
 TRACE    (139964248123200) leaving Pizza::getName in file `Pizza.hpp' on line 63
+
 TRACE    (139964248123200) calling PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
 TRACE       (139964248123200) calling NYPizzaStore::createPizza in file `NYPizzaStore.hpp' on line 18
 TRACE          (139964248123200) calling Pizza::Pizza in file `Pizza.hpp' on line 22
@@ -107,6 +116,7 @@ TRACE       (139964248123200) leaving Pizza::cut in file `Pizza.hpp' on line 53
 TRACE       (139964248123200) calling Pizza::box in file `Pizza.hpp' on line 58
 TRACE       (139964248123200) leaving Pizza::box in file `Pizza.hpp' on line 58
 TRACE    (139964248123200) leaving PizzaStore::orderPizza in file `PizzaStore.hpp' on line 27
+
 TRACE    (139964248123200) calling Pizza::~Pizza in file `Pizza.hpp' on line 32
 TRACE    (139964248123200) leaving Pizza::~Pizza in file `Pizza.hpp' on line 32
 TRACE    (139964248123200) calling Pizza::getName in file `Pizza.hpp' on line 63

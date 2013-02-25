@@ -55,18 +55,24 @@ Contents
 .. toctree::
   :maxdepth: 1
 
-  _static/Silver/Adapter/README.rst
+**Creational**
+  _static/Silver/Singleton/README.rst
+  _static/Silver/Factory/README.rst
+  _static/Silver/Builder/README.rst
+
+**Behavioral**
+  _static/Silver/Template/README.rst
   _static/Silver/Command/README.rst
   _static/Silver/Iterator/README.rst
-  _static/Silver/Composite/README.rst
-  _static/Silver/Decorator/README.rst
-  _static/Silver/Facade/README.rst
-  _static/Silver/Factory/README.rst
   _static/Silver/Observer/README.rst
-  _static/Silver/Singleton/README.rst
   _static/Silver/State/README.rst
   _static/Silver/Strategy/README.rst
-  _static/Silver/Template/README.rst
+
+**Structural**
+  _static/Silver/Decorator/README.rst
+  _static/Silver/Composite/README.rst
+  _static/Silver/Facade/README.rst
+  _static/Silver/Adapter/README.rst
 
 
 You can view :download:`Doxygen Document <_static/linktodoxygen.html>`.

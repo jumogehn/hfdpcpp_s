@@ -59,6 +59,7 @@ Contents
 | `Composite <docs/_static/Silver/Composite>`_
 | `Decorator <docs/_static/Silver/Decorator>`_
 | `Facade <docs/_static/Silver/Facade>`_
+| `Factory <docs/_static/Silver/Factory>`_
 |
 | `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
 

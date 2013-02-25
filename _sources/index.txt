@@ -1,7 +1,6 @@
 
-=================================
-Head First Design Patterns in C++
-=================================
+Welcome to Head First Design Patterns for C++ documentation!
+============================================================
 
 About the C++ Source Code
 -------------------------
@@ -24,7 +23,7 @@ possible other enhancement will be done.
 About the Story used to explain each patterns
 ---------------------------------------------
 
-.. image:: docs/_static/thebookcover.jpg
+.. image:: _static/thebookcover.jpg
    :scale: 50 %
    :alt: The Book We Love
 
@@ -53,31 +52,32 @@ Hwansoo Seo
 Contents
 --------
 
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-|생성관련 패턴                                     |행동관련 패턴                                     |구조관련 패턴                                     |
-+==================================================+==================================================+==================================================+
-|`Singleton <docs/_static/Silver/Singleton>`_      |`Template <docs/_static/Silver/Template>`_        |`Decorator <docs/_static/Silver/Decorator>`_      |
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-|`Factory <docs/_static/Silver/Factory>`_          |`Command <docs/_static/Silver/Command>`_          |`Composite <docs/_static/Silver/Composite>`_      |
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-|                                                  |`Iterator <docs/_static/Silver/Iterator>`_        |`Facade <docs/_static/Silver/Facade>`_            |
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-|                                                  |`Observer <docs/_static/Silver/Observer>`_        |`Adapter <docs/_static/Silver/Adapter>`_          |
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-|                                                  |`State <docs/_static/Silver/State>`_              |                                                  |
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-|                                                  |`Strategy <docs/_static/Silver/Strategy>`_        |                                                  |
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+.. toctree::
+  :maxdepth: 1
 
-| `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
+  _static/Silver/Adapter/README.rst
+  _static/Silver/Command/README.rst
+  _static/Silver/Iterator/README.rst
+  _static/Silver/Composite/README.rst
+  _static/Silver/Decorator/README.rst
+  _static/Silver/Facade/README.rst
+  _static/Silver/Factory/README.rst
+  _static/Silver/Observer/README.rst
+  _static/Silver/Singleton/README.rst
+  _static/Silver/State/README.rst
+  _static/Silver/Strategy/README.rst
+  _static/Silver/Template/README.rst
 
-You can view `Doxygen Document
-<http://journeyer.github.com/hfdpcpp_s/doxygen>`_.
 
-You can download `the UML file
-<http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ and open/edit it
+You can view :download:`Doxygen Document <_static/linktodoxygen.html>`.
+
+You can download :download:`the UML file <_static/Silver.uml>` and open/edit it
 via `StarUML <http://staruml.sourceforge.net/en/>`_.
 
+Indices and tables
+==================
 
-Journeyer J. Joh
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 

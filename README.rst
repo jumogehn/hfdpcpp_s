@@ -88,6 +88,8 @@ You can download `the UML file
 <http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ and open/edit it
 via `StarUML <http://staruml.sourceforge.net/en/>`_.
 
+Also Design Patterns are well documented in `Wikipedia
+<http://en.wikipedia.org/wiki/Design_Patterns>`_.
 
 Journeyer J. Joh
 

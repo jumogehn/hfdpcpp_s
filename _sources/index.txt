@@ -49,10 +49,11 @@ Hwansoo Seo
 `wickedlysmart.com <http://wickedlysmart.com/>`_
 
 
-Contents:
+Contents
+--------
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
 
   _static/Silver/Adapter/README.rst
   _static/Silver/Command/README.rst

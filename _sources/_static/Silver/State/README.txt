@@ -55,7 +55,7 @@ Sequence Diagram
 |함수)을 캡슐화 한다. 상황에 따라     |전략 객체를 사용할지를 지정해 준다.     |
 |Context 객체에서 여러 상태 객체 중 한|그리고 실행시에 전략 객체를 변경할 수   |
 |객체에게 모든 행동을 맡기게 된다.    |있는 유연성을 제공해 준다.              |
-+------------------------------------------------------------------------------+
++-------------------------------------+----------------------------------------+
 |컨택스트 객체에 수많은 조건문을 넣는 |서브클래스를 만드는 방법을 대신해서     |
 |대신 사용할 수 있는 패턴이다. 행동을 |유연성을 극대화 하는 용도로 사용된다.   |
 |상태 객체 내에 캡슐화 시켜서 컨택스트|                                        |
@@ -65,8 +65,9 @@ Sequence Diagram
 +-------------------------------------+----------------------------------------+
 
 
-|참고 :
-|`OOP란 조건문(if)을 줄이는 것 <http://alankang.tistory.com/249>`_
-|`On the Criteria to be used in Decomposing Systems into Modules
+| 참고 :
+`OOP란 조건문(if)을 줄이는 것 <http://alankang.tistory.com/249>`_
+
+`On the Criteria to be used in Decomposing Systems into Modules
 <http://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf>`_
 

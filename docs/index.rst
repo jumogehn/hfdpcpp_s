@@ -97,8 +97,9 @@ You can view :download:`Doxygen Document <_static/linktodoxygen.html>`.
 You can download :download:`the UML file <_static/Silver.uml>` and open/edit it
 via `StarUML <http://staruml.sourceforge.net/en/>`_.
 
-Also Design Patterns are well documented in `Wikipedia
-<http://en.wikipedia.org/wiki/Design_Patterns>`_.
+Also `Design Patterns <http://en.wikipedia.org/wiki/Design_Patterns>`_ are well
+documented in Wikipedia.
+
 
 Indices and tables
 ==================

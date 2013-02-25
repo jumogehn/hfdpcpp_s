@@ -66,7 +66,7 @@ Sequence Diagram
 
 
 | 참고 :
-| `OOP란 조건문(if)을 줄이는 것 <http://alankang.tistory.com/249>`_
-`On the Criteria to be used in Decomposing Systems into Modules
+* `OOP란 조건문(if)을 줄이는 것 <http://alankang.tistory.com/249>`_
+* `On the Criteria to be used in Decomposing Systems into Modules
 <http://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf>`_
 

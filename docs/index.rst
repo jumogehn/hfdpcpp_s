@@ -49,10 +49,8 @@ Hwansoo Seo
 `wickedlysmart.com <http://wickedlysmart.com/>`_
 
 
-Contents
---------
-
-**Creational**
+Creational
+----------
 
 .. toctree::
   :maxdepth: 1
@@ -60,8 +58,10 @@ Contents
   _static/Silver/Singleton/README.rst
   _static/Silver/Factory/README.rst
   _static/Silver/Builder/README.rst
+* Prototype
 
-**Behavioral**
+Behavioral
+----------
 
 .. toctree::
   :maxdepth: 1
@@ -72,8 +72,14 @@ Contents
   _static/Silver/Observer/README.rst
   _static/Silver/State/README.rst
   _static/Silver/Strategy/README.rst
+  _static/Silver/ChainOfResponsibility/README.rst
+  _static/Silver/Interpreter/README.rst
+  _static/Silver/Mediator/README.rst
+  _static/Silver/Visitor/README.rst
+* Memento
 
-**Structural**
+Structural
+----------
 
 .. toctree::
   :maxdepth: 1
@@ -82,7 +88,9 @@ Contents
   _static/Silver/Composite/README.rst
   _static/Silver/Facade/README.rst
   _static/Silver/Adapter/README.rst
-
+  _static/Silver/Bridge/README.rst
+  _static/Silver/Flyweight/README.rst
+* Proxy
 
 You can view :download:`Doxygen Document <_static/linktodoxygen.html>`.
 

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Strategy Pattern &mdash; hfdpcpp_s 0.1 documentation</title>
+    <title>Template Method Pattern &mdash; hfdpcpp_s 0.1 documentation</title>
     
     <link rel="stylesheet" href="../../haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../pygments.css" type="text/css" />
@@ -28,19 +28,16 @@
     <script type="text/javascript" src="../../doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../theme_extras.js"></script>
-    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="../../../index.html" />
-    <link rel="prev" title="Template Method Pattern" href="../Strategy/README.html" /> 
+    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="../../../index.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="../../../index.html">
           <span>hfdpcpp_s 0.1 documentation</span></a></h1>
-        <h2 class="heading"><span>Strategy Pattern</span></h2>
+        <h2 class="heading"><span>Template Method Pattern</span></h2>
       </div>
       <div class="topnav">
       
         <p>
-        «&#160;&#160;<a href="../Strategy/README.html">Template Method Pattern</a>
-        &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../../../index.html">Contents</a>
         </p>
 
@@ -48,78 +45,62 @@
       <div class="content">
         
         
-  <div class="section" id="strategy-pattern">
-<h1>Strategy Pattern<a class="headerlink" href="#strategy-pattern" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">디자인 원칙</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>애플리케 이션에서 달라지는 부분을 찾아내고, 달라지지 않는 부분으로부터 분리
-시킨다.</td>
-</tr>
-</tbody>
-</table>
-<p><em>&#8220;바뀌는 부분은 따로 뽑아서 캡슐화 시킨다. 그렇게 하면 나중에 바뀌지 않는
-부분에는 영향을 미치지 않은 채로 그 부분만 고치거나 확장할 수 있다.&#8221;</em></p>
-<p>이 개념은 매우 간단하지만 다른 모든 디자인 패턴의 기반을 이루는 원칙이다. 모든
-패턴은 &#8216;시스템의 일부분을 다른 부분과 독립적으로 변화시킬 수 있는&#8217; 방법을
-제공하기 위한 것이니까...</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">디자인 원칙</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>구현이 아닌 인터페이스에 맞춰서 프로그래밍 한다.</td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="miniducksimulator">
-<h2>MiniDuckSimulator<a class="headerlink" href="#miniducksimulator" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="template-method-pattern">
+<h1>Template Method Pattern<a class="headerlink" href="#template-method-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="barista">
+<h2>Barista<a class="headerlink" href="#barista" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="class-diagram">
 <h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Template/Content/Overview_of_MiniDuckSimulator.jpg"><img alt="Class Diagram" src="_static/Silver/Template/Content/Overview_of_MiniDuckSimulator.jpg" /></a>
+<a class="reference internal image-reference" href="_static/Silver/Template/Barista/Overview_of_Barista.jpg"><img alt="Class Diagram" src="_static/Silver/Template/Barista/Overview_of_Barista.jpg" /></a>
 </div>
 <div class="section" id="sequence-diagram">
 <h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Template/Content/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/Template/Content/SequenceDiagram1.jpg" /></a>
+<a class="reference internal image-reference" href="_static/Silver/Template/Barista/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/Template/Barista/SequenceDiagram1.jpg" /></a>
 <table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">디자인 원칙</th>
+<tr class="row-odd"><th class="head">패턴 10. 템플릿 메소드</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>상속보다는 구성을 활용한다.</td>
+<tr class="row-even"><td>메소드에 서 알고리즘의 골격을 정의한다. 알고리즘의 여러 단계중 일부는
+서브클래스에서 구현할 수 있다. 템플릿 메소드를 이용하면 알고리즘의 구조는
+그대로 유지하면서 서브클래스에서 특정 단계를 재정의 할 수 있다.</td>
 </tr>
 </tbody>
 </table>
+<a class="reference internal image-reference" href="../../../_images/TemplateMethod.jpg"><img alt="GoG's Strategy Pattern" src="../../../_images/TemplateMethod.jpg" style="width: 193.0px; height: 118.0px;" /></a>
+<p>잠깐 : 후크(hook)는 추상 클래스에서 선언되는 메소드이긴 하지만(위 패턴 정의
+그림에서 Operation1(), Operation2() 처럼) 자바의 abstract 메소드 혹은 C++ 의 순수
+가상함수처럼 그 바디가 없는 것이 아니라 기본적인 내용이 구현되어있거나 아무
+내용이 없는 빈 메소드로 구현이 된 메소드 이다. 이렇게 하면 서브클래스 입장에서는
+후크를 활용(오버라이드)해서 후크 메소드가 사용되는 지점에서 알고리즘에 끼어들 수
+있게 된다. 물론 그냥 무시하고 넘어가도록 전략적으로 방치시킬 수도 있다.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">패턴 1. 스트래티지</th>
+<tr class="row-odd"><th class="head">디자인 원칙 - 헐리우드 원칙</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>알고리즘 군을 정의하고 각각을 캡슐화하여 교환해서 사용할 수 있도록 만든다.
-스트래티지를 활용하면 알고리즘을 사용하는 클라이언트와는 독립적으로 알고리즘을
-변경할 수 있다.</td>
+<tr class="row-even"><td>먼저 연락하지 마세요. 저희가 연락 드리겠습니다.</td>
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="_static/Silver/Template/Strategy.jpg"><img alt="GoG's Strategy Pattern" src="_static/Silver/Template/Strategy.jpg" /></a>
+<p>클래스들의 고수준과 저수준의 다단계의 계층 구조에서 고수준 구성요소가 저수준
+구성요소에 의존하고 또, 저수준 구성요소도 아무런 제한없이 고소준 구성요소에
+의존하며 구수준과 저수준의 각종 클래스들이 서로서로 의존관계가 무질서하게
+얽혀있는 의존성 부페(dependency rot) 를 방지하기 위해서 헐리우드 원칙을 사용할 수
+있다. 이 원칙을 사용하면 저수준 구성요소에서는 시스템에 접속을 할 수는 있지만,
+언제 어떤 식으로 그 구성요소들을 사용할지는 고수준 구성요소에서 결정하게 된다.
+즉, 고수준 구성요소에서 저수준 구성요소에게 &#8220;먼저 연락하지 마세요. 제가 먼저 연락
+드리겠습니다.&#8221; 라고 얘기를 하는 것과 같다.</p>
+<p>헐리우드 원칙은 템플릿 메소드 패턴에서 눈에 확연히 드러나며, 팩토리 메소드 패턴과
+옵저버 패턴 등 에서도 관찰할 수 있다.</p>
 </div>
 </div>
 </div>
@@ -129,8 +110,6 @@
       <div class="bottomnav">
       
         <p>
-        «&#160;&#160;<a href="../Strategy/README.html">Template Method Pattern</a>
-        &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../../../index.html">Contents</a>
         </p>
 

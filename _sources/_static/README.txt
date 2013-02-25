@@ -11,4 +11,5 @@ Head First Design Patterns in C++
   Silver/Iterator/README.rst
   Silver/Composite/README.rst
   Silver/Decorator/README.rst
+  Silver/Facade/README.rst
 

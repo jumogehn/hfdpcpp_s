@@ -52,15 +52,20 @@ Hwansoo Seo
 Contents
 --------
 
+**Creational**
+
 .. toctree::
   :maxdepth: 1
 
-**Creational**
   _static/Silver/Singleton/README.rst
   _static/Silver/Factory/README.rst
   _static/Silver/Builder/README.rst
 
 **Behavioral**
+
+.. toctree::
+  :maxdepth: 1
+
   _static/Silver/Template/README.rst
   _static/Silver/Command/README.rst
   _static/Silver/Iterator/README.rst
@@ -69,6 +74,10 @@ Contents
   _static/Silver/Strategy/README.rst
 
 **Structural**
+
+.. toctree::
+  :maxdepth: 1
+
   _static/Silver/Decorator/README.rst
   _static/Silver/Composite/README.rst
   _static/Silver/Facade/README.rst

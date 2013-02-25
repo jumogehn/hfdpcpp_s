@@ -1,7 +1,7 @@
 
-*****************************
-ChainOfResponsibility Pattern
-*****************************
+*******************************
+Chain of responsibility Pattern
+*******************************
 
 GumballEMailHandler
 ===================

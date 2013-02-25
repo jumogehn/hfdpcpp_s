@@ -1,6 +1,6 @@
 
 ***********************
-Template Method Pattern
+Template method Pattern
 ***********************
 
 Barista

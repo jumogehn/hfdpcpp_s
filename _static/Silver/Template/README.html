@@ -57,11 +57,11 @@
 <h2>Barista<a class="headerlink" href="#barista" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="class-diagram">
 <h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Template/Barista/Overview_of_Barista.jpg"><img alt="Class Diagram" src="_static/Silver/Template/Barista/Overview_of_Barista.jpg" /></a>
+<a class="reference internal image-reference" href="../../../_images/Overview_of_Barista.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_Barista.jpg" style="width: 356.5px; height: 162.5px;" /></a>
 </div>
 <div class="section" id="sequence-diagram">
 <h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Template/Barista/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/Template/Barista/SequenceDiagram1.jpg" /></a>
+<a class="reference internal image-reference" href="../../../_images/SequenceDiagram17.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram17.jpg" style="width: 336.5px; height: 448.0px;" /></a>
 <table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
@@ -71,13 +71,13 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>메소드에 서 알고리즘의 골격을 정의한다. 알고리즘의 여러 단계중 일부는
+<tr class="row-even"><td>메소드에서 알고리즘의 골격을 정의한다. 알고리즘의 여러 단계중 일부는
 서브클래스에서 구현할 수 있다. 템플릿 메소드를 이용하면 알고리즘의 구조는
 그대로 유지하면서 서브클래스에서 특정 단계를 재정의 할 수 있다.</td>
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../../_images/TemplateMethod.jpg"><img alt="GoG's Strategy Pattern" src="../../../_images/TemplateMethod.jpg" style="width: 193.0px; height: 118.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/TemplateMethod.jpg"><img alt="GoF's Template Method Pattern" src="../../../_images/TemplateMethod.jpg" style="width: 183.5px; height: 136.5px;" /></a>
 <p>잠깐 : 후크(hook)는 추상 클래스에서 선언되는 메소드이긴 하지만(위 패턴 정의
 그림에서 Operation1(), Operation2() 처럼) 자바의 abstract 메소드 혹은 C++ 의 순수
 가상함수처럼 그 바디가 없는 것이 아니라 기본적인 내용이 구현되어있거나 아무
@@ -98,8 +98,8 @@
 </tbody>
 </table>
 <p>클래스들의 고수준과 저수준의 다단계의 계층 구조에서 고수준 구성요소가 저수준
-구성요소에 의존하고 또, 저수준 구성요소도 아무런 제한없이 고소준 구성요소에
-의존하며 구수준과 저수준의 각종 클래스들이 서로서로 의존관계가 무질서하게
+구성요소에 의존하고 또, 저수준 구성요소도 아무런 제한없이 고수준 구성요소에
+의존하며 고수준과 저수준의 각종 클래스들이 서로서로 의존관계가 무질서하게
 얽혀있는 의존성 부페(dependency rot) 를 방지하기 위해서 헐리우드 원칙을 사용할 수
 있다. 이 원칙을 사용하면 저수준 구성요소에서는 시스템에 접속을 할 수는 있지만,
 언제 어떤 식으로 그 구성요소들을 사용할지는 고수준 구성요소에서 결정하게 된다.

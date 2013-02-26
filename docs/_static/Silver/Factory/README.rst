@@ -133,9 +133,9 @@ Class Diagram
    :scale: 50 %
    :alt: Class Diagram
 
-**PizzaIngredientFactory** 가 바로 Abstract Factory 패턴의 ``Abstract Factory``
-이다. **PizzaStore** 는 Factory Method 패턴의 ``Creator`` 이다. **각 구상 Pizza
-클래스들** 은 Abstract Factory 패턴의 ``Client`` 이다.
+* **PizzaIngredientFactory** : ``Abstract Factory`` in Abstract Factory Pattern
+* **PizzaStore** : ``Creator`` in Factory Method Pattern
+* **각 구상 Pizza 클래스들** : ``Client`` in Abstract Factory Pattern
 
 
 Sequence Diagram

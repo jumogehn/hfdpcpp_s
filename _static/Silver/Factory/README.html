@@ -93,7 +93,7 @@
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../../_images/FactoryMethod.jpg"><img alt="A Facade" src="../../../_images/FactoryMethod.jpg" style="width: 171.5px; height: 116.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/FactoryMethod.jpg"><img alt="A Facade" src="../../../_images/FactoryMethod.jpg" style="width: 122.0px; height: 202.0px;" /></a>
 <p>Q : 간단한 팩토리와 팩토리 메소드 패턴의 차이점</p>
 <p>A : 간단한 팩토리는 1회용 처방에 불과한 반면, 팩토리 메소드 패턴을 사용하면 어떤
 구현을 사용할지를 서브클래스에서 결정하는 프레임워크를 만들 수 있다는 결정적인
@@ -138,6 +138,16 @@
 가이드라인을 지키지 않기로 선택할 수 있다.
 예를 들면, 자바의 String 클래스와 같은 경우 거의 변경이 발생하지 않을 것으로
 예상되므로 팩토리를 사용하지 않고 직접 만들어서 사용할 수 있는 것이다!</em></p>
+<p><strong>OCP(Open-Closed Principle)</strong></p>
+<a class="reference internal image-reference" href="../../../_images/OCP_in_FactoryMethod.jpg"><img alt="Class Diagram" src="../../../_images/OCP_in_FactoryMethod.jpg" style="width: 185.5px; height: 202.0px;" /></a>
+<p>책에서 설명하지 않는 내용이지만 Factory Method 패턴에서는 <strong>OCP
+(Open-Closed Principle)</strong> 을 발견할 수 있다. 위 그림의 우측편의 의존관계는 책에서
+설명하지 않지만 중요해 보인다. 즉, 이는 변화에 <tt class="docutils literal"><span class="pre">닫힌(Closed)</span></tt> <strong>프레임워크</strong> 를
+구현한다. 반면, 위 그림의 좌측편의 의존관계는 하나의 구상클래스가 다른
+구상클래스를 생성하는 의존관계인데 이는 새로운 확장에 <tt class="docutils literal"><span class="pre">열려(Open)</span></tt> 있어
+<strong>어플리케이션</strong> 에서 마음대로 새로운 내용을 추가할 수 있다. 이는 위의
+PizzaStore의 클래스 다이어그램에서도 PizzaStore 와 Pizza 간의 의존관계가 생략되어
+있으며 이를 포함해 동일하게 설명할 수 있다.</p>
 </div>
 </div>
 <div class="section" id="abstract-factory">
@@ -145,10 +155,15 @@
 <div class="section" id="id3">
 <h3>Class Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_AbstractFactory.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_AbstractFactory.jpg" style="width: 726.0px; height: 753.5px;" /></a>
+<ul class="simple">
+<li><strong>PizzaIngredientFactory</strong> : <tt class="docutils literal"><span class="pre">Abstract</span> <span class="pre">Factory</span></tt> in Abstract Factory Pattern</li>
+<li><strong>PizzaStore</strong> : <tt class="docutils literal"><span class="pre">Creator</span></tt> in Factory Method Pattern</li>
+<li><strong>각 구상 Pizza 클래스들</strong> : <tt class="docutils literal"><span class="pre">Client</span></tt> in Abstract Factory Pattern</li>
+</ul>
 </div>
 <div class="section" id="id4">
 <h3>Sequence Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Factory/Pizzaaf/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/Factory/Pizzaaf/SequenceDiagram1.jpg" /></a>
+<a class="reference internal image-reference" href="../../../_images/SequenceDiagram16.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram16.jpg" style="width: 446.0px; height: 366.0px;" /></a>
 <table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
@@ -163,7 +178,7 @@
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../../_images/AbstractFactory.jpg"><img alt="A Facade" src="../../../_images/AbstractFactory.jpg" style="width: 373.0px; height: 203.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/AbstractFactory.jpg"><img alt="A Facade" src="../../../_images/AbstractFactory.jpg" style="width: 726.0px; height: 753.5px;" /></a>
 <table border="1" class="docutils">
 <colgroup>
 <col width="49%" />
@@ -175,15 +190,17 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>클래스 (의 상속)를 사용해서 객체 생성</td>
-<td>객체(의 구성)를 사용해서 객체 생성</td>
+<tr class="row-even"><td>상속한 팩토리클래스를 사용해서 객체
+생성</td>
+<td>전달받은(구성) 팩토리객체를 사용해서
+객체 생성</td>
 </tr>
 <tr class="row-odd"><td>간단한 인터페이스 - 하나의 팩토리
-메소드 - 장점</td>
+메소드 - <strong>장점</strong></td>
 <td>제품 군을 생성 - 인터페이스가 큰 편,
 팩토리가 생성하는 제품군에 제품을
 추가하는 경우 인터페이스의 변경이
-불가피하다. - 단점</td>
+불가피하다. - <strong>단점</strong></td>
 </tr>
 <tr class="row-even"><td colspan="2">객체 생성을 캡슐화해서 애플리케이션의 결합을 느슨하게 만들고, 특정 구현에 덜
 의존하도록 만들 수 있음.</td>

@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_TEMPLATE_BARISTA_COFFEE_WITH_HOOK_HPP_
 #define _HFDP_CPP_TEMPLATE_BARISTA_COFFEE_WITH_HOOK_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "Barista.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -11,6 +14,7 @@ namespace HeadFirstDesignPatterns {
       private:
         std::string getUserInput() const
         {
+          HUM_TRACE(ACE_TEXT("CoffeeWithHook::getUserInput"));
           std::string value;
           std::cout << "Would you like milk and sugar with your coffee (y/n)? "
             << std::endl;
@@ -21,14 +25,18 @@ namespace HeadFirstDesignPatterns {
       public:
         void brew() const
         {
+          HUM_TRACE(ACE_TEXT("CoffeeWithHook::brew"));
           std::cout << "Dripping Coffee through filter" << std::endl;
         }
         void addCondiments() const
         {
+          HUM_TRACE(ACE_TEXT("CoffeeWithHook::addCondiments"));
           std::cout << "Adding Sugar and Milk" << std::endl;
         }
-        bool customerWantsCondiments() const
+
+        bool customerWantsCondiments()
         {
+          HUM_TRACE(ACE_TEXT("CoffeeWithHook::customerWantsCondiments"));
           bool value = false;
           std::string answer = getUserInput();
           if( answer.find('y') != -1 ) {

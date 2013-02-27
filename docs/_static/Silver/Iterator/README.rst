@@ -3,7 +3,7 @@
 Iterator Pattern
 *****************
 
-DinnerMergerI
+DinerMergerI
 =============
 
 Class Diagram
@@ -62,6 +62,14 @@ IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove �
 
 집합체에 내부 컬렉션과 관련된 기능과 반복자용 메소드관련 기능이 전부 구현된다면
 ``단일 역할의 원칙`` 에 위배된다.
+
+*몇가지 책에 없는 이야기를 하자면, 구상 Aggregate 객체는* ``Last long & Unique``
+*하지만 구상 Iterator 객체는* ``Prompt, Frequent 그리고 Multiply 하게 생성됐다가
+소멸`` *한다는 것이다. 또 C++ 에서는 Iterator클래스는 Aggregate클래스의*
+``Friend`` *클래스로 구현하면 좋겠다는 것이다. 관련된 이야기가 더 있는지
+궁금하다.*
+
+
 
 Continue to `Composite Pattern <../Composite>`_
 

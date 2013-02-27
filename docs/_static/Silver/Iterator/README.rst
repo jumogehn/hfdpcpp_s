@@ -9,7 +9,7 @@ DinnerMergerI
 Class Diagram
 -------------
 
-.. image:: DinnerMergerI/Overview_of_DinnerMergerI.jpg
+.. image:: DinerMergerI/Overview_of_DinerMergerI.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -17,7 +17,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: DinnerMergerI/SequenceDiagram1.jpg
+.. image:: DinerMergerI/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

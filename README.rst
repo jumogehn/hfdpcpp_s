@@ -91,6 +91,8 @@ via `StarUML <http://staruml.sourceforge.net/en/>`_.
 Also GoF's Design Patterns are well documented in
 `Wikipedia <http://en.wikipedia.org/wiki/Design_Patterns>`_.
 
+Vince Huston provides `very awesome website for GoF's Patterns
+<http://www.vincehuston.org/dp/>`_.
 
 Journeyer J. Joh
 

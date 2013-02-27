@@ -1,6 +1,9 @@
 #ifndef	_HEAD_FIRST_DESIGN_PATTERNS_ITERATOR_DINER_MERGER_OBJECT_HPP_
 #define _HEAD_FIRST_DESIGN_PATTERNS_ITERATOR_DINER_MERGER_OBJECT_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
   namespace Iterator {
     namespace DinerMerger {

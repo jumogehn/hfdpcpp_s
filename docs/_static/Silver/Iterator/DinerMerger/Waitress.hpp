@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_ITERATOR_DINER_MERGER_WAITRESS_HPP_
 #define _HFDP_CPP_ITERATOR_DINER_MERGER_WAITRESS_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
   namespace Iterator {
     namespace DinerMerger {
@@ -14,6 +17,7 @@ namespace HeadFirstDesignPatterns {
 
         void printMenu( Iterator<MenuItem>* iterator )
         {
+          HUM_TRACE(ACE_TEXT("Waitress::printMenu"));
           while( iterator->hasNext() ) {
             MenuItem* menuItem = dynamic_cast< MenuItem* >( iterator->next() );
             std::cout << menuItem->getName() << ", ";
@@ -23,6 +27,7 @@ namespace HeadFirstDesignPatterns {
         }
         void printVegetarianMenu( Iterator<MenuItem>* iterator )
         {
+          HUM_TRACE(ACE_TEXT("Waitress::printVegetarianMenu"));
           while( iterator->hasNext() ) {
             MenuItem* menuItem = dynamic_cast< MenuItem* >( iterator->next() );
             if( menuItem->isVegetarian() ) {
@@ -34,6 +39,7 @@ namespace HeadFirstDesignPatterns {
         }
         bool isVegetarian( std::string name, Iterator<MenuItem>* iterator )
         {
+          HUM_TRACE(ACE_TEXT("Waitress::isVegetarian"));
           while( iterator->hasNext() ) {
             MenuItem* menuItem = dynamic_cast< MenuItem* >( iterator->next() );
             if( menuItem->getName().compare( name ) == 0 ) {
@@ -48,9 +54,12 @@ namespace HeadFirstDesignPatterns {
       public:
         Waitress(PancakeHouseMenu* pancakeHouseMenu, DinerMenu* dinerMenu) :
           _pancakeHouseMenu(pancakeHouseMenu), _dinerMenu(dinerMenu)
-        {}
+        {
+          HUM_TRACE(ACE_TEXT("Waitress::Waitress"));
+        }
         void printMenu()
         {
+          HUM_TRACE(ACE_TEXT("Waitress::printMenu"));
           Iterator<MenuItem>* pancakeIterator
             = _pancakeHouseMenu->createIterator();
           Iterator<MenuItem>* dinerIterator = _dinerMenu->createIterator();
@@ -62,11 +71,13 @@ namespace HeadFirstDesignPatterns {
         }
         void printVegetarianMenu()
         {
+          HUM_TRACE(ACE_TEXT("Waitress::printVegetarianMenu"));
           printVegetarianMenu( _pancakeHouseMenu->createIterator() );
           printVegetarianMenu( _dinerMenu->createIterator() );
         }
         bool isItemVegetarian( std::string name)
         {
+          HUM_TRACE(ACE_TEXT("Waitress::isItemVegetarian"));
           Iterator<MenuItem>* breakfastIterator
             = _pancakeHouseMenu->createIterator();
           if( isVegetarian(name, breakfastIterator) ) {

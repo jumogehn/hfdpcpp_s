@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_ITERATOR_DINER_MERGER_PANCAKE_HOUSE_MENU_HPP_
 #define _HFDP_CPP_ITERATOR_DINER_MERGER_PANCAKE_HOUSE_MENU_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
   namespace Iterator {
     namespace DinerMerger {
@@ -15,6 +18,7 @@ namespace HeadFirstDesignPatterns {
       public:
         PancakeHouseMenu()
         {
+          HUM_TRACE(ACE_TEXT("PancakeHouseMenu::PancakeHouseMenu"));
           addItem( "K&B's Pancake Breakfast",
                    "Pancakes with scrambled eggs, and toast", true, 2.99 );
           addItem( "Regular Pancake Breakfast",
@@ -27,21 +31,25 @@ namespace HeadFirstDesignPatterns {
         void addItem( std::string name, std::string description,
                       bool vegetarian, double price )
         {
+          HUM_TRACE(ACE_TEXT("PancakeHouseMenu::addItem"));
           MenuItem* menuItem = new MenuItem( name, description, vegetarian,
                                              price );
           _menuItems.push_back( menuItem );
         }
         std::vector< MenuItem* > getMenuItems() const
         {
+          HUM_TRACE(ACE_TEXT("PancakeHouseMenu::getMenuItems"));
           return _menuItems;
         }
         Iterator<MenuItem>* createIterator() const
         {
+          HUM_TRACE(ACE_TEXT("PancakeHouseMenu::createIterator"));
           return dynamic_cast<Iterator<MenuItem>* > (
             new PancakeHouseMenuIterator( _menuItems ) );
         }
         std::string toString() const
         {
+          HUM_TRACE(ACE_TEXT("PancakeHouseMenu::toString"));
           return "Objectville Pancake House Menu";
         }
 

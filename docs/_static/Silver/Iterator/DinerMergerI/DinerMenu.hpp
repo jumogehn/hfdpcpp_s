@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_ITERATOR_DINER_MERGER_I_DINER_MENU_HPP_
 #define _HFDP_CPP_ITERATOR_DINER_MERGER_I_DINER_MENU_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
   namespace Iterator {
     namespace DinerMergerI {
@@ -17,6 +20,8 @@ namespace HeadFirstDesignPatterns {
         DinerMenu() :
           _numberOfItems( 0 )
         {
+          HUM_TRACE(ACE_TEXT("DinerMenu::DinerMenu"));
+
           // added one additional entry;
           _menuItems = new MenuItem*[MAX_ITEMS + 1];
           for( int i = 0; i <= MAX_ITEMS; i++ ) { // to hold a null ( 0 ) value
@@ -38,6 +43,7 @@ namespace HeadFirstDesignPatterns {
         void addItem( std::string name, std::string description,
                       bool vegetarian, double price)
         {
+          HUM_TRACE(ACE_TEXT("DinerMenu::addItem"));
           MenuItem* menuItem
             = new MenuItem(name, description, vegetarian, price);
           if( _numberOfItems >= MAX_ITEMS) {
@@ -50,10 +56,12 @@ namespace HeadFirstDesignPatterns {
         }
         MenuItem** getMenuItems() const
         {
+          HUM_TRACE(ACE_TEXT("DinerMenu::getMenuItems"));
           return _menuItems;
         }
         Iterator<MenuItem>* createIterator() const
         {
+          HUM_TRACE(ACE_TEXT("DinerMenu::createIterator"));
           return dynamic_cast< Iterator< MenuItem >* >(
             new DinerMenuIterator( _menuItems) );
         }

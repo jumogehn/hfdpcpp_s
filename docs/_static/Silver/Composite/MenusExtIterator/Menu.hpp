@@ -66,10 +66,7 @@ namespace HeadFirstDesignPatterns {
         //여기부터 다시 구현하자
         Iterator<MenuComponent>* createIterator() const
         {
-          HUM_TRACE(ACE_TEXT("Menu::createIterator"));
-          std::vector< MenuComponent* >::iterator
-            iterator = _menuComponents.begin();
-          return new CompositeIterator(iterator);
+          //
         }
 
       };

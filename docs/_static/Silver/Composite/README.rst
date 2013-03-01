@@ -66,6 +66,14 @@ hasNext, next 를 호출해서 원하는 반복작업을 할 수 있기 때문�
 스택을 써서 재귀적인 구조에서의 복합객체에서의 현재 위치를 관리할 수 있다. (쫌
 복잡하군하..)
 
+
+
+.. image:: Composite_with_Iterator.jpg
+   :scale: 50 %
+   :alt: GoF's Composite Pattern + Iterator Pattern
+
+
+
 *여기에 자바코드는 C++ 버전은 없는 건가..*
 
 널반복자는 ``널객체 디자인 패턴`` 이 적용된 사례가 된다. 그리고

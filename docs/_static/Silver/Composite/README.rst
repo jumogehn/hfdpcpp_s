@@ -67,6 +67,9 @@ MenuComponent (의 함수 print(), 정확하게는 Menu::print()) 내부에서 �
 현재 위치를 관리할 수 있다.
 
 
+Class Diagram of Composite Pattern which has external Iterator
+--------------------------------------------------------------
+
 .. image:: Composite_with_Iterator.jpg
    :scale: 50 %
    :alt: GoF's Composite Pattern + Iterator Pattern

@@ -75,23 +75,33 @@ Class Diagram of Composite Pattern which has external Iterator
    :alt: GoF's Composite Pattern + Iterator Pattern
 
 
+Class Diagram
+-------------
+
+.. image:: MenusExtIterator/Overview_of_MenusExtIterator.jpg
+   :scale: 50 %
+   :alt: Class Diagram
+
+
+Sequence Diagram
+----------------
+
+.. image:: MenusExtIterator/SequenceDiagram1.jpg
+   :scale: 50 %
+   :alt: Sequence Diagram
 
 
 널반복자는 ``널객체 디자인 패턴`` 이 적용된 사례가 된다. 그리고
 printBegetarianMenu 메소드에서 try/catch 구조를 사용한 것은 Menu 와 MenuItem을
-똑같이 다룸으로써 투명성을 높이기 위함이다.
+똑같이 다룸으로써 투명성을 높이기 위함이다. 그런데 이는 try/catch 의 원래 용도에
+맞는 사용법은 아니다. C++ 에서는 RTTI 를 쓸 수 있다. 또는 RTTI 의 사용을 피하기
+위해 LLVM 스타일의 RTTI 를 도입할 수도 있다.
 
 컴포지트 패턴의 가장 큰 장점은 클라이언트를 단순화 시킬 수 있다는 것이다.
 클라이언트는 복합객체를 사용하고 있는지 잎 객체를 사용하고 있는지에 대해서 전혀
 신경쓰지 않아도 된다. 올바른 객체에 대해 올바른 연산을 적용하고 있는지 확인하기
 위해 if 문을 지저분하게 여기저기 사용하지 않아도 된다. 그리고 하나의 메소드를
 호출하면 전체 구조에 대해서 반복해서 작업을 처리할 수도 있다.
-
-안드로이드의 오픈코어의 테스트 코드에 바로 컴포지트 패턴이 적용되 있다. 자동으로
-수많은 테스트 케이스의 테스트를 수행할 수 있도록 수많은 테스트 케이스들이
-복합객체를 구성한다. 테스트는 일정 범위만 수행할 수도 있고 특정 테스트 항목만 할
-수도 있으며 전체를 테스트할 수도 있다. 컴포지트 패턴이 GUI 외에 적용된 모범
-사례이다.
 
 Continue to `Iterator Pattern <../Iterator>`_
 

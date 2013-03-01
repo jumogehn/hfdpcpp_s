@@ -53,15 +53,15 @@
         
   <div class="section" id="iterator-pattern">
 <h1>Iterator Pattern<a class="headerlink" href="#iterator-pattern" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="dinnermergeri">
-<h2>DinnerMergerI<a class="headerlink" href="#dinnermergeri" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dinermergeri">
+<h2>DinerMergerI<a class="headerlink" href="#dinermergeri" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="class-diagram">
 <h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Iterator/DinnerMergerI/Overview_of_DinnerMergerI.jpg"><img alt="Class Diagram" src="_static/Silver/Iterator/DinnerMergerI/Overview_of_DinnerMergerI.jpg" /></a>
+<a class="reference internal image-reference" href="../../../_images/Overview_of_DinerMergerI.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_DinerMergerI.jpg" style="width: 566.5px; height: 473.0px;" /></a>
 </div>
 <div class="section" id="sequence-diagram">
 <h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Iterator/DinnerMergerI/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/Iterator/DinnerMergerI/SequenceDiagram1.jpg" /></a>
+<a class="reference internal image-reference" href="../../../_images/SequenceDiagram17.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram17.jpg" style="width: 501.0px; height: 312.0px;" /></a>
 <table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
@@ -74,7 +74,7 @@
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../../_images/Iterator.jpg"><img alt="GoF's Iterator Pattern" src="../../../_images/Iterator.jpg" style="width: 220.5px; height: 134.5px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Iterator.jpg"><img alt="GoF's Iterator Pattern" src="../../../_images/Iterator.jpg" style="width: 148.5px; height: 251.0px;" /></a>
 <p>주의 : Iterator 인터페이스에서 선언하는 메소드 이름은 전통적으로 First, Next,
 IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove 등을
 사용하는 것이 대세이다. first 가 없어진 것은 자바에서는 처음부터 다시 돌리고
@@ -82,7 +82,7 @@ IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove �
 <p>본문의 Iterator 는 <tt class="docutils literal"><span class="pre">외부</span> <span class="pre">반복자</span></tt> 이다. 클라이언트가 next 를 호출하며 반복작업을
 제어하기 때문이다. 반면 <tt class="docutils literal"><span class="pre">내부</span> <span class="pre">반복자</span></tt> 는 반복자 자신에 의해서 반복작업이
 제어된다.
-즉, 클라이언트가 반복자한테 어떤 작어을 넘겨줘야 한다. 내부 반복자를 쓰면
+즉, 클라이언트가 반복자한테 어떤 작업을 넘겨줘야 한다. 내부 반복자를 쓰면
 클라이언트가 반복작업을 마음대로 제어할 수 없기 때문에 외부 반복자를 쓰는
 경우보다 유연성이 조금 떨어지게 되는데 작업을 반복자에게 완전 위임할 수 있어서
 오히려 이점이 장점이 되기도 한다.</p>
@@ -105,6 +105,11 @@ IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove �
 얻을 수 있게된다.</p>
 <p>집합체에 내부 컬렉션과 관련된 기능과 반복자용 메소드관련 기능이 전부 구현된다면
 <tt class="docutils literal"><span class="pre">단일</span> <span class="pre">역할의</span> <span class="pre">원칙</span></tt> 에 위배된다.</p>
+<p><em>몇가지 책에 없는 이야기를 하자면,</em> <strong>구상 Aggregate 객체</strong> <em>는</em> <tt class="docutils literal"><span class="pre">Last</span> <span class="pre">long</span> <span class="pre">&amp;</span>
+<span class="pre">Unique</span></tt> <em>하지만</em> <strong>구상 Iterator 객체</strong> <em>는</em> <tt class="docutils literal"><span class="pre">Prompt,</span> <span class="pre">Frequent</span> <span class="pre">그리고</span> <span class="pre">Multiply</span>
+<span class="pre">하게</span> <span class="pre">생성됐다가</span> <span class="pre">소멸</span></tt> <em>한다는 것이다. 또</em> <strong>C++ 에서는 Iterator 클래스는
+Aggregate 클래스의</strong> <tt class="docutils literal"><span class="pre">Friend</span></tt> <strong>클래스로 구현하면 좋겠다</strong> <em>는 것이다. 관련된
+이야기가 더 있는지 궁금하다.</em></p>
 <p>Continue to <a class="reference external" href="../Composite">Composite Pattern</a></p>
 </div>
 </div>

@@ -3,13 +3,13 @@
 Iterator Pattern
 *****************
 
-DinnerMergerI
+DinerMergerI
 =============
 
 Class Diagram
 -------------
 
-.. image:: DinnerMergerI/Overview_of_DinnerMergerI.jpg
+.. image:: DinerMergerI/Overview_of_DinerMergerI.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -17,7 +17,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: DinnerMergerI/SequenceDiagram1.jpg
+.. image:: DinerMergerI/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 
@@ -42,7 +42,7 @@ IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove �
 본문의 Iterator 는 ``외부 반복자`` 이다. 클라이언트가 next 를 호출하며 반복작업을
 제어하기 때문이다. 반면 ``내부 반복자`` 는 반복자 자신에 의해서 반복작업이
 제어된다.
-즉, 클라이언트가 반복자한테 어떤 작어을 넘겨줘야 한다. 내부 반복자를 쓰면
+즉, 클라이언트가 반복자한테 어떤 작업을 넘겨줘야 한다. 내부 반복자를 쓰면
 클라이언트가 반복작업을 마음대로 제어할 수 없기 때문에 외부 반복자를 쓰는
 경우보다 유연성이 조금 떨어지게 되는데 작업을 반복자에게 완전 위임할 수 있어서
 오히려 이점이 장점이 되기도 한다.
@@ -62,6 +62,13 @@ IsDone, CurrentItem 등이었지만, 최근의 경향은 next, hasNext, remove �
 
 집합체에 내부 컬렉션과 관련된 기능과 반복자용 메소드관련 기능이 전부 구현된다면
 ``단일 역할의 원칙`` 에 위배된다.
+
+*몇가지 책에 없는 이야기를 하자면,* **구상 Aggregate 객체** *는* ``Last long &
+Unique`` *하지만* **구상 Iterator 객체** *는* ``Prompt, Frequent 그리고 Multiply
+하게 생성됐다가 소멸`` *한다는 것이다. 또* **C++ 에서는 Iterator 클래스는
+Aggregate 클래스의** ``Friend`` **클래스로 구현하면 좋겠다** *는 것이다. 관련된
+이야기가 더 있는지 궁금하다.*
+
 
 Continue to `Composite Pattern <../Composite>`_
 

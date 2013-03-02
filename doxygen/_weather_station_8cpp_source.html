@@ -78,29 +78,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">WeatherStation.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;WeatherStation.hpp&quot;</span>
-<a name="l00002"></a>00002 
-<a name="l00003"></a>00003 <span class="keyword">using namespace </span>HeadFirstDesignPatterns::Observer;
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;Hum_Log_Manager.h&quot;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;Hum_Trace.h&quot;</span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[] ) {
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;WeatherStation.hpp&quot;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007   <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_weather_data.html">WeatherData</a> weatherData;
+<a name="l00007"></a>00007 <span class="keyword">using namespace </span>HeadFirstDesignPatterns::Observer;
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009   <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_current_conditions_display.html">CurrentConditionsDisplay</a> currentDisplay( &amp;weatherData );
-<a name="l00010"></a>00010   <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_statistics_display.html">StatisticsDisplay</a> statisticsDisplay( &amp;weatherData );
-<a name="l00011"></a>00011   <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_forecast_display.html">ForecastDisplay</a> forecastDisplay( &amp;weatherData );
+<a name="l00009"></a>00009 <span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[] ) {
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011   HUM_LOG_MANAGER-&gt;redirectToFile(ACE_TEXT(<span class="stringliteral">&quot;trace.log&quot;</span>));
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="preprocessor">#ifdef _HEAT_INDEX_DISPLAY_</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span>  <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_heat_index_display.html">HeatIndexDisplay</a> heatIndexDisplay( &amp;weatherData );
-<a name="l00015"></a>00015 <span class="preprocessor">#endif</span>
-<a name="l00016"></a>00016 <span class="preprocessor"></span>
-<a name="l00017"></a>00017   weatherData.setMeasurements( 80, 65, 30.4f );
-<a name="l00018"></a>00018   weatherData.setMeasurements( 82, 70, 29.2f );
-<a name="l00019"></a>00019   weatherData.setMeasurements( 78, 90, 29.2f );
+<a name="l00013"></a>00013   HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;main&quot;</span>));
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015   <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_weather_data.html">WeatherData</a> weatherData;
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017   <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_current_conditions_display.html">CurrentConditionsDisplay</a> currentDisplay( &amp;weatherData );
+<a name="l00018"></a>00018   <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_statistics_display.html">StatisticsDisplay</a> statisticsDisplay( &amp;weatherData );
+<a name="l00019"></a>00019   <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_forecast_display.html">ForecastDisplay</a> forecastDisplay( &amp;weatherData );
 <a name="l00020"></a>00020 
-<a name="l00021"></a>00021   <span class="keywordflow">return</span> 0;
-<a name="l00022"></a>00022 }
-<a name="l00023"></a>00023 
+<a name="l00021"></a>00021 <span class="preprocessor">#ifdef _HEAT_INDEX_DISPLAY_</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span>  <a class="code" href="class_head_first_design_patterns_1_1_observer_1_1_heat_index_display.html">HeatIndexDisplay</a> heatIndexDisplay( &amp;weatherData );
+<a name="l00023"></a>00023 <span class="preprocessor">#endif</span>
+<a name="l00024"></a>00024 <span class="preprocessor"></span>
+<a name="l00025"></a>00025   weatherData.setMeasurements( 80, 65, 30.4f );
+<a name="l00026"></a>00026   weatherData.setMeasurements( 82, 70, 29.2f );
+<a name="l00027"></a>00027   weatherData.setMeasurements( 78, 90, 29.2f );
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029   <span class="keywordflow">return</span> 0;
+<a name="l00030"></a>00030 }
+<a name="l00031"></a>00031 
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -119,7 +127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 1 2013 12:21:55 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 2 2013 22:37:00 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

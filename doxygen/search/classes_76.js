@@ -6,6 +6,6 @@ var searchData=
   ['veggiepizza',['VeggiePizza',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_veggie_pizza.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
   ['veggiepizza',['VeggiePizza',['../class_head_first_design_patterns_1_1_factory_1_1_simple_1_1_veggie_pizza.html',1,'HeadFirstDesignPatterns::Factory::Simple']]],
   ['veggies',['Veggies',['../class_head_first_design_patterns_1_1_factory_1_1_abstract_1_1_veggies.html',1,'HeadFirstDesignPatterns::Factory::Abstract']]],
-  ['visitor',['Visitor',['../class_head_first_design_patterns_1_1_visitor_1_1_menus_1_1_visitor.html',1,'HeadFirstDesignPatterns::Visitor::Menus']]],
-  ['visitor',['Visitor',['../class_head_first_design_patterns_1_1_interpreter_1_1_mini_duck_simulator_1_1_visitor.html',1,'HeadFirstDesignPatterns::Interpreter::MiniDuckSimulator']]]
+  ['visitor',['Visitor',['../class_head_first_design_patterns_1_1_interpreter_1_1_mini_duck_simulator_1_1_visitor.html',1,'HeadFirstDesignPatterns::Interpreter::MiniDuckSimulator']]],
+  ['visitor',['Visitor',['../class_head_first_design_patterns_1_1_visitor_1_1_menus_1_1_visitor.html',1,'HeadFirstDesignPatterns::Visitor::Menus']]]
 ];

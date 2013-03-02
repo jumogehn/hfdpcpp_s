@@ -81,59 +81,68 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _HFDP_CPP_STATE_GUMBALL_STATE_WINNER_SOLD_STATE_HPP_</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _HFDP_CPP_STATE_GUMBALL_STATE_WINNER_SOLD_STATE_HPP_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="keyword">namespace </span>HeadFirstDesignPatterns {
-<a name="l00005"></a>00005   <span class="keyword">namespace </span>State {
-<a name="l00006"></a>00006     <span class="keyword">namespace </span>GumballStateWinner {
-<a name="l00007"></a>00007 
-<a name="l00008"></a><a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">00008</a>       <span class="keyword">class </span><a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a> : <span class="keyword">public</span> <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_state.html">State</a> {
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010         <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_gumball_machine.html">GumballMachine</a>* _gumballMachine;
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012         <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a>( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a>&amp; ); <span class="comment">// Disable copy constructor</span>
-<a name="l00013"></a>00013         <span class="keywordtype">void</span> operator=( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a>&amp; ); <span class="comment">// Disable assignment operator</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Hum_Log_Manager.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;Hum_Trace.h&quot;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="keyword">namespace </span>HeadFirstDesignPatterns {
+<a name="l00008"></a>00008   <span class="keyword">namespace </span>State {
+<a name="l00009"></a>00009     <span class="keyword">namespace </span>GumballStateWinner {
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">00011</a>       <span class="keyword">class </span><a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a> : <span class="keyword">public</span> <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_state.html">State</a> {
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013         <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_gumball_machine.html">GumballMachine</a>* _gumballMachine;
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015       <span class="keyword">public</span>:
-<a name="l00016"></a>00016         <span class="keyword">explicit</span> <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a>( <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_gumball_machine.html">GumballMachine</a>* gumballMachine ) :
-<a name="l00017"></a>00017           _gumballMachine( gumballMachine )
-<a name="l00018"></a>00018         {
-<a name="l00019"></a>00019           assert( gumballMachine );
-<a name="l00020"></a>00020         }
-<a name="l00021"></a>00021         <span class="keywordtype">void</span> insertQuarter()<span class="keyword"> const</span>
-<a name="l00022"></a>00022 <span class="keyword">        </span>{
-<a name="l00023"></a>00023           std::cout &lt;&lt; <span class="stringliteral">&quot;Please wait, we&#39;re already giving you a gumball&quot;</span>
-<a name="l00024"></a>00024             &lt;&lt; std::endl;
-<a name="l00025"></a>00025         }
-<a name="l00026"></a>00026         <span class="keywordtype">void</span> ejectQuarter()<span class="keyword"> const</span>
-<a name="l00027"></a>00027 <span class="keyword">        </span>{
-<a name="l00028"></a>00028           std::cout &lt;&lt; <span class="stringliteral">&quot;Sorry, you already turned the crank&quot;</span> &lt;&lt; std::endl;
-<a name="l00029"></a>00029         }
-<a name="l00030"></a>00030         <span class="keywordtype">void</span> turnCrank()<span class="keyword"> const</span>
-<a name="l00031"></a>00031 <span class="keyword">        </span>{
-<a name="l00032"></a>00032           std::cout &lt;&lt; <span class="stringliteral">&quot;Turning twice doesn&#39;t get you another gumball!&quot;</span>
-<a name="l00033"></a>00033             &lt;&lt; std::endl;
-<a name="l00034"></a>00034         }
-<a name="l00035"></a>00035         <span class="keywordtype">void</span> dispense()
-<a name="l00036"></a>00036         {
-<a name="l00037"></a>00037           _gumballMachine-&gt;releaseBall();
-<a name="l00038"></a>00038           <span class="keywordflow">if</span>( _gumballMachine-&gt;getCount() &gt; 0) {
-<a name="l00039"></a>00039             _gumballMachine-&gt;setState( _gumballMachine-&gt;getNoQuarterState() );
-<a name="l00040"></a>00040           } <span class="keywordflow">else</span> {
-<a name="l00041"></a>00041             std::cout &lt;&lt; <span class="stringliteral">&quot;Oops, out of gumballs!&quot;</span> &lt;&lt; std::endl;
-<a name="l00042"></a>00042             _gumballMachine-&gt;setState( _gumballMachine-&gt;getSoldOutState() );
-<a name="l00043"></a>00043           }
-<a name="l00044"></a>00044         }
-<a name="l00045"></a>00045         std::string toString()<span class="keyword"> const</span>
-<a name="l00046"></a>00046 <span class="keyword">        </span>{
-<a name="l00047"></a>00047           <span class="keywordflow">return</span> <span class="stringliteral">&quot;dispensing a gumball&quot;</span>;
-<a name="l00048"></a>00048         }
-<a name="l00049"></a>00049       };
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051     } <span class="comment">// namespace GumballStateWinner</span>
-<a name="l00052"></a>00052   } <span class="comment">// namespace State</span>
-<a name="l00053"></a>00053 } <span class="comment">// namespace HeadFirstDesignPatterns</span>
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="preprocessor">#endif</span>
-<a name="l00056"></a>00056 <span class="preprocessor"></span>
+<a name="l00015"></a>00015         <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a>( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a>&amp; ); <span class="comment">// Disable copy constructor</span>
+<a name="l00016"></a>00016         <span class="keywordtype">void</span> operator=( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a>&amp; ); <span class="comment">// Disable assignment operator</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018       <span class="keyword">public</span>:
+<a name="l00019"></a>00019         <span class="keyword">explicit</span> <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_sold_state.html">SoldState</a>( <a class="code" href="class_head_first_design_patterns_1_1_state_1_1_gumball_state_winner_1_1_gumball_machine.html">GumballMachine</a>* gumballMachine ) :
+<a name="l00020"></a>00020           _gumballMachine( gumballMachine )
+<a name="l00021"></a>00021         {
+<a name="l00022"></a>00022           assert( gumballMachine );
+<a name="l00023"></a>00023           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;SoldState::SoldState&quot;</span>));
+<a name="l00024"></a>00024         }
+<a name="l00025"></a>00025         <span class="keywordtype">void</span> insertQuarter()<span class="keyword"> const</span>
+<a name="l00026"></a>00026 <span class="keyword">        </span>{
+<a name="l00027"></a>00027           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;SoldState::insertQuarter&quot;</span>));
+<a name="l00028"></a>00028           std::cout &lt;&lt; <span class="stringliteral">&quot;Please wait, we&#39;re already giving you a gumball&quot;</span>
+<a name="l00029"></a>00029             &lt;&lt; std::endl;
+<a name="l00030"></a>00030         }
+<a name="l00031"></a>00031         <span class="keywordtype">void</span> ejectQuarter()<span class="keyword"> const</span>
+<a name="l00032"></a>00032 <span class="keyword">        </span>{
+<a name="l00033"></a>00033           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;SoldState::ejectQuarter&quot;</span>));
+<a name="l00034"></a>00034           std::cout &lt;&lt; <span class="stringliteral">&quot;Sorry, you already turned the crank&quot;</span> &lt;&lt; std::endl;
+<a name="l00035"></a>00035         }
+<a name="l00036"></a>00036         <span class="keywordtype">void</span> turnCrank()<span class="keyword"> const</span>
+<a name="l00037"></a>00037 <span class="keyword">        </span>{
+<a name="l00038"></a>00038           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;SoldState::turnCrank&quot;</span>));
+<a name="l00039"></a>00039           std::cout &lt;&lt; <span class="stringliteral">&quot;Turning twice doesn&#39;t get you another gumball!&quot;</span>
+<a name="l00040"></a>00040             &lt;&lt; std::endl;
+<a name="l00041"></a>00041         }
+<a name="l00042"></a>00042         <span class="keywordtype">void</span> dispense()
+<a name="l00043"></a>00043         {
+<a name="l00044"></a>00044           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;SoldState::dispense&quot;</span>));
+<a name="l00045"></a>00045           _gumballMachine-&gt;releaseBall();
+<a name="l00046"></a>00046           <span class="keywordflow">if</span>( _gumballMachine-&gt;getCount() &gt; 0) {
+<a name="l00047"></a>00047             _gumballMachine-&gt;setState( _gumballMachine-&gt;getNoQuarterState() );
+<a name="l00048"></a>00048           } <span class="keywordflow">else</span> {
+<a name="l00049"></a>00049             std::cout &lt;&lt; <span class="stringliteral">&quot;Oops, out of gumballs!&quot;</span> &lt;&lt; std::endl;
+<a name="l00050"></a>00050             _gumballMachine-&gt;setState( _gumballMachine-&gt;getSoldOutState() );
+<a name="l00051"></a>00051           }
+<a name="l00052"></a>00052         }
+<a name="l00053"></a>00053         std::string toString()<span class="keyword"> const</span>
+<a name="l00054"></a>00054 <span class="keyword">        </span>{
+<a name="l00055"></a>00055           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;SoldState::toString&quot;</span>));
+<a name="l00056"></a>00056           <span class="keywordflow">return</span> <span class="stringliteral">&quot;dispensing a gumball&quot;</span>;
+<a name="l00057"></a>00057         }
+<a name="l00058"></a>00058       };
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060     } <span class="comment">// namespace GumballStateWinner</span>
+<a name="l00061"></a>00061   } <span class="comment">// namespace State</span>
+<a name="l00062"></a>00062 } <span class="comment">// namespace HeadFirstDesignPatterns</span>
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -152,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 1 2013 12:21:55 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 2 2013 22:36:59 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a><a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_pancake_house_menu_iterator.html">00011</a>       <span class="keyword">class </span><a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_pancake_house_menu_iterator.html">PancakeHouseMenuIterator</a> : <span class="keyword">public</span> <a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_iterator.html">Iterator</a>&lt;MenuItem &gt; {
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013         <span class="keyword">mutable</span> std::vector&lt; MenuItem* &gt; _items;
-<a name="l00014"></a>00014         <span class="keyword">mutable</span> <a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_menu_item.html">MenuItem</a>* _position;
+<a name="l00014"></a>00014         <span class="keyword">mutable</span> std::vector&lt; MenuItem* &gt;::iterator _iterator;
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016         <a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_pancake_house_menu_iterator.html">PancakeHouseMenuIterator</a>( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_pancake_house_menu_iterator.html">PancakeHouseMenuIterator</a>&amp; );
 <a name="l00017"></a>00017         <span class="keywordtype">void</span> operator=( <span class="keyword">const</span> <a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_pancake_house_menu_iterator.html">PancakeHouseMenuIterator</a>&amp; );
@@ -102,36 +102,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00022"></a>00022         {
 <a name="l00023"></a>00023           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;PancakeHouseMenuIterator::&quot;</span>
 <a name="l00024"></a>00024                              <span class="stringliteral">&quot;PancakeHouseMenuIterator&quot;</span>));
-<a name="l00025"></a>00025           _position = *items.begin();
+<a name="l00025"></a>00025           _iterator = _items.begin();
 <a name="l00026"></a>00026         }
 <a name="l00027"></a>00027         <a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_menu_item.html">MenuItem</a>* next()<span class="keyword"> const</span>
 <a name="l00028"></a>00028 <span class="keyword">        </span>{
 <a name="l00029"></a>00029           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;PancakeHouseMenuIterator::next&quot;</span>));
-<a name="l00030"></a>00030           <span class="keywordflow">return</span> _position;
-<a name="l00031"></a>00031         }
-<a name="l00032"></a>00032         <span class="keywordtype">bool</span> hasNext()<span class="keyword"> const</span>
-<a name="l00033"></a>00033 <span class="keyword">        </span>{
-<a name="l00034"></a>00034           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;PancakeHouseMenuIterator::hasNext&quot;</span>));
-<a name="l00035"></a>00035           <span class="keywordflow">for</span>( std::vector&lt; MenuItem* &gt;::iterator iterator
-<a name="l00036"></a>00036                = _items.begin(); iterator != _items.end(); iterator++ ) {
-<a name="l00037"></a>00037             <span class="keywordflow">if</span>( *iterator == _position ) {
-<a name="l00038"></a>00038               <span class="keywordflow">if</span>( ++iterator != _items.end() ) {
-<a name="l00039"></a>00039                 _position = *iterator;
-<a name="l00040"></a>00040                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00041"></a>00041               }
-<a name="l00042"></a>00042               <span class="keywordflow">else</span>
-<a name="l00043"></a>00043                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00044"></a>00044             }
-<a name="l00045"></a>00045           }
-<a name="l00046"></a>00046           <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00047"></a>00047         }
-<a name="l00048"></a>00048       };
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050     } <span class="comment">// namespace DinerMergerI</span>
-<a name="l00051"></a>00051   } <span class="comment">// namespace Iterator</span>
-<a name="l00052"></a>00052 } <span class="comment">// namespace HeadFirstDesignPatterns</span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif</span>
+<a name="l00030"></a>00030           <a class="code" href="class_head_first_design_patterns_1_1_iterator_1_1_diner_merger_i_1_1_menu_item.html">MenuItem</a>* result = *_iterator++;
+<a name="l00031"></a>00031           <span class="keywordflow">return</span> result;
+<a name="l00032"></a>00032         }
+<a name="l00033"></a>00033         <span class="keywordtype">bool</span> hasNext()<span class="keyword"> const</span>
+<a name="l00034"></a>00034 <span class="keyword">        </span>{
+<a name="l00035"></a>00035           HUM_TRACE(ACE_TEXT(<span class="stringliteral">&quot;PancakeHouseMenuIterator::hasNext&quot;</span>));
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037           <span class="keywordflow">if</span>( _iterator != _items.end() ) {
+<a name="l00038"></a>00038             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00039"></a>00039           }
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041           <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00042"></a>00042         }
+<a name="l00043"></a>00043       };
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045     } <span class="comment">// namespace DinerMergerI</span>
+<a name="l00046"></a>00046   } <span class="comment">// namespace Iterator</span>
+<a name="l00047"></a>00047 } <span class="comment">// namespace HeadFirstDesignPatterns</span>
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -150,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 1 2013 12:21:54 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 2 2013 22:36:59 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

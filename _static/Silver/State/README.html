@@ -57,18 +57,27 @@
 <h2>GumballStateWinner<a class="headerlink" href="#gumballstatewinner" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="class-diagram">
 <h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/State/GumballStateWinner/Overview_of_GumballStateWinner.jpg"><img alt="Class Diagram" src="_static/Silver/State/GumballStateWinner/Overview_of_GumballStateWinner.jpg" /></a>
+<a class="reference internal image-reference" href="../../../_images/Overview_of_GumballStateWinner.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_GumballStateWinner.jpg" style="width: 635.5px; height: 397.5px;" /></a>
 </div>
 <div class="section" id="sequence-diagram">
 <h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/State/GumballStateWinner/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/State/GumballStateWinner/SequenceDiagram1.jpg" /></a>
-<p>위 예제에서처럼 상태 전환 코드를 상태 클래스에 집어 넣으면 상태 클래스들 사이에
-의존성이 생긴다는 단점이 있다. GumballMachine을 구현한 코드를 보면 구상 상태
-클래스를 코드에 직접 집어넣는 대신 Context 객체의 게터 메소드를 써서 그나마
+<a class="reference internal image-reference" href="../../../_images/SequenceDiagram110.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram110.jpg" style="width: 571.5px; height: 478.0px;" /></a>
+</div>
+<div class="section" id="statechart-diagram">
+<h3>Statechart Diagram<a class="headerlink" href="#statechart-diagram" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../../_images/StatechartDiagram1.jpg"><img alt="Statechart Diagram" src="../../../_images/StatechartDiagram1.jpg" style="width: 290.0px; height: 214.0px;" /></a>
+<p>위 예제에서처럼 <strong>상태 전환 코드</strong> 를 상태 클래스에 집어 넣으면 상태 클래스들
+사이에 의존성이 생긴다는 단점이 있다. GumballMachine을 구현한 코드를 보면 구상
+상태 클래스를 코드에 직접 집어넣는 대신 Context 객체의 게터 메소드를 써서 그나마
 의존성을 최소화 하려고 노력했음을 알 수 있다.</p>
 <p>상태 전환의 흐름을 결정하는 코드를 어느 쪽에 집어 넣는지에 따라서, 시스템이 점점
 커지게 될 때, 어떤 클래스(Context 또는 상태 클래스)가 변경에 대해서 닫혀지게
 되는지가 결정된다.</p>
+<p>상태 전환이 고정되어 있으면 상태 전환 흐름을 결정하는 코드를 Context에 집어
+넣어도 된다. 하지만 이 예제에서 처럼 <strong>상태 전환이 동적으로 결정되는 경우에는
+상태 클래스 내에서 처리하는 것이 좋다.</strong> (GumballMachine 에서 NoQuarter 또는
+SoldOut 으로 전환하는 결정은 실행중에 남아있는 알맹이의 개수에 따라 동적으로
+결정될 수 밖에 없다.)</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
@@ -83,7 +92,7 @@
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../../_images/State.jpg"><img alt="GoG's State Pattern" src="../../../_images/State.jpg" style="width: 226.0px; height: 113.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/State.jpg"><img alt="GoF's State Pattern" src="../../../_images/State.jpg" style="width: 213.0px; height: 101.5px;" /></a>
 <p><strong>&#8220;한가지 비밀을 알려드릴까요? 스트래티지 패턴하고 스테이트 패턴은 태어나자마자
 헤어지긴 했지만 원래 쌍둥이랍니다.&#8221;</strong></p>
 <table border="1" class="docutils">

@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_OBSERVER_HEAT_INDEX_DISPLAY_HPP_
 #define _HFDP_CPP_OBSERVER_HEAT_INDEX_DISPLAY_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "WeatherStation.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -16,6 +19,7 @@ namespace HeadFirstDesignPatterns {
 
       float computeHeatIndex( float t, float rh ) const
       {
+        HUM_TRACE(ACE_TEXT("HeatIndexDisplay::computeHeatIndex"));
         float index = (float)((16.923 + (0.185212 * t) + (5.37941 * rh)
                                - (0.100254 * t * rh) + (0.00941695 * (t * t) )
                                + (0.00728898 * (rh * rh) )
@@ -38,20 +42,24 @@ namespace HeadFirstDesignPatterns {
         _weatherData( weatherData ), _heatIndex( 0.0 )
       {
         assert( weatherData );
+        HUM_TRACE(ACE_TEXT("HeatIndexDisplay::HeatIndexDisplay"));
         _weatherData->registerObserver( this );
       }
       ~HeatIndexDisplay()
       {
+        HUM_TRACE(ACE_TEXT("HeatIndexDisplay::~HeatIndexDisplay"));
         _weatherData->removeObserver( this );
       }
       void update( float t, float rh, float pressure )
       {
+        HUM_TRACE(ACE_TEXT("HeatIndexDisplay::update"));
         _heatIndex = computeHeatIndex( t, rh );
         display();
       }
 
       void display() const
       {
+        HUM_TRACE(ACE_TEXT("HeatIndexDisplay::display"));
         std::cout.setf( std::ios::showpoint);
         std::cout.precision(7);
         std::cout << "Heat index is " << _heatIndex << std::endl;

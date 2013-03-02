@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_OBSERVER_STATISTICS_DISPLAY_HPP_
 #define _HFDP_CPP_OBSERVER_STATISTICS_DISPLAY_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "WeatherStation.hpp"
 
 namespace HeadFirstDesignPatterns {
@@ -23,14 +26,17 @@ namespace HeadFirstDesignPatterns {
         _tempSum( 0.0 ), _numReadings( 0 )
       {
         assert( weatherData );
+        HUM_TRACE(ACE_TEXT("StatisticsDisplay::StatisticsDisplay"));
         _weatherData->registerObserver( this );
       }
       ~StatisticsDisplay()
       {
+        HUM_TRACE(ACE_TEXT("StatisticsDisplay::~StatisticsDisplay"));
         _weatherData->removeObserver( this );
       }
       void update( float temp, float humidity, float pressure )
       {
+        HUM_TRACE(ACE_TEXT("StatisticsDisplay::update"));
         _tempSum += temp;
         _numReadings++;
 
@@ -46,6 +52,7 @@ namespace HeadFirstDesignPatterns {
       }
       void display() const
       {
+        HUM_TRACE(ACE_TEXT("StatisticsDisplay::display"));
         std::cout.setf( std::ios::showpoint );
         std::cout.precision(3);
         std::cout << "Avg/Max/Min temperature = " << ( _tempSum / _numReadings );

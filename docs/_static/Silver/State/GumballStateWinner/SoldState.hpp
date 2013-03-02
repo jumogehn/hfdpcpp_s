@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_STATE_GUMBALL_STATE_WINNER_SOLD_STATE_HPP_
 #define _HFDP_CPP_STATE_GUMBALL_STATE_WINNER_SOLD_STATE_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
   namespace State {
     namespace GumballStateWinner {
@@ -17,23 +20,28 @@ namespace HeadFirstDesignPatterns {
           _gumballMachine( gumballMachine )
         {
           assert( gumballMachine );
+          HUM_TRACE(ACE_TEXT("SoldState::SoldState"));
         }
         void insertQuarter() const
         {
+          HUM_TRACE(ACE_TEXT("SoldState::insertQuarter"));
           std::cout << "Please wait, we're already giving you a gumball"
             << std::endl;
         }
         void ejectQuarter() const
         {
+          HUM_TRACE(ACE_TEXT("SoldState::ejectQuarter"));
           std::cout << "Sorry, you already turned the crank" << std::endl;
         }
         void turnCrank() const
         {
+          HUM_TRACE(ACE_TEXT("SoldState::turnCrank"));
           std::cout << "Turning twice doesn't get you another gumball!"
             << std::endl;
         }
         void dispense()
         {
+          HUM_TRACE(ACE_TEXT("SoldState::dispense"));
           _gumballMachine->releaseBall();
           if( _gumballMachine->getCount() > 0) {
             _gumballMachine->setState( _gumballMachine->getNoQuarterState() );
@@ -44,6 +52,7 @@ namespace HeadFirstDesignPatterns {
         }
         std::string toString() const
         {
+          HUM_TRACE(ACE_TEXT("SoldState::toString"));
           return "dispensing a gumball";
         }
       };

@@ -1,3 +1,7 @@
+
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #include "GumballStateWinner.hpp"
 
 using namespace HeadFirstDesignPatterns::State::GumballStateWinner;
@@ -11,22 +15,29 @@ using namespace HeadFirstDesignPatterns::State::GumballStateWinner;
 // acceptable.
 //
 GumballMachine::GumballMachine(int numberGumballs) :
+  _count( numberGumballs )
+{
+  assert( numberGumballs >= 0 );
 
-  _count( numberGumballs ) { assert( numberGumballs >= 0 );
+  HUM_TRACE(ACE_TEXT("GumballMachine::GumballMachine"));
 
-    _soldOutState = new SoldOutState( this );
-    _noQuarterState = new NoQuarterState( this );
-    _hasQuarterState = new HasQuarterState( this );
-    _soldState = new SoldState( this );
-    _winnerState = new WinnerState( this );
-    _state = _soldOutState;
+  _soldOutState = new SoldOutState( this );
+  _noQuarterState = new NoQuarterState( this );
+  _hasQuarterState = new HasQuarterState( this );
+  _soldState = new SoldState( this );
+  _winnerState = new WinnerState( this );
+  _state = _soldOutState;
 
-    if( _count  > 0 ) {
-      _state = _noQuarterState;
-    }
+  if( _count  > 0 ) {
+    _state = _noQuarterState;
   }
+}
 
 int main( int argc, char* argv[] ) {
+
+  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
+
+  HUM_TRACE(ACE_TEXT("main"));
 
   std::auto_ptr< GumballMachine > gumballMachine( new GumballMachine( 10 ) );
   std::cout << gumballMachine->toString() << std::endl;

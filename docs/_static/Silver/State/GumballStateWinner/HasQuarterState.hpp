@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_STATE_GUMBALL_STATE_WINNER_HAS_QUARTER_STATE_HPP_
 #define _HFDP_CPP_STATE_GUMBALL_STATE_WINNER_HAS_QUARTER_STATE_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 #ifdef WIN32
 #include <process.h>
 #else
@@ -25,6 +28,7 @@ namespace HeadFirstDesignPatterns {
           _gumballMachine( gumballMachine ), _random( 0 )
         {
           assert( gumballMachine );
+          HUM_TRACE(ACE_TEXT("HasQuarterState::HasQuarterState"));
 #ifdef WIN32
           srand( _getpid() );
 #else
@@ -33,15 +37,18 @@ namespace HeadFirstDesignPatterns {
         }
         void insertQuarter() const
         {
+          HUM_TRACE(ACE_TEXT("HasQuarterState::insertQuarter"));
           std::cout << "You can't insert another quarter" << std::endl;
         }
         void ejectQuarter() const
         {
+          HUM_TRACE(ACE_TEXT("HasQuarterState::ejectQuarter"));
           std::cout << "Quarter returned" << std::endl;
           _gumballMachine->setState( _gumballMachine->getNoQuarterState() );
         }
         void turnCrank() const
         {
+          HUM_TRACE(ACE_TEXT("HasQuarterState::turnCrank"));
           std::cout << "You turned..." << std::endl;
           int winner = rand() % 5;
           if( ( winner == 0 ) && ( _gumballMachine->getCount() > 0 ) ) {
@@ -52,10 +59,12 @@ namespace HeadFirstDesignPatterns {
         }
         void dispense()
         {
+          HUM_TRACE(ACE_TEXT("HasQuarterState::dispense"));
           std::cout << "No gumball dispensed" << std::endl;
         }
         std::string toString() const
         {
+          HUM_TRACE(ACE_TEXT("HasQuarterState::toString"));
           return "waiting for turn of crank";
         }
       };

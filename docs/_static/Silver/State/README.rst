@@ -22,6 +22,15 @@ Sequence Diagram
    :alt: Sequence Diagram
 
 
+Statechart Diagram
+-------------------
+
+.. image:: GumballStateWinner/StatechartDiagram1.jpg
+   :scale: 50 %
+   :alt: Statechart Diagram
+
+
+
 위 예제에서처럼 **상태 전환 코드** 를 상태 클래스에 집어 넣으면 상태 클래스들
 사이에 의존성이 생긴다는 단점이 있다. GumballMachine을 구현한 코드를 보면 구상
 상태 클래스를 코드에 직접 집어넣는 대신 Context 객체의 게터 메소드를 써서 그나마

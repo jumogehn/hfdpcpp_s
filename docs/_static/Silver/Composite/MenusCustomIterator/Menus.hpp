@@ -9,6 +9,9 @@
 #include "Menu.hpp"
 #include "MenuItem.hpp"
 
+#include "Iterator.hpp"
+#include "MenuIterator.hpp"
+
 #include "Waitress.hpp"
 
 #endif

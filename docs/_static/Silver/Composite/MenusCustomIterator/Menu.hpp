@@ -4,6 +4,9 @@
 #include "Hum_Log_Manager.h"
 #include "Hum_Trace.h"
 
+#include "Iterator.hpp"
+#include "MenuIterator.hpp"
+
 namespace HeadFirstDesignPatterns {
   namespace Composite {
     namespace Menus {
@@ -55,18 +58,22 @@ namespace HeadFirstDesignPatterns {
           std::cout << ", " << getDescription().c_str() << std::endl;
           std::cout << "---------------------" << std::endl;
 
-          std::vector< MenuComponent* >::iterator
-            iterator = _menuComponents.begin();
-          while( iterator != _menuComponents.end() ) {
-            MenuComponent* menuComponent = *iterator++;
+          //There might be a memory leak!! ^^;
+          Iterator<MenuComponent>* menuIterator
+            = createIterator();
+
+          while( menuIterator->hasNext() ) {
+            MenuComponent* menuComponent = dynamic_cast<MenuComponent * >
+              ( menuIterator->next() );
             menuComponent->print();
           }
         }
 
-        //여기부터 다시 구현하자
         Iterator<MenuComponent>* createIterator() const
         {
-          //
+          HUM_TRACE(ACE_TEXT("PancakeHouseMenu::createIterator"));
+          return dynamic_cast<Iterator<MenuComponent>* > (
+            new MenuIterator(_menuComponents) );
         }
 
       };

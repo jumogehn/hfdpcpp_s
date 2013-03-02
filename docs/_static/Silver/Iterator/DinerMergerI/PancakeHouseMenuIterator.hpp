@@ -11,7 +11,7 @@ namespace HeadFirstDesignPatterns {
       class PancakeHouseMenuIterator : public Iterator<MenuItem > {
 
         mutable std::vector< MenuItem* > _items;
-        mutable MenuItem* _position;
+        mutable std::vector< MenuItem* >::iterator _iterator;
 
         PancakeHouseMenuIterator( const PancakeHouseMenuIterator& );
         void operator=( const PancakeHouseMenuIterator& );
@@ -22,27 +22,22 @@ namespace HeadFirstDesignPatterns {
         {
           HUM_TRACE(ACE_TEXT("PancakeHouseMenuIterator::"
                              "PancakeHouseMenuIterator"));
-          _position = *items.begin();
+          _iterator = _items.begin();
         }
         MenuItem* next() const
         {
           HUM_TRACE(ACE_TEXT("PancakeHouseMenuIterator::next"));
-          return _position;
+          MenuItem* result = *_iterator++;
+          return result;
         }
         bool hasNext() const
         {
           HUM_TRACE(ACE_TEXT("PancakeHouseMenuIterator::hasNext"));
-          for( std::vector< MenuItem* >::iterator iterator
-               = _items.begin(); iterator != _items.end(); iterator++ ) {
-            if( *iterator == _position ) {
-              if( ++iterator != _items.end() ) {
-                _position = *iterator;
-                return true;
-              }
-              else
-                return false;
-            }
+
+          if( _iterator != _items.end() ) {
+            return true;
           }
+
           return false;
         }
       };

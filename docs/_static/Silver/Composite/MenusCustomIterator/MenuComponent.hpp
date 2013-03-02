@@ -4,6 +4,8 @@
 #include "Hum_Log_Manager.h"
 #include "Hum_Trace.h"
 
+#include "Iterator.hpp"
+
 namespace HeadFirstDesignPatterns {
   namespace Composite {
     namespace Menus {
@@ -22,6 +24,8 @@ namespace HeadFirstDesignPatterns {
         {
           HUM_TRACE(ACE_TEXT("MenuComponent::~MenuComponent"));
         }
+
+
         virtual void add( MenuComponent* menuComponent )
         {
           HUM_TRACE(ACE_TEXT("MenuComponent::add"));

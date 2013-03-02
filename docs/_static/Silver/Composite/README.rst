@@ -61,7 +61,8 @@ print 메소드에서 사용된 반복자는 구성 요소의 각 항목에 대�
 구성요소가 Menu 인 경우에는 재귀적으로 print 를 호출해서 작업을 처리한다. 즉
 MenuComponent (의 함수 print(), 정확하게는 Menu::print()) 내부에서 반복작업을
 알아서 처리했다. (``내부 반복자``) 여기에 ``외부 반복자`` 를 사용하는 방식을
-추가로 구현해 본 것이 아래의 그림(MenusExtIterator)이다. 외부 반복자를 쓸 때는
+추가로 구현해 본 것이 책에 소개되어 있다. (C++ 샘플 코드는 구현치 않았다. 기존
+샘플에 버그가 많기 때문이다. (메모리 유출이 많아 보인다)) 외부 반복자를 쓸 때는
 반복중 현재 위치를 관리 해야한다. 그래야 클라이언트에서 hasNext, next 를 호출해서
 원하는 반복작업을 할 수 있기 때문이다. 이 경우에는 **스택** 을 써서 재귀적인
 구조에서의 복합객체에서의 현재 위치를 관리할 수 있다.
@@ -74,21 +75,7 @@ Composite Pattern which has external Iterator
    :scale: 50 %
    :alt: GoF's Composite Pattern + Iterator Pattern
 
-
-Class Diagram
--------------
-
-.. image:: MenusExtIterator/Overview_of_MenusExtIterator.jpg
-   :scale: 50 %
-   :alt: Class Diagram
-
-
-Sequence Diagram
-----------------
-
-.. image:: MenusExtIterator/SequenceDiagram1.jpg
-   :scale: 50 %
-   :alt: Sequence Diagram
+``외부 반복자`` 이므로 Client 에서 Iterator 로 가는 연관관계를 그려넣었다.
 
 
 널반복자는 ``널객체 디자인 패턴`` 이 적용된 사례가 된다. 그리고

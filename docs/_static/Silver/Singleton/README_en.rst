@@ -1,5 +1,5 @@
 
-I want `English version <README_en.rst>`_.
+I want `Korean version <README.rst>`_.
 
 *****************
 Singleton Pattern

@@ -29,7 +29,7 @@ Sequence Diagram
 |사용한다.                                                                     |
 +------------------------------------------------------------------------------+
 
-.. image:: Menus/Overview_of_Menus.jpg
+.. image:: Visitor.jpg
    :scale: 50 %
    :alt: Class Diagram
 

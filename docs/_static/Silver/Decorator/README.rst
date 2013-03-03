@@ -31,7 +31,7 @@ Starbuzz
 Class Diagram
 -------------
 
-.. image:: Menus/Overview_of_Starbuzz.jpg
+.. image:: Content/Overview_of_Starbuzz.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -39,7 +39,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: Menus/SequenceDiagram1.jpg
+.. image:: Content/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

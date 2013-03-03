@@ -1,7 +1,7 @@
 #ifndef	_HFDP_CPP_STRATEGY_MINI_DUCK_SIMULATOR_HPP_
 #define _HFDP_CPP_STRATEGY_MINI_DUCK_SIMULATOR_HPP_
 
-#include "../Standard.h"
+#include "../../Standard.h"
 
 #include "FlyBehavior.hpp"
 #include "FlyNoWay.hpp"

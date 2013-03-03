@@ -1,5 +1,6 @@
 
 I want `English version <README_en.rst>`_.
+(Only intro is translated.)
 
 =================================
 Head First Design Patterns in C++

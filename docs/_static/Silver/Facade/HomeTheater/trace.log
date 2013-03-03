@@ -17,6 +17,7 @@ TRACE    (139666734397248) calling PopcornPopper::PopcornPopper in file `Popcorn
 TRACE    (139666734397248) leaving PopcornPopper::PopcornPopper in file `PopcornPopper.hpp' on line 24
 TRACE    (139666734397248) calling HomeTheaterFacade::~HomeTheaterFacade in file `HomeTheaterFacade.hpp' on line 43
 TRACE    (139666734397248) leaving HomeTheaterFacade::~HomeTheaterFacade in file `HomeTheaterFacade.hpp' on line 43
+
 TRACE    (139666734397248) calling HomeTheaterFacade::watchMovie in file `HomeTheaterFacade.hpp' on line 47
 TRACE       (139666734397248) calling PopcornPopper::on in file `PopcornPopper.hpp' on line 28
 TRACE       (139666734397248) leaving PopcornPopper::on in file `PopcornPopper.hpp' on line 28
@@ -45,6 +46,7 @@ TRACE       (139666734397248) leaving DvdPlayer::on in file `DvdPlayer.hpp' on l
 TRACE       (139666734397248) calling DvdPlayer::play in file `DvdPlayer.hpp' on line 50
 TRACE       (139666734397248) leaving DvdPlayer::play in file `DvdPlayer.hpp' on line 50
 TRACE    (139666734397248) leaving HomeTheaterFacade::watchMovie in file `HomeTheaterFacade.hpp' on line 47
+
 TRACE    (139666734397248) calling HomeTheaterFacade::endMovie in file `HomeTheaterFacade.hpp' on line 64
 TRACE       (139666734397248) calling PopcornPopper::off in file `PopcornPopper.hpp' on line 33
 TRACE       (139666734397248) leaving PopcornPopper::off in file `PopcornPopper.hpp' on line 33
@@ -63,4 +65,5 @@ TRACE       (139666734397248) leaving DvdPlayer::eject in file `DvdPlayer.hpp' o
 TRACE       (139666734397248) calling DvdPlayer::off in file `DvdPlayer.hpp' on line 39
 TRACE       (139666734397248) leaving DvdPlayer::off in file `DvdPlayer.hpp' on line 39
 TRACE    (139666734397248) leaving HomeTheaterFacade::endMovie in file `HomeTheaterFacade.hpp' on line 64
+
 TRACE (139666734397248) leaving main in file `HomeTheater.cpp' on line 12

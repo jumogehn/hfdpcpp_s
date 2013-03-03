@@ -24,23 +24,22 @@ Sequence Diagram
    :alt: Sequence Diagram
 
 +------------------------------------------------------------------------------+
-|패턴 7. 커맨드                                                                |
+|Pattern 7. Command                                                            |
 +==============================================================================+
-|요구사항 을 객체로 캡슐화 할 수 있으며, 매개변수를 써서 여러가지 다른         |
-|요구사항을 집어넣을 수도 있다. 또한 요청 내역을 큐에 저장하거나 로그로 기록할 |
-|수도 있으며, 작업 취소 기능도 지원 가능하다.                                  |
+|Requirements can be encapsulated into objects and various other requirements, |
+|using the parameters n2/n1Also may request details are stored in a queue or   |
+|log to record the job cancel function support is available.                   |
 +------------------------------------------------------------------------------+
 
-참조 : 메타 커맨드 패턴 (명령들로 이루어진 매크로를 만들어서 여러개의 명령을
-한번에 실행한다.)
+Note : Meta Command Pattern (Creating a macro command, consisting of the number
+of commands to run at once.)
 
 
 .. image:: Command_Pattern.jpg
    :scale: 50 %
    :alt: GoF's Command Pattern
 
-참고 : 클라이언트(Client)는 Invoker 에 setCommand() 되는 ConcreteCommand 객체를
-생성한다.
+Note : ConcreteCommand Invoker in setCommand() which creates an object client.
 
 
 Remote Control
@@ -62,11 +61,11 @@ Sequence Diagram
    :alt: Sequence Diagram
 
 
-**널 객체( null object ) - 패턴 장려상**
+**null object - Pattern Encouragement Award**
 
-딱히 리턴할 객체는 없지만 클라이언트 쪽에서 null 을 처리하지 않아도 되도록 하고
-싶을 때 널 객체를 활용하면 좋다. 위 사례에서의 NoCommand 클래스의 용법이다.
-
+Apparent null handle the client-side so that you do not want to, you can take
+advantage of a null object, but the object to be returned. In the above case is
+the use of class NoCommand
 
 
 Undo
@@ -88,12 +87,11 @@ Sequence Diagram
    :alt: Sequence Diagram
 
 
-* undo 기능 외에도 매크로 커맨드 객체를 사용할 수도 있다. (샘플 리모컨의
-  파티모드)
-* 쓰레드 풀이나 프로세스 풀 혹은 스케줄러 에서도 활용할 수 있다.
-* 커맨드 클래스에 load(), store() 함수를 추가함으로써 로그 기반의 복구시스템을
-  구현하는데 쓰일 수도 있으며, 트랜젝션을 활용하여 모든 작업이 완벽하게
-  처리되도록 하거나, 그렇지 않으면 아무것도 처리되지 않게 롤백하도록 하는
-  기능을 구현하는데 쓰일 수도 있다.
-
+* Undo functionality in addition to the macro command object may be used. (A
+  sample of the remote control Party mode)
+* Process or thread pool in pools or scheduler can take advantage of.
+* Command class to load (), store () function by adding a log-based recovery
+  system Can be used to implement the transaction by taking advantage of all
+  work perfectly Nothing to be processed, or otherwise handled to prevent
+  rollback Can be used to implement the functionality.
 

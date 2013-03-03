@@ -24,15 +24,15 @@ Sequence Diagram
    :alt: Sequence Diagram
 
 +------------------------------------------------------------------------------+
-|패턴 8. 어댑터                                                                |
+|Pattern 8. Adapter                                                            |
 +==============================================================================+
-|한 클래스의 인터페이스를 클라이언트에서 사용하고자 하는 다른 인터페이스로     |
-|변환한다. 어댑터를 이용하면 인터페이스 호환성 문제 때문에 같이 쓸 수 없는     |
-|클래스들을 연결해서 쓸 수 있다.                                               |
+|Convert the interface of a class that you want to use a different interface   |
+|from a client. Interface compatibility problem, because classes can not be    |
+|written as the adapter can use to connect.                                    |
 +------------------------------------------------------------------------------+
 
 
-**객체 어댑터(StarUML 템플릿)**
+**Object Adapter (StarUML Template)**
 
 .. image:: Object_Adapter.jpg
    :scale: 50 %
@@ -40,15 +40,13 @@ Sequence Diagram
 
 
 
-**클래스 어댑터**
+**Class Adapter**
 
 .. image:: Class_Adapter.jpg
    :scale: 50 %
    :alt: Class Diagram
 
 
-
-다중상속이 지양되는 바로 그 이유로 클래스 어댑터의 사용도 지양된다.
-(일반적으로...)
-
+Avoid multiple inheritance is avoided for that reason the use of the adapter
+class.
 

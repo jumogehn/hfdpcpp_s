@@ -1,6 +1,4 @@
 
-I want `English version <README_en.rst>`_.
-
 ****************
 Strategy Pattern
 ****************

@@ -81,11 +81,8 @@ Eric T Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra
 |                                             |`Visitor <docs/_static/Silver/Visitor>`_                               |                                                  |
 +---------------------------------------------+-----------------------------------------------------------------------+--------------------------------------------------+
 
-| `Github Page <http://journeyer.github.com/hfdpcpp_s>`_
-
-`여기
-<http://journeyer.github.com/hfdpcpp_s/doxygen>`_ 에서 Doxygen 문서를 확인할 수
-있습니다.
+`Doxygen 문서
+<http://journeyer.github.com/hfdpcpp_s/doxygen>`_ 를 확인할 수 있습니다.
 
 `UML file
 <http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ 을 내려받을 수

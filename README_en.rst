@@ -81,8 +81,6 @@ Contents
 |                                             |`Visitor <docs/_static/Silver/Visitor>`_                               |                                                  |
 +---------------------------------------------+-----------------------------------------------------------------------+--------------------------------------------------+
 
-| `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
-
 You can view `Doxygen Document
 <http://journeyer.github.com/hfdpcpp_s/doxygen>`_.
 

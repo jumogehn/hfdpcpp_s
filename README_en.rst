@@ -1,60 +1,59 @@
 
-I want `English version <README_en.rst>`_.
+I want `Korean version <README.rst>`_.
 
 =================================
 Head First Design Patterns in C++
 =================================
 
-C++ 소스코드에 대해서
----------------------
+About the C++ Source Code
+-------------------------
 
-**출처** : http://hfdp-cpp.sourceforge.net/
+**Origin** : http://hfdp-cpp.sourceforge.net/
 
-**라이센스** : `AFL 3.0 <http://opensource.org/licenses/afl-3.0.php>`_
+**License** : `AFL 3.0 <http://opensource.org/licenses/afl-3.0.php>`_
 
-**저자** : Glenn Puchtel
+**Author** : Glenn Puchtel
 
-이 프로젝트는 위의 소스포지상의 프로젝트에서 출발하였습니다.
-저(Journeyer J. Joh)는 이 프로젝트의 원 저작자가 아닙니다. 만약 오리지널
-프로젝트나 그 프로젝트의 원저작자와 연락하길 원한다면 위에서 ``출처`` 로 표시한
-웹사이트를 방문하시길 바랍니다.
+This project is copied from the sourceforge project above.
+I, Journeyer J. Joh, am not the original author of this project.
+Please refer to the url specified with Origin: above
+if you want to reach to the original project or author of this project.
 
-Github 에서 공개하고 있는 이프로젝트는 POSIX 빌드환경을 지원하려 하며, 그 외 다른
-것들도 가능한 부분은 개선할 것입니다.
+This project on github will add POSIX build environment support and
+possible other enhancement will be done.
 
 
-각 패턴들의 설명에 사용된 이야기에 대해서
------------------------------------------
+About the Story used to explain each patterns
+---------------------------------------------
 
 .. image:: docs/_static/thebookcover.jpg
    :scale: 50 %
    :alt: The Book We Love
 
-**출처** :
-`HFDP 한국어판
+**Origin** :
+`Korean Translation of HFDP
 <http://www.hanb.co.kr/book/look.html?isbn=89-7914-340-0>`_
 `The Original Book <http://shop.oreilly.com/product/9780596007126.do>`_
 
-**라이센스** : 이 책의 내용은 copyleft 가 적용되지 않으며 오픈소스도 아닙니다.
-책에서 설명한 이야기들이 이 프로젝트에 일부 인용되고 있습니다. 주로 각 패턴의
-정의와 요약에 관한 것들로써 이 부분에 대해서 원 저자중의 한사람인
-``Elisabeth Robson`` 으로부터 허락을 얻었습니다.
-책의 더 자세한 내용을 이 프로젝트에 추가하는 것은 관련 저작권자들로부터 허락이
-있지 않은 한 삼가는 것이 마땅합니다.
+**License** : The content of the Book is not a copy-left nor a open-source.
+The story explained in the book is not shown explicitly on this project's
+documentaion. Only some keyword or major core concepts are introduced under the
+permission of one of the author, Elisabeth Robson.
+Because this documentation can exist only with the author's permission, if
+anyone wants to add more story from the book, it's not a good idea.
 
-
-**저자** :
+**Authors** :
 Eric T Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra
 
-**한국어판 번역자** :
-서환수
+**Korean Translator** :
+Hwansoo Seo
 
-**참고 웹사이트** : `Forum <http://headfirstlabs.com/books/hfdp/>`_
+**References** : `Forum <http://headfirstlabs.com/books/hfdp/>`_
 `wickedlysmart.com <http://wickedlysmart.com/>`_
 
 
-내용
-----
+Contents
+--------
 
 +---------------------------------------------+-----------------------------------------------------------------------+--------------------------------------------------+
 |Creational                                   |Behavioral                                                             |Structural                                        |
@@ -82,22 +81,20 @@ Eric T Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra
 |                                             |`Visitor <docs/_static/Silver/Visitor>`_                               |                                                  |
 +---------------------------------------------+-----------------------------------------------------------------------+--------------------------------------------------+
 
-| `Github Page <http://journeyer.github.com/hfdpcpp_s>`_
+| `Github Page for HFDP <http://journeyer.github.com/hfdpcpp_s>`_
 
-`여기
-<http://journeyer.github.com/hfdpcpp_s/doxygen>`_ 에서 Doxygen 문서를 확인할 수
-있습니다.
+You can view `Doxygen Document
+<http://journeyer.github.com/hfdpcpp_s/doxygen>`_.
 
-`UML file
-<http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ 을 내려받을 수
-있으며 `StarUML <http://staruml.sourceforge.net/en/>`_ 로 편집할 수 있습니다.
+You can download `the UML file
+<http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ and open/edit it
+via `StarUML <http://staruml.sourceforge.net/en/>`_.
 
-GoF의 디자인패턴은 `Wikipedia <http://en.wikipedia.org/wiki/Design_Patterns>`_에
-잘 설명되어 있습니다.
+Also GoF's Design Patterns are well documented in
+`Wikipedia <http://en.wikipedia.org/wiki/Design_Patterns>`_.
 
-Vince Huston은 GoF의 디자인패턴에 대해 `매우 훌륭한 웹사이트
-<http://www.vincehuston.org/dp/>`_ 를 공개하고 있습니다.
-
+Vince Huston provides `very awesome website for GoF's Patterns
+<http://www.vincehuston.org/dp/>`_.
 
 Journeyer J. Joh
 

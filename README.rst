@@ -51,7 +51,6 @@ Eric T Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra
 
 **참고 웹사이트** : `headfirstlabs.com <http://headfirstlabs.com/books/hfdp/>`_
 `wickedlysmart.com <http://wickedlysmart.com/>`_
-`한국어판 <http://www.hanb.co.kr/book/look.html?isbn=89-7914-340-0>`_
 
 내용
 ----

@@ -32,12 +32,11 @@ About the Story used to explain each patterns
 <http://www.hanb.co.kr/book/look.html?isbn=89-7914-340-0>`_
 `The Original Book <http://shop.oreilly.com/product/9780596007126.do>`_
 
-**License** : The content of the Book is not a copy-left nor a open-source.
-The story explained in the book is not shown explicitly on this project's
-documentaion. Only some keyword or major core concepts are introduced under the
-permission of one of the author, Elisabeth Robson.
-Because this documentation can exist only with the author's permission, if
-anyone wants to add more story from the book, it's not a good idea.
+**License** : The content of the Book is not a copyleft nor an open-source.
+Some story from the book is quoted and introduced here. Mostly they are core
+concepts and summary of each patterns under the permission of one of the author,
+Elisabeth Robson. If anyone wants to add more story from the book but didn't get
+the copyright holder's proper permission, he/she must stop.
 
 **Authors** :
 Eric T Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra

@@ -1,34 +1,42 @@
 TRACE (140162779952960) calling main in file `Starbuzz.cpp' on line 13
+
 TRACE    (140162779952960) calling Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) leaving Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) calling Espresso::Espresso in file `Espresso.hpp' on line 17
 TRACE    (140162779952960) leaving Espresso::Espresso in file `Espresso.hpp' on line 17
+
 TRACE    (140162779952960) calling Espresso::cost in file `Espresso.hpp' on line 22
 TRACE    (140162779952960) leaving Espresso::cost in file `Espresso.hpp' on line 22
 TRACE    (140162779952960) calling Beverage::getDescription in file `Beverage.hpp' on line 29
 TRACE    (140162779952960) leaving Beverage::getDescription in file `Beverage.hpp' on line 29
+
+
 TRACE    (140162779952960) calling Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) leaving Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) calling DarkRoast::DarkRoast in file `DarkRoast.hpp' on line 17
 TRACE    (140162779952960) leaving DarkRoast::DarkRoast in file `DarkRoast.hpp' on line 17
+
 TRACE    (140162779952960) calling Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) leaving Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) calling CondimentDecorator::CondimentDecorator in file `CondimentDecorator.hpp' on line 20
 TRACE    (140162779952960) leaving CondimentDecorator::CondimentDecorator in file `CondimentDecorator.hpp' on line 20
 TRACE    (140162779952960) calling Mocha::Mocha in file `Mocha.hpp' on line 21
 TRACE    (140162779952960) leaving Mocha::Mocha in file `Mocha.hpp' on line 21
+
 TRACE    (140162779952960) calling Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) leaving Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) calling CondimentDecorator::CondimentDecorator in file `CondimentDecorator.hpp' on line 20
 TRACE    (140162779952960) leaving CondimentDecorator::CondimentDecorator in file `CondimentDecorator.hpp' on line 20
 TRACE    (140162779952960) calling Mocha::Mocha in file `Mocha.hpp' on line 21
 TRACE    (140162779952960) leaving Mocha::Mocha in file `Mocha.hpp' on line 21
+
 TRACE    (140162779952960) calling Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) leaving Beverage::Beverage in file `Beverage.hpp' on line 20
 TRACE    (140162779952960) calling CondimentDecorator::CondimentDecorator in file `CondimentDecorator.hpp' on line 20
 TRACE    (140162779952960) leaving CondimentDecorator::CondimentDecorator in file `CondimentDecorator.hpp' on line 20
 TRACE    (140162779952960) calling Whip::Whip in file `Whip.hpp' on line 21
 TRACE    (140162779952960) leaving Whip::Whip in file `Whip.hpp' on line 21
+
 TRACE    (140162779952960) calling Whip::cost in file `Whip.hpp' on line 34
 TRACE       (140162779952960) calling Mocha::cost in file `Mocha.hpp' on line 35
 TRACE          (140162779952960) calling Mocha::cost in file `Mocha.hpp' on line 35

@@ -14,12 +14,12 @@ C++ 소스코드에 대해서
 
 **저자** : Glenn Puchtel
 
-이 프로젝트는 위의 소스포지상의 프로젝트에서 출발하였습니다.
-저(Journeyer J. Joh)는 이 프로젝트의 원 저작자가 아닙니다. 만약 오리지널
+이 프로젝트는 위의 소스포지상의 프로젝트에서 시작하였습니다.
+저 (Journeyer J. Joh)는 이 프로젝트의 원 저작자가 아닙니다. 만약 오리지널
 프로젝트나 그 프로젝트의 원저작자와 연락하길 원한다면 위에서 ``출처`` 로 표시한
 웹사이트를 방문하시길 바랍니다.
 
-Github 에서 공개하고 있는 이프로젝트는 POSIX 빌드환경을 지원하려 하며, 그 외 다른
+Github 에서 공개하고 있는 이프로젝트는 POSIX 빌드환경을 지원하며, 그 외 다른
 것들도 가능한 부분은 개선할 것입니다.
 
 
@@ -49,9 +49,9 @@ Eric T Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra
 **한국어판 번역자** :
 서환수
 
-**참고 웹사이트** : `Forum <http://headfirstlabs.com/books/hfdp/>`_
+**참고 웹사이트** : `headfirstlabs.com <http://headfirstlabs.com/books/hfdp/>`_
 `wickedlysmart.com <http://wickedlysmart.com/>`_
-
+`한국어판 <http://www.hanb.co.kr/book/look.html?isbn=89-7914-340-0>`_
 
 내용
 ----
@@ -92,7 +92,7 @@ Eric T Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra
 <http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ 을 내려받을 수
 있으며 `StarUML <http://staruml.sourceforge.net/en/>`_ 로 편집할 수 있습니다.
 
-GoF의 디자인패턴은 `Wikipedia <http://en.wikipedia.org/wiki/Design_Patterns>`_에
+GoF의 디자인패턴은 `Wikipedia <http://en.wikipedia.org/wiki/Design_Patterns>`_ 에
 잘 설명되어 있습니다.
 
 Vince Huston은 GoF의 디자인패턴에 대해 `매우 훌륭한 웹사이트

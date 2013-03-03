@@ -31,15 +31,22 @@ Starbuzz
 Class Diagram
 -------------
 
-.. image:: Menus/Overview_of_Starbuzz.jpg
+.. image:: Content/Overview_of_Starbuzz.jpg
    :scale: 50 %
    :alt: Class Diagram
+
+
+예제 코드에서는 각 구상 CondimentDecorator 클래스에서 Beverage 클래스로의
+연관관계를 가지고 있다. 데코레이터 패턴의 템플릿에서 처럼 이를
+CondimentDecorator 클래스가 가지도록 하는 것이 더 좋아보인다. 이렇게 할 때
+새로운 CondimentDecorator의 구상 클래스를 작성하게 될 때 마다 동일한 변수를
+매번 선언하지 않아도 되는 장점이 있기 때문이다.
 
 
 Sequence Diagram
 ----------------
 
-.. image:: Menus/SequenceDiagram1.jpg
+.. image:: Content/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

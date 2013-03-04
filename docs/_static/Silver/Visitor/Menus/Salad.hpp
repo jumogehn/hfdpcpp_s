@@ -1,49 +1,77 @@
 #ifndef	_HFDP_CPP_VISITOR_SALAD_HPP_
 #define _HFDP_CPP_VISITOR_SALAD_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
-namespace Visitor {
-namespace Menus {
+  namespace Visitor {
+    namespace Menus {
 
-class Salad : public IngredientDecorator {
+      class Salad : public IngredientDecorator {
 
-	private: std::auto_ptr< Stock > _base;
-	private: std::string _description;
+        std::auto_ptr< Stock > _base;
+        std::string _description;
 
-	public: explicit Salad( std::string description, Ingredient* ingredient, Stock* base) :
-		_description( description ), _base( base ), IngredientDecorator( ingredient ) { assert( base );
-	}
-	public: void accept( Visitor* visitor ) { assert( visitor );
-		return visitor->visit( this );
-	}
-	public: float getCalories() const {
-		return _ingredient->getCalories() + _base->getCalories();
-	};
-	public: float getCarbs() const {
-		return _ingredient->getCarbs() + _base->getCarbs();
-	};
-	public: float getProtien() const {
-		return _ingredient->getProtien() + _base->getProtien();
-	}
-	public: float getFat() const {
-		return _ingredient->getFat() + _base->getFat();
-	}
-	public: float getCholesterol() const {
-		return _ingredient->getCholesterol() + _base->getCholesterol();
-	}
-	public: float getSodium() const {
-		return _ingredient->getSodium() + _base->getSodium();
-	}
-	public: bool isVegetarian() const {
-		return _ingredient->isVegetarian();
-	}
-	public: std::string toString() const {
-		return _description;
-	}
-};
+      public:
+        explicit Salad( std::string description, Ingredient* ingredient,
+                        Stock* base) :
+          _description( description ), _base( base ),
+          IngredientDecorator( ingredient )
+        {
+          assert( base );
+          HUM_TRACE(ACE_TEXT("Salad::Salad"));
+        }
+        void accept( Visitor* visitor )
+        {
+          assert( visitor );
+          HUM_TRACE(ACE_TEXT("Salad::accept"));
+          return visitor->visit( this );
+        }
+        float getCalories() const
+        {
+          HUM_TRACE(ACE_TEXT("Salad::getCalories"));
+          return _ingredient->getCalories() + _base->getCalories();
+        }
+        float getCarbs() const
+        {
+          HUM_TRACE(ACE_TEXT("Salad::getCarbs"));
+          return _ingredient->getCarbs() + _base->getCarbs();
+        }
+        float getProtien() const
+        {
+          HUM_TRACE(ACE_TEXT("Salad::getProtien"));
+          return _ingredient->getProtien() + _base->getProtien();
+        }
+        float getFat() const
+        {
+          HUM_TRACE(ACE_TEXT("Salad::getFat"));
+          return _ingredient->getFat() + _base->getFat();
+        }
+        float getCholesterol() const
+        {
+          HUM_TRACE(ACE_TEXT("Salad::getCholesterol"));
+          return _ingredient->getCholesterol() + _base->getCholesterol();
+        }
+        float getSodium() const
+        {
+          HUM_TRACE(ACE_TEXT("Salad::getSodium"));
+          return _ingredient->getSodium() + _base->getSodium();
+        }
+        bool isVegetarian() const
+        {
+          HUM_TRACE(ACE_TEXT("Salad::isVegetarian"));
+          return _ingredient->isVegetarian();
+        }
+        std::string toString() const
+        {
+          HUM_TRACE(ACE_TEXT("Salad::toString"));
+          return _description;
+        }
+      };
 
-} // namespace Menus
-} // namespace Visitor
+    } // namespace Menus
+  } // namespace Visitor
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_VISITOR_INGREDIENT_HPP_
 #define _HFDP_CPP_VISITOR_INGREDIENT_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
   namespace Visitor {
     namespace Menus {
@@ -24,12 +27,17 @@ namespace HeadFirstDesignPatterns {
           _amount( amount )
         {
           assert( amount > 0.0f );
+          HUM_TRACE(ACE_TEXT("Ingredient::Ingredient"));
         }
       public:
         virtual ~Ingredient()
-        {}
+        {
+          HUM_TRACE(ACE_TEXT("Ingredient::~Ingredient"));
+        }
         virtual void add( MenuComponent* menuComponent )
-        {}
+        {
+          HUM_TRACE(ACE_TEXT("Ingredient::add"));
+        }
         virtual void accept( Visitor* visitor ) = 0;
         virtual bool isVegetarian() const = 0;
         virtual float getCalories() const = 0;
@@ -40,6 +48,8 @@ namespace HeadFirstDesignPatterns {
         virtual float getSodium() const = 0;
         virtual float getHealthRating() const
         {
+          HUM_TRACE(ACE_TEXT("Ingredient::getHealthRating"));
+
           float result = 0.0f;
 
           result += getCalories() / dailyCalories;

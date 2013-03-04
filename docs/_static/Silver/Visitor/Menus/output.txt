@@ -1,0 +1,69 @@
+
+ALL MENUS
+	All menus combined
+	
+PANCAKE HOUSE MENU
+	Breakfast
+	
+		K&B's Pancake Breakfast (v) $2.99
+		Pancakes with scrambled eggs, and toast | 799.09
+			Egg(2) | 132.73
+			Bread(2) | 64.83
+			Pancake(6) | 553.55
+		Regular Pancake Breakfast $2.99
+		Pancakes with fried eggs, sausage | 907.82
+			Egg(2) | 132.73
+			Bread(2) | 64.83
+			Pancake(6) | 553.55
+			Sausage(2) | 198.07
+		Blueberry Pancakes (v) $3.49
+		Pancakes made with fresh blueberries, and blueberry syrup | 1124.42
+			Pancake(12) | 1107.10
+			Blue berries(1) | 17.32
+DINER MENU
+	Lunch
+	
+		BLT $2.99
+		Bacon with lettuce & tomato on whole wheat | 309.70
+			Bacon(2) | 212.07
+			Lettus(1) | 0.05
+			Tomato(1) | 32.75
+			Bread(2) | 64.83
+		Vegetarian BLT (v) $2.99
+		(Fakin') Bacon with lettuce & tomato on whole wheat | 150.65
+			Bacon(2) | 212.07
+			Lettus(1) | 0.05
+			Tomato(1) | 32.75
+			Bread(2) | 64.83
+		Soup of the day (v) $2.99
+		A bowl of the soup of the day, with a side of potato salad | 405.86
+			Tomato soup | 49.12
+			Potato salad | 356.73
+		Hotdog $3.05
+		A hot dog, with saurkraut, relish, onions, topped with cheese | 484.87
+			Hotdog(1) | 212.68
+			Bread(2) | 64.83
+			SauerKraut(1) | 23.76
+			Cheese(1) | 183.59
+		Steamed Veggies and Brown Rice (v) $3.99
+		Steamed vegetables over brown rice | 76.74
+			Mixed vegetables(2) | 81.75
+			Rice(1) | 35.87
+		Pasta (v) $3.89
+		Spaghetti with Marinara Sauce, and a slice of sourdough bread | 113.96
+			Pasta(1) | 48.79
+			Tomato(1) | 32.75
+			Bread(1) | 32.42
+DESSERT MENU
+	Dessert of course!
+	
+		Ice Cream $1.89
+		A scoop of vanilla icecream with blueberry topping | 85.12
+			Milk(1) | 67.80
+			Blue berries(1) | 17.32
+CAFE MENU
+	Snacks
+	
+		Bagel $0.69
+		Flavors include sesame, poppyseed and cinnamon raisin | 10.80
+			Bagel(1) | 10.80

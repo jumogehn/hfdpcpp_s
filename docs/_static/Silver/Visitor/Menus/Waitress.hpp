@@ -1,6 +1,9 @@
 #ifndef	_HFDP_CPP_VISITOR_MENUS_WAITRESS_HPP_
 #define _HFDP_CPP_VISITOR_MENUS_WAITRESS_HPP_
 
+#include "Hum_Log_Manager.h"
+#include "Hum_Trace.h"
+
 namespace HeadFirstDesignPatterns {
   namespace Visitor {
     namespace Menus {
@@ -17,14 +20,17 @@ namespace HeadFirstDesignPatterns {
           _allMenus( allMenus )
         {
           assert( allMenus );
+          HUM_TRACE(ACE_TEXT("Waitress::Waitress"));
         }
         void printMenu()
         {
+          HUM_TRACE(ACE_TEXT("Waitress::printMenu"));
           _allMenus->accept( this );
         }
         virtual void visit( Menu* component )
         {
           assert( component );
+          HUM_TRACE(ACE_TEXT("Waitress::visit of Menu"));
           std::stringstream tokens( component->toString() );
           std::string token;
           std::cout << std::endl;
@@ -36,6 +42,7 @@ namespace HeadFirstDesignPatterns {
         virtual void visit( MenuItem* component )
         {
           assert( component );
+          HUM_TRACE(ACE_TEXT("Waitress::visit of MenuItem"));
           std::stringstream tokens( component->toString() );
           std::string token;
           while( std::getline( tokens, token, '\t' ) ) {
@@ -48,6 +55,7 @@ namespace HeadFirstDesignPatterns {
         virtual void visit( Ingredient* component )
         {
           assert( component );
+          HUM_TRACE(ACE_TEXT("Waitress::visit of Ingredient"));
           std::stringstream tokens( component->toString() );
           std::string token;
           while( std::getline( tokens, token, '\t' ) ) {

@@ -1,0 +1,28 @@
+
+Welcome to Patternsland Vacation Planner!
+
+Enter vacation date (YYYY MM DD) where...
+YYYY=2006, 2007, etc..., MM=1-12, DD=1-31, separated by spaces
+YYYY MM DD
+2013 5 3
+hotel? (0=No, 1=Grand Facadion, 2=Nostalgic Momento)
+1
+Park tickets? (0=No, 1=Yes)
+0
+Dinner Reservations? (0=No, 1=Pancake House, 2=Objectville Diner)
+1
+Special Events? (0=No, 1=Choc-O-Holic factory tour, 2=Pizza factory tour)
+1
+Would you like to plan another day? (0=No, 1=Yes)
+0
+
+  Vacation Itinerary, All events
+2013-5-3 :   Day, 1
+   Hotel , Grand Facadion- $399
+  Reservation, Dinner
+   Pancake House , - $0
+  Reservation, Special event
+   Tickets , Choc-O-Holic factory tour- $45
+
+Goodbye and have a dreamy vacation!
+

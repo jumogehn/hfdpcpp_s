@@ -34,3 +34,11 @@ Sequence Diagram
    :alt: Class Diagram
 
 
+Bridge Pattern using Template
+-----------------------------
+
+.. image:: Bridge_using_Template.jpg
+   :scale: 50 %
+   :alt: Class Diagram
+
+

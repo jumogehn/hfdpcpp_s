@@ -54,11 +54,35 @@
 <h2>FowlWeight<a class="headerlink" href="#fowlweight" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="class-diagram">
 <h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Flyweight/FowlWeight/Overview_of_FowlWeight.jpg"><img alt="Class Diagram" src="_static/Silver/Flyweight/FowlWeight/Overview_of_FowlWeight.jpg" /></a>
-</div>
-<div class="section" id="sequence-diagram">
-<h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="_static/Silver/Flyweight/FowlWeight/SequenceDiagram1.jpg"><img alt="Sequence Diagram" src="_static/Silver/Flyweight/FowlWeight/SequenceDiagram1.jpg" /></a>
+<a class="reference internal image-reference" href="../../../_images/Overview_of_FowlWeight.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_FowlWeight.jpg" style="width: 540.5px; height: 362.5px;" /></a>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">패턴 C. 플라이급패턴</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>어떤 클래스의 인스턴스 한 개만 가지고 여러 개의 <strong>가상 인스턴스</strong> 를 제공하고
+싶다면 플라이웨이트 패턴을 사용하면 됩니다.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>장점</strong></p>
+<ul class="simple">
+<li>실행시에 객체 인스턴스의 개수를 줄여서 메모리를 절약할 수 있다.</li>
+<li>여러 <strong>가상</strong> 객체의 상태를 한 곳에 집중시켜놓을 수 있다.</li>
+</ul>
+<p><strong>사용법 및 단점</strong></p>
+<ul class="simple">
+<li>어떤 클래스의 인스턴스가 아주 많이 필요하지만 모두 똑같은 방식으로 제어할 수
+있는 경우에 유용하다.</li>
+<li>일단 이 패턴을 써서 구현해놓고 나면 특정 인스턴스만 다른 인스턴스와 다른 식으로
+행동하도록 하는 것이 불가능하다는 단점이 있다.</li>
+</ul>
+<p><em>가상의 객체의 리소스 관리가 또 하나의 고민거리가 되겠다. 이는 레퍼런스 카운트
+기반의 스마트 포인터가 필요한 최적의 모델이 아닐까?</em></p>
 </div>
 </div>
 </div>

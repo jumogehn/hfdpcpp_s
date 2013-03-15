@@ -76,11 +76,37 @@
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../../_images/Bridge.jpg"><img alt="Class Diagram" src="../../../_images/Bridge.jpg" style="width: 221.5px; height: 131.5px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Bridge.jpg"><img alt="Class Diagram" src="../../../_images/Bridge.jpg" style="width: 265.5px; height: 248.5px;" /></a>
+<p><strong>장점</strong></p>
+<ul class="simple">
+<li>구현을 인터페이스에 완전히 결합시키지 않았기 때문에 구현과 추상화된 부분을
+분리시킬 수 있다.</li>
+<li>추상화된 부분과 실제 구현 부분을 독립적으로 확장 할 수 있다.</li>
+<li>추상화된 부분을 구현한 구상 클래스를 바꿔도 클라이언트 쪽에는 영향을 끼치지
+않는다.</li>
+</ul>
+<p><strong>사용법 및 단점</strong></p>
+<ul class="simple">
+<li>여러 플랫폼에서 사용해야 할 그래픽스 및 윈도우 처리 시스템에서 유용하게
+쓰인다.</li>
+<li>인터페이스와 실제 구현부를 서로 다른 방식으로 변경해야 하는 경우에 유용하게
+쓰인다.</li>
+<li>디자인이 복잡해진다는 단점이 있다.</li>
+</ul>
 </div>
 <div class="section" id="bridge-pattern-using-template">
 <h3>Bridge Pattern using Template<a class="headerlink" href="#bridge-pattern-using-template" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="../../../_images/Bridge_using_Template.jpg"><img alt="Class Diagram" src="../../../_images/Bridge_using_Template.jpg" style="width: 212.0px; height: 101.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Bridge_using_Template.jpg"><img alt="Class Diagram" src="../../../_images/Bridge_using_Template.jpg" style="width: 243.0px; height: 49.0px;" /></a>
+<p><strong>특징</strong></p>
+<ul class="simple">
+<li>데이터형 안전성이 더 높다.</li>
+<li>가상함수를 사용치 않고 인라인 함수화 할 수도 있어 더 빠르다.</li>
+</ul>
+<p><strong>단점</strong></p>
+<ul class="simple">
+<li>하지만 인터페이스와 구현 사이에 직접적인 종속관계가 생겨 독립적으로 변경할 수
+있던 특징이 사라진다?</li>
+</ul>
 </div>
 </div>
 </div>

@@ -9,7 +9,7 @@ Head First Design Patterns in C++
 C++ 소스코드에 대해서
 ---------------------
 
-**출처** : http://hfdp-cpp.sourceforge.net/
+**출처** : https://hfdpcpp.codeplex.com/
 
 **라이센스** : `AFL 3.0 <http://opensource.org/licenses/afl-3.0.php>`_
 

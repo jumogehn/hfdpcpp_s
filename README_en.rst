@@ -8,7 +8,7 @@ Head First Design Patterns in C++
 About the C++ Source Code
 -------------------------
 
-**Origin** : http://hfdp-cpp.sourceforge.net/
+**Origin** : https://hfdpcpp.codeplex.com/
 
 **License** : `AFL 3.0 <http://opensource.org/licenses/afl-3.0.php>`_
 

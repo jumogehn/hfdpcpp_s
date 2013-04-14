@@ -95,3 +95,18 @@ Sequence Diagram
   기능을 구현하는데 쓰일 수도 있다.
 
 
+
+
+Loki의 Functor를 사용한 Command Pattern
+=======================================
+
+
+std::function를 사용한 Command Pattern
+=======================================
+
+
+boost::function를 사용한 Command Pattern
+=======================================
+
+
+

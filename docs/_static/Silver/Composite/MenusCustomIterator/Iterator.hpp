@@ -1,8 +1,8 @@
 #ifndef	_HFDP_CPP_COMPOSITE_MENUS_CUSTOM_ITERATOR_ITERATOR_HPP_
 #define _HFDP_CPP_COMPOSITE_MENUS_CUSTOM_ITERATOR_ITERATOR_HPP_
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
+//#include "Hum_Log_Manager.h"
+//#include "Hum_Trace.h"
 
 namespace HeadFirstDesignPatterns {
   namespace Composite {
@@ -15,7 +15,7 @@ namespace HeadFirstDesignPatterns {
           virtual T* next() const = 0;
           virtual ~Iterator()
           {
-            HUM_TRACE(ACE_TEXT("Iterator::~Iterator"));
+            //HUM_TRACE(ACE_TEXT("Iterator::~Iterator"));
           }
         };
 

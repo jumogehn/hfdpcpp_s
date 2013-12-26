@@ -1,8 +1,8 @@
 #ifndef	_HFDP_CPP_COMPOSITE_MENUS_WAITRESS_HPP_
 #define _HFDP_CPP_COMPOSITE_MENUS_WAITRESS_HPP_
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
+//#include "Hum_Log_Manager.h"
+//#include "Hum_Trace.h"
 
 namespace HeadFirstDesignPatterns {
   namespace Composite	 {
@@ -20,11 +20,11 @@ namespace HeadFirstDesignPatterns {
           _allMenus( allMenus )
         {
           assert( allMenus );
-          HUM_TRACE(ACE_TEXT("Waitress::Waitress"));
+          //HUM_TRACE(ACE_TEXT("Waitress::Waitress"));
         }
         void printMenu() const
         {
-          HUM_TRACE(ACE_TEXT("Waitress::printMenu"));
+          //HUM_TRACE(ACE_TEXT("Waitress::printMenu"));
           _allMenus->print();
         }
       };

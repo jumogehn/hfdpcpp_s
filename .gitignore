@@ -4,3 +4,10 @@ cscope.files
 cscope.out
 tags
 
+CMakeCache.txt
+CMakeFiles/
+Ducks
+DucksConfig.h
+Makefile
+cmake_install.cmake
+

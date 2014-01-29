@@ -14,7 +14,6 @@
 #ifndef	_HFDP_CPP_ADAPTER_TURKEY_HPP_
 #define _HFDP_CPP_ADAPTER_TURKEY_HPP_
 
-#include "Ducks.hpp"
 
 namespace HeadFirstDesignPatterns {
   namespace Adapter {

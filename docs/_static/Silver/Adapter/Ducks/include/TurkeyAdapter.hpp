@@ -14,13 +14,14 @@
 #ifndef	_HFDP_CPP_ADAPTER_TURKEY_ADAPTER_HPP_
 #define _HFDP_CPP_ADAPTER_TURKEY_ADAPTER_HPP_
 
-#include "Ducks.hpp"
+#include "Duck.hpp"
+#include "Turkey.hpp"
 
 namespace HeadFirstDesignPatterns {
   namespace Adapter {
     namespace Ducks {
 
-      class Turkey;
+//      class Turkey;
 
       class TurkeyAdapter : public Duck {
 

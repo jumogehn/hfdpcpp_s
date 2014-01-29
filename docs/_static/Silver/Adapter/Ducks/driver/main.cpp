@@ -10,22 +10,26 @@
 ///
 //===----------------------------------------------------------------------===//
 
-
-#include "Ducks.hpp"
-#include <stdio.h>
+#include "Duck.hpp"
+#include "Turkey.hpp"
+#include "TurkeyAdapter.hpp"
+#include "WildTurkey.hpp"
+#include "DuckAdapter.hpp"
+#include "MallardDuck.hpp"
+#include <iostream>
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 
 void testDuck( const Duck* duck )
 {
-  fprintf(stdout, "testDuck\n");
+  std::cout << "testDuck" << std::endl;
   duck->quack();
   duck->fly();
 }
 
 int main( int argc, char* argv[] )
 {
-  fprintf(stdout, "main\n");
+  std::cout << "main" << std::endl;
 
   std::auto_ptr< MallardDuck > duck( new MallardDuck() );
 

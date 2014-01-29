@@ -11,21 +11,19 @@
 //===----------------------------------------------------------------------===//
 
 #include "MallardDuck.hpp"
-#include "Ducks.hpp"
-#include <stdio.h>
+#include <iostream>
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 
 void MallardDuck::fly() const
 {
-  fprintf(stdout, "MallardDuck::fly\n");
+  std::cout << "MallardDuck::fly" << std::endl;
   std::cout << "I'm flying" << std::endl;
 }
 
 void MallardDuck::quack() const
 {
-
-  fprintf(stdout, "MallardDuck::quack\n");
+  std::cout << "MallardDuck::quack" << std::endl;
   std::cout << "Quack" << std::endl;
 }
 

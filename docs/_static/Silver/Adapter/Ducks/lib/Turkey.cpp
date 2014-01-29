@@ -11,14 +11,13 @@
 //===----------------------------------------------------------------------===//
 
 
-#include "Ducks.hpp"
 #include "Turkey.hpp"
-#include <stdio.h>
+#include <iostream>
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 
 Turkey::~Turkey()
 {
-  fprintf(stdout, "Turkey::~Turkey\n");
+  std::cout << "Turkey::~Turkey" << std::endl;
 }
 

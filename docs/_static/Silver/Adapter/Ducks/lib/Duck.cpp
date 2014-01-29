@@ -10,14 +10,13 @@
 ///
 //===----------------------------------------------------------------------===//
 
-#include "Ducks.hpp"
 #include "Duck.hpp"
-#include <stdio.h>
+#include <iostream>
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 
 Duck::~Duck()
 {
-  fprintf(stdout, "Duck::~Duck()\n");
+  std::cout << "Duck::~Duck()" << std::endl;
 }
 

@@ -14,7 +14,7 @@
 #ifndef	_HFDP_CPP_ADAPTER_MALLARD_DUCK_HPP_
 #define _HFDP_CPP_ADAPTER_MALLARD_DUCK_HPP_
 
-#include "Ducks.hpp"
+#include "Duck.hpp"
 
 namespace HeadFirstDesignPatterns {
   namespace Adapter {

@@ -11,14 +11,13 @@
 //===----------------------------------------------------------------------===//
 
 
-#include "Ducks.hpp"
 #include "DuckAdapter.hpp"
-#include <stdio.h>
+#include <cassert>
+#include <iostream>
 #ifdef WIN32
-#include <process.h>
+//#include <process.h>
 #else
-#include <sys/types.h>
-#include <unistd.h>
+#include <stdlib.h>
 #endif
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
@@ -27,7 +26,7 @@ DuckAdapter::DuckAdapter( const Duck* duck ) :
   _duck ( duck )
 {
   assert( _duck.get() );
-  fprintf(stdout, "DuckAdapter::DuckAdapter\n");
+  std::cout << "DuckAdapter::DuckAdapter" << std::endl;
 #ifdef WIN32
   srand( _getpid() );
 #else
@@ -42,7 +41,7 @@ void DuckAdapter::fly() const
 {
   assert( _duck.get() );
 
-  fprintf(stdout, "DuckAdapter::fly\n");
+  std::cout << "DuckAdapter::fly" << std::endl;
   for( int i = 0; i < _random; i++ ) {
     _duck->fly();
   }
@@ -50,8 +49,7 @@ void DuckAdapter::fly() const
 
 void DuckAdapter::gobble() const
 {
-
-  fprintf(stdout, "DuckAdapter::gobble\n");
+  std::cout << "DuckAdapter::gobble" << std::endl;
   assert( _duck.get() );
   _duck->quack();
 }

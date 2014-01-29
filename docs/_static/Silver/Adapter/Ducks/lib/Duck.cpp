@@ -11,12 +11,12 @@
 //===----------------------------------------------------------------------===//
 
 #include "Duck.hpp"
-#include <iostream>
+#include "Utilities.hpp"
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 
 Duck::~Duck()
 {
-  std::cout << "Duck::~Duck()" << std::endl;
+  PrintMessage("Duck::~Duck()");
 }
 

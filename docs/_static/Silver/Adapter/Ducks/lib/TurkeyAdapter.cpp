@@ -11,7 +11,7 @@
 //===----------------------------------------------------------------------===//
 
 #include "TurkeyAdapter.hpp"
-#include <iostream>
+#include "Utilities.hpp"
 #include <cassert>
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
@@ -21,14 +21,14 @@ TurkeyAdapter::TurkeyAdapter( const Turkey* turkey ) :
 {
   assert( turkey );
 
-  std::cout << "TurkeyAdapter::TurkeyAdapter" << std::endl;
+  PrintMessage("TurkeyAdapter::TurkeyAdapter");
 }
 
 void TurkeyAdapter::fly() const
 {
   assert( _turkey );
 
-  std::cout << "TurkeyAdapter::fly" << std::endl;
+  PrintMessage("TurkeyAdapter::fly");
   for( int i = 0; i < 5; i++ ) {
     _turkey->fly();
   }
@@ -38,7 +38,7 @@ void TurkeyAdapter::quack() const
 {
   assert( _turkey );
 
-  std::cout << "TurkeyAdapter::quack" << std::endl;
+  PrintMessage("TurkeyAdapter::quack");
   _turkey->gobble();
 }
 

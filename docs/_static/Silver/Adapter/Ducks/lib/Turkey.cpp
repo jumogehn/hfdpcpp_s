@@ -12,12 +12,12 @@
 
 
 #include "Turkey.hpp"
-#include <iostream>
+#include "Utilities.hpp"
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 
 Turkey::~Turkey()
 {
-  std::cout << "Turkey::~Turkey" << std::endl;
+  PrintMessage("Turkey::~Turkey");
 }
 

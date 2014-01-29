@@ -11,19 +11,19 @@
 //===----------------------------------------------------------------------===//
 
 #include "WildTurkey.hpp"
-#include <iostream>
+#include <Utilities.hpp>
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 
 void WildTurkey::fly() const
 {
-  std::cout << "WildTurkey::fly" << std::endl;
-  std::cout << "I'm flying a short distance" << std::endl;
+  PrintMessage("WildTurkey::fly");
+  PrintMessage("I'm flying a short distance");
 }
 
 void WildTurkey::gobble() const
 {
-  std::cout << "WildTurkey::gobble" << std::endl;
-  std::cout << "Gobble gobble" << std::endl;
+  PrintMessage("WildTurkey::gobble");
+  PrintMessage("Gobble gobble");
 }
 

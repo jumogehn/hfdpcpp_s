@@ -1,10 +1,8 @@
 #ifndef	_HFDP_CPP_ADAPTER_TURKEY_ADAPTER_HPP_
 #define _HFDP_CPP_ADAPTER_TURKEY_ADAPTER_HPP_
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
-
 #include "Ducks.hpp"
+#include <stdio.h>
 
 namespace HeadFirstDesignPatterns {
   namespace Adapter {
@@ -22,12 +20,14 @@ namespace HeadFirstDesignPatterns {
           _turkey( turkey )
         {
           assert( turkey );
-          HUM_TRACE(ACE_TEXT("TurkeyAdapter::TurkeyAdapter"));
+
+          fprintf(stdout, "TurkeyAdapter::TurkeyAdapter\n");
         }
         void fly() const
         {
           assert( _turkey );
-          HUM_TRACE(ACE_TEXT("TurkeyAdapter::fly"));
+
+          fprintf(stdout, "TurkeyAdapter::fly\n");
           for( int i = 0; i < 5; i++ ) {
             _turkey->fly();
           }
@@ -35,7 +35,8 @@ namespace HeadFirstDesignPatterns {
         void quack() const
         {
           assert( _turkey );
-          HUM_TRACE(ACE_TEXT("TurkeyAdapter::quack"));
+
+          fprintf(stdout, "TurkeyAdapter::quack\n");
           _turkey->gobble();
         }
       };

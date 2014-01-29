@@ -1,10 +1,8 @@
 #ifndef	_HFDP_CPP_ADAPTER_MALLARD_DUCK_HPP_
 #define _HFDP_CPP_ADAPTER_MALLARD_DUCK_HPP_
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
-
 #include "Ducks.hpp"
+#include <stdio.h>
 
 namespace HeadFirstDesignPatterns {
   namespace Adapter {
@@ -15,12 +13,13 @@ namespace HeadFirstDesignPatterns {
       public:
         void fly() const
         {
-          HUM_TRACE(ACE_TEXT("MallardDuck::fly"));
+          fprintf(stdout, "MallardDuck::fly\n");
           std::cout << "I'm flying" << std::endl;
         }
         void quack() const
         {
-          HUM_TRACE(ACE_TEXT("MallardDuck::quack"));
+
+          fprintf(stdout, "MallardDuck::quack\n");
           std::cout << "Quack" << std::endl;
         }
       };

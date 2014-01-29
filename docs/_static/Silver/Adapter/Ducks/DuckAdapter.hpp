@@ -1,10 +1,8 @@
 #ifndef	_HFDP_CPP_ADAPTER_DUCK_ADAPTER_HPP_
 #define _HFDP_CPP_ADAPTER_DUCK_ADAPTER_HPP_
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
-
 #include "Ducks.hpp"
+#include <stdio.h>
 #ifdef WIN32
 #include <process.h>
 #else
@@ -29,7 +27,7 @@ namespace HeadFirstDesignPatterns {
           _duck ( duck )
         {
           assert( _duck.get() );
-          HUM_TRACE(ACE_TEXT("DuckAdapter::DuckAdapter"));
+          fprintf(stdout, "DuckAdapter::DuckAdapter\n");
 #ifdef WIN32
           srand( _getpid() );
 #else
@@ -42,14 +40,16 @@ namespace HeadFirstDesignPatterns {
         void fly() const
         {
           assert( _duck.get() );
-          HUM_TRACE(ACE_TEXT("DuckAdapter::fly"));
+
+          fprintf(stdout, "DuckAdapter::fly\n");
           for( int i = 0; i < _random; i++ ) {
             _duck->fly();
           }
         }
         void gobble() const
         {
-          HUM_TRACE(ACE_TEXT("DuckAdapter::gobble"));
+
+          fprintf(stdout, "DuckAdapter::gobble\n");
           assert( _duck.get() );
           _duck->quack();
         }

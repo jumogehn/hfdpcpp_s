@@ -11,7 +11,7 @@
 //===----------------------------------------------------------------------===//
 
 #include "WildTurkey.hpp"
-#include <Utilities.hpp>
+#include "Utilities.hpp"
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 

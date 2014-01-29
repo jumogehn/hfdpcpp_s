@@ -9,7 +9,7 @@ Ducks
 Class Diagram
 -------------
 
-.. image:: Ducks/Overview_of_Ducks.jpg
+.. image:: Ducks/imgs/Overview_of_Ducks.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -17,7 +17,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: Ducks/SequenceDiagram1.jpg
+.. image:: Ducks/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

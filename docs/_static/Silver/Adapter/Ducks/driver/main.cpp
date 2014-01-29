@@ -33,11 +33,12 @@ int main( int argc, char* argv[] )
 
   std::auto_ptr< MallardDuck > duck( new MallardDuck() );
 
-#ifdef _DUCK_ADAPTER_
+#if 1
+//#ifdef _DUCK_ADAPTER_
   std::auto_ptr< Turkey > duckAdapter( new DuckAdapter( duck.get() ) );
 
   for( int i = 0; i < 10; i++ ) {
-  PrintMessage("The DuckAdapter says...");
+    PrintMessage("The DuckAdapter says...");
     duckAdapter->gobble();
     duckAdapter->fly();
   }

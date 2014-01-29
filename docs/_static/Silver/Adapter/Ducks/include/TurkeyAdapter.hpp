@@ -17,7 +17,7 @@
 #include "Duck.hpp"
 #include "Turkey.hpp"
 
-namespace HeadFirstDesignPatterns {
+namespace HFDP {
   namespace Adapter {
     namespace Ducks {
 
@@ -38,6 +38,6 @@ namespace HeadFirstDesignPatterns {
 
     } // namespace Ducks
   } // namespace Adapter
-} // namespace HeadFirstDesignPatterns
+} // namespace HFDP
 
 #endif

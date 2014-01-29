@@ -13,7 +13,7 @@
 #include "MallardDuck.hpp"
 #include "Utilities.hpp"
 
-using namespace HeadFirstDesignPatterns::Adapter::Ducks;
+using namespace HFDP::Adapter::Ducks;
 
 void MallardDuck::fly() const
 {

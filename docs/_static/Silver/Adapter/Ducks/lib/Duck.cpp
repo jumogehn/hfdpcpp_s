@@ -13,7 +13,7 @@
 #include "Duck.hpp"
 #include "Utilities.hpp"
 
-using namespace HeadFirstDesignPatterns::Adapter::Ducks;
+using namespace HFDP::Adapter::Ducks;
 
 Duck::~Duck()
 {

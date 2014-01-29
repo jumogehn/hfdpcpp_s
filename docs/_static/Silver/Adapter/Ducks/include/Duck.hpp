@@ -13,7 +13,7 @@
 #ifndef	_HFDP_CPP_ADAPTER_DUCK_HPP_
 #define _HFDP_CPP_ADAPTER_DUCK_HPP_
 
-namespace HeadFirstDesignPatterns {
+namespace HFDP {
   namespace Adapter {
     namespace Ducks {
 
@@ -27,6 +27,6 @@ namespace HeadFirstDesignPatterns {
 
     } // namespace Ducks
   } // namespace Adapter
-} // namespace HeadFirstDesignPatterns
+} // namespace HFDP
 
 #endif

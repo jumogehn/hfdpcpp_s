@@ -18,7 +18,7 @@
 #include "MallardDuck.hpp"
 #include "Utilities.hpp"
 
-using namespace HeadFirstDesignPatterns::Adapter::Ducks;
+using namespace HFDP::Adapter::Ducks;
 
 void testDuck( const Duck* duck )
 {
@@ -33,8 +33,9 @@ int main( int argc, char* argv[] )
 
   std::auto_ptr< MallardDuck > duck( new MallardDuck() );
 
-#if 1
+#if 0
 //#ifdef _DUCK_ADAPTER_
+//Crashes when destroyed
   std::auto_ptr< Turkey > duckAdapter( new DuckAdapter( duck.get() ) );
 
   for( int i = 0; i < 10; i++ ) {

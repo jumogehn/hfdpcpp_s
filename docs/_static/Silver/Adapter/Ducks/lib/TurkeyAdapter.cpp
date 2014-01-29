@@ -14,7 +14,7 @@
 #include "Utilities.hpp"
 #include <cassert>
 
-using namespace HeadFirstDesignPatterns::Adapter::Ducks;
+using namespace HFDP::Adapter::Ducks;
 
 TurkeyAdapter::TurkeyAdapter( const Turkey* turkey ) :
   _turkey( turkey )

@@ -22,7 +22,7 @@
 #include <unistd.h>
 #endif
 
-using namespace HeadFirstDesignPatterns::Adapter::Ducks;
+using namespace HFDP::Adapter::Ducks;
 
 DuckAdapter::DuckAdapter( const Duck* duck ) :
   _duck ( duck )

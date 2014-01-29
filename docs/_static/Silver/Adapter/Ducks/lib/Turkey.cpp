@@ -14,7 +14,7 @@
 #include "Turkey.hpp"
 #include "Utilities.hpp"
 
-using namespace HeadFirstDesignPatterns::Adapter::Ducks;
+using namespace HFDP::Adapter::Ducks;
 
 Turkey::~Turkey()
 {

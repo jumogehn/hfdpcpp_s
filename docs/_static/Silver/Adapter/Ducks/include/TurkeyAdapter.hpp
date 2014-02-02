@@ -21,8 +21,6 @@ namespace HFDP {
   namespace Adapter {
     namespace Ducks {
 
-//      class Turkey;
-
       class TurkeyAdapter : public Duck {
 
         const Turkey *MyTurkey;

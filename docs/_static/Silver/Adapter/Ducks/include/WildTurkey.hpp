@@ -20,8 +20,6 @@ namespace HFDP {
   namespace Adapter {
     namespace Ducks {
 
-//      class Turkey;
-
       class WildTurkey : public Turkey {
 
       public:

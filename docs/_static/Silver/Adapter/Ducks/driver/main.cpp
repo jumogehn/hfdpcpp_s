@@ -29,19 +29,17 @@ void testDuck( const Duck* duck )
 
 int main( int argc, char* argv[] )
 {
-  std::auto_ptr< MallardDuck > duck( new MallardDuck() );
-
-#if 1
-  std::auto_ptr< Turkey > duckAdapter( new DuckAdapter( duck.get() ) );
+  std::unique_ptr< MallardDuck > duck( new MallardDuck() );
+  std::unique_ptr< Turkey > duckAdapter( new DuckAdapter( duck.get() ) );
 
   for( int i = 0; i < 10; i++ ) {
     PrintMessage("The DuckAdapter says...");
     duckAdapter->gobble();
     duckAdapter->fly();
   }
-#else
-  std::auto_ptr< WildTurkey > turkey( new WildTurkey() );
-  std::auto_ptr< Duck > turkeyAdapter( new TurkeyAdapter( turkey.get() ) );
+
+  std::unique_ptr< WildTurkey > turkey( new WildTurkey() );
+  std::unique_ptr< Duck > turkeyAdapter( new TurkeyAdapter( turkey.get() ) );
 
   PrintMessage("The Turkey says...");
   turkey->gobble();
@@ -52,7 +50,7 @@ int main( int argc, char* argv[] )
 
   PrintMessage("The TurkeyAdapter says...");
   testDuck( turkeyAdapter.get() );
-#endif
 
   return 0;
 }
+

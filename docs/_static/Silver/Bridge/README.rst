@@ -8,14 +8,16 @@ Remotes
 
 Test
 ----
-::
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can
+compile as shown below.::
+
  mkdir build
  cd build/
  cmake ../Remotes/
  make
  ./driver/testremotes 
 
-And of course you can compile this on Windows, Mac OSX, and other POSIX OSes.
 
 Class Diagram
 -------------

@@ -24,7 +24,7 @@ namespace HFDP {
 
       class DuckAdapter : public Turkey {
 
-        std::auto_ptr< const Duck > MyDuck;
+        const Duck *MyDuck;
         int _random;
 
         DuckAdapter( const DuckAdapter& ); // Disable copy constructor

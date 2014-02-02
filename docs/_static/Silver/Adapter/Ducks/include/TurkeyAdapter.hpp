@@ -25,7 +25,7 @@ namespace HFDP {
 
       class TurkeyAdapter : public Duck {
 
-        const Turkey* MyTurkey;
+        const Turkey *MyTurkey;
 
         TurkeyAdapter( const TurkeyAdapter& ); // Disable copy constructor
         void operator=( const TurkeyAdapter& ); // Disable assignment operator

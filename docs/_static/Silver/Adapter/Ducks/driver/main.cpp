@@ -29,25 +29,9 @@ void testDuck( const Duck* duck )
 
 int main( int argc, char* argv[] )
 {
-  PrintMessage("main");
-
-#ifdef HAS_CXX11_STATIC_ASSERT
-    PrintMessage("HAS_CXX11_STATIC_ASSERT");
-#else
-    PrintMessage("HAS_CXX11_STATIC_ASSERT NOT SUPPORTED");
-#endif
-
-#ifdef HAS_CXX11_VARIADIC_TEMPLATES
-    PrintMessage("HAS_CXX11_VARIADIC_TEMPLATES");
-#else
-    PrintMessage("HAS_CXX11_VARIADIC_TEMPLATES NOT SUPPORTED");
-#endif
-
   std::auto_ptr< MallardDuck > duck( new MallardDuck() );
 
-#if 0
-//#ifdef _DUCK_ADAPTER_
-//Crashes when destroyed
+#if 1
   std::auto_ptr< Turkey > duckAdapter( new DuckAdapter( duck.get() ) );
 
   for( int i = 0; i < 10; i++ ) {

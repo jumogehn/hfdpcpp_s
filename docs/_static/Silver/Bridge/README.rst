@@ -6,6 +6,17 @@ Bridge Pattern
 Remotes
 =======
 
+Test
+----
+::
+ mkdir build
+ cd build/
+ cmake ../Remotes/
+ make
+ ./driver/testremotes 
+
+And of course you can compile this on Windows, Mac OSX, and other POSIX OSes.
+
 Class Diagram
 -------------
 

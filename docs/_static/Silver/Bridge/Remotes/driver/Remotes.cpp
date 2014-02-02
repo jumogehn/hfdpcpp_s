@@ -1,16 +1,32 @@
-#include "Remotes.hpp"
+//===--- Remotes.cpp - ------------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
 
-using namespace HeadFirstDesignPatterns::Bridge::Remotes;
+#include "RemoteControl.hpp"
+#include "SonyControl.hpp"
+#include "RCAControl.hpp"
+#include <vector>
+#include <memory>
+
+using namespace HFDP::Bridge::Remotes;
 
 int main( int argc, char* argv[] ) {
 
   std::vector< RemoteControl* > remotes;
 
-  std::auto_ptr< SonyControl >
+  std::unique_ptr< SonyControl >
     sonyControl( new SonyControl( "XBR in living room" ) );
   remotes.push_back( sonyControl.get() );
 
-  std::auto_ptr< RCAControl >
+  std::unique_ptr< RCAControl >
     rcaControl( new RCAControl( "19 inch in kitchen" ) );
   remotes.push_back( rcaControl.get() );
 

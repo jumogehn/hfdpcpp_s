@@ -25,9 +25,9 @@
 using namespace HFDP::Adapter::Ducks;
 
 DuckAdapter::DuckAdapter( const Duck* duck ) :
-  _duck ( duck )
+  MyDuck ( duck )
 {
-  assert( _duck.get() );
+  //assert( MyDuck->get() );
   PrintMessage("DuckAdapter::DuckAdapter");
 #ifdef WIN32
   srand( _getpid() );
@@ -41,18 +41,18 @@ DuckAdapter::DuckAdapter( const Duck* duck ) :
 
 void DuckAdapter::fly() const
 {
-  assert( _duck.get() );
+  //assert( MyDuck->get() );
 
   PrintMessage("DuckAdapter::fly");
   for( int i = 0; i < _random; i++ ) {
-    _duck->fly();
+    MyDuck->fly();
   }
 }
 
 void DuckAdapter::gobble() const
 {
   PrintMessage("DuckAdapter::gobble");
-  assert( _duck.get() );
-  _duck->quack();
+  //assert( MyDuck->get() );
+  MyDuck->quack();
 }
 

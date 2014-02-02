@@ -11,8 +11,8 @@
 //===----------------------------------------------------------------------===//
 
 
-#ifndef	_HFDP_CPP_ADAPTER_TURKEY_ADAPTER_HPP_
-#define _HFDP_CPP_ADAPTER_TURKEY_ADAPTER_HPP_
+#ifndef	_HFDP_CPP_ADAPTERMyTurkey_ADAPTER_HPP_
+#define _HFDP_CPP_ADAPTERMyTurkey_ADAPTER_HPP_
 
 #include "Duck.hpp"
 #include "Turkey.hpp"
@@ -25,7 +25,7 @@ namespace HFDP {
 
       class TurkeyAdapter : public Duck {
 
-        const Turkey* _turkey;
+        const Turkey* MyTurkey;
 
         TurkeyAdapter( const TurkeyAdapter& ); // Disable copy constructor
         void operator=( const TurkeyAdapter& ); // Disable assignment operator

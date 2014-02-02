@@ -17,28 +17,28 @@
 using namespace HFDP::Adapter::Ducks;
 
 TurkeyAdapter::TurkeyAdapter( const Turkey* turkey ) :
-  _turkey( turkey )
+  MyTurkey( turkey )
 {
-  assert( turkey );
+  //assert( MyTurkey->get() );
 
   PrintMessage("TurkeyAdapter::TurkeyAdapter");
 }
 
 void TurkeyAdapter::fly() const
 {
-  assert( _turkey );
+  //assert( MyTurkey->get() );
 
   PrintMessage("TurkeyAdapter::fly");
   for( int i = 0; i < 5; i++ ) {
-    _turkey->fly();
+    MyTurkey->fly();
   }
 }
 
 void TurkeyAdapter::quack() const
 {
-  assert( _turkey );
+  //assert( MyTurkey->get() );
 
   PrintMessage("TurkeyAdapter::quack");
-  _turkey->gobble();
+  MyTurkey->gobble();
 }
 

@@ -8,6 +8,12 @@ INCLUDE_DIRECTORIES(${Ducks_SOURCE_DIR}/include)
 # The extension is automatically found.
 ADD_EXECUTABLE(testducks main)
 
+foreach(flag ${CXX11_FEATURE_LIST})
+  set_property(TARGET testducks
+	APPEND PROPERTY COMPILE_DEFINITIONS ${flag}
+	)
+endforeach()
+
 # Link the executable to the library ducks.
 TARGET_LINK_LIBRARIES(testducks ducks)
 

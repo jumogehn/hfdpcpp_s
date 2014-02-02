@@ -10,8 +10,8 @@
 ///
 //===----------------------------------------------------------------------===//
 
-#ifndef	_HFDP_CPP_ADAPTER_DUCK_ADAPTER_HPP_
-#define _HFDP_CPP_ADAPTER_DUCK_ADAPTER_HPP_
+#ifndef	_HFDP_CPP_ADAPTERMyDuck_ADAPTER_HPP_
+#define _HFDP_CPP_ADAPTERMyDuck_ADAPTER_HPP_
 
 #include "Duck.hpp"
 #include "Turkey.hpp"
@@ -24,7 +24,7 @@ namespace HFDP {
 
       class DuckAdapter : public Turkey {
 
-        std::auto_ptr< const Duck > _duck;
+        std::auto_ptr< const Duck > MyDuck;
         int _random;
 
         DuckAdapter( const DuckAdapter& ); // Disable copy constructor

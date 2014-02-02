@@ -1,10 +1,7 @@
-#include "GumballEMailHandler.hpp"
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
+#include "Client.hpp"
 
-using
-namespace HeadFirstDesignPatterns::ChainOfResponsibility::GumballEMailHandler;
+using namespace HFDP::ChainOfResponsibility::GumballEMailHandler;
 
 const char* email [] = {
   "You guys really razz my berries, your gumball machines are totally hip",
@@ -28,13 +25,9 @@ const char* email [] = {
 
 int main( int argc, char* argv[] ) {
 
-  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
-
-  HUM_TRACE(ACE_TEXT("main"));
-
   std::auto_ptr< Client > client( new Client() );
 
-  for( int i = 0; i < sizeof( email ) / sizeof( char* ); i++ ) {
+  for( unsigned int i = 0; i < sizeof( email ) / sizeof( char* ); i++ ) {
     client->handleRequest( email[i] );
   }
 
@@ -42,3 +35,4 @@ int main( int argc, char* argv[] ) {
 
   return 0;
 }
+

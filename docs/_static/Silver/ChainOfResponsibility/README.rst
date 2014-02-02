@@ -6,10 +6,23 @@ Chain of responsibility Pattern
 GumballEMailHandler
 ===================
 
+Test
+----
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can 
+compile as shown below::
+
+ mkdir build
+ cd build/
+ cmake ../GumballEMailHandler/
+ make
+ ./driver/testhandlers
+
+
 Class Diagram
 -------------
 
-.. image:: GumballEMailHandler/Overview_of_GumballEMailHandler.jpg
+.. image:: GumballEMailHandler/imgs/Overview_of_GumballEMailHandler.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -17,7 +30,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: GumballEMailHandler/SequenceDiagram1.jpg
+.. image:: GumballEMailHandler/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

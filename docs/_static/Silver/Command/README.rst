@@ -9,7 +9,7 @@ Simple Remote Control
 Class Diagram
 -------------
 
-.. image:: SimpleRemote/Overview_of_SimpleRemote.jpg
+.. image:: SimpleRemote/imgs/Overview_of_SimpleRemote.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -17,7 +17,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: SimpleRemote/SequenceDiagram1.jpg
+.. image:: SimpleRemote/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 
@@ -47,7 +47,7 @@ Remote Control
 Class Diagram
 -------------
 
-.. image:: Remote/Overview_of_Remote.jpg
+.. image:: Remote/imgs/Overview_of_Remote.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -55,7 +55,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: Remote/SequenceDiagram1.jpg
+.. image:: Remote/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 
@@ -73,7 +73,7 @@ Undo
 Class Diagram
 -------------
 
-.. image:: Undo/Overview_of_Undo.jpg
+.. image:: Undo/imgs/Overview_of_Undo.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -81,7 +81,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: Undo/SequenceDiagram1.jpg
+.. image:: Undo/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

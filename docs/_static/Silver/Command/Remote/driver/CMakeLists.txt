@@ -1,0 +1,22 @@
+
+#http://www-flc.desy.de/ldcoptimization/documents/talks/CMake_Tutorial.pdf
+
+# Make sure the compiler can find include files from our library remote.
+INCLUDE_DIRECTORIES(${Remote_SOURCE_DIR}/include)
+
+# Add binary called "testremote" that is built from the source file "Remote.cpp". 
+# The extension is automatically found.
+ADD_EXECUTABLE(testremote Remote)
+
+foreach(flag ${CXX11_FEATURE_LIST})
+  set_property(TARGET testremote
+	APPEND PROPERTY COMPILE_DEFINITIONS ${flag}
+	)
+endforeach()
+
+# Link the executable to the library remote.
+TARGET_LINK_LIBRARIES(testremote remote)
+
+# Link the executable to the libraries duck duckadapter mallardduck turkey turkeyadapter wildturkey.
+#TARGET_LINK_LIBRARIES(testremote duck duckadapter mallardduck turkey turkeyadapter wildturkey)
+

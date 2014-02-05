@@ -1,3 +1,18 @@
+//===--- LightOffCommand.cpp - ----------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "LightOffCommand.hpp"
+#include "Utilities.hpp"
+#include <cassert>
 
 using namespace HFDP::Command::Remote;
 
@@ -5,12 +20,12 @@ LightOffCommand::LightOffCommand( const Light* light  ) :
   _light( light )
 {
   assert( light );
-  HUM_TRACE(ACE_TEXT("LightOffCommand::LightOffCommand"));
+  PrintMessage("LightOffCommand::LightOffCommand");
 }
 
 void LightOffCommand::execute() const
 {
-  HUM_TRACE(ACE_TEXT("LightOffCommand::execute"));
+  PrintMessage("LightOffCommand::execute");
   _light->off();
 }
 

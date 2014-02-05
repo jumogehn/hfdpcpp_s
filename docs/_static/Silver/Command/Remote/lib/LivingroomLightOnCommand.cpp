@@ -1,3 +1,18 @@
+//===--- LivingroomLightOnCommand.cpp - -------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "LivingroomLightOnCommand.hpp"
+#include "Utilities.hpp"
+#include <cassert>
 
 using namespace HFDP::Command::Remote;
 
@@ -5,13 +20,13 @@ LivingroomLightOnCommand::LivingroomLightOnCommand( const Light* light ) :
   _light( light )
 {
   assert( light );
-  HUM_TRACE(ACE_TEXT("LivingroomLightOnCommand::"
-                     "LivingroomLightOnCommand"));
+  PrintMessage("LivingroomLightOnCommand::"
+                     "LivingroomLightOnCommand");
 }
 
 void LivingroomLightOnCommand::execute() const
 {
-  HUM_TRACE(ACE_TEXT("LivingroomLightOnCommand::execute"));
+  PrintMessage("LivingroomLightOnCommand::execute");
   _light->on();
 }
 

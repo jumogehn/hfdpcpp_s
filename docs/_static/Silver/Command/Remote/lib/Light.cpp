@@ -1,19 +1,34 @@
+//===--- Light.cpp - --------------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "Light.hpp"
+#include "Utilities.hpp"
+#include <iostream>
 
 using namespace HFDP::Command::Remote;
 
-explicit Light::Light( const std::string location) :
+Light::Light( const std::string location) :
   _location( location )
 {
-  HUM_TRACE(ACE_TEXT("Light::Light"));
+  PrintMessage("Light::Light");
 }
 void Light::on() const
 {
-  HUM_TRACE(ACE_TEXT("Light::on"));
+  PrintMessage("Light::on");
   std::cout << _location.c_str() << " light is on" << std::endl;
 }
 void Light::off() const
 {
-  HUM_TRACE(ACE_TEXT("Light::off"));
+  PrintMessage("Light::off");
   std::cout << _location.c_str() << " light is off" << std::endl;
 }
 

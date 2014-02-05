@@ -1,3 +1,19 @@
+//===--- GarageDoorUpCommand.cpp - ------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "GarageDoorUpCommand.hpp"
+#include "GarageDoor.hpp"
+#include "Utilities.hpp"
+#include <cassert>
 
 using namespace HFDP::Command::Remote;
 
@@ -5,12 +21,12 @@ GarageDoorUpCommand::GarageDoorUpCommand( const GarageDoor* garageDoor ) :
   _garageDoor( garageDoor )
 {
   assert( garageDoor );
-  HUM_TRACE(ACE_TEXT("GarageDoorUpCommand::GarageDoorUpCommand"));
+  PrintMessage("GarageDoorUpCommand::GarageDoorUpCommand");
 }
 
 void GarageDoorUpCommand::execute() const
 {
-  HUM_TRACE(ACE_TEXT("GarageDoorUpCommand::execute"));
+  PrintMessage("GarageDoorUpCommand::execute");
   _garageDoor->up();
 }
 

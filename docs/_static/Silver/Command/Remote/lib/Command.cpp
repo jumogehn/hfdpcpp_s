@@ -1,13 +1,27 @@
+//===--- Command.cpp - ------------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "Command.hpp"
+#include "Utilities.hpp"
 
 using namespace HFDP::Command::Remote;
 
 Command::Command()
 {
-  HUM_TRACE(ACE_TEXT("Command::Command"));
+  PrintMessage("Command::Command");
 }
 
 Command::~Command()
 {
-  HUM_TRACE(ACE_TEXT("Command::~Command"));
+  PrintMessage("Command::~Command");
 }
 

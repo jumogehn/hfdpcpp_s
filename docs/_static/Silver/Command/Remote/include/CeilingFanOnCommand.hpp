@@ -1,4 +1,4 @@
-//===--- CeilingFanOnCommand.cpp - ------------------------------*- C++ -*-===//
+//===--- CeilingFanOnCommand.hpp - ------------------------------*- C++ -*-===//
 //
 //                     Head First Design Patterns
 //

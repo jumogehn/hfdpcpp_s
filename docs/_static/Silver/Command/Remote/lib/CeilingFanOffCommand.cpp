@@ -1,3 +1,19 @@
+//===--- CeilingFanOffCommand.cpp - -----------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "CeilingFanOffCommand.hpp"
+#include "CeilingFan.hpp"
+#include "Utilities.hpp"
+#include <cassert>
 
 using namespace HFDP::Command::Remote;
 
@@ -5,11 +21,11 @@ CeilingFanOffCommand::CeilingFanOffCommand( const CeilingFan* ceilingFan ) :
   _ceilingFan( ceilingFan )
 {
   assert( ceilingFan );
-  HUM_TRACE(ACE_TEXT("CeilingFanOffCommand::CeilingFanOffCommand"));
+  PrintMessage("CeilingFanOffCommand::CeilingFanOffCommand");
 }
 void CeilingFanOffCommand::execute() const
 {
-  HUM_TRACE(ACE_TEXT("CeilingFanOffCommand::execute"));
+  PrintMessage("CeilingFanOffCommand::execute");
   _ceilingFan->off();
 }
 

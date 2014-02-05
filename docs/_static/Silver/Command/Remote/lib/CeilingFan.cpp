@@ -1,3 +1,19 @@
+//===--- CeilingFan.cpp - ---------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "CeilingFan.hpp"
+#include "Utilities.hpp"
+#include <string>
+#include <iostream>
 
 
 using namespace HFDP::Command::Remote;
@@ -5,12 +21,12 @@ using namespace HFDP::Command::Remote;
 CeilingFan::CeilingFan( const std::string location ) :
   _level( LOW ), _location( location )
 {
-  HUM_TRACE(ACE_TEXT("CeilingFan::CeilingFan"));
+  PrintMessage("CeilingFan::CeilingFan");
 }
 
 void CeilingFan::high() const
 {
-  HUM_TRACE(ACE_TEXT("CeilingFan::high"));
+  PrintMessage("CeilingFan::high");
   _level = HIGH;
   std::cout << _location.c_str()
     << " ceiling fan is on high" << std::endl;
@@ -18,7 +34,7 @@ void CeilingFan::high() const
 
 void CeilingFan::medium() const
 {
-  HUM_TRACE(ACE_TEXT("CeilingFan::medium"));
+  PrintMessage("CeilingFan::medium");
   _level = MEDIUM;
   std::cout << _location.c_str()
     << " ceiling fan is on medium" << std::endl;
@@ -26,7 +42,7 @@ void CeilingFan::medium() const
 
 void CeilingFan::low() const
 {
-  HUM_TRACE(ACE_TEXT("CeilingFan::low"));
+  PrintMessage("CeilingFan::low");
   _level = LOW;
   std::cout << _location.c_str()
     << " ceiling fan is on low" << std::endl;
@@ -34,14 +50,14 @@ void CeilingFan::low() const
 
 void CeilingFan::off() const
 {
-  HUM_TRACE(ACE_TEXT("CeilingFan::off"));
+  PrintMessage("CeilingFan::off");
   _level = 0;
   std::cout << _location.c_str() << " ceiling fan is off" << std::endl;
 }
 
 int CeilingFan::getSpeed() const
 {
-  HUM_TRACE(ACE_TEXT("CeilingFan::getSpeed"));
+  PrintMessage("CeilingFan::getSpeed");
   return _level;
 }
 

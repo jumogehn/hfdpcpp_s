@@ -26,6 +26,7 @@
 #include "StereoOnWithCDCommand.hpp"
 #include "StereoOffCommand.hpp"
 #include <memory>
+#include <iostream>
 
 
 

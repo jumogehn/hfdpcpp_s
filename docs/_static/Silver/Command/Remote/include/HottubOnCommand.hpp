@@ -1,4 +1,4 @@
-//===--- HottubOnCommand.cpp - ----------------------------------*- C++ -*-===//
+//===--- HottubOnCommand.hpp - ----------------------------------*- C++ -*-===//
 //
 //                     Head First Design Patterns
 //

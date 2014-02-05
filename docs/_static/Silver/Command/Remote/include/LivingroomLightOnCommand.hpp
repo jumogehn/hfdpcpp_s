@@ -1,4 +1,4 @@
-//===--- LivingroomLightOnCommand.cpp - -------------------------*- C++ -*-===//
+//===--- LivingroomLightOnCommand.hpp - -------------------------*- C++ -*-===//
 //
 //                     Head First Design Patterns
 //

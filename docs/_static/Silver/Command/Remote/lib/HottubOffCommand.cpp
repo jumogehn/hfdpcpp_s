@@ -1,16 +1,31 @@
+//===--- HottubOffCommand.cpp - ---------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "HottubOffCommand.hpp"
+#include "Utilities.hpp"
+#include <cassert>
 
 using namespace HFDP::Command::Remote;
 
 HottubOffCommand::HottubOffCommand( const Hottub* hottub ) :
   _hottub( hottub )
 {
-  HUM_TRACE(ACE_TEXT("HottubOffCommand::HottubOffCommand"));
+  PrintMessage("HottubOffCommand::HottubOffCommand");
   assert( hottub );
 }
 
 void HottubOffCommand::execute() const
 {
-  HUM_TRACE(ACE_TEXT("HottubOffCommand::execute"));
+  PrintMessage("HottubOffCommand::execute");
   _hottub->cool();
   _hottub->off();
 }

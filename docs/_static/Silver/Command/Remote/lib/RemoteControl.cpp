@@ -1,3 +1,20 @@
+#//===--- RemoteControl.cpp - -----------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "RemoteControl.hpp"
+#include "NoCommand.hpp"
+#include "Utilities.hpp"
+#include <cassert>
+#include <sstream>
 #include <typeinfo>
 
 using namespace HFDP::Command::Remote;
@@ -5,7 +22,7 @@ using namespace HFDP::Command::Remote;
 
 RemoteControl::RemoteControl()
 {
-  HUM_TRACE(ACE_TEXT("RemoteControl::RemoteControl"));
+  PrintMessage("RemoteControl::RemoteControl");
   _noCommand = new NoCommand();
   for( int i = 0; i < SLOTS; i++ ) {
     _onCommands[i]  = _noCommand;
@@ -15,13 +32,13 @@ RemoteControl::RemoteControl()
 
 RemoteControl::~RemoteControl()
 {
-  HUM_TRACE(ACE_TEXT("RemoteControl::~RemoteControl"));
+  PrintMessage("RemoteControl::~RemoteControl");
   delete _noCommand;
 }
 
 void RemoteControl::setCommand( int slot, Command* onCommand, Command* offCommand )
 {
-  HUM_TRACE(ACE_TEXT("RemoteControl::setCommand"));
+  PrintMessage("RemoteControl::setCommand");
   assert( slot <= SLOTS ); assert( onCommand ); assert ( offCommand );
   _onCommands[slot] = onCommand;
   _offCommands[slot] = offCommand;
@@ -29,21 +46,21 @@ void RemoteControl::setCommand( int slot, Command* onCommand, Command* offComman
 
 void RemoteControl::onButtonWasPushed( int slot ) const
 {
-  HUM_TRACE(ACE_TEXT("RemoteControl::onButtonWasPushed"));
+  PrintMessage("RemoteControl::onButtonWasPushed");
   assert( slot <= SLOTS );
   _onCommands[slot]->execute();
 }
 
 void RemoteControl::offButtonWasPushed( int slot ) const
 {
-  HUM_TRACE(ACE_TEXT("RemoteControl::offButtonWasPushed"));
+  PrintMessage("RemoteControl::offButtonWasPushed");
   assert( slot <= SLOTS );
   _offCommands[slot]->execute();
 }
 
 std::string RemoteControl::toString() const
 {
-  HUM_TRACE(ACE_TEXT("RemoteControl::toString"));
+  PrintMessage("RemoteControl::toString");
   std::stringstream value;
   value << "\n------ Remote Control -------\n" << std::endl;
   for( int i = 0; i < SLOTS; i++ ) {

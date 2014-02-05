@@ -1,4 +1,4 @@
-//===--- GarageDoorUpCommand.cpp - ------------------------------*- C++ -*-===//
+//===--- GarageDoorUpCommand.hpp - ------------------------------*- C++ -*-===//
 //
 //                     Head First Design Patterns
 //

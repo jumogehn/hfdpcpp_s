@@ -1,9 +1,23 @@
+//===--- NoCommand.cpp - ----------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+#include "NoCommand.hpp"
+#include "Utilities.hpp"
 
 using namespace HFDP::Command::Remote;
 
 void NoCommand::execute() const
 {
-  HUM_TRACE(ACE_TEXT("NoCommand::execute"));
+  PrintMessage("NoCommand::execute");
 }
 
 

@@ -9,17 +9,17 @@ Test
 This project uses cmake so wide range of OSes are supported. For ubuntu, you can 
 compile as shown below::
 
- mkdir build_Remote
- cd build_Remote/
- cmake ../Remote/
- make
- ./driver/testremote
-
  mkdir build_SimpleRemote
  cd build_SimpleRemote/
  cmake ../SimpleRemote/
  make
  ./driver/testsimpleremote
+
+ mkdir build_Remote
+ cd build_Remote/
+ cmake ../Remote/
+ make
+ ./driver/testremote
 
  mkdir build_Undo
  cd build_Undo/

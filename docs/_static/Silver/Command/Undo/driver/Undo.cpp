@@ -1,25 +1,39 @@
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
+//===--- Undo.cpp - ---------------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
 
-#include "Undo.hpp"
 
-using namespace HeadFirstDesignPatterns::Command::Undo;
+#include "RemoteControlWithUndo.hpp"
+#include "Light.hpp"
+#include "LightOnCommand.hpp"
+#include "LightOffCommand.hpp"
+#include "CeilingFan.hpp"
+#include "CeilingFanMediumCommand.hpp"
+#include "CeilingFanHighCommand.hpp"
+#include "CeilingFanOffCommand.hpp"
+#include <memory>
+
+using namespace HFDP::Command::Undo;
 
 int main( int argc, char* argv[] ) {
 
-  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
-
-  HUM_TRACE(ACE_TEXT("main"));
-
-  std::auto_ptr< RemoteControlWithUndo > remoteControl(
+  std::unique_ptr< RemoteControlWithUndo > remoteControl(
     new RemoteControlWithUndo() );
 
-  std::auto_ptr< Light > livingRoomLight(
+  std::unique_ptr< Light > livingRoomLight(
     new Light( "Living Room" ) );
 
-  std::auto_ptr< LightOnCommand > livingRoomLightOn(
+  std::unique_ptr< LightOnCommand > livingRoomLightOn(
     new LightOnCommand( livingRoomLight.get() ) );
-  std::auto_ptr< LightOffCommand > livingRoomLightOff(
+  std::unique_ptr< LightOffCommand > livingRoomLightOff(
     new LightOffCommand( livingRoomLight.get() ) );
 
   remoteControl->setCommand( 0, livingRoomLightOn.get(),
@@ -34,14 +48,14 @@ int main( int argc, char* argv[] ) {
   std::cout << remoteControl->toString() << std::endl;
   remoteControl->undoButtonWasPushed();
 
-  std::auto_ptr< CeilingFan > ceilingFan(
+  std::unique_ptr< CeilingFan > ceilingFan(
     new CeilingFan( "Living Room" ) );
 
-  std::auto_ptr< CeilingFanMediumCommand > ceilingFanMedium(
+  std::unique_ptr< CeilingFanMediumCommand > ceilingFanMedium(
     new CeilingFanMediumCommand( ceilingFan.get() ) );
-  std::auto_ptr< CeilingFanHighCommand > ceilingFanHigh(
+  std::unique_ptr< CeilingFanHighCommand > ceilingFanHigh(
     new CeilingFanHighCommand( ceilingFan.get() ) );
-  std::auto_ptr< CeilingFanOffCommand > ceilingFanOff(
+  std::unique_ptr< CeilingFanOffCommand > ceilingFanOff(
     new CeilingFanOffCommand( ceilingFan.get() ) );
 
   remoteControl->setCommand( 0, ceilingFanMedium.get(), ceilingFanOff.get() );

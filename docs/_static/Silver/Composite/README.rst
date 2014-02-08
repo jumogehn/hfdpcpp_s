@@ -6,6 +6,25 @@ Composite Pattern
 MenusCustomIterator
 ===================
 
+Test
+----
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can 
+compile as shown below::
+
+ mkdir build_MenusCustomIterator
+ cd build_MenusCustomIterator/
+ cmake ../MenusCustomIterator/
+ make
+ ./driver/testmenuscustomiterator
+
+ mkdir build_Menus
+ cd build_Menus/
+ cmake ../Menus/
+ make
+ ./driver/testmenus
+
+
 +------------------------------------------------------------------------------+
 |패턴 12. 컴포지트                                                             |
 +==============================================================================+

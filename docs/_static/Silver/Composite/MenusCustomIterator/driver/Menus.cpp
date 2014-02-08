@@ -1,29 +1,37 @@
+//===--- Menus.cpp - --------------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
 
-//#include "Hum_Log_Manager.h"
-//#include "Hum_Trace.h"
+#include "MenuComponent.hpp"
+#include "Menu.hpp"
+#include "MenuItem.hpp"
+#include "Waitress.hpp"
+#include <memory>
 
-#include "Menus.hpp"
-
-using namespace HeadFirstDesignPatterns::Composite::Menus;
+using namespace HFDP::Composite::Menus;
 
 int main( int argc, char* argv[] ) {
 
-  //HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
-
-  //HUM_TRACE(ACE_TEXT("main"));
-
-  std::auto_ptr< MenuComponent > pancakeHouseMenu(
+  std::unique_ptr< MenuComponent > pancakeHouseMenu(
     new Menu( "PANCAKE HOUSE MENU", "Breakfast" ) );
-  std::auto_ptr< MenuComponent > dinerMenu(
+  std::unique_ptr< MenuComponent > dinerMenu(
     new Menu( "DINER MENU", "Lunch" ) );
-  std::auto_ptr< MenuComponent > cafeMenu(
+  std::unique_ptr< MenuComponent > cafeMenu(
     new Menu( "CAFE MENU", "Dinner" ) );
-  std::auto_ptr< MenuComponent > dessertMenu(
+  std::unique_ptr< MenuComponent > dessertMenu(
     new Menu( "DESSERT MENU", "Dessert of course!" ) );
-  std::auto_ptr< MenuComponent > coffeeMenu(
+  std::unique_ptr< MenuComponent > coffeeMenu(
     new Menu( "COFFEE MENU", "Stuff to go with your afternoon coffee" ) );
 
-  std::auto_ptr< MenuComponent > allMenus(
+  std::unique_ptr< MenuComponent > allMenus(
     new Menu( "ALL MENUS", "All menus combined" ) );
 
   allMenus->add( pancakeHouseMenu.get() );
@@ -132,7 +140,7 @@ int main( int argc, char* argv[] ) {
       true,
       0.89) );
 
-  std::auto_ptr< Waitress > waitress( new Waitress(allMenus.get() ) );
+  std::unique_ptr< Waitress > waitress( new Waitress(allMenus.get() ) );
   waitress->printMenu();
 
   return 0;

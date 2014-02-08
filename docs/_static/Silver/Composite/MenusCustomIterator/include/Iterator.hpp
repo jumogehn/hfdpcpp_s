@@ -1,10 +1,22 @@
+//===--- Iterator.hpp - -----------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+
 #ifndef	_HFDP_CPP_COMPOSITE_MENUS_CUSTOM_ITERATOR_ITERATOR_HPP_
 #define _HFDP_CPP_COMPOSITE_MENUS_CUSTOM_ITERATOR_ITERATOR_HPP_
 
-//#include "Hum_Log_Manager.h"
-//#include "Hum_Trace.h"
+#include "Utilities.hpp"
 
-namespace HeadFirstDesignPatterns {
+namespace HFDP {
   namespace Composite {
     namespace Menus {
 
@@ -15,12 +27,12 @@ namespace HeadFirstDesignPatterns {
           virtual T* next() const = 0;
           virtual ~Iterator()
           {
-            //HUM_TRACE(ACE_TEXT("Iterator::~Iterator"));
+            PrintMessage("Iterator::~Iterator");
           }
         };
 
     } // namespace Menus
   } // namespace Composite
-} // namespace HeadFirstDesignPatterns
+} // namespace HFDP
 
 #endif

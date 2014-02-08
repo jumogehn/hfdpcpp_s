@@ -23,7 +23,7 @@ MenusCustomIterator
 Class Diagram
 -------------
 
-.. image:: MenusCustomIterator/Overview_of_Menus_Custom_Iterator.jpg
+.. image:: MenusCustomIterator/imgs/Overview_of_Menus_Custom_Iterator.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -31,7 +31,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: MenusCustomIterator/SequenceDiagram1.jpg
+.. image:: MenusCustomIterator/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

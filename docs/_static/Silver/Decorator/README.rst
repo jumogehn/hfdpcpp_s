@@ -44,7 +44,7 @@ compile as shown below::
 Class Diagram
 -------------
 
-.. image:: Content/Overview_of_Starbuzz.jpg
+.. image:: Content/imgs/Overview_of_Starbuzz.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -59,7 +59,7 @@ CondimentDecorator 클래스가 가지도록 하는 것이 더 좋아보인다. 
 Sequence Diagram
 ----------------
 
-.. image:: Content/SequenceDiagram1.jpg
+.. image:: Content/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

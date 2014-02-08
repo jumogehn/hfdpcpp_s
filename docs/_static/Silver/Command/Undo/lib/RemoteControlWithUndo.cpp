@@ -1,4 +1,4 @@
-//===--- Utilities.cpp - ----------------------------------------*- C++ -*-===//
+//===--- RemoteControlWithUndo.cpp - ----------------------------*- C++ -*-===//
 //
 //                     Head First Design Patterns
 //
@@ -11,8 +11,10 @@
 //===----------------------------------------------------------------------===//
 
 
+#include "RemoteControlWithUndo.hpp"
+#include "NoCommand.hpp"
 #include "Utilities.hpp"
-#include <iostream>
+#include <sstream>
 #include <cassert>
 #include <typeinfo>
 

@@ -10,7 +10,7 @@
 ///
 //===----------------------------------------------------------------------===//
 
-
+#include "CeilingFan.hpp"
 #include "Utilities.hpp"
 #include <iostream>
 

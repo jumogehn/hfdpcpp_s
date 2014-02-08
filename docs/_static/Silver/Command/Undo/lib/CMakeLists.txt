@@ -2,13 +2,17 @@
 #http://www-flc.desy.de/ldcoptimization/documents/talks/CMake_Tutorial.pdf
 
 # CmakeLists.txt in lib dir
-INCLUDE_DIRECTORIES(${SimpleRemote_SOURCE_DIR}/include)
+INCLUDE_DIRECTORIES(${Undo_SOURCE_DIR}/include)
 
-# Adds a library called simpleremote (libsimpleremote.a under Linux) from the source files under lib/
-ADD_LIBRARY( simpleremote GarageDoor Light LightOnCommand Utilities Command GarageDoorOpenCommand LightOffCommand SimpleRemoteControl )
-
+# Adds a library called undo (libundo.a under Linux) from the source files under lib/
+ADD_LIBRARY( undo 
+  CeilingFanMediumCommand DimmerLightOnCommand NoCommand
+  CeilingFan CeilingFanOffCommand Light RemoteControlWithUndo
+  CeilingFanHighCommand Command LightOffCommand Utilities
+  CeilingFanLowCommand DimmerLightOffCommand LightOnCommand )
+  
 foreach(flag ${CXX11_FEATURE_LIST})
-  set_property(TARGET simpleremote
+  set_property(TARGET undo
 	APPEND PROPERTY COMPILE_DEFINITIONS ${flag}
 	)
 endforeach()

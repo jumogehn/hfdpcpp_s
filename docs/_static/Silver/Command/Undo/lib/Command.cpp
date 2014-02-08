@@ -11,8 +11,8 @@
 //===----------------------------------------------------------------------===//
 
 
+#include "Command.hpp"
 #include "Utilities.hpp"
-#include <iostream>
 
 using namespace HFDP::Command::Undo;
 

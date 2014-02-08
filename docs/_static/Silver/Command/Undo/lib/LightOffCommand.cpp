@@ -1,4 +1,4 @@
-//===--- Utilities.cpp - ----------------------------------------*- C++ -*-===//
+//===--- LightOffCommand.cpp - ----------------------------------*- C++ -*-===//
 //
 //                     Head First Design Patterns
 //
@@ -11,8 +11,8 @@
 //===----------------------------------------------------------------------===//
 
 
+#include "LightOffCommand.hpp"
 #include "Utilities.hpp"
-#include <iostream>
 #include <cassert>
 
 using namespace HFDP::Command::Undo;

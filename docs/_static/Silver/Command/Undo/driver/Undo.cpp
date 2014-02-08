@@ -20,6 +20,7 @@
 #include "CeilingFanHighCommand.hpp"
 #include "CeilingFanOffCommand.hpp"
 #include <memory>
+#include <iostream>
 
 using namespace HFDP::Command::Undo;
 

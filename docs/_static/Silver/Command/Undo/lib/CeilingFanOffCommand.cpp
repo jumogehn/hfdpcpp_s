@@ -11,8 +11,8 @@
 //===----------------------------------------------------------------------===//
 
 
+#include "CeilingFanOffCommand.hpp"
 #include "Utilities.hpp"
-#include <iostream>
 #include <cassert>
 
 using namespace HFDP::Command::Undo;

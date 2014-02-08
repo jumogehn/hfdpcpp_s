@@ -1,4 +1,4 @@
-//===--- Utilities.cpp - ----------------------------------------*- C++ -*-===//
+//===--- NoCommand.cpp - ----------------------------------------*- C++ -*-===//
 //
 //                     Head First Design Patterns
 //
@@ -11,8 +11,8 @@
 //===----------------------------------------------------------------------===//
 
 
+#include "NoCommand.hpp"
 #include "Utilities.hpp"
-#include <iostream>
 
 using namespace HFDP::Command::Undo;
 

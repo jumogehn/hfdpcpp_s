@@ -88,6 +88,9 @@ You can download `the UML file
 <http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ and open/edit it
 via `StarUML <http://staruml.sourceforge.net/en/>`_.
 
+There appeared `WhiteStarUML
+<http://sourceforge.net/projects/whitestaruml>`_ I haven't tried it though..
+
 Also GoF's Design Patterns are well documented in
 `Wikipedia <http://en.wikipedia.org/wiki/Design_Patterns>`_.
 

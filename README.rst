@@ -89,6 +89,9 @@ Eric T Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra
 <http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ 을 내려받을 수
 있으며 `StarUML <http://staruml.sourceforge.net/en/>`_ 로 편집할 수 있습니다.
 
+`WhiteStarUML
+<http://sourceforge.net/projects/whitestaruml>`_ 이 새로 나왔습니다.
+
 GoF의 디자인패턴은 `Wikipedia <http://en.wikipedia.org/wiki/Design_Patterns>`_ 에
 잘 설명되어 있습니다.
 

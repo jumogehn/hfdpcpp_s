@@ -6,6 +6,19 @@ Decorator Pattern
 Starbuzz
 ========
 
+Test
+----
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can 
+compile as shown below::
+
+ mkdir build
+ cd build
+ cmake ../Content/
+ make
+ ./driver/testdecorator
+
+
 +------------------------------------------------------------------------------+
 |디자인 원칙 - OCP (Open-Closed Principle)                                     |
 +==============================================================================+

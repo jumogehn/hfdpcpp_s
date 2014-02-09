@@ -1,22 +1,31 @@
+//===--- Pizzafm.cpp - ------------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
+#include "Pizza.hpp"
+#include "PizzaStore.hpp"
+#include "NYPizzaStore.hpp"
+#include "ChicagoPizzaStore.hpp"
+#include <memory>
+#include <iostream>
 
-#include "Pizzafm.hpp"
-
-using namespace HeadFirstDesignPatterns::Factory::Method;
+using namespace HFDP::Factory::Method;
 
 int main( int argc, char* argv[] )
 {
 
-  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
+  std::unique_ptr< PizzaStore > nyStore( new NYPizzaStore() );
+  std::unique_ptr< PizzaStore > chicagoStore( new ChicagoPizzaStore() );
 
-  HUM_TRACE(ACE_TEXT("main"));
-
-  std::auto_ptr< PizzaStore > nyStore( new NYPizzaStore() );
-  std::auto_ptr< PizzaStore > chicagoStore( new ChicagoPizzaStore() );
-
-  std::auto_ptr< Pizza > pizza(nyStore->orderPizza( "cheese" ) );
+  std::unique_ptr< Pizza > pizza(nyStore->orderPizza( "cheese" ) );
   std::cout << "Ethan ordered a " << pizza->getName() << std::endl;
 
   pizza = chicagoStore->orderPizza( "cheese" );

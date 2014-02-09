@@ -17,7 +17,7 @@ Chocolate Boiler
 Class Diagram
 -------------
 
-.. image:: Chocolate/Overview_of_Chocolate_Boiler.jpg
+.. image:: Chocolate/imgs/Overview_of_Chocolate_Boiler.jpg
    :scale: 50 %
    :alt: Class Diagram
 

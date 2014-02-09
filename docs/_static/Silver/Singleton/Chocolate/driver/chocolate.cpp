@@ -1,6 +1,19 @@
-#include "Chocolate.hpp"
+//===--- chocolate.cpp - ----------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
 
-using namespace HeadFirstDesignPatterns::Factory::Singleton;
+#include "ChocolateBoiler.hpp"
+#include <iostream>
+
+using namespace HFDP::Factory::Singleton;
 
 ChocolateBoiler* ChocolateBoiler::_uniqueInstance = 0;
 

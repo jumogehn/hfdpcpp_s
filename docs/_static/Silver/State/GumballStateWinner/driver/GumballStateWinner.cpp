@@ -1,10 +1,27 @@
+//===--- GumballStateWinner.cpp - -------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
+#include "GumballMachine.hpp"
+#include "SoldOutState.hpp"
+#include "NoQuarterState.hpp"
+#include "HasQuarterState.hpp"
+#include "SoldState.hpp"
+#include "WinnerState.hpp"
+#include "Utilities.hpp"
+#include <cassert>
+#include <iostream>
+#include <memory>
 
-#include "GumballStateWinner.hpp"
-
-using namespace HeadFirstDesignPatterns::State::GumballStateWinner;
+using namespace HFDP::State::GumballStateWinner;
 
 //
 // put here to resolve forward reference paradox where GumballMachine
@@ -19,7 +36,7 @@ GumballMachine::GumballMachine(int numberGumballs) :
 {
   assert( numberGumballs >= 0 );
 
-  HUM_TRACE(ACE_TEXT("GumballMachine::GumballMachine"));
+  PrintMessage("GumballMachine::GumballMachine");
 
   _soldOutState = new SoldOutState( this );
   _noQuarterState = new NoQuarterState( this );
@@ -35,11 +52,7 @@ GumballMachine::GumballMachine(int numberGumballs) :
 
 int main( int argc, char* argv[] ) {
 
-  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
-
-  HUM_TRACE(ACE_TEXT("main"));
-
-  std::auto_ptr< GumballMachine > gumballMachine( new GumballMachine( 10 ) );
+  std::unique_ptr< GumballMachine > gumballMachine( new GumballMachine( 10 ) );
   std::cout << gumballMachine->toString() << std::endl;
 
   gumballMachine->insertQuarter();

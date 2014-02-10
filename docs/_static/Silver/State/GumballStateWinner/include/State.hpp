@@ -1,20 +1,29 @@
+//===--- State.hpp - --------------------------------------------*- C++ -*-===//
+//
+//                     Head First Design Patterns
+//
+//
+//===----------------------------------------------------------------------===//
+///
+/// \file
+/// \brief
+///
+//===----------------------------------------------------------------------===//
+
+
 #ifndef	_HFDP_CPP_STATE_GUMBALL_STATE_WINNER_STATE_HPP_
 #define _HFDP_CPP_STATE_GUMBALL_STATE_WINNER_STATE_HPP_
 
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
+#include <string>
 
-namespace HeadFirstDesignPatterns {
+namespace HFDP {
   namespace State {
     namespace GumballStateWinner {
 
       class State {
 
       public:
-        virtual ~State()
-        {
-          HUM_TRACE(ACE_TEXT("State::~State"));
-        }
+        virtual ~State();
         virtual void insertQuarter() const = 0;
         virtual void ejectQuarter() const = 0;
         virtual void turnCrank() const = 0;
@@ -24,6 +33,6 @@ namespace HeadFirstDesignPatterns {
 
     } // namespace GumballStateWinner
   } // namespace State
-} // namespace HeadFirstDesignPatterns
+} // namespace HFDP
 
 #endif

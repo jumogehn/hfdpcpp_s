@@ -21,7 +21,8 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Bacon::Bacon(	float amount = 1.0f ) : Ingredient( amount )
+Bacon::Bacon( float amount /*= 1.0f*/ )
+: Ingredient( amount )
 {
   PrintMessage("Bacon::Bacon");
 }

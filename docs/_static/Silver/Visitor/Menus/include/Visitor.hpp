@@ -14,13 +14,13 @@
 #ifndef	_HFDP_CPP_VISITOR_VISITOR_HPP_
 #define _HFDP_CPP_VISITOR_VISITOR_HPP_
 
+#include "Ingredient.hpp"
+#include "MenuItem.hpp"
+#include "Menu.hpp"
+
 namespace HFDP {
   namespace Visitor {
     namespace Menus {
-
-      class Ingredient;
-      class MenuItem;
-      class Menu;
 
       class Visitor {
 

@@ -14,9 +14,18 @@
 #ifndef	_HFDP_CPP_VISITOR_MENUS_MENU_ITEM_HPP_
 #define _HFDP_CPP_VISITOR_MENUS_MENU_ITEM_HPP_
 
+#include "Ingredient.hpp"
+#include "Visitor.hpp"
+#include "MenuComponent.hpp"
+#include <string>
+#include <vector>
+#include <list>
+
 namespace HFDP {
   namespace Visitor {
     namespace Menus {
+
+      class Ingredient;
 
       class MenuItem : public MenuComponent {
 

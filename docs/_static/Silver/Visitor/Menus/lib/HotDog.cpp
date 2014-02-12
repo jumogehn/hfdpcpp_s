@@ -10,7 +10,7 @@
 ///
 //===----------------------------------------------------------------------===//
 
-#include "Hotdog.hpp"
+#include "HotDog.hpp"
 #include "Ingredient.hpp"
 #include "Visitor.hpp"
 #include "Utilities.hpp"
@@ -20,7 +20,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Hotdog::Hotdog( float amount = 1.0f ) :
+Hotdog::Hotdog( float amount /*= 1.0f*/ ) :
   Ingredient( amount )
 {
   PrintMessage("Hotdog::Hotdog");

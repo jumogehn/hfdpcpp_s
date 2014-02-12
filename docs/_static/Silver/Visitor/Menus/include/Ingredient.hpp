@@ -22,12 +22,15 @@ namespace HFDP {
   namespace Visitor {
     namespace Menus {
 
-      class Ingredient : MenuComponent {
+      class MenuComponent;
+      class Visitor;
+
+      class Ingredient : public MenuComponent {
 
       protected:
         float _amount;
 
-        Ingredient( float amount = 1.0f ) :
+        Ingredient( float amount = 1.0f );
       public:
         virtual ~Ingredient();
         virtual void add( MenuComponent* menuComponent );

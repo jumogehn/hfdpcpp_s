@@ -14,13 +14,20 @@
 #ifndef	_HFDP_CPP_VISITOR_SOUP_HPP_
 #define _HFDP_CPP_VISITOR_SOUP_HPP_
 
+#include "Ingredient.hpp"
+#include "IngredientDecorator.hpp"
+#include "Visitor.hpp"
+#include "Stock.hpp"
+#include <string>
+#include <memory>
+
 namespace HFDP {
   namespace Visitor {
     namespace Menus {
 
       class Soup : public IngredientDecorator {
 
-        std::auto_ptr< Stock > _base;
+        std::unique_ptr< Stock > _base;
         std::string _description;
 
       public:

@@ -14,6 +14,11 @@
 #ifndef	_HFDP_CPP_VISTOR_MENUS_MENU_HPP_
 #define _HFDP_CPP_VISTOR_MENUS_MENU_HPP_
 
+#include "Visitor.hpp"
+#include "MenuComponent.hpp"
+#include <string>
+#include <vector>
+
 namespace HFDP {
   namespace Visitor {
     namespace Menus {

@@ -14,13 +14,19 @@
 #ifndef	_HFDP_CPP_VISITOR_STOCK_HPP_
 #define _HFDP_CPP_VISITOR_STOCK_HPP_
 
+#include "Ingredient.hpp"
+#include "Visitor.hpp"
+#include "Stock.hpp"
+#include <string>
+#include <memory>
+
 namespace HFDP {
   namespace Visitor {
     namespace Menus {
 
       class Stock : public Ingredient {
 
-        std::auto_ptr< Ingredient > _ingredient;
+        std::unique_ptr< Ingredient > _ingredient;
         float _factor;	// self=1.0, sauce=1.5, gravy=2.0, broth=0.5
 
       public:

@@ -14,6 +14,10 @@
 #ifndef	_HFDP_CPP_VISITOR_BERRIES_HPP_
 #define _HFDP_CPP_VISITOR_BERRIES_HPP_
 
+#include "Ingredient.hpp"
+#include "Visitor.hpp"
+#include <string>
+
 namespace HFDP {
   namespace Visitor {
     namespace Menus {

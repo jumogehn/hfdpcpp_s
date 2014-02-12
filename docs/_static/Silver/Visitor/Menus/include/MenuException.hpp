@@ -14,6 +14,9 @@
 #ifndef	_HEAD_FIRST_DESIGN_PATTERNS_VISITOR_MENUS_EXCEPTION_HPP_
 #define _HEAD_FIRST_DESIGN_PATTERNS_VISITOR_MENUS_EXCEPTION_HPP_
 
+#include <exception>
+#include <string>
+
 namespace HFDP {
   namespace Visitor {
     namespace Menus {

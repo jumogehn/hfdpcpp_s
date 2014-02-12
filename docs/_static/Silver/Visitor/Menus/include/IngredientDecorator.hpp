@@ -14,6 +14,10 @@
 #ifndef	_HFDP_CPP_VISITOR_INGREDIENT_DECORATOR_HPP_
 #define _HFDP_CPP_VISITOR_INGREDIENT_DECORATOR_HPP_
 
+#include "Ingredient.hpp"
+#include <string>
+#include <memory>
+
 namespace HFDP {
   namespace Visitor {
     namespace Menus {
@@ -24,7 +28,7 @@ namespace HFDP {
         void operator=( const IngredientDecorator& );
 
       protected:
-        std::auto_ptr< Ingredient > _ingredient;
+        std::unique_ptr< Ingredient > _ingredient;
         explicit IngredientDecorator( Ingredient* ingredient ) :
       public:
         virtual ~IngredientDecorator()

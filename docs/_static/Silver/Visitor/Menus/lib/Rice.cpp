@@ -20,7 +20,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Rice::Rice( float amount = 1.0f ) :
+Rice::Rice( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Rice::Rice");

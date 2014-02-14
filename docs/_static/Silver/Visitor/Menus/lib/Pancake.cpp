@@ -20,7 +20,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Pancake::Pancake( float amount = 1.0f ) :
+Pancake::Pancake( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Pancake::Pancake");

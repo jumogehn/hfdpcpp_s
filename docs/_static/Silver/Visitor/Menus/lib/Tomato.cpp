@@ -20,7 +20,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Tomato::Tomato( float amount = 1.0f ) :
+Tomato::Tomato( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Tomato::Tomato");

@@ -20,7 +20,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Egg::Egg( float amount = 1.0f ) :
+Egg::Egg( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Egg::Egg");

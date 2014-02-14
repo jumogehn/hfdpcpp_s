@@ -10,7 +10,9 @@
 ///
 //===----------------------------------------------------------------------===//
 
-#include "MenuComponent.hpp"
+//#include "MenuComponent.hpp"
+
+#include "Ingredient.hpp"
 #include "Utilities.hpp"
 
 using namespace HFDP::Visitor::Menus;

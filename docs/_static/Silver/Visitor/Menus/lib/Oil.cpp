@@ -20,7 +20,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Oil::Oil( float amount = 1.0f ) :
+Oil::Oil( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Oil::Oil");

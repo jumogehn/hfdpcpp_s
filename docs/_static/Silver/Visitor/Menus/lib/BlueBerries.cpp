@@ -21,7 +21,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-BlueBerries::BlueBerries( float amount = 1.0f ) :
+BlueBerries::BlueBerries( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("BlueBerries::BlueBerries");

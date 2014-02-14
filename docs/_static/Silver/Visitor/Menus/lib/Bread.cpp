@@ -21,7 +21,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Bread::Bread( float amount = 1.0f ) :
+Bread::Bread( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Bread::Bread");

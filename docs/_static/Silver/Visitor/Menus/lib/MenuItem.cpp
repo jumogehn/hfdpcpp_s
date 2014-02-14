@@ -10,7 +10,6 @@
 ///
 //===----------------------------------------------------------------------===//
 
-#include "MenuItem.hpp"
 #include "Ingredient.hpp"
 #include "Visitor.hpp"
 #include "Utilities.hpp"

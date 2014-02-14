@@ -21,7 +21,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Lettus::Lettus( float amount = 1.0f ) :
+Lettus::Lettus( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Lettus::Lettus");

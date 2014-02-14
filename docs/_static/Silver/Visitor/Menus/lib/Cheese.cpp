@@ -21,7 +21,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Cheese::Cheese( float amount = 1.0f ) :
+Cheese::Cheese( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Cheese::Cheese");

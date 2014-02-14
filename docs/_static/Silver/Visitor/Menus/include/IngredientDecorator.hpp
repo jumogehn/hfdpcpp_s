@@ -29,9 +29,9 @@ namespace HFDP {
 
       protected:
         std::unique_ptr< Ingredient > _ingredient;
-        explicit IngredientDecorator( Ingredient* ingredient ) :
+        explicit IngredientDecorator( Ingredient* ingredient );
       public:
-        virtual ~IngredientDecorator()
+        virtual ~IngredientDecorator();
       };
     } // namespace Menus
   } // namespace Visitor

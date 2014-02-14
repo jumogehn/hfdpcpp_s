@@ -7,7 +7,7 @@ INCLUDE_DIRECTORIES(${Menus_SOURCE_DIR}/include)
 # Adds a library called menus (libmenus.a under Linux) from the source files under lib/
 ADD_LIBRARY( menus 
   Bacon        HotDog      MenuComponent        Pancake          Sausage     Toast
-  Bagel        Cheese      Ingredient           MenuException    Pasta       Scrambled   Tomato
+  Bagel        Cheese      Ingredient           Pasta            Scrambled   Tomato
   Beef         Chicken     IngredientDecorator  MenuItem         Potato      Soup        Utilities
   BlueBerries  Egg         Lettus               Milk             Rice        Steamed     Visitor
   Bread        Fish        Mayonnaise           MixedVegetables  Salad       Stock       Waitress

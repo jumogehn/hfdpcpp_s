@@ -20,7 +20,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-MixedVegetables::MixedVegetables( float amount = 1.0f ) :
+MixedVegetables::MixedVegetables( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("MixedVegetables::MixedVegetables");

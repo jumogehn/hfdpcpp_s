@@ -10,14 +10,14 @@
 ///
 //===----------------------------------------------------------------------===//
 
-#include "MenuComponent.hpp"
-#include "Menu.hpp"
-#include "MenuItem.hpp"
+//#include "MenuComponent.hpp"
+#include "Ingredient.hpp"
 #include "Scrambled.hpp"
 #include "Egg.hpp"
 #include "Butter.hpp"
 #include "Bread.hpp"
-#include "Pancake .hpp"
+#include "Pancake.hpp"
+#include "Potato.hpp"
 #include "Fried.hpp"
 #include "Oil.hpp"
 #include "Sausage.hpp"
@@ -37,7 +37,7 @@
 #include "Rice.hpp"
 #include "Salad.hpp"
 #include "Mayonnaise.hpp"
-#include "Hotdog.hpp"
+#include "HotDog.hpp"
 #include "Sauerkraut.hpp"
 #include "Cheese.hpp"
 #include "Steamed.hpp"

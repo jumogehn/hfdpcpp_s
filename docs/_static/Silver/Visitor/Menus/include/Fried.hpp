@@ -15,6 +15,7 @@
 #define _HFDP_CPP_VISITOR_FRIED_HPP_
 
 #include "Ingredient.hpp"
+#include "IngredientDecorator.hpp"
 #include "Visitor.hpp"
 #include <string>
 

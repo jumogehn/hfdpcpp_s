@@ -10,8 +10,8 @@
 ///
 //===----------------------------------------------------------------------===//
 
-#include "Menu.hpp"
-#include "MenuComponent.hpp"
+#include "Visitor.hpp"
+#include "Ingredient.hpp"
 #include "Utilities.hpp"
 #include <string>
 #include <vector>

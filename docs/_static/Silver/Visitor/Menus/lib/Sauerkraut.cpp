@@ -20,7 +20,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Sauerkraut::Sauerkraut( float amount = 1.0f ) :
+Sauerkraut::Sauerkraut( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Sauerkraut::Sauerkraut");

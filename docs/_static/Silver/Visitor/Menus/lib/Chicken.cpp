@@ -21,7 +21,7 @@
 
 using namespace HFDP::Visitor::Menus;
 
-Chicken::Chicken( float amount = 1.0f ) :
+Chicken::Chicken( float amount ) :
   Ingredient( amount )
 {
   PrintMessage("Chicken::Chicken");

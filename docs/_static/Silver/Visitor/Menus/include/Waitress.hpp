@@ -15,9 +15,6 @@
 #define _HFDP_CPP_VISITOR_MENUS_WAITRESS_HPP_
 
 #include "Ingredient.hpp"
-#include "MenuItem.hpp"
-#include "Menu.hpp"
-#include "MenuComponent.hpp"
 #include "Visitor.hpp"
 
 namespace HFDP {

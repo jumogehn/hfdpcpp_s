@@ -14,16 +14,30 @@
 #ifndef	_HFDP_CPP_VISITOR_INGREDIENT_HPP_
 #define _HFDP_CPP_VISITOR_INGREDIENT_HPP_
 
-#include "Visitor.hpp"
-#include "MenuComponent.hpp"
 #include <string>
+#include <vector>
+#include <list>
 
 namespace HFDP {
   namespace Visitor {
     namespace Menus {
 
-      class MenuComponent;
       class Visitor;
+
+      class MenuComponent {
+
+        MenuComponent( const MenuComponent& ); // Disable copy constructor
+        void operator=( const MenuComponent& ); // Disable assignment operator
+
+      public:
+        MenuComponent();
+        virtual ~MenuComponent();
+        virtual void accept( Visitor* visitor ) = 0;
+        virtual void add( MenuComponent* menuComponent );
+        virtual float getHealthRating() const  = 0;
+        virtual std::string toString() const = 0;
+        virtual bool isVegetarian() const = 0;
+      };
 
       class Ingredient : public MenuComponent {
 
@@ -44,6 +58,42 @@ namespace HFDP {
         virtual float getSodium() const = 0;
         virtual float getHealthRating() const;
         virtual std::string toString() const = 0;
+      };
+
+      class Menu : public MenuComponent {
+
+        std::string _name;
+        std::string _description;
+        mutable std::vector< MenuComponent* > _menuComponents;
+
+      public:
+        explicit Menu( const std::string name, const std::string description );
+        void accept( Visitor* visitor );
+        float getHealthRating() const;
+        void add( MenuComponent* menuComponent );
+        bool isVegetarian() const;
+        std::string toString() const;
+      };
+
+      class MenuItem : public MenuComponent {
+
+        std::string _name;
+        std::string _description;
+        double _price;
+
+      protected:
+        mutable std::list< Ingredient* > _ingredients;
+
+      public:
+        MenuItem( const std::string name, const std::string description,
+                  double price );
+        void accept( Visitor* visitor );
+        void add( Ingredient* ingredient );
+        double getPrice() const;
+        float getHealthRating() const;
+
+        bool isVegetarian() const;
+        std::string toString() const;
       };
 
     } // namespace Menus

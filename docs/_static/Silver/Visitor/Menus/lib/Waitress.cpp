@@ -14,6 +14,7 @@
 #include "Utilities.hpp"
 #include <cassert>
 #include <iostream>
+#include <sstream>
 #include <string>
 
 using namespace HFDP::Visitor::Menus;

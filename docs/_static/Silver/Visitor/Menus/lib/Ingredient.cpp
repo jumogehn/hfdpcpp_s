@@ -11,7 +11,7 @@
 //===----------------------------------------------------------------------===//
 
 #include "Ingredient.hpp"
-#include "MenuComponent.hpp"
+//#include "MenuComponent.hpp"
 #include "Utilities.hpp"
 #include <cassert>
 
@@ -25,7 +25,7 @@ static const float dailyFat = 65.0f;
 static const float dailyProtien = 50.0f;
 static const float dailySodium = 2.400f;
 
-Ingredient::Ingredient( float amount = 1.0f ) :
+Ingredient::Ingredient( float amount ) :
   _amount( amount )
 {
   assert( amount > 0.0f );

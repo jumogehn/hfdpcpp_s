@@ -9,10 +9,6 @@ The C++ Project including UML diagrams
 
 The original license remains same.
 
-Note : Please note that this project uses `a logging and tracing DLL
-<https://github.com/Journeyer/log_manager>`_, which I implemented using `ACE
-<http://www.cs.wustl.edu/~schmidt/ACE.html>`_.
-
 
 The Story from the book
 -----------------------

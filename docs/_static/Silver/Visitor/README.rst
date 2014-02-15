@@ -6,6 +6,19 @@ Visitor Pattern
 Menus
 =====
 
+Test
+----
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can 
+compile as shown below::
+
+ mkdir build
+ cd build/
+ cmake ../Menus/
+ make
+ ./driver/testmenus
+
+
 Class Diagram
 -------------
 

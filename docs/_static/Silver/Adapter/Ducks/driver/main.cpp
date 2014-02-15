@@ -17,6 +17,8 @@
 #include "DuckAdapter.hpp"
 #include "MallardDuck.hpp"
 #include "Utilities.hpp"
+#include "DucksConfig.h"
+#include <stdio.h>
 
 using namespace HFDP::Adapter::Ducks;
 
@@ -29,6 +31,11 @@ void testDuck( const Duck* duck )
 
 int main( int argc, char* argv[] )
 {
+  fprintf(stdout,"%s Version %d.%d\n\n",
+          argv[0],
+          Ducks_VERSION_MAJOR,
+          Ducks_VERSION_MINOR);
+
   std::unique_ptr< MallardDuck > duck( new MallardDuck() );
   std::unique_ptr< Turkey > duckAdapter( new DuckAdapter( duck.get() ) );
 

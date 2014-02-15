@@ -53,6 +53,16 @@
         
   <div class="section" id="singleton-pattern">
 <h1>Singleton Pattern<a class="headerlink" href="#singleton-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="test">
+<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<p>This project uses cmake so wide range of OSes are supported. For ubuntu, you can
+compile as shown below:</p>
+<div class="highlight-python"><pre>mkdir build
+cd build/
+cmake ../Chocolate/
+make
+./driver/testchocolate</pre>
+</div>
 <table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
@@ -68,15 +78,16 @@
 </tbody>
 </table>
 <div class="section" id="chocolate-boiler">
-<h2>Chocolate Boiler<a class="headerlink" href="#chocolate-boiler" title="Permalink to this headline">¶</a></h2>
+<h3>Chocolate Boiler<a class="headerlink" href="#chocolate-boiler" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 <div class="section" id="class-diagram">
-<h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
+<h2>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_Chocolate_Boiler.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_Chocolate_Boiler.jpg" style="width: 172.5px; height: 129.0px;" /></a>
 <p>싱글턴을 쓸 때는 동기화 문제를 해결해야만 한다. 위 C++ 예제에서는 동기화 코드가
 들어가 있지 않기 때문에 별도로 동기화 문제를 해결해야만 한다. 언어별로 제공되는
 각종 동기화 기법을 사용하거나 아예 static 객체로 생성시키거나 안전한 시점에 객체
 생성을 시키도록 하는 등의 방법을 쓸 수 있다.</p>
-</div>
 </div>
 </div>
 

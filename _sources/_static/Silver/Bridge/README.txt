@@ -6,10 +6,23 @@ Bridge Pattern
 Remotes
 =======
 
+Test
+----
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can
+compile as shown below::
+
+ mkdir build
+ cd build/
+ cmake ../Remotes/
+ make
+ ./driver/testremotes 
+
+
 Class Diagram
 -------------
 
-.. image:: Remotes/Overview_of_Remotes.jpg
+.. image:: Remotes/imgs/Overview_of_Remotes.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -17,7 +30,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: Remotes/SequenceDiagram1.jpg
+.. image:: Remotes/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

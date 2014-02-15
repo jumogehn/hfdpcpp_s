@@ -6,6 +6,25 @@ Composite Pattern
 MenusCustomIterator
 ===================
 
+Test
+----
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can 
+compile as shown below::
+
+ mkdir build_MenusCustomIterator
+ cd build_MenusCustomIterator/
+ cmake ../MenusCustomIterator/
+ make
+ ./driver/testmenuscustomiterator
+
+ mkdir build_Menus
+ cd build_Menus/
+ cmake ../Menus/
+ make
+ ./driver/testmenus
+
+
 +------------------------------------------------------------------------------+
 |패턴 12. 컴포지트                                                             |
 +==============================================================================+
@@ -23,7 +42,7 @@ MenusCustomIterator
 Class Diagram
 -------------
 
-.. image:: MenusCustomIterator/Overview_of_Menus_Custom_Iterator.jpg
+.. image:: MenusCustomIterator/imgs/Overview_of_Menus_Custom_Iterator.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -31,7 +50,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: MenusCustomIterator/SequenceDiagram1.jpg
+.. image:: MenusCustomIterator/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

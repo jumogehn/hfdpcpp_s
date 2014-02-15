@@ -53,14 +53,38 @@
         
   <div class="section" id="command-pattern">
 <h1>Command Pattern<a class="headerlink" href="#command-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="test">
+<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<p>This project uses cmake so wide range of OSes are supported. For ubuntu, you can
+compile as shown below:</p>
+<div class="highlight-python"><pre>mkdir build_SimpleRemote
+cd build_SimpleRemote/
+cmake ../SimpleRemote/
+make
+./driver/testsimpleremote
+
+mkdir build_Remote
+cd build_Remote/
+cmake ../Remote/
+make
+./driver/testremote
+
+mkdir build_Undo
+cd build_Undo/
+cmake ../Undo/
+make
+./driver/testundo</pre>
+</div>
 <div class="section" id="simple-remote-control">
-<h2>Simple Remote Control<a class="headerlink" href="#simple-remote-control" title="Permalink to this headline">¶</a></h2>
+<h3>Simple Remote Control<a class="headerlink" href="#simple-remote-control" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 <div class="section" id="class-diagram">
-<h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
+<h2>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_SimpleRemote.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_SimpleRemote.jpg" style="width: 540.5px; height: 198.5px;" /></a>
 </div>
 <div class="section" id="sequence-diagram">
-<h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
+<h2>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/SequenceDiagram13.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram13.jpg" style="width: 445.0px; height: 374.0px;" /></a>
 <table border="1" class="docutils">
 <colgroup>
@@ -82,30 +106,30 @@
 <a class="reference internal image-reference" href="../../../_images/Command_Pattern.jpg"><img alt="GoF's Command Pattern" src="../../../_images/Command_Pattern.jpg" style="width: 248.5px; height: 116.5px;" /></a>
 <p>참고 : 클라이언트(Client)는 Invoker 에 setCommand() 되는 ConcreteCommand 객체를
 생성한다.</p>
-</div>
-</div>
 <div class="section" id="remote-control">
-<h2>Remote Control<a class="headerlink" href="#remote-control" title="Permalink to this headline">¶</a></h2>
+<h3>Remote Control<a class="headerlink" href="#remote-control" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 <div class="section" id="id1">
-<h3>Class Diagram<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2>Class Diagram<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_Remote.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_Remote.jpg" style="width: 915.0px; height: 644.0px;" /></a>
 </div>
 <div class="section" id="id2">
-<h3>Sequence Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h2>Sequence Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/SequenceDiagram14.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram14.jpg" style="width: 1540.5px; height: 640.0px;" /></a>
 <p><strong>널 객체( null object ) - 패턴 장려상</strong></p>
 <p>딱히 리턴할 객체는 없지만 클라이언트 쪽에서 null 을 처리하지 않아도 되도록 하고
 싶을 때 널 객체를 활용하면 좋다. 위 사례에서의 NoCommand 클래스의 용법이다.</p>
-</div>
-</div>
 <div class="section" id="undo">
-<h2>Undo<a class="headerlink" href="#undo" title="Permalink to this headline">¶</a></h2>
+<h3>Undo<a class="headerlink" href="#undo" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 <div class="section" id="id3">
-<h3>Class Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h2>Class Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_Undo.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_Undo.jpg" style="width: 906.0px; height: 345.5px;" /></a>
 </div>
 <div class="section" id="id4">
-<h3>Sequence Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h2>Sequence Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/SequenceDiagram15.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram15.jpg" style="width: 807.0px; height: 390.0px;" /></a>
 <ul class="simple">
 <li>undo 기능 외에도 매크로 커맨드 객체를 사용할 수도 있다. (샘플 리모컨의
@@ -116,16 +140,15 @@
 처리되도록 하거나, 그렇지 않으면 아무것도 처리되지 않게 롤백하도록 하는
 기능을 구현하는데 쓰일 수도 있다.</li>
 </ul>
-</div>
-</div>
 <div class="section" id="loki-functor-command-pattern">
-<h2>Loki의 Functor를 사용한 Command Pattern<a class="headerlink" href="#loki-functor-command-pattern" title="Permalink to this headline">¶</a></h2>
+<h3>Loki의 Functor를 사용한 Command Pattern<a class="headerlink" href="#loki-functor-command-pattern" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="std-function-command-pattern">
-<h2>std::function를 사용한 Command Pattern<a class="headerlink" href="#std-function-command-pattern" title="Permalink to this headline">¶</a></h2>
+<h3>std::function를 사용한 Command Pattern<a class="headerlink" href="#std-function-command-pattern" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="boost-function-command-pattern">
-<h2>boost::function를 사용한 Command Pattern<a class="headerlink" href="#boost-function-command-pattern" title="Permalink to this headline">¶</a></h2>
+<h3>boost::function를 사용한 Command Pattern<a class="headerlink" href="#boost-function-command-pattern" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 </div>
 

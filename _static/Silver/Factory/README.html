@@ -53,30 +53,54 @@
         
   <div class="section" id="factory-pattern">
 <h1>Factory Pattern<a class="headerlink" href="#factory-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="test">
+<h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<p>This project uses cmake so wide range of OSes are supported. For ubuntu, you can
+compile as shown below:</p>
+<div class="highlight-python"><pre>mkdir build_Pizzaaf
+cd build_Pizzaaf/
+cmake ../Pizzaaf/
+make
+./driver/testpizzaaf
+
+mkdir build_Pizzafm
+cd build_Pizzafm/
+cmake ../Pizzafm/
+make
+./driver/testpizzafm
+
+mkdir build_Pizzaas
+cd build_Pizzaas/
+cmake ../Pizzaas/
+make
+./driver/testpizzaas</pre>
+</div>
 <div class="section" id="simple-static-factory-method">
-<h2>Simple Static Factory Method<a class="headerlink" href="#simple-static-factory-method" title="Permalink to this headline">¶</a></h2>
+<h3>Simple Static Factory Method<a class="headerlink" href="#simple-static-factory-method" title="Permalink to this headline">¶</a></h3>
 <p>간단한 팩토리 - 패턴 장려상</p>
+</div>
+</div>
 <div class="section" id="class-diagram">
-<h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
+<h2>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_SimpleFactory.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_SimpleFactory.jpg" style="width: 433.0px; height: 263.5px;" /></a>
 </div>
 <div class="section" id="sequence-diagram">
-<h3>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h3>
+<h2>Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/SequenceDiagram19.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram19.jpg" style="width: 251.0px; height: 300.0px;" /></a>
 <p>SimplePizzaFactory 클래스는 팩토리로써 위 애플리케이션에서 유일하게 Pizza 의
 구상클래스를 직접 참조하는 부분이다.</p>
 <p><strong>이런 메소드(SimplePizzaFactory::createPizza())를 static 메소드로 선언하는
 경우가 종종 있다.</strong></p>
-</div>
-</div>
 <div class="section" id="factory-method">
-<h2>Factory Method<a class="headerlink" href="#factory-method" title="Permalink to this headline">¶</a></h2>
+<h3>Factory Method<a class="headerlink" href="#factory-method" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 <div class="section" id="id1">
-<h3>Class Diagram<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2>Class Diagram<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_FactoryMethod.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_FactoryMethod.jpg" style="width: 446.5px; height: 350.0px;" /></a>
 </div>
 <div class="section" id="id2">
-<h3>Sequence Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h2>Sequence Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/SequenceDiagram110.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram110.jpg" style="width: 280.0px; height: 290.5px;" /></a>
 <table border="1" class="docutils">
 <colgroup>
@@ -148,12 +172,12 @@
 <strong>어플리케이션</strong> 에서 마음대로 새로운 내용을 추가할 수 있다. 이는 위의
 PizzaStore의 클래스 다이어그램에서도 PizzaStore 와 Pizza 간의 의존관계가 생략되어
 있으며 이를 포함해 동일하게 설명할 수 있다.</p>
-</div>
-</div>
 <div class="section" id="abstract-factory">
-<h2>Abstract Factory<a class="headerlink" href="#abstract-factory" title="Permalink to this headline">¶</a></h2>
+<h3>Abstract Factory<a class="headerlink" href="#abstract-factory" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 <div class="section" id="id3">
-<h3>Class Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h2>Class Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_AbstractFactory.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_AbstractFactory.jpg" style="width: 726.0px; height: 753.5px;" /></a>
 <ul class="simple">
 <li><strong>PizzaIngredientFactory</strong> : <tt class="docutils literal"><span class="pre">Abstract</span> <span class="pre">Factory</span></tt> in Abstract Factory Pattern</li>
@@ -162,7 +186,7 @@ PizzaStore의 클래스 다이어그램에서도 PizzaStore 와 Pizza 간의 의
 </ul>
 </div>
 <div class="section" id="id4">
-<h3>Sequence Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h2>Sequence Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/SequenceDiagram111.jpg"><img alt="Sequence Diagram" src="../../../_images/SequenceDiagram111.jpg" style="width: 446.0px; height: 366.0px;" /></a>
 <table border="1" class="docutils">
 <colgroup>
@@ -207,7 +231,6 @@ PizzaStore의 클래스 다이어그램에서도 PizzaStore 와 Pizza 간의 의
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 

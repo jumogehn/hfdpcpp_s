@@ -3,6 +3,19 @@
 Singleton Pattern
 *****************
 
+Test
+----
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can 
+compile as shown below::
+
+ mkdir build
+ cd build/
+ cmake ../Chocolate/
+ make
+ ./driver/testchocolate
+
+
 +------------------------------------------------------------------------------+
 |패턴 6. 싱글턴                                                                |
 +==============================================================================+
@@ -17,7 +30,7 @@ Chocolate Boiler
 Class Diagram
 -------------
 
-.. image:: Chocolate/Overview_of_Chocolate_Boiler.jpg
+.. image:: Chocolate/imgs/Overview_of_Chocolate_Boiler.jpg
    :scale: 50 %
    :alt: Class Diagram
 

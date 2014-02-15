@@ -6,10 +6,23 @@ Adapter Pattern
 Ducks
 =====
 
+Test
+----
+
+This project uses cmake so wide range of OSes are supported. For ubuntu, you can
+compile as shown below::
+
+ mkdir build
+ cd build/
+ cmake ../Ducks/
+ make
+ ./driver/testducks
+
+
 Class Diagram
 -------------
 
-.. image:: Ducks/Overview_of_Ducks.jpg
+.. image:: Ducks/imgs/Overview_of_Ducks.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -17,7 +30,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: Ducks/SequenceDiagram1.jpg
+.. image:: Ducks/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

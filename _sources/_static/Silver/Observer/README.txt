@@ -28,7 +28,7 @@ Weather Station
 Class Diagram
 -------------
 
-.. image:: Content/Overview_of_WeatherStation.jpg
+.. image:: Content/imgs/Overview_of_WeatherStation.jpg
    :scale: 50 %
    :alt: Class Diagram
 
@@ -36,7 +36,7 @@ Class Diagram
 Sequence Diagram
 ----------------
 
-.. image:: Content/SequenceDiagram1.jpg
+.. image:: Content/imgs/SequenceDiagram1.jpg
    :scale: 50 %
    :alt: Sequence Diagram
 

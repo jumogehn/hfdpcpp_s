@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -122,17 +122,17 @@ Inheritance diagram for HeadFirstDesignPatterns::Factory::Simple::Pizza:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90234cc83af2f3233e9eed0497de6f3b"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::getName" ref="a90234cc83af2f3233e9eed0497de6f3b" args="() const " -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefcca06492b3aa6c1bcdc27acb986b02"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::getName" ref="aefcca06492b3aa6c1bcdc27acb986b02" args="() const " -->
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26da3045a1cc4b2d907c6b0ded3ff776"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::prepare" ref="a26da3045a1cc4b2d907c6b0ded3ff776" args="() const " -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa55e72b03e843023d659af0b078b40d"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::prepare" ref="aaa55e72b03e843023d659af0b078b40d" args="() const " -->
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>prepare</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a69b447b9e825cf33f4f7fce36e2539"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::bake" ref="a3a69b447b9e825cf33f4f7fce36e2539" args="() const " -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a024191630bd7c8f500fc27e35a9987ce"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::bake" ref="a024191630bd7c8f500fc27e35a9987ce" args="() const " -->
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>bake</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e9cc8f3febc8c9bd845c463ce4acf50"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::cut" ref="a6e9cc8f3febc8c9bd845c463ce4acf50" args="() const " -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5271e5bfc9cde6487e82592c30fd1471"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::cut" ref="a5271e5bfc9cde6487e82592c30fd1471" args="() const " -->
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>cut</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa181add522fcbfcdb9c8f01169a3f3db"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::box" ref="aa181add522fcbfcdb9c8f01169a3f3db" args="() const " -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23110a557e21d3a65e58670957d372bb"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::box" ref="a23110a557e21d3a65e58670957d372bb" args="() const " -->
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>box</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac532e101347f098ef13d55925316c0dd"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::toString" ref="ac532e101347f098ef13d55925316c0dd" args="() const " -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec7519e4428d39821fab18939ab69e73"></a><!-- doxytag: member="HeadFirstDesignPatterns::Factory::Simple::Pizza::toString" ref="aec7519e4428d39821fab18939ab69e73" args="() const " -->
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -147,9 +147,10 @@ std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_pizzas_2_pizza_8hpp_source.html#l00013">13</a> of file <a class="el" href="_pizzas_2_pizza_8hpp_source.html">Pizzas/Pizza.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_pizzas_2_pizza_8hpp_source.html">Pizzas/Pizza.hpp</a></li>
+<p>Definition at line <a class="el" href="_pizzas_2include_2_pizza_8hpp_source.html#l00024">24</a> of file <a class="el" href="_pizzas_2include_2_pizza_8hpp_source.html">Pizzas/include/Pizza.hpp</a>.</p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="_pizzas_2include_2_pizza_8hpp_source.html">Pizzas/include/Pizza.hpp</a></li>
+<li><a class="el" href="_pizzas_2lib_2_pizza_8cpp_source.html">Pizzas/lib/Pizza.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- window showing the filter options -->
@@ -157,7 +158,7 @@ std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -169,7 +170,7 @@ std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 14 2013 16:49:56 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 15 2014 12:00:53 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

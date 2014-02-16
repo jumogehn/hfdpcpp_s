@@ -23,3 +23,7 @@ if (USE_UTILS)
   target_link_libraries(testremotes utils)
 endif (USE_UTILS)
 
+# add the install targets
+install (TARGETS testremotes DESTINATION bin)
+install (FILES "${PROJECT_BINARY_DIR}/RemotesConfig.h" DESTINATION include)
+

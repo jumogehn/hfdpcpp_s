@@ -13,3 +13,6 @@ foreach(flag ${CXX11_FEATURE_LIST})
 	)
 endforeach()
 
+install (TARGETS utils DESTINATION bin)
+install (FILES ${Remotes_SOURCE_DIR}/include/utils/Utilities.hpp DESTINATION include)
+

@@ -11,6 +11,7 @@
 //===----------------------------------------------------------------------===//
 
 
+#include "RemotesConfig.h"
 #include "Sony.hpp"
 #include "SonyControl.hpp"
 #include <string>

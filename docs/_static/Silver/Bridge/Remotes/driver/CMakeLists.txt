@@ -2,11 +2,14 @@
 #http://www-flc.desy.de/ldcoptimization/documents/talks/CMake_Tutorial.pdf
 
 # Make sure the compiler can find include files from our library remotes.
-INCLUDE_DIRECTORIES(${Remotes_SOURCE_DIR}/include)
+include_directories(${Remotes_SOURCE_DIR}/include/remotes)
+if (USE_UTILS)
+  include_directories(${Remotes_SOURCE_DIR}/include/utils)
+endif (USE_UTILS)
 
 # Add binary called "testremotes" that is built from the source file "Remotes.cpp". 
 # The extension is automatically found.
-ADD_EXECUTABLE(testremotes Remotes)
+add_executable(testremotes Remotes)
 
 foreach(flag ${CXX11_FEATURE_LIST})
   set_property(TARGET testremotes
@@ -15,8 +18,8 @@ foreach(flag ${CXX11_FEATURE_LIST})
 endforeach()
 
 # Link the executable to the library remotes.
-TARGET_LINK_LIBRARIES(testremotes remotes)
-
-# Link the executable to the libraries duck duckadapter mallardduck turkey turkeyadapter wildturkey.
-#TARGET_LINK_LIBRARIES(testremotes duck duckadapter mallardduck turkey turkeyadapter wildturkey)
+target_link_libraries(testremotes remotes)
+if (USE_UTILS)
+  target_link_libraries(testremotes utils)
+endif (USE_UTILS)
 

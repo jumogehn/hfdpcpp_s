@@ -36,5 +36,9 @@ if(MSVC)
   list(REMOVE_DUPLICATES CMAKE_CXX_FLAGS_DEBUG)
 endif()
 
-ADD_SUBDIRECTORY(driver)
-ADD_SUBDIRECTORY(lib)
+# should we use our own utils functions?
+option (USE_UTILS
+  "Use my own utils implementation" ON)
+
+add_subdirectory(driver)
+add_subdirectory(lib)

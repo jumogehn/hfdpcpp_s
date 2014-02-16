@@ -11,6 +11,7 @@
 //===----------------------------------------------------------------------===//
 
 
+#include "RemotesConfig.h"
 #include "RemoteControl.hpp"
 #include <cassert>
 

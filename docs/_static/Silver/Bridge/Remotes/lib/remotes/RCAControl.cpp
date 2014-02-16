@@ -11,6 +11,7 @@
 //===----------------------------------------------------------------------===//
 
 
+#include "RemotesConfig.h"
 #include "RCA.hpp"
 #include "RCAControl.hpp"
 

@@ -16,7 +16,7 @@
 #include <iostream>
 #include <cassert>
 
-void PrintMessage(const char * pMessage, bool newline)
+void CALL PrintMessage(const char * pMessage, bool newline)
 {
   assert(pMessage);
   if (newline)
@@ -25,7 +25,7 @@ void PrintMessage(const char * pMessage, bool newline)
     std::cout << pMessage;
 }
 
-void PrintNumber(unsigned int num, bool newline)
+void CALL PrintNumber(unsigned int num, bool newline)
 {
   if (newline)
     std::cout << num << std::endl;

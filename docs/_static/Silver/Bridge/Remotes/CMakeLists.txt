@@ -40,13 +40,6 @@ endif()
 option (USE_UTILS
   "Use my own utils implementation" ON)
 
-if(CMAKE_COMPILER_IS_GNUCXX)
-  set(CMAKE_INSTALL_PREFIX "/home/hum/Projects/sandbox")
-endif(CMAKE_COMPILER_IS_GNUCXX)
-if(MSVC)
-  #set(CMAKE_INSTALL_PREFIX "")
-endif(MSVC)
-
 add_subdirectory(driver)
 add_subdirectory(lib)
 

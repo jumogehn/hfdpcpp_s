@@ -13,12 +13,17 @@
 #include "RemoteControl.hpp"
 #include "SonyControl.hpp"
 #include "RCAControl.hpp"
+#include "RemotesConfig.h"
 #include <vector>
 #include <memory>
+#include <iostream>
 
 using namespace HFDP::Bridge::Remotes;
 
 int main( int argc, char* argv[] ) {
+
+  std::cout << argv[0] << " Version " << Remotes_VERSION_MAJOR << "."
+  << Remotes_VERSION_MINOR << std::endl << std::endl;
 
   std::vector< RemoteControl* > remotes;
 

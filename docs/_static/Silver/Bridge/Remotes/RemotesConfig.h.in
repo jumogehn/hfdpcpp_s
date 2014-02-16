@@ -1,0 +1,3 @@
+// the configured options and settings for Remotes
+#define Remotes_VERSION_MAJOR @Remotes_VERSION_MAJOR@                          
+#define Remotes_VERSION_MINOR @Remotes_VERSION_MINOR@ 

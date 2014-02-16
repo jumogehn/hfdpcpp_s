@@ -10,12 +10,19 @@
 ///
 //===----------------------------------------------------------------------===//
 
+//http://chadaustin.me/cppinterface.html
 
 #ifndef __UTILITIES_H__
 #define __UTILITIES_H__
 
-extern void PrintMessage(const char * pMessage, bool newline = true);
-extern void PrintMessage(unsigned int num, bool newline = true);
+#ifdef WIN32
+  #define CALL __stdcall
+#else
+  #define CALL
+#endif
+
+extern "C" void CALL PrintMessage(const char * pMessage, bool newline = true);
+extern "C" void CALL PrintNumber(unsigned int num, bool newline = true);
 
 #endif
 

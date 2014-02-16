@@ -39,6 +39,6 @@ void Sony::tuneChannel( unsigned int channel )
   PrintMessage("Sony ", false);
   PrintMessage(_location.c_str(), false);
   PrintMessage(" tuned to channel ", false);
-  PrintMessage(channel);
+  PrintNumber(channel);
 }
 

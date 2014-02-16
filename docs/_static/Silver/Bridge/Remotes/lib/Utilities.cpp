@@ -10,11 +10,13 @@
 ///
 //===----------------------------------------------------------------------===//
 
+//http://chadaustin.me/cppinterface.html
 
+#include "Utilities.hpp"
 #include <iostream>
 #include <cassert>
 
-void PrintMessage(const char * pMessage, bool newline = true)
+void PrintMessage(const char * pMessage, bool newline)
 {
   assert(pMessage);
   if (newline)
@@ -23,7 +25,7 @@ void PrintMessage(const char * pMessage, bool newline = true)
     std::cout << pMessage;
 }
 
-void PrintMessage(unsigned int num, bool newline = true)
+void PrintNumber(unsigned int num, bool newline)
 {
   if (newline)
     std::cout << num << std::endl;

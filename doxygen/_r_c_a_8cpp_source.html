@@ -87,37 +87,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011 <span class="comment"></span><span class="comment">//===----------------------------------------------------------------------===//</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_r_c_a_8hpp.html">RCA.hpp</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Utilities.hpp&quot;</span>
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keyword">using namespace </span>HFDP::Bridge::Remotes;
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019 RCA::RCA( <span class="keyword">const</span> std::string&amp; location ) :
-<a name="l00020"></a>00020   _location( location )
-<a name="l00021"></a>00021 {}
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="keywordtype">void</span> RCA::on()
-<a name="l00024"></a>00024 {
-<a name="l00025"></a>00025   PrintMessage(<span class="stringliteral">&quot;RCA &quot;</span>, <span class="keyword">false</span>);
-<a name="l00026"></a>00026   PrintMessage(_location.c_str(), <span class="keyword">false</span>);
-<a name="l00027"></a>00027   PrintMessage(<span class="stringliteral">&quot; TV is on&quot;</span>);
-<a name="l00028"></a>00028 }
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="keywordtype">void</span> RCA::off()
-<a name="l00031"></a>00031 {
-<a name="l00032"></a>00032   PrintMessage(<span class="stringliteral">&quot;RCA &quot;</span>, <span class="keyword">false</span>);
-<a name="l00033"></a>00033   PrintMessage(_location.c_str(), <span class="keyword">false</span>);
-<a name="l00034"></a>00034   PrintMessage(<span class="stringliteral">&quot; TV is off&quot;</span>);
-<a name="l00035"></a>00035 }
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keywordtype">void</span> RCA::tuneChannel(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> channel)
-<a name="l00038"></a>00038 {
-<a name="l00039"></a>00039   PrintMessage(<span class="stringliteral">&quot;RCA &quot;</span>, <span class="keyword">false</span>);
-<a name="l00040"></a>00040   PrintMessage(_location.c_str(), <span class="keyword">false</span>);
-<a name="l00041"></a>00041   PrintMessage(<span class="stringliteral">&quot; tuned to channel &quot;</span>, <span class="keyword">false</span>);
-<a name="l00042"></a>00042   PrintMessage(channel);
-<a name="l00043"></a>00043 }
-<a name="l00044"></a>00044 
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;RemotesConfig.h&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_r_c_a_8hpp.html">RCA.hpp</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#ifdef USE_UTILS</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#include &quot;Utilities.hpp&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#else</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#endif</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span>
+<a name="l00022"></a>00022 <span class="keyword">using namespace </span>HFDP::Bridge::Remotes;
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 RCA::RCA( <span class="keyword">const</span> std::string&amp; location ) :
+<a name="l00025"></a>00025   _location( location )
+<a name="l00026"></a>00026 {}
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="keywordtype">void</span> RCA::on()
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030 <span class="preprocessor">#ifdef USE_UTILS</span>
+<a name="l00031"></a>00031 <span class="preprocessor"></span>  PrintMessage(<span class="stringliteral">&quot;RCA &quot;</span>, <span class="keyword">false</span>);
+<a name="l00032"></a>00032   PrintMessage(_location.c_str(), <span class="keyword">false</span>);
+<a name="l00033"></a>00033   PrintMessage(<span class="stringliteral">&quot; TV is on&quot;</span>);
+<a name="l00034"></a>00034 <span class="preprocessor">#else</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span>  std::cout &lt;&lt; <span class="stringliteral">&quot;RCA &quot;</span> &lt;&lt; _location.c_str() &lt;&lt; <span class="stringliteral">&quot; TV is on&quot;</span> &lt;&lt; std::endl;
+<a name="l00036"></a>00036 <span class="preprocessor">#endif</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span>}
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keywordtype">void</span> RCA::off()
+<a name="l00040"></a>00040 {
+<a name="l00041"></a>00041 <span class="preprocessor">#ifdef USE_UTILS</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>  PrintMessage(<span class="stringliteral">&quot;RCA &quot;</span>, <span class="keyword">false</span>);
+<a name="l00043"></a>00043   PrintMessage(_location.c_str(), <span class="keyword">false</span>);
+<a name="l00044"></a>00044   PrintMessage(<span class="stringliteral">&quot; TV is off&quot;</span>);
+<a name="l00045"></a>00045 <span class="preprocessor">#else</span>
+<a name="l00046"></a>00046 <span class="preprocessor"></span>  std::cout &lt;&lt; <span class="stringliteral">&quot;RCA &quot;</span> &lt;&lt; _location.c_str() &lt;&lt; <span class="stringliteral">&quot; TV is off&quot;</span> &lt;&lt; std::endl;
+<a name="l00047"></a>00047 <span class="preprocessor">#endif</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span>}
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keywordtype">void</span> RCA::tuneChannel(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> channel)
+<a name="l00051"></a>00051 {
+<a name="l00052"></a>00052 <span class="preprocessor">#ifdef USE_UTILS</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>  PrintMessage(<span class="stringliteral">&quot;RCA &quot;</span>, <span class="keyword">false</span>);
+<a name="l00054"></a>00054   PrintMessage(_location.c_str(), <span class="keyword">false</span>);
+<a name="l00055"></a>00055   PrintMessage(<span class="stringliteral">&quot; tuned to channel &quot;</span>, <span class="keyword">false</span>);
+<a name="l00056"></a>00056   PrintNumber(channel);
+<a name="l00057"></a>00057 <span class="preprocessor">#else</span>
+<a name="l00058"></a>00058 <span class="preprocessor"></span>  std::cout &lt;&lt; <span class="stringliteral">&quot;RCA &quot;</span> &lt;&lt; _location.c_str() &lt;&lt; <span class="stringliteral">&quot; tuned to channel &quot;</span> &lt;&lt; channel &lt;&lt; std::endl;
+<a name="l00059"></a>00059 <span class="preprocessor">#endif</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>}
+<a name="l00061"></a>00061 
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -136,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 15 2014 12:16:59 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 23:00:41 for hfdp_s by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

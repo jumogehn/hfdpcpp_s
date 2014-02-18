@@ -1,6 +1,8 @@
 
 #http://www-flc.desy.de/ldcoptimization/documents/talks/CMake_Tutorial.pdf
 #http://pageant.ghulbus.eu/?p=664
+#http://cmake.org/Wiki/CMake/Testing_With_CTest#Simple_Testing
+#http://stackoverflow.com/questions/733475/cmake-ctest-make-test-doesnt-build-tests
 
 cmake_minimum_required(VERSION 2.8.6)
 

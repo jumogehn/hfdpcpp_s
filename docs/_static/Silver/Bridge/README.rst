@@ -13,7 +13,7 @@ This project uses cmake so wide range of OSes are supported. For ubuntu, you can
 compile as shown below
 
 **Compile**
-
+::
  mkdir build
  cd build/
  cmake ../Remotes/
@@ -21,15 +21,14 @@ compile as shown below
  make
 
 
-**Test**::
-
+**Test**
+::
  make test
  ctest
 
 
 **Install**
 ::
-
  (sudo) make install
 
 
@@ -40,12 +39,12 @@ compile as shown below
 
 
 **Creating binary distributing**
-
+::
  cpack -C CPackConfig.cmake
 
 
 **Creating source distributing**
-
+::
  cpack -C CPackSourceConfig.cmake
 
 

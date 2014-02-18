@@ -45,8 +45,17 @@ option (USE_UTILS
 add_subdirectory(driver)
 add_subdirectory(lib)
 
+# CTest
 enable_testing ()
-
 # does the application run
 add_test (RmotesRuns driver/testremotes)
+
+# CPack
+# build a CPack driven installer package
+include (InstallRequiredSystemLibraries)
+set (CPACK_RESOURCE_FILE_LICENSE  
+     "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
+set (CPACK_PACKAGE_VERSION_MAJOR "${Remotes_VERSION_MAJOR}")
+set (CPACK_PACKAGE_VERSION_MINOR "${Remotes_VERSION_MINOR}")
+include (CPack)
 

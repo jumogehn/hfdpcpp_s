@@ -6,8 +6,8 @@ Bridge Pattern
 Remotes
 =======
 
-Test
-----
+How to use cmake environment
+----------------------------
 
 This project uses cmake so wide range of OSes are supported. For ubuntu, you can
 compile as shown below

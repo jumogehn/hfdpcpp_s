@@ -43,4 +43,8 @@ option (USE_UTILS
 add_subdirectory(driver)
 add_subdirectory(lib)
 
+enable_testing ()
+
+# does the application run
+add_test (RmotesRuns driver/testremotes)
 

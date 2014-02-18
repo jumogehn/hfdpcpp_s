@@ -10,9 +10,9 @@ Test
 ----
 
 This project uses cmake so wide range of OSes are supported. For ubuntu, you can
-compile as shown below::
+compile as shown below
 
-** Compile **
+**Compile**
 
  mkdir build
  cd build/
@@ -21,29 +21,30 @@ compile as shown below::
  make
 
 
-** Test **
+**Test**::
 
  make test
  ctest
 
 
-** Install **
+**Install**
+::
 
-(sudo) make install
+ (sudo) make install
 
 
-** Use **
-
+**Use**
+::
  ./driver/testremotes
  (testremotes)
 
 
-** Creating binary distributing **
+**Creating binary distributing**
 
  cpack -C CPackConfig.cmake
 
 
-** Creating source distributing **
+**Creating source distributing**
 
  cpack -C CPackSourceConfig.cmake
 

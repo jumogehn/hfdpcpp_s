@@ -12,11 +12,40 @@ Test
 This project uses cmake so wide range of OSes are supported. For ubuntu, you can
 compile as shown below::
 
+** Compile **
+
  mkdir build
  cd build/
  cmake ../Remotes/
+ (cmake ../Remotes/ -DCMAKE_INSTALL_PREFIX=/usr/local)
  make
- ./driver/testremotes 
+
+
+** Test **
+
+ make test
+ ctest
+
+
+** Install **
+
+(sudo) make install
+
+
+** Use **
+
+ ./driver/testremotes
+ (testremotes)
+
+
+** Creating binary distributing **
+
+ cpack -C CPackConfig.cmake
+
+
+** Creating source distributing **
+
+ cpack -C CPackSourceConfig.cmake
 
 
 Class Diagram

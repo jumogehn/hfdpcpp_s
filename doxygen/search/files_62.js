@@ -21,5 +21,8 @@ var searchData=
   ['remotecontrol_2ehpp',['RemoteControl.hpp',['../_bridge_2_remotes_2include_2remotes_2_remote_control_8hpp.html',1,'']]],
   ['tv_2ehpp',['TV.hpp',['../_bridge_2_remotes_2include_2remotes_2_t_v_8hpp.html',1,'']]],
   ['utilities_2ecpp',['Utilities.cpp',['../_bridge_2_remotes_2lib_2utils_2_utilities_8cpp.html',1,'']]],
-  ['utilities_2ehpp',['Utilities.hpp',['../_bridge_2_remotes_2include_2utils_2_utilities_8hpp.html',1,'']]]
+  ['utilities_2ehpp',['Utilities.hpp',['../_bridge_2build_2___c_pack___packages_2_linux_2_s_t_g_z_2_remotes-1_80_81-_linux_2include_2_utilities_8hpp.html',1,'']]],
+  ['utilities_2ehpp',['Utilities.hpp',['../_bridge_2_remotes_2include_2utils_2_utilities_8hpp.html',1,'']]],
+  ['utilities_2ehpp',['Utilities.hpp',['../_bridge_2build_2___c_pack___packages_2_linux_2_t_g_z_2_remotes-1_80_81-_linux_2include_2_utilities_8hpp.html',1,'']]],
+  ['utilities_2ehpp',['Utilities.hpp',['../_bridge_2build_2___c_pack___packages_2_linux_2_t_z_2_remotes-1_80_81-_linux_2include_2_utilities_8hpp.html',1,'']]]
 ];

@@ -55,15 +55,33 @@
 <h1>Bridge Pattern<a class="headerlink" href="#bridge-pattern" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="remotes">
 <h2>Remotes<a class="headerlink" href="#remotes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="test">
-<h3>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="how-to-use-cmake-environment">
+<h3>How to use cmake environment<a class="headerlink" href="#how-to-use-cmake-environment" title="Permalink to this headline">¶</a></h3>
 <p>This project uses cmake so wide range of OSes are supported. For ubuntu, you can
-compile as shown below:</p>
+compile as shown below</p>
+<p><strong>Compile</strong></p>
 <div class="highlight-python"><pre>mkdir build
 cd build/
 cmake ../Remotes/
-make
-./driver/testremotes</pre>
+(cmake ../Remotes/ -DCMAKE_INSTALL_PREFIX=/usr/local)
+make</pre>
+</div>
+<p><strong>Test</strong></p>
+<div class="highlight-python"><pre>make test
+ctest</pre>
+</div>
+<p><strong>Install</strong></p>
+<div class="highlight-python"><pre>(sudo) make install</pre>
+</div>
+<p><strong>Use</strong></p>
+<div class="highlight-python"><pre>./driver/testremotes
+(testremotes)</pre>
+</div>
+<p><strong>Creating binary distributing</strong></p>
+<div class="highlight-python"><pre>cpack -C CPackConfig.cmake</pre>
+</div>
+<p><strong>Creating source distributing</strong></p>
+<div class="highlight-python"><pre>cpack -C CPackSourceConfig.cmake</pre>
 </div>
 </div>
 <div class="section" id="class-diagram">

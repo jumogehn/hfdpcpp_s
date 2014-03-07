@@ -1,0 +1,11 @@
+
+To test do the following
+
+ lua miniducksimulator.lua
+
+tested under:
+
+Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
+
+I only translated C++ Strategy pattern implementation into Lua.
+

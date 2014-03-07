@@ -5,7 +5,21 @@ To test do the following
 
 tested under:
 
-Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
+ Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
 
 I only translated C++ Strategy pattern implementation into Lua.
+
+And GoF patterns are not recommended in lua. One of the reason
+stems from it's nature - a dynamic language not static like C++
+There are talks related with this.
+
+ http://lua-users.org/lists/lua-l/2014-02/msg00399.html
+ http://lua-users.org/lists/lua-l/2014-02/msg00398.html
+
+I hope my work be a starting point to study lua version of GoF
+pattern which should be very much different than original GoF's
+
+License I prefer is AFL 3.0
+
+Journeyer
 

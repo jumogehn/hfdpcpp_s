@@ -28,7 +28,7 @@ setfenv(1, _M)
 _NAME = modname
 _VERSION = "1.0"
 
-package.loaded["duck"] = nil
+package.loaded["ducks.duck"] = nil
 local Duck     = require "ducks.duck"
 local class    = setmetatable( _M, {__index = Duck} )
 local meta     = getmetatable( class )
@@ -41,8 +41,8 @@ local ometa = { __index = class, __newindex = class }
 
 --[[ import package classes ]]-----------------------------------------------
 
-package.loaded["flynoway"] = nil
-package.loaded["squeak"] = nil
+package.loaded["ducks.flynoway"] = nil
+package.loaded["ducks.squeak"] = nil
 local FlyNoWay = require "ducks.flynoway"
 local Squeak = require "ducks.squeak"
 

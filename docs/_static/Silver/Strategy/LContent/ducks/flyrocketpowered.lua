@@ -28,7 +28,7 @@ setfenv(1, _M)
 _NAME = modname
 _VERSION = "1.0"
 
-package.loaded["flybehavior"] = nil
+package.loaded["ducks.flybehavior"] = nil
 local FlyBehavior = require "ducks.flybehavior"
 local class    = setmetatable( _M, {__index = FlyBehavior, __newindex = FlyBehavior} )
 local meta     = getmetatable( class )

@@ -28,7 +28,7 @@ setfenv(1, _M)
 _NAME = modname
 _VERSION = "1.0"
 
-package.loaded["quackbehavior"] = nil
+package.loaded["ducks.quackbehavior"] = nil
 local QuackBehavior = require "ducks.quackbehavior"
 local class    = setmetatable( _M, {__index = QuackBehavior} )
 local meta     = getmetatable( class )

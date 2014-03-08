@@ -29,7 +29,7 @@ _NAME = modname
 _VERSION = "1.0"
 
 package.loaded["quackbehavior"] = nil
-local QuackBehavior = require "quackbehavior"
+local QuackBehavior = require "ducks.quackbehavior"
 local class    = setmetatable( _M, {__index = QuackBehavior, __newindex = QuackBehavior} )
 local meta     = getmetatable( class )
 

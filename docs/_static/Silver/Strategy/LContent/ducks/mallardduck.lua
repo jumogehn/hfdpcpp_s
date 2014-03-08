@@ -1,5 +1,5 @@
 --[[-------------------------------------------------------- -*- LUA -*- ----
-Name:        flywithwings.lua
+Name:        mallardduck.lua
 Purpose:     
 Author:      Journeyer J. Joh
 Modified by:
@@ -28,9 +28,9 @@ setfenv(1, _M)
 _NAME = modname
 _VERSION = "1.0"
 
-package.loaded["flybehavior"] = nil
-local FlyBehavior = require "flybehavior"
-local class    = setmetatable( _M, {__index = FlyBehavior, __newindex = FlyBehavior} )
+package.loaded["duck"] = nil
+local Duck     = require "ducks.duck"
+local class    = setmetatable( _M, {__index = Duck, __newindex = Duck} )
 local meta     = getmetatable( class )
 
 function meta:__tostring()
@@ -39,17 +39,23 @@ end
 
 local ometa = { __index = class, __newindex = class }
 
+--[[ import package classes ]]-----------------------------------------------
+package.loaded["flywithwings"] = nil
+package.loaded["quack"] = nil
+local FlyWithWings = require "ducks.flywithwings"
+local Quack        = require "ducks.quack"
+
 --[[ Public Methods ]]-------------------------------------------------------
 
-function fly(self)
-  print(_NAME .. ':fly')
-  print('---- I am Flying!')
+function display(self)
+  print(_NAME .. ':display')
+  print('---- I am a real Mallard Duck!')
 end
 
 --[[ constructor ]]----------------------------------------------------------
 local function Init()
   print(_NAME .. ':Init')
-  --FlyBehavior()
+  Duck(Quack(), FlyWithWings())
   --...
 end
 function meta:__call()

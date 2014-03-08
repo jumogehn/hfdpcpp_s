@@ -1,5 +1,5 @@
 --[[-------------------------------------------------------- -*- LUA -*- ----
-Name:        flynoway.lua
+Name:        flywithwings.lua
 Purpose:     
 Author:      Journeyer J. Joh
 Modified by:
@@ -29,7 +29,7 @@ _NAME = modname
 _VERSION = "1.0"
 
 package.loaded["flybehavior"] = nil
-local FlyBehavior = require "flybehavior"
+local FlyBehavior = require "ducks.flybehavior"
 local class    = setmetatable( _M, {__index = FlyBehavior, __newindex = FlyBehavior} )
 local meta     = getmetatable( class )
 
@@ -43,7 +43,7 @@ local ometa = { __index = class, __newindex = class }
 
 function fly(self)
   print(_NAME .. ':fly')
-  print('---- I cannot fly')
+  print('---- I am Flying!')
 end
 
 --[[ constructor ]]----------------------------------------------------------

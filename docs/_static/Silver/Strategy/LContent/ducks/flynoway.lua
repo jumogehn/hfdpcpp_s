@@ -1,5 +1,5 @@
 --[[-------------------------------------------------------- -*- LUA -*- ----
-Name:        quack.lua
+Name:        flynoway.lua
 Purpose:     
 Author:      Journeyer J. Joh
 Modified by:
@@ -28,9 +28,9 @@ setfenv(1, _M)
 _NAME = modname
 _VERSION = "1.0"
 
-package.loaded["quackbehavior"] = nil
-local QuackBehavior = require "quackbehavior"
-local class    = setmetatable( _M, {__index = QuackBehavior, __newindex = QuackBehavior} )
+package.loaded["flybehavior"] = nil
+local FlyBehavior = require "ducks.flybehavior"
+local class    = setmetatable( _M, {__index = FlyBehavior, __newindex = FlyBehavior} )
 local meta     = getmetatable( class )
 
 function meta:__tostring()
@@ -41,16 +41,15 @@ local ometa = { __index = class, __newindex = class }
 
 --[[ Public Methods ]]-------------------------------------------------------
 
-function quack(self)
-  print(_NAME .. ':quack')
-  print('---- Quack!')
+function fly(self)
+  print(_NAME .. ':fly')
+  print('---- I cannot fly')
 end
 
 --[[ constructor ]]----------------------------------------------------------
-
 local function Init()
   print(_NAME .. ':Init')
-  --QuackBehavior()
+  --FlyBehavior()
   --...
 end
 function meta:__call()

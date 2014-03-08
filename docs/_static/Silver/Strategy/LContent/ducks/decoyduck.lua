@@ -29,7 +29,7 @@ _NAME = modname
 _VERSION = "1.0"
 
 package.loaded["duck"] = nil
-local Duck = require "duck"
+local Duck = require "ducks.duck"
 local class = setmetatable( _M, {__index = Duck, __newindex = Duck} )
 local meta = getmetatable( class )
 
@@ -42,8 +42,8 @@ local ometa = { __index = class, __newindex = class }
 --[[ import package classes ]]-----------------------------------------------
 package.loaded["flynoway"] = nil
 package.loaded["mutequack"] = nil
-local FlyNoWay = require "flynoway"
-local MuteQuack = require "mutequack"
+local FlyNoWay = require "ducks.flynoway"
+local MuteQuack = require "ducks.mutequack"
 
 --[[ Public Methods ]]-------------------------------------------------------
 function display(self)

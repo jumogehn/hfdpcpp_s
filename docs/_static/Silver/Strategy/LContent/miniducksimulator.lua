@@ -16,11 +16,11 @@ local require = require
 local print   = print
 -----------------------------------------------------------------------------
 
-local FlyRocketPowered = require "flyrocketpowered"
-local MallardDuck      = require "mallardduck"
-local RubberDuck       = require "rubberduck"
-local DecoyDuck        = require "decoyduck"
-local ModelDuck        = require "modelduck"
+local FlyRocketPowered = require "ducks.flyrocketpowered"
+local MallardDuck      = require "ducks.mallardduck"
+local RubberDuck       = require "ducks.rubberduck"
+local DecoyDuck        = require "ducks.decoyduck"
+local ModelDuck        = require "ducks.modelduck"
 
 local Donald = MallardDuck()
 local Rubby = RubberDuck()

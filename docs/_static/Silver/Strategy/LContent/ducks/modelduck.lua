@@ -1,5 +1,5 @@
 --[[-------------------------------------------------------- -*- LUA -*- ----
-Name:        mutequack.lua
+Name:        modelduck.lua
 Purpose:     
 Author:      Journeyer J. Joh
 Modified by:
@@ -28,9 +28,9 @@ setfenv(1, _M)
 _NAME = modname
 _VERSION = "1.0"
 
-package.loaded["quackbehavior"] = nil
-local QuackBehavior = require "quackbehavior"
-local class    = setmetatable( _M, {__index = QuackBehavior} )
+package.loaded["duck"] = nil
+local Duck     = require "ducks.duck"
+local class    = setmetatable( _M, {__index = Duck, __newindex = Duck} )
 local meta     = getmetatable( class )
 
 function meta:__tostring()
@@ -39,18 +39,25 @@ end
 
 local ometa = { __index = class, __newindex = class }
 
+--[[ import package classes ]]-----------------------------------------------
+
+package.loaded["flynoway"] = nil
+package.loaded["fakequack"] = nil
+local FlyNoWay = require "ducks.flynoway"
+local FakeQuack = require "ducks.fakequack"
+
 --[[ Public Methods ]]-------------------------------------------------------
 
-function quack(self)
-  print(_NAME .. ':quack')
-  print('---- << Silence >>')
+function display(self)
+  print(_NAME .. ':display')
+  print('---- I am a Model Duck')
 end
 
 --[[ constructor ]]----------------------------------------------------------
 
 local function Init()
   print(_NAME .. ':Init')
-  --QuackBehavior()
+  Duck(FakeQuack(), FlyNoWay())
   --...
 end
 function meta:__call()

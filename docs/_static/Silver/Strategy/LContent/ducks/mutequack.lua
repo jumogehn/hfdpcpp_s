@@ -1,5 +1,5 @@
 --[[-------------------------------------------------------- -*- LUA -*- ----
-Name:        fakequack.lua
+Name:        mutequack.lua
 Purpose:     
 Author:      Journeyer J. Joh
 Modified by:
@@ -29,8 +29,8 @@ _NAME = modname
 _VERSION = "1.0"
 
 package.loaded["quackbehavior"] = nil
-local QuackBehavior = require "quackbehavior"
-local class    = setmetatable( _M, {__index = QuackBehavior, __newindex = QuackBehavior} )
+local QuackBehavior = require "ducks.quackbehavior"
+local class    = setmetatable( _M, {__index = QuackBehavior} )
 local meta     = getmetatable( class )
 
 function meta:__tostring()
@@ -43,10 +43,11 @@ local ometa = { __index = class, __newindex = class }
 
 function quack(self)
   print(_NAME .. ':quack')
-  print('---- Qwak')
+  print('---- << Silence >>')
 end
 
 --[[ constructor ]]----------------------------------------------------------
+
 local function Init()
   print(_NAME .. ':Init')
   --QuackBehavior()

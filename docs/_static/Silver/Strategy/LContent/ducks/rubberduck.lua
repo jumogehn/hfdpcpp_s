@@ -1,5 +1,5 @@
 --[[-------------------------------------------------------- -*- LUA -*- ----
-Name:        modelduck.lua
+Name:        rubberduck.lua
 Purpose:     
 Author:      Journeyer J. Joh
 Modified by:
@@ -29,8 +29,8 @@ _NAME = modname
 _VERSION = "1.0"
 
 package.loaded["duck"] = nil
-local Duck     = require "duck"
-local class    = setmetatable( _M, {__index = Duck, __newindex = Duck} )
+local Duck     = require "ducks.duck"
+local class    = setmetatable( _M, {__index = Duck} )
 local meta     = getmetatable( class )
 
 function meta:__tostring()
@@ -42,22 +42,22 @@ local ometa = { __index = class, __newindex = class }
 --[[ import package classes ]]-----------------------------------------------
 
 package.loaded["flynoway"] = nil
-package.loaded["fakequack"] = nil
-local FlyNoWay = require "flynoway"
-local FakeQuack = require "fakequack"
+package.loaded["squeak"] = nil
+local FlyNoWay = require "ducks.flynoway"
+local Squeak = require "ducks.squeak"
 
 --[[ Public Methods ]]-------------------------------------------------------
 
 function display(self)
   print(_NAME .. ':display')
-  print('---- I am a Model Duck')
+  print('---- I am a rubber Duck!')
 end
 
 --[[ constructor ]]----------------------------------------------------------
 
 local function Init()
   print(_NAME .. ':Init')
-  Duck(FakeQuack(), FlyNoWay())
+  Duck(Squeak(), FlyNoWay())
   --...
 end
 function meta:__call()

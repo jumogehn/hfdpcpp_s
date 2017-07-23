@@ -82,10 +82,10 @@ Contents
 +---------------------------------------------+-----------------------------------------------------------------------+--------------------------------------------------+
 
 You can view `Doxygen Document
-<http://journeyer.github.com/hfdpcpp_s/doxygen>`_.
+<http://Jeonghum.github.com/hfdpcpp_s/doxygen>`_.
 
 You can download `the UML file
-<http://journeyer.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ and open/edit it
+<http://Jeonghum.github.com/hfdpcpp_s/_downloads/Silver.uml>`_ and open/edit it
 via `StarUML <http://staruml.sourceforge.net/en/>`_.
 
 There appeared `WhiteStarUML

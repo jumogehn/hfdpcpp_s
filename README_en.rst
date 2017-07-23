@@ -15,7 +15,7 @@ About the C++ Source Code
 **Author** : Glenn Puchtel
 
 This project is copied from the sourceforge project above.
-I, Journeyer J. Joh, am not the original author of this project.
+I, Jeonghum Joh, am not the original author of this project.
 Please refer to the url specified with Origin: above
 if you want to reach to the original project or author of this project.
 
@@ -97,5 +97,5 @@ Also GoF's Design Patterns are well documented in
 Vince Huston provides `very awesome website for GoF's Patterns
 <http://www.vincehuston.org/dp/>`_.
 
-Journeyer J. Joh
+Jeonghum Joh
 

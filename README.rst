@@ -16,7 +16,7 @@ C++ 소스코드에 대해서
 **저자** : Glenn Puchtel
 
 이 프로젝트는 위의 소스포지상의 프로젝트에서 시작하였습니다.
-저 (Journeyer J. Joh)는 이 프로젝트의 원 저작자가 아닙니다. 만약 오리지널
+저 (Jeonghum Joh)는 이 프로젝트의 원 저작자가 아닙니다. 만약 오리지널
 프로젝트나 그 프로젝트의 원저작자와 연락하길 원한다면 위에서 ``출처`` 로 표시한
 웹사이트를 방문하시길 바랍니다.
 
@@ -99,5 +99,5 @@ Vince Huston은 GoF의 디자인패턴에 대해 `매우 훌륭한 웹사이트
 <http://www.vincehuston.org/dp/>`_ 를 공개하고 있습니다.
 
 
-Journeyer J. Joh
+Jeonghum Joh
 

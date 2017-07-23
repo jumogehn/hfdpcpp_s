@@ -1,10 +1,10 @@
 --[[-------------------------------------------------------- -*- LUA -*- ----
 Name:        squeak.lua
 Purpose:     
-Author:      Journeyer J. Joh
+Author:      Jeonghum Joh
 Modified by:
 Created:     2014-03-05
-Copyright:   (c) 2014 Journeyer J. Joh
+Copyright:   (c) 2014 Jeonghum Joh
 License:     AFL 3.0
 --]]-------------------------------------------------------------------------
 

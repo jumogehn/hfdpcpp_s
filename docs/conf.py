@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'hfdpcpp_s'
-copyright = u'2013, Journeyer J. Joh'
+copyright = u'2013, Jeonghum Joh'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -184,7 +184,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'hfdpcpp_s.tex', u'hfdpcpp\\_s\\_tst Documentation',
-   u'Journeyer J. Joh', 'manual'),
+   u'Jeonghum Joh', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -214,7 +214,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'hfdpcpp_s', u'hfdpcpp_s Documentation',
-     [u'Journeyer J. Joh'], 1)
+     [u'Jeonghum Joh'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -228,7 +228,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'hfdpcpp_s', u'hfdpcpp_s Documentation',
-   u'Journeyer J. Joh', 'hfdpcpp_s', 'One line description of project.',
+   u'Jeonghum Joh', 'hfdpcpp_s', 'One line description of project.',
    'Miscellaneous'),
 ]
 

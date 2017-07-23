@@ -1,43 +1,37 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Factory Pattern &mdash; hfdpcpp_s 0.1 documentation</title>
-    
+    <title>Factory Pattern &#8212; hfdpcpp_s 0.1 documentation</title>
     <link rel="stylesheet" href="../../haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../print.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../jquery.js"></script>
     <script type="text/javascript" src="../../underscore.js"></script>
     <script type="text/javascript" src="../../doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../theme_extras.js"></script>
-    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="../../../index.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Builder Pattern" href="../Builder/README.html" />
     <link rel="prev" title="Singleton Pattern" href="../Singleton/README.html" /> 
   </head>
   <body>
-      <div class="header"><h1 class="heading"><a href="../../../index.html">
+      <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>hfdpcpp_s 0.1 documentation</span></a></h1>
         <h2 class="heading"><span>Factory Pattern</span></h2>
       </div>
-      <div class="topnav">
+      <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
         «&#160;&#160;<a href="../Singleton/README.html">Singleton Pattern</a>
@@ -57,23 +51,24 @@
 <h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
 <p>This project uses cmake so wide range of OSes are supported. For ubuntu, you can
 compile as shown below:</p>
-<div class="highlight-python"><pre>mkdir build_Pizzaaf
-cd build_Pizzaaf/
-cmake ../Pizzaaf/
-make
-./driver/testpizzaaf
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build_Pizzaaf</span>
+<span class="n">cd</span> <span class="n">build_Pizzaaf</span><span class="o">/</span>
+<span class="n">cmake</span> <span class="o">../</span><span class="n">Pizzaaf</span><span class="o">/</span>
+<span class="n">make</span>
+<span class="o">./</span><span class="n">driver</span><span class="o">/</span><span class="n">testpizzaaf</span>
 
-mkdir build_Pizzafm
-cd build_Pizzafm/
-cmake ../Pizzafm/
-make
-./driver/testpizzafm
+<span class="n">mkdir</span> <span class="n">build_Pizzafm</span>
+<span class="n">cd</span> <span class="n">build_Pizzafm</span><span class="o">/</span>
+<span class="n">cmake</span> <span class="o">../</span><span class="n">Pizzafm</span><span class="o">/</span>
+<span class="n">make</span>
+<span class="o">./</span><span class="n">driver</span><span class="o">/</span><span class="n">testpizzafm</span>
 
-mkdir build_Pizzaas
-cd build_Pizzaas/
-cmake ../Pizzaas/
-make
-./driver/testpizzaas</pre>
+<span class="n">mkdir</span> <span class="n">build_Pizzaas</span>
+<span class="n">cd</span> <span class="n">build_Pizzaas</span><span class="o">/</span>
+<span class="n">cmake</span> <span class="o">../</span><span class="n">Pizzaas</span><span class="o">/</span>
+<span class="n">make</span>
+<span class="o">./</span><span class="n">driver</span><span class="o">/</span><span class="n">testpizzaas</span>
+</pre></div>
 </div>
 <div class="section" id="simple-static-factory-method">
 <h3>Simple Static Factory Method<a class="headerlink" href="#simple-static-factory-method" title="Permalink to this headline">¶</a></h3>
@@ -166,9 +161,9 @@ make
 <a class="reference internal image-reference" href="../../../_images/OCP_in_FactoryMethod.jpg"><img alt="Class Diagram" src="../../../_images/OCP_in_FactoryMethod.jpg" style="width: 185.5px; height: 202.0px;" /></a>
 <p>책에서 설명하지 않는 내용이지만 Factory Method 패턴에서는 <strong>OCP
 (Open-Closed Principle)</strong> 을 발견할 수 있다. 위 그림의 우측편의 의존관계는 책에서
-설명하지 않지만 중요해 보인다. 즉, 이는 변화에 <tt class="docutils literal"><span class="pre">닫힌(Closed)</span></tt> <strong>프레임워크</strong> 를
+설명하지 않지만 중요해 보인다. 즉, 이는 변화에 <code class="docutils literal"><span class="pre">닫힌(Closed)</span></code> <strong>프레임워크</strong> 를
 구현한다. 반면, 위 그림의 좌측편의 의존관계는 하나의 구상클래스가 다른
-구상클래스를 생성하는 의존관계인데 이는 새로운 확장에 <tt class="docutils literal"><span class="pre">열려(Open)</span></tt> 있어
+구상클래스를 생성하는 의존관계인데 이는 새로운 확장에 <code class="docutils literal"><span class="pre">열려(Open)</span></code> 있어
 <strong>어플리케이션</strong> 에서 마음대로 새로운 내용을 추가할 수 있다. 이는 위의
 PizzaStore의 클래스 다이어그램에서도 PizzaStore 와 Pizza 간의 의존관계가 생략되어
 있으며 이를 포함해 동일하게 설명할 수 있다.</p>
@@ -180,9 +175,9 @@ PizzaStore의 클래스 다이어그램에서도 PizzaStore 와 Pizza 간의 의
 <h2>Class Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../../_images/Overview_of_AbstractFactory.jpg"><img alt="Class Diagram" src="../../../_images/Overview_of_AbstractFactory.jpg" style="width: 726.0px; height: 753.5px;" /></a>
 <ul class="simple">
-<li><strong>PizzaIngredientFactory</strong> : <tt class="docutils literal"><span class="pre">Abstract</span> <span class="pre">Factory</span></tt> in Abstract Factory Pattern</li>
-<li><strong>PizzaStore</strong> : <tt class="docutils literal"><span class="pre">Creator</span></tt> in Factory Method Pattern</li>
-<li><strong>각 구상 Pizza 클래스들</strong> : <tt class="docutils literal"><span class="pre">Client</span></tt> in Abstract Factory Pattern</li>
+<li><strong>PizzaIngredientFactory</strong> : <code class="docutils literal"><span class="pre">Abstract</span> <span class="pre">Factory</span></code> in Abstract Factory Pattern</li>
+<li><strong>PizzaStore</strong> : <code class="docutils literal"><span class="pre">Creator</span></code> in Factory Method Pattern</li>
+<li><strong>각 구상 Pizza 클래스들</strong> : <code class="docutils literal"><span class="pre">Client</span></code> in Abstract Factory Pattern</li>
 </ul>
 </div>
 <div class="section" id="id4">
@@ -236,7 +231,7 @@ PizzaStore의 클래스 다이어그램에서도 PizzaStore 와 Pizza 간의 의
 
 
       </div>
-      <div class="bottomnav">
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
         «&#160;&#160;<a href="../Singleton/README.html">Singleton Pattern</a>
@@ -248,9 +243,9 @@ PizzaStore의 클래스 다이어그램에서도 PizzaStore 와 Pizza 간의 의
 
       </div>
 
-    <div class="footer">
-        &copy; Copyright 2013, Journeyer J. Joh.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Jeonghum Joh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
   </body>
 </html>

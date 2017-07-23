@@ -1,43 +1,37 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Strategy Pattern &mdash; hfdpcpp_s 0.1 documentation</title>
-    
+    <title>Strategy Pattern &#8212; hfdpcpp_s 0.1 documentation</title>
     <link rel="stylesheet" href="../../haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../print.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../jquery.js"></script>
     <script type="text/javascript" src="../../underscore.js"></script>
     <script type="text/javascript" src="../../doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../theme_extras.js"></script>
-    <link rel="top" title="hfdpcpp_s 0.1 documentation" href="../../../index.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Chain of responsibility Pattern" href="../ChainOfResponsibility/README.html" />
     <link rel="prev" title="State Pattern" href="../State/README.html" /> 
   </head>
   <body>
-      <div class="header"><h1 class="heading"><a href="../../../index.html">
+      <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>hfdpcpp_s 0.1 documentation</span></a></h1>
         <h2 class="heading"><span>Strategy Pattern</span></h2>
       </div>
-      <div class="topnav">
+      <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
         «&#160;&#160;<a href="../State/README.html">State Pattern</a>
@@ -67,11 +61,11 @@
 </tr>
 </tbody>
 </table>
-<p><em>&#8220;바뀌는 부분은 따로 뽑아서 캡슐화 시킨다. 그렇게 하면 나중에 바뀌지 않는
-부분에는 영향을 미치지 않은 채로 그 부분만 고치거나 확장할 수 있다.&#8221;</em></p>
+<p><em>“바뀌는 부분은 따로 뽑아서 캡슐화 시킨다. 그렇게 하면 나중에 바뀌지 않는
+부분에는 영향을 미치지 않은 채로 그 부분만 고치거나 확장할 수 있다.”</em></p>
 <p>이 개념은 매우 간단하지만 다른 모든 디자인 패턴의 기반을 이루는 원칙이다. 모든
-패턴은 &#8216;시스템의 일부분을 다른 부분과 독립적으로 변화시킬 수 있는&#8217; 방법을
-제공하기 위한 것이니까...</p>
+패턴은 ‘시스템의 일부분을 다른 부분과 독립적으로 변화시킬 수 있는’ 방법을
+제공하기 위한 것이니까…</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
@@ -91,11 +85,12 @@
 <h3>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
 <p>This project uses cmake so wide range of OSes are supported. For ubuntu, you can
 compile as shown below:</p>
-<div class="highlight-python"><pre>mkdir build
-cd build/
-cmake ../Content/
-make
-./driver/testcontent</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span><span class="o">/</span>
+<span class="n">cmake</span> <span class="o">../</span><span class="n">Content</span><span class="o">/</span>
+<span class="n">make</span>
+<span class="o">./</span><span class="n">driver</span><span class="o">/</span><span class="n">testcontent</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="class-diagram">
@@ -140,7 +135,7 @@ make
 
 
       </div>
-      <div class="bottomnav">
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
         «&#160;&#160;<a href="../State/README.html">State Pattern</a>
@@ -152,9 +147,9 @@ make
 
       </div>
 
-    <div class="footer">
-        &copy; Copyright 2013, Journeyer J. Joh.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Jeonghum Joh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
   </body>
 </html>

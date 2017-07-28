@@ -15,7 +15,7 @@
 
 using namespace HFDP::Adapter::Ducks;
 
-TurkeyAdapter::TurkeyAdapter( const Turkey* turkey ) :
+TurkeyAdapter::TurkeyAdapter( const std::shared_ptr<Turkey> turkey ) :
   MyTurkey( turkey )
 {
   PrintMessage("TurkeyAdapter::TurkeyAdapter");

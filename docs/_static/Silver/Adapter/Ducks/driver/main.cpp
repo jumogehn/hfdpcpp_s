@@ -22,7 +22,7 @@
 
 using namespace HFDP::Adapter::Ducks;
 
-void testDuck( const Duck* duck )
+void testDuck( const std::shared_ptr<Duck> duck )
 {
   PrintMessage("testDuck");
   duck->quack();
@@ -34,8 +34,8 @@ int main( int argc, char* argv[] )
   std::cout << argv[0] << " Version " << Ducks_VERSION_MAJOR << "."
     << Ducks_VERSION_MINOR << std::endl << std::endl;
 
-  std::unique_ptr< MallardDuck > duck( new MallardDuck() );
-  std::unique_ptr< Turkey > duckAdapter( new DuckAdapter( duck.get() ) );
+  auto duck = std::make_shared<MallardDuck>();
+  std::shared_ptr< Turkey > duckAdapter = std::make_shared<DuckAdapter>(duck);
 
   for( int i = 0; i < 10; i++ ) {
     PrintMessage("The DuckAdapter says...");
@@ -43,18 +43,18 @@ int main( int argc, char* argv[] )
     duckAdapter->fly();
   }
 
-  std::unique_ptr< WildTurkey > turkey( new WildTurkey() );
-  std::unique_ptr< Duck > turkeyAdapter( new TurkeyAdapter( turkey.get() ) );
+  auto turkey = std::make_shared<WildTurkey>();
+  std::shared_ptr< Duck > turkeyAdapter = std::make_shared<TurkeyAdapter>(turkey);
 
   PrintMessage("The Turkey says...");
   turkey->gobble();
   turkey->fly();
 
   PrintMessage("The Duck says...");
-  testDuck( duck.get() );
+  testDuck( duck );
 
   PrintMessage("The TurkeyAdapter says...");
-  testDuck( turkeyAdapter.get() );
+  testDuck( turkeyAdapter );
 
   return 0;
 }

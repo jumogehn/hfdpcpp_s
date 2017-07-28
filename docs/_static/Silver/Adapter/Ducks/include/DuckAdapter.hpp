@@ -24,14 +24,14 @@ namespace HFDP {
 
       class DuckAdapter : public Turkey {
 
-        const Duck *MyDuck;
+        const std::shared_ptr<Duck> MyDuck;
         int _random;
 
         DuckAdapter( const DuckAdapter& ); // Disable copy constructor
         void operator=( const DuckAdapter& ); // Disable assignment operator
 
       public:
-        explicit DuckAdapter( const Duck* duck );
+        explicit DuckAdapter( const std::shared_ptr<Duck> duck );
         void fly() const;
         void gobble() const;
       };

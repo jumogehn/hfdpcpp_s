@@ -16,6 +16,7 @@
 
 #include "Duck.hpp"
 #include "Turkey.hpp"
+#include <memory>
 
 namespace HFDP {
   namespace Adapter {
@@ -23,13 +24,13 @@ namespace HFDP {
 
       class TurkeyAdapter : public Duck {
 
-        const Turkey *MyTurkey;
+        const std::shared_ptr<Turkey> MyTurkey;
 
         TurkeyAdapter( const TurkeyAdapter& ); // Disable copy constructor
         void operator=( const TurkeyAdapter& ); // Disable assignment operator
 
       public:
-        explicit TurkeyAdapter( const Turkey* turkey );
+        explicit TurkeyAdapter( const std::shared_ptr<Turkey> turkey );
         void fly() const;
         void quack() const;
       };

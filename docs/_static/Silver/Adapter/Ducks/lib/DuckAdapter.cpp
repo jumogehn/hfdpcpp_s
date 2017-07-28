@@ -24,7 +24,7 @@
 
 using namespace HFDP::Adapter::Ducks;
 
-DuckAdapter::DuckAdapter( const Duck* duck ) :
+DuckAdapter::DuckAdapter( const std::shared_ptr<Duck> duck ) :
   MyDuck ( duck )
 {
   PrintMessage("DuckAdapter::DuckAdapter");

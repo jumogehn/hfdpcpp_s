@@ -20,7 +20,7 @@ using namespace HFDP::Bridge::Remotes;
 RCAControl::RCAControl( const std::string& location ) :
   _currentStation( 0 )
 {
-  _implementor = new RCA( location );
+  _implementor = std::make_shared<RCA>(location);
 }
 
 void RCAControl::setStation( unsigned int channel )

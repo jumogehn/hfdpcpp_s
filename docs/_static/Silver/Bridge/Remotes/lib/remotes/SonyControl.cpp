@@ -21,7 +21,7 @@ using namespace HFDP::Bridge::Remotes;
 SonyControl::SonyControl( const std::string& location ) :
   _currentStation( 0 )
 {
-  _implementor = new Sony( location );
+  _implementor = std::make_shared<Sony>(location);
 }
 
 void SonyControl::setStation( unsigned int channel )

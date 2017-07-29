@@ -15,6 +15,7 @@
 #define _HFDP_CPP_BRIDGE_REMOTE_CONTROL_HPP_
 
 #include "TV.hpp"
+#include <memory>
 
 namespace HFDP {
   namespace Bridge {
@@ -26,7 +27,7 @@ namespace HFDP {
         void operator=( const RemoteControl& ); // Disable assignment operator
 
       protected:
-        TV* _implementor;
+        std::shared_ptr<TV> _implementor;
         RemoteControl();
         virtual void setChannel( unsigned int channel );
 

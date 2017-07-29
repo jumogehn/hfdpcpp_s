@@ -29,7 +29,6 @@ void RemoteControl::setChannel( unsigned int channel )
 
 RemoteControl::~RemoteControl()
 {
-  delete _implementor;
 }
 
 void RemoteControl::on()

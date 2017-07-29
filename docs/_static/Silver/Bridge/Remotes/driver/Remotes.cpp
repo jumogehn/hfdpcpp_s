@@ -25,18 +25,16 @@ int main( int argc, char* argv[] ) {
   std::cout << argv[0] << " Version " << Remotes_VERSION_MAJOR << "."
   << Remotes_VERSION_MINOR << std::endl << std::endl;
 
-  std::vector< RemoteControl* > remotes;
+  std::vector<std::shared_ptr<RemoteControl>> remotes;
 
-  std::unique_ptr< SonyControl >
-    sonyControl( new SonyControl( "XBR in living room" ) );
-  remotes.push_back( sonyControl.get() );
+  auto sonyControl = std::make_shared<SonyControl>( "XBR in living room" );
+  remotes.push_back( sonyControl );
 
-  std::unique_ptr< RCAControl >
-    rcaControl( new RCAControl( "19 inch in kitchen" ) );
-  remotes.push_back( rcaControl.get() );
+  auto rcaControl = std::make_shared<RCAControl>( "19 inch in kitchen" );
+  remotes.push_back( rcaControl );
 
   // turn on all tv's
-  std::vector< RemoteControl* >::iterator iterator;
+  std::vector<std::shared_ptr<RemoteControl>>::iterator iterator;
   for( iterator = remotes.begin(); iterator != remotes.end(); iterator++ ) {
     ( *iterator )->on();
   }

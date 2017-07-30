@@ -20,7 +20,7 @@ void FanHandler::handleRequest( std::string request ) const
                   tolower );
 
   if( canHandleRequest( request ) == true ) {
-    Handler::canHandleRequest( request );
+    Handler::store( request );
   } else {
     Handler::handleRequest( request );
   }

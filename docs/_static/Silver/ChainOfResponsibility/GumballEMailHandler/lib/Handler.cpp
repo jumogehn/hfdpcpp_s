@@ -11,7 +11,7 @@ Handler::Handler( const Handler* successor ) :
 {
   PrintMessage("Handler::Handler");
 }
-bool Handler::canHandleRequest( const std::string& request ) const
+bool Handler::store( const std::string& request ) const
 {
   PrintMessage("Handler::canHandleRequest");
   _requests.push_back( request );

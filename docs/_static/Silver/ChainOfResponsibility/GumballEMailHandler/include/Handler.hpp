@@ -19,12 +19,11 @@ namespace HFDP {
 
       protected:
         explicit Handler( const Handler* successor = 0 );
-        virtual bool canHandleRequest( const std::string& request ) const;
+        bool store( const std::string& request ) const;
 
       public:
         virtual ~Handler();
         virtual void handleRequest( std::string request ) const;
-
         virtual void print() const;
       };
 

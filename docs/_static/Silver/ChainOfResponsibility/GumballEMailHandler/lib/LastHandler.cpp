@@ -14,7 +14,7 @@ LastHandler::LastHandler( const Handler* successor ) :
 void LastHandler::handleRequest( std::string request ) const
 {
   PrintMessage("LastHandler::handleRequest");
-  Handler::canHandleRequest( request );
+  Handler::store( request );
 }
 void LastHandler::print() const
 {

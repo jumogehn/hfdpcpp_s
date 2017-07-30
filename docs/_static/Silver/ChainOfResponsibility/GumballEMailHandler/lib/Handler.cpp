@@ -36,11 +36,9 @@ void Handler::print() const
   PrintMessage("Handler::print");
   PrintMessage(" count=", false);
   PrintMessage(_requests.size());
-  std::list< std::string >::const_iterator iterator = _requests.begin();
-  while( iterator != _requests.end() ) {
+  for (auto &var : _requests) {
     PrintMessage(" - ", false);
-    PrintMessage(( *iterator ).c_str());
-    iterator++;
+    PrintMessage(var.c_str());
   }
   if( _successor ) {
     _successor->print();

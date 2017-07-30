@@ -25,7 +25,7 @@ const char* email [] = {
 
 int main( int argc, char* argv[] ) {
 
-  std::auto_ptr< Client > client( new Client() );
+  auto client = std::make_shared<Client>();
 
   for( unsigned int i = 0; i < sizeof( email ) / sizeof( char* ); i++ ) {
     client->handleRequest( email[i] );

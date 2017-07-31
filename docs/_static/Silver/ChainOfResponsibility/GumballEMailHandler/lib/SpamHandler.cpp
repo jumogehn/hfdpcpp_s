@@ -7,7 +7,7 @@
 
 using namespace HFDP::ChainOfResponsibility::GumballEMailHandler;
 
-SpamHandler::SpamHandler( const Handler* successor ) :
+SpamHandler::SpamHandler( const std::shared_ptr<Handler> successor ) :
   Handler( successor )
 {
   PrintMessage("SpamHandler::SpamHandler");

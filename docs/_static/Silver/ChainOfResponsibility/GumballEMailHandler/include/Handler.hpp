@@ -4,6 +4,7 @@
 #include "Handler.hpp"
 #include <list>
 #include <string>
+#include <memory>
 
 namespace HFDP {
   namespace ChainOfResponsibility {
@@ -12,13 +13,13 @@ namespace HFDP {
       class Handler {
 
         mutable std::list< std::string > _requests;
-        const Handler* _successor;
+        const std::shared_ptr<Handler> _successor;
 
         Handler( const Handler& ); // Disable copy constructor
         void operator=( const Handler& ); // Disable assignment operator
 
       protected:
-        explicit Handler( const Handler* successor = 0 );
+        explicit Handler( const std::shared_ptr<Handler> successor = 0 );
         bool store( const std::string& request ) const;
 
       public:

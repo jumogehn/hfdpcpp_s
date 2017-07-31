@@ -5,15 +5,16 @@
 #include "FanHandler.hpp"
 #include "SpamHandler.hpp"
 #include "Utilities.hpp"
+#include <memory>
 
 using namespace HFDP::ChainOfResponsibility::GumballEMailHandler;
 
 Client::Client() :
-  _lastHandler( new LastHandler() ),
-  _newHandler(  new NewLocationHandler( _lastHandler.get() ) ),
-  _hateHandler( new ComplaintHandler( _newHandler.get() ) ),
-  _fanHandler(  new FanHandler( _hateHandler.get() ) ),
-  _spamHandler( new SpamHandler ( _fanHandler.get() ) )
+  _lastHandler( std::make_shared<LastHandler>()),
+  _newHandler( std::make_shared<NewLocationHandler>(_lastHandler)),
+  _hateHandler( std::make_shared<ComplaintHandler>(_newHandler)),
+  _fanHandler( std::make_shared<FanHandler>(_hateHandler)),
+  _spamHandler( std::make_shared<SpamHandler>(_fanHandler))
 {
   PrintMessage("Client::Client");
 }

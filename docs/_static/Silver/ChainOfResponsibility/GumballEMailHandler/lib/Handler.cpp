@@ -6,7 +6,7 @@
 
 using namespace HFDP::ChainOfResponsibility::GumballEMailHandler;
 
-Handler::Handler( const Handler* successor ) :
+Handler::Handler( const std::shared_ptr<Handler> successor ) :
   _successor( successor )
 {
   PrintMessage("Handler::Handler");

@@ -7,7 +7,7 @@
 
 using namespace HFDP::ChainOfResponsibility::GumballEMailHandler;
 
-ComplaintHandler::ComplaintHandler( const Handler* successor) :
+ComplaintHandler::ComplaintHandler( const std::shared_ptr<Handler> successor) :
   Handler( successor )
 {
   PrintMessage("ComplaintHandler::ComplaintHandler");

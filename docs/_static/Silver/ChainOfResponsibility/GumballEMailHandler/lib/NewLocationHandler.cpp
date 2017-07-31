@@ -7,7 +7,7 @@
 
 using namespace HFDP::ChainOfResponsibility::GumballEMailHandler;
 
-NewLocationHandler::NewLocationHandler( const Handler* successor ) :
+NewLocationHandler::NewLocationHandler( const std::shared_ptr<Handler> successor ) :
   Handler( successor )
 {
   PrintMessage("NewLocationHandler::NewLocationHandler");

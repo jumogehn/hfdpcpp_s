@@ -10,11 +10,11 @@ namespace HFDP {
 
       class Client {
 
-        std::unique_ptr< Handler > _lastHandler;
-        std::unique_ptr< Handler > _newHandler;
-        std::unique_ptr< Handler > _hateHandler;
-        std::unique_ptr< Handler > _fanHandler;
-        std::unique_ptr< Handler > _spamHandler;
+        std::shared_ptr< Handler > _lastHandler;
+        std::shared_ptr< Handler > _newHandler;
+        std::shared_ptr< Handler > _hateHandler;
+        std::shared_ptr< Handler > _fanHandler;
+        std::shared_ptr< Handler > _spamHandler;
 
         Client( const Client& ); // Disable copy constructor
         void operator=( const Client& ); // Disable assignment operator

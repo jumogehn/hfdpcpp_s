@@ -7,7 +7,7 @@
 
 using namespace HFDP::ChainOfResponsibility::GumballEMailHandler;
 
-FanHandler::FanHandler( const Handler* successor ) :
+FanHandler::FanHandler( const std::shared_ptr<Handler> successor ) :
   Handler( successor )
 {
   PrintMessage("FanHandler::FanHandler");

@@ -10,7 +10,7 @@ namespace HFDP {
       class LastHandler : public Handler {
 
       public:
-        explicit LastHandler( const Handler* successor = 0 );
+        explicit LastHandler( const std::shared_ptr<Handler> successor = 0 );
         void handleRequest( std::string request ) const;
         void print() const;
       };

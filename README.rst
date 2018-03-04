@@ -1,3 +1,4 @@
+Please check `this <https://github.com/Jeonghum/hfdpcpp11>`_ out. It's for C++11
 
 I want `English version <README_en.rst>`_.
 (Only intro is translated.)

@@ -1,15 +1,25 @@
-#include "Hum_Log_Manager.h"
-#include "Hum_Trace.h"
 
-#include "HomeTheater.hpp"
+#include <iostream>
+#include <memory>
+#include <string>
+
+#include "Tuner.hpp"
+#include "CdPlayer.hpp"
+#include "DvdPlayer.hpp"
+#include "Amplifier.hpp"
+
+#include "Projector.hpp"
+#include "PopcornPopper.hpp"
+#include "Screen.hpp"
+#include "TheaterLights.hpp"
+
+#include "HomeTheaterFacade.hpp"
 
 using namespace HeadFirstDesignPatterns::Facade::HomeTheater;
 
 int main( int argc, char* argv[] ) {
 
-  HUM_LOG_MANAGER->redirectToFile(ACE_TEXT("trace.log"));
-
-  HUM_TRACE(ACE_TEXT("main"));
+  std::cout << "main" << std::endl;
 
   std::auto_ptr< Amplifier > amp(
     new Amplifier( "Top-O-Line Amplifier" ) );
